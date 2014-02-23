@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html  xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <h3>Your Selection</h3>
+    <table border="0">
+        <tbody>
+        <tr wicket:id="cart">
+            <td wicket:id="name" width="80">Gouda</td>
+            <td wicket:id="articleCounter" width="100" align="center">x1</td>
+            <td wicket:id="price" width="100" align="center">$2.99</td>
+            <td width="80" align="center">
+                <a wicket:id="remove" href="#">
+                    remove
+                </a>
+            </td>
+        </tr>
+        <wicket:remove>
+            <tr>
+                <td>Emmental</td>
+                <td></td>
+                <td>$1.99</td>
+                <td><a href="#">remove</a></td>
+            </tr>
+        </wicket:remove>
+        </tbody>
+        <tfoot>
+        <tr class="total">
+            <th colspan="2">Total</th>
+            <!--<td></td>-->
+            <th wicket:id="total">$1.99</th>
+            <td>&nbsp;</td>
+        </tr>
+        </tfoot>
+    </table>
+</wicket:panel>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <table class="dbcontent">
+        <thead>
+        <th width="20"></th>
+        <th>Name</th>
+        <th>Description</th>
+        <th width="60">Price</th>
+        <th width="60"></th>
+        <th width="60"></th>
+        </thead>
+    <tr wicket:id="cheeses">
+        <td wicket:id="num" align="center">1</td>
+        <td wicket:id="name">Gouda</td>
+        <td wicket:id="description">Gouda is a Dutch...</td>
+        <td wicket:id="price" align="center">$1.99</td>
+        <td align="center"><a href="#" wicket:id="edit">edit</a></td>
+        <td align="center"><a href="#" wicket:id="delete">delete</a></td>
+    </tr>
+    </table>
+    <div wicket:id="navigator"></div>
+</wicket:panel>
+</body>
+</html>
