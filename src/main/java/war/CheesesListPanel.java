@@ -12,7 +12,7 @@ import org.apache.wicket.markup.html.panel.Panel;
 
 import java.util.List;
 
-public class CheesesListPanel extends Panel {
+public class CheesesListPanel extends CheesePanel {
 
     private CheesesModel cheesesModel;
 
@@ -48,10 +48,6 @@ public class CheesesListPanel extends Panel {
                 };
         add(cheeses);
         add(new PagingNavigator("navigator", cheeses));
-    }
-
-    protected CheeseSession getCheeseSession() {
-        return (CheeseSession)getSession();
     }
 
     protected Cart getCart() {

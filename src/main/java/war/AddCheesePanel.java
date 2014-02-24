@@ -10,7 +10,7 @@ import org.apache.wicket.model.PropertyModel;
 
 import java.util.List;
 
-public class AddCheesePanel extends Panel {
+public class AddCheesePanel extends CheesePanel {
 
     public AddCheesePanel(String id) {
         super(id);
@@ -47,9 +47,5 @@ public class AddCheesePanel extends Panel {
                 setResponsePage(ViewCheeses.class);
             }
         });
-    }
-
-    protected CheeseSession getCheeseSession() {
-        return (CheeseSession) getSession();
     }
 }

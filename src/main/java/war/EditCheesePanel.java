@@ -8,7 +8,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.PropertyModel;
 
-public class EditCheesePanel extends Panel {
+public class EditCheesePanel extends CheesePanel {
 
     private Cheese cheese;
 
@@ -49,7 +49,4 @@ public class EditCheesePanel extends Panel {
         return cheese.getName() != null;
     }
 
-    protected CheeseSession getCheeseSession() {
-        return (CheeseSession) getSession();
-    }
 }

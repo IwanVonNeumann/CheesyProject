@@ -11,7 +11,7 @@ import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 
-public class ShoppingCartPanel extends Panel {
+public class ShoppingCartPanel extends CheesePanel {
 
     private Cart cart;
 

@@ -5,19 +5,25 @@
     <link href="styles.css" rel="stylesheet"/>
 </head>
 <body>
-<div id="header"></div>
-<h3 class="section">Login Page</h3>
-<table align="center" class="dbcontent">
-    <thead>
-    <th>List of customers</th>
-    </thead>
-    <tr wicket:id="customers">
-        <td align="center">
-            <a href="#" wicket:id="link">
-                <span wicket:id="name">John Wayne</span>
-            </a>
-        </td>
-    </tr>
-</table>
+<div class="header"></div>
+<div class="content">
+    <h3 class="section">Login Page</h3>
+    <div class="center">
+        <table class="dbcontent">
+            <thead>
+            <tr>
+                <th>List of customers</th>
+            </tr>
+            </thead>
+            <tr wicket:id="customers">
+                <td>
+                    <a href="#" wicket:id="link">
+                        <span wicket:id="name">John Wayne</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 </body>
 </html>
