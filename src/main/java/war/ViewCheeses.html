@@ -8,19 +8,11 @@
 <div wicket:id="head"></div>
 <div class="content">
     <h3 class="section">Cheeses View</h3>
-    <table align="center">
-        <tr>
-            <td valign="top" align="center">
-                <div wicket:id="cheesesListPanel"></div>
-            </td>
-            <td width="50"></td>
-            <td valign="top">
-                <div wicket:id="addCheesePanel"></div>
-                <br/>
-                <div wicket:id="editCheesePanel"></div>
-            </td>
-        </tr>
-    </table>
+    <div wicket:id="cheesesListPanel" class="leftpanel"></div>
+
+    <div wicket:id="addCheesePanel" class="rightpanel"></div>
+    <div class="rightpanel">&nbsp;</div>
+    <div wicket:id="editCheesePanel" class="rightpanel"></div>
 </div>
 </body>
 </html>

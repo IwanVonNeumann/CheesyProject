@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html  xmlns:wicket="http://wicket.apache.org">
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
 <body>
 <wicket:panel>
-    <h3>Your Selection</h3>
+    <h3 class="cart">Your selection</h3>
     <table class="cart">
         <tbody>
-        <tr wicket:id="cart" class="cart">
-            <td width="25%" wicket:id="name">Gouda</td>
-            <td width="30%" wicket:id="articleCounter" align="center">x1</td>
-            <td width="20%" wicket:id="price" align="center">$2.99</td>
-            <td width="25%" align="center">
+        <tr wicket:id="cart">
+            <td wicket:id="name" class="cheesename">Gouda</td>
+            <td wicket:id="articleCounter">x1</td>
+            <td wicket:id="price" class="cheeseprice">$2.99</td>
+            <td class="remove">
                 <a wicket:id="remove" href="#">remove</a>
             </td>
         </tr>
-        <wicket:remove>
-            <tr>
-                <td>Emmental</td>
-                <td>2x</td>
-                <td>$1.99</td>
-                <td><a href="#">remove</a></td>
-            </tr>
-        </wicket:remove>
         </tbody>
         <tfoot>
-        <tr class="total">
-            <th colspan="2">Total</th>
-            <th wicket:id="total">$1.99</th>
-            <td>&nbsp;</td>
+        <tr>
+            <th class="cheesename"></th>
+            <th class="total">Total:</th>
+            <th wicket:id="total" class="cheeseprice">$1.99</th>
+            <td class="remove">&nbsp;</td>
         </tr>
         </tfoot>
     </table>
