@@ -5,23 +5,36 @@ body {
 }
 
 div {
-	border: 1px solid;
+	border: 0px solid;
 }
 
-div.header {
+div.userid, .header, .menu, .content {
 	margin-left:auto;
 	margin-right:auto;
 	width:920px;
+}
 
+div.userid {
+	text-align: right;
+}
+
+div.header {
 	height: 150px;
 	background: url(logo.png) center no-repeat;
 }
 
+div.menu {
+	background-color: maroon;
+}
 
-div.content{
-	margin-left:auto;
-	margin-right:auto;
-	width:920px;
+div.leftpanel {
+	float: left;
+	margin-left: 50px;
+}
+
+div.rightpanel {
+	float: right;
+	margin-right: 50px;
 }
 
 h3.section {
@@ -29,12 +42,30 @@ h3.section {
 	color: #5C0000;
 }
 
-div.center {
+table {
+	border-collapse:collapse;	
+}
+
+table.center {
 	margin-left:auto;
 	margin-right:auto;	
-	/*text-align: center;*/
-
 }
+
+
+
+/* Menu */
+
+tr.menu td {
+	width:100px;
+	text-align:center;	
+}
+
+tr.menu td a {
+	color: white;	
+}
+
+
+/* Database content */
 
 table.dbcontent {
 	border-collapse:collapse;
@@ -42,6 +73,48 @@ table.dbcontent {
 
 table.dbcontent, table.dbcontent th, table.dbcontent td {
 	border: 1px solid maroon;
-}e.dbcontent td {
-	border: 1px solid maroon;
 }
+
+table.dbcontent th {
+	background-color: maroon;
+	color:white;
+}
+
+tr.even td{
+	background-color: #F5D0A9; 
+}
+
+tr.odd td{
+	background-color: #F8ECE0;
+}
+
+table.dbcontent tfoot.foot td {
+	background-color: #B81212;
+	color:white;
+}
+
+td.users { /* Login page */
+	text-align: center;
+}
+
+
+
+/* Shopping cart */ 
+
+
+
+
+/* Links */
+
+a:link {color:maroon;}		/* unvisited link */
+
+a:visited {color:maroon;}	/* visited link */
+
+a:hover {			/* mouse over link */
+	color:red;
+	text-decoration: none;
+}   
+
+a:active {	/* selected link */
+	color:yellow;
+}	

@@ -6,23 +6,18 @@
 </head>
 <body>
 <div wicket:id="head"></div>
-<table border="0" width="800" align="center">
-    <tr>
-        <td width="*">
-            <div id="main">
-                <div wicket:id="cheesesListPanel"></div>
-            </div>
-        </td>
-        <!--<td width="*"></td>-->
-        <td valign="top" align="center" width="360">
-            <!--<div id="cart">-->
-                <div wicket:id="shoppingCart"></div>
-                <input type="button" wicket:id="checkout"
-                       value="Check Out"/>
-            <!--</div>-->
-        </td>
-    </tr>
-</table>
+<div class="content">
+    <h3 class="section">Shop view</h3>
+
+    <div wicket:id="cheesesListPanel" class="leftpanel"></div>
+    <div class="rightpanel">
+        <div wicket:id="shoppingCart"></div>
+        <div align="center">
+            <input type="button" wicket:id="checkout"
+                   value="Check Out"/>
+        </div>
+    </div>
+</div>
 <!--
     <div id="container">
         <div id="header"></div>
