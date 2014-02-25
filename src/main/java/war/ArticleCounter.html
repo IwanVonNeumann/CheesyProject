@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
 <body>
 <wicket:panel>
-    <div class="counter">
-        <table border="1" style="border-collapse:collapse;">
-            <tbody>
-            <tr>
-                <td class="counter" width="20" align="center">
-                    <a class="counter" wicket:id="decLink" href="#">-</a>
-                </td>
-                <td wicket:id="quantity" width="40" align="center">x1</td>
-                <td class="counter" width="20" align="center">
-                    <a class="counter" wicket:id="incLink" href="#">+</a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    <table>
+        <tbody>
+        <tr>
+            <td class="counterbutton">
+                <a class="counter" wicket:id="decLink" href="#">-</a>
+            </td>
+            <td wicket:id="quantity" class="counter">x1</td>
+            <td class="counterbutton">
+                <a class="counter" wicket:id="incLink" href="#">+</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </wicket:panel>
 </body>
 </html>

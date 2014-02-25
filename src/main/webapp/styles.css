@@ -113,10 +113,6 @@ td.users { /* Login page */
 
 /* Shopping cart */
 
-table.cart, table.cart td, table.cart th {
-	border: 0px solid black;
-}
-
 td.cheesename, th.cheesename {
 	width: 85px;
 }
@@ -135,6 +131,39 @@ td.remove, th.remove {
 	text-align: center;
 }
 
+td.counterbutton {
+	width: 20px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+td.counter {
+	width: 40px;
+	text-align: center;
+}
+
+
+/* Counter buttons */
+
+a.counter:link {		/* unvisited link */
+	color:maroon;
+	text-decoration: none;
+}
+
+a.counter:hover {		/* mouse over link */
+	color:red;
+	text-decoration: none;
+}  
+
+a.counter:visited		{/* visited link */
+	color:maroon;
+	text-decoration: none;
+}
+
+a.counter:active		{/* selected link */
+	color:yellow;
+	text-decoration: none;
+}
 
 
 /* Links */
@@ -150,4 +179,4 @@ a:hover {			/* mouse over link */
 
 a:active {	/* selected link */
 	color:yellow;
-}	
+}
