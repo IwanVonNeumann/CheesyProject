@@ -5,6 +5,8 @@ import domain.Cart;
 import domain.MultiCheese;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
+import panels.PageHeadPanel;
+import panels.ShoppingCartPanel;
 
 import java.sql.Timestamp;
 

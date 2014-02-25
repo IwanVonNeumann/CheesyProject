@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Cheesr - Making cheese taste beta</title>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div wicket:id="head"></div>
+<div class="content">
+    <h3 class="section">Purchases View</h3>
+
+    <div wicket:id="carts">
+        <div class="purchase">
+            <div wicket:id="customer" class="customer">John Wayne</div>
+            <div>
+                <span wicket:id="date">14 feb 2014</span>
+                <span wicket:id="time">18:15:00</span>
+            </div>
+        </div>
+        <br/>
+        <table class="dbcontent center">
+            <thead>
+            <tr>
+                <th class="number"></th>
+                <th class="cheesename">Cheese</th>
+                <th class="cheeseprice">Price</th>
+                <th class="quantity">Quantity</th>
+                <th class="cheeseprice">Cost</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr wicket:id="entries">
+                <td wicket:id="num" class="number">1</td>
+                <td wicket:id="cheese" class="cheesename"></td>
+                <td wicket:id="price" class="cheeseprice"></td>
+                <td wicket:id="quantity" class="quantity"></td>
+                <td wicket:id="cost" class="cheeseprice"></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="5" class="totalcost">
+                    Total cost:
+                    <span wicket:id="total" class="totalcost">$100.00</span>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+        <br/>
+    </div>
+</div>
+<div wicket:id="navigator" class="navigator"></div>
+</body>
+</html>

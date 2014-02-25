@@ -1,8 +1,11 @@
-package war;
+package views;
 
 import domain.Cheese;
-import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
+import panels.AddCheesePanel;
+import panels.AdminCheesesListPanel;
+import panels.EditCheesePanel;
+import panels.PageHeadPanel;
+import war.CheesePage;
 
 public class ViewCheeses extends CheesePage {
 

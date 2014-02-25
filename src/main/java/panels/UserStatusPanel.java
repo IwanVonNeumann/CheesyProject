@@ -1,8 +1,9 @@
-package war;
+package panels;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.markup.html.panel.Panel;
+import panels.CheesePanel;
+import war.LoginPage;
 
 /**
  * Created by IRuskevich on 14.24.2.

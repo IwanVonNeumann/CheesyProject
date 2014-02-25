@@ -1,6 +1,4 @@
-package war;
-
-import org.apache.wicket.markup.html.panel.Panel;
+package panels;
 
 
 public class PageHeadPanel extends CheesePanel {

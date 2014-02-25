@@ -1,6 +1,7 @@
-package war;
+package panels;
 
 import org.apache.wicket.markup.html.panel.Panel;
+import war.CheeseSession;
 
 /**
  * Created by IRuskevich on 14.24.2.

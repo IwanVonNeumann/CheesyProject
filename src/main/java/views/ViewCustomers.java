@@ -1,4 +1,4 @@
-package war;
+package views;
 
 import domain.Address;
 import look.RowModifier;
@@ -7,6 +7,8 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+import panels.PageHeadPanel;
+import war.CheesePage;
 
 public class ViewCustomers extends CheesePage {
 

@@ -1,9 +1,12 @@
-package war;
+package panels;
 
 
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.markup.html.panel.Panel;
+import views.ViewProfile;
+import war.Index;
+import views.ViewCheeses;
+import views.ViewCustomers;
+import views.ViewPurchases;
 
 public class MenuPanel extends CheesePanel {
 
@@ -35,6 +38,13 @@ public class MenuPanel extends CheesePanel {
             @Override
             public void onClick() {
                 setResponsePage(ViewCustomers.class);
+            }
+        });
+
+        add(new Link("profile") {
+            @Override
+            public void onClick() {
+                setResponsePage(ViewProfile.class);
             }
         });
     }

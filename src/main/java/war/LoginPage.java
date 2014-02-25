@@ -1,6 +1,7 @@
 package war;
 
 import domain.Address;
+import look.RowModifier;
 import models.CustomersModel;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
@@ -17,12 +18,10 @@ public class LoginPage extends CheesePage {
                 new ListView("customers", customersModel) {
                     @Override
                     protected void populateItem(ListItem listItem) {
+                        int i = listItem.getIndex() + 1;
+                        listItem.add(new RowModifier(i));
                         final Address address = (Address) listItem.getModelObject();
-                        /*
-                        final int i = listItem.getIndex() + 1;
-                        //listItem.add(new RowModifier(i));
-                        listItem.add(new Label("num", String.valueOf(i)));
-                        */
+
                         Link link = new Link("link") {
                             @Override
                             public void onClick() {
@@ -32,11 +31,7 @@ public class LoginPage extends CheesePage {
                         };
                         link.add(new Label("name", address.getName()));
                         listItem.add(link);
-                        /*
-                        listItem.add(new Label("street", address.getStreet()));
-                        listItem.add(new Label("zip", address.getZipCode().toString()));
-                        listItem.add(new Label("city", address.getCity()));
-                        */
+
                     }
                 };
         add(customers);

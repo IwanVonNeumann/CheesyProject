@@ -1,4 +1,4 @@
-package war;
+package panels;
 
 import domain.MultiCheese;
 import org.apache.wicket.markup.html.basic.Label;

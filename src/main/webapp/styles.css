@@ -8,7 +8,7 @@ div {
 	border: 0px solid;
 }
 
-div.userid, .header, .menu, .content {
+div.userid, .header, .menu, .content, .navigator {
 	margin-left:auto;
 	margin-right:auto;
 	width:920px;
@@ -37,6 +37,10 @@ div.rightpanel {
 	margin-right: 50px;
 }
 
+div.navigator {
+	text-align: center;
+}
+
 div.checkout {
 	text-align: center;
 }
@@ -57,6 +61,14 @@ table {
 table.center {
 	margin-left:auto;
 	margin-right:auto;	
+}
+
+td.center {
+	text-align: center;
+}
+
+td.right {
+	text-align: right;
 }
 
 
@@ -96,25 +108,106 @@ tr.odd td{
 	background-color: #F8ECE0;
 }
 
-table.dbcontent tfoot.foot td {
+table.dbcontent tfoot td {
 	background-color: #B81212;
 	color:white;
 }
 
-table.dbcontent thead th.number {
-	width: 20px;
+table.dbcontent tfoot a {
+	color:white;
 }
 
-td.users { /* Login page */
+
+th.number, td.number {  /* table.dbcontent thead */
+	width: 20px;
 	text-align: center;
 }
 
+
+th.description, td.description {
+	padding-left: 5px;
+}
+
+th.action, td.action {
+	width: 60px;
+}
+
+td.action {
+	text-align: center;
+}
+
+th.quantity, td.quantity {
+	width: 60px;
+}
+
+td.quantity {
+	text-align: center;
+}
+
+td.totalcost {
+	text-align: right;
+	padding-right: 10px;
+}
+
+span.totalcost {
+	font-weight: bold;
+}
+
+th.users, td.users { /* Login page */
+	width: 160px;
+	text-align: center;
+}
+
+th.customers, td.customers {
+	width: 140px;
+	padding-left: 5px;	
+}
+
+th.street, td.street {
+	width: 120px;
+	padding-left: 5px;
+}
+
+th.zipcode, td.zipcode {
+	width: 80px;
+}
+
+td.zipcode {
+	text-align: center;
+}
+
+th.city, td.city {
+	width: 100px;
+	padding-left: 5px;
+}
+
+td.title { /* checkout */
+	width: 75px;
+	text-align: right;
+	padding-right:5px;
+	font-weight: bold;
+}
+
+td.userdata {
+	padding-left:5px;
+	width: 125px;
+}
+
+
+div.purchase {
+	padding-left: 200px;
+}
+
+div.customer {
+	font-weight: bold;
+}
 
 
 /* Shopping cart */
 
 td.cheesename, th.cheesename {
-	width: 85px;
+	width: 90px;
+	padding-left: 5px;
 }
 
 td.cheeseprice, th.cheeseprice{
@@ -131,12 +224,6 @@ td.remove, th.remove {
 	text-align: center;
 }
 
-td.counterbutton {
-	width: 20px;
-	text-align: center;
-	border: 1px solid black;
-}
-
 td.counter {
 	width: 40px;
 	text-align: center;
@@ -146,23 +233,34 @@ td.counter {
 /* Counter buttons */
 
 a.counter:link {		/* unvisited link */
-	color:maroon;
+	color: maroon;
 	text-decoration: none;
 }
 
 a.counter:hover {		/* mouse over link */
-	color:red;
+	color: red;
 	text-decoration: none;
 }  
 
 a.counter:visited		{/* visited link */
-	color:maroon;
+	color: maroon;
 	text-decoration: none;
 }
 
 a.counter:active		{/* selected link */
-	color:yellow;
+	color: red;
 	text-decoration: none;
+}
+
+div.counterbutton {
+	width: 20px;
+	background-color: #F8ECE0;
+	border: 1px solid black;
+	text-align: center;
+}
+
+div.counterbutton:hover {
+	background-color: #F5D0A9;
 }
 
 
@@ -176,6 +274,10 @@ a:hover {			/* mouse over link */
 	color:red;
 	text-decoration: none;
 }   
+
+a:active {	/* selected link */
+	color:yellow;
+}
 
 a:active {	/* selected link */
 	color:yellow;

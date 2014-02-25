@@ -1,4 +1,4 @@
-package war;
+package panels;
 
 import domain.Cheese;
 import domain.MultiCheese;
@@ -9,7 +9,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
-import org.apache.wicket.markup.html.panel.Panel;
+import views.ViewCheeses;
 
 import java.util.List;
 

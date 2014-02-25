@@ -1,6 +1,9 @@
 package war;
 
 import org.apache.wicket.markup.html.link.Link;
+import panels.CheesesListPanel;
+import panels.PageHeadPanel;
+import panels.ShoppingCartPanel;
 
 public class Index extends CheesePage {
 

@@ -1,4 +1,4 @@
-package war;
+package views;
 
 import domain.Cart;
 import domain.MultiCheese;
@@ -10,10 +10,11 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+import panels.PageHeadPanel;
+import war.CheesePage;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.List;
 
 public class ViewPurchases extends CheesePage {
 
