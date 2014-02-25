@@ -42,6 +42,35 @@ public class CartDAO extends DAO {
         }
     }
 
+    public List<Cart> getCartsList(Address address) {
+        List<Cart> list = null;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        try {
+            //System.out.println("Accessing data...");
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Carts WHERE CustomerID = ?;");
+            statement.setInt(1, address.getId());
+            list = new ArrayList<Cart>();
+            while (result.next()) {
+                Cart cart = new Cart(result.getTimestamp("Clock"),
+                        result.getInt("CartID"),
+                        result.getInt("CustomerID")
+                );
+                list.add(cart);
+            }
+            System.out.println("[JDBC] SELECT * FROM Carts\n\t" +
+                    "WHERE CustomerID = " + address.getId() + ";");
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+            return list;
+        }
+    }
+
     public void insertCart(Address address, Cart cart) {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;

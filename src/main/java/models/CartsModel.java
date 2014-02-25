@@ -1,6 +1,7 @@
 package models;
 
 import dao.CartDAO;
+import domain.Address;
 import domain.Cart;
 import org.apache.wicket.model.LoadableDetachableModel;
 
@@ -9,10 +10,17 @@ import java.util.List;
 public class CartsModel extends LoadableDetachableModel {
 
     private CartDAO dao;
+    private Address address;
 
     public CartsModel(CartDAO dao) {
         super();
         this.dao = dao;
+        address = null;
+    }
+
+    public CartsModel(CartDAO dao, Address address) {
+        this(dao);
+        this.address = address;
     }
 
     @Override
@@ -21,6 +29,12 @@ public class CartsModel extends LoadableDetachableModel {
     }
 
     protected List<Cart> getCarts() {
-        return dao.getCartsList();
+        List<Cart> cartsList;
+        if (address == null) {
+            cartsList = dao.getCartsList();
+        } else {
+            cartsList = null; // заменить!!
+        }
+        return cartsList;
     }
 }

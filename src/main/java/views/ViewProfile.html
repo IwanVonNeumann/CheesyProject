@@ -8,24 +8,34 @@
 <div wicket:id="head"></div>
 <div class="content">
     <h3 class="section">Profile View</h3>
-    <table class="dbcontent">
-        <tr class="odd">
-            <td>Name</td>
-            <td>John Wayne</td>
-        </tr>
-        <tr class="even">
-            <td>Street</td>
-            <td>Penny Lane</td>
-        </tr>
-        <tr class="odd">
-            <td>Zip code</td>
-            <td>1234</td>
-        </tr>
-        <tr class="even">
-            <td>City</td>
-            <td>New York</td>
-        </tr>
-    </table>
+
+    <div class="leftpanel">
+        <table class="dbcontent">
+            <thead>
+            <tr>
+                <th colspan="2">Your personal data</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+                <td class="title">Name</td>
+                <td class="userdata" wicket:id="name"></td>
+            </tr>
+            <tr class="even">
+                <td class="title">Street</td>
+                <td class="userdata" wicket:id="street"></td>
+            </tr>
+            <tr class="odd">
+                <td class="title">Zip code</td>
+                <td class="userdata" wicket:id="zipCode"></td>
+            </tr>
+            <tr class="even">
+                <td class="title">City</td>
+                <td class="userdata" wicket:id="city"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 </body>
 </html>
