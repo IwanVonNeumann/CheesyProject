@@ -31,7 +31,8 @@ public class PurchasesListPanel extends CheesePanel {
         if (address == null) {
             cartsModel = new CartsModel(
                     getCheeseSession().getCartDAO());
-        } else {
+        }
+        else {
             cartsModel = new CartsModel(
                     getCheeseSession().getCartDAO(), address);
         }

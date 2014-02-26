@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<wicket:panel>
+    <form wicket:id="form">
+        <table class="dbcontent">
+            <tbody>
+            <tr class="odd">
+                <td class="title" wicket:id="name">Name:</td>
+                <td><input type="text" /></td>
+            </tr>
+            <tr class="even">
+                <td class="title" wicket:id="street">Street:</td>
+                <td><input type="text" /></td>
+            </tr>
+            <tr class="odd">
+                <td class="title" wicket:id="zipCode">Zip code:</td>
+                <td><input type="text" /></td>
+            </tr>
+            <tr class="even">
+                <td class="title" wicket:id="city">City:</td>
+                <td><input type="text" /></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Cancel" />
+                    <input type="submit" value="Save" />
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </form>
+</wicket:panel>
+</body>
+</html>

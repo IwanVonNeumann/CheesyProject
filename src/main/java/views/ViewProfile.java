@@ -2,7 +2,10 @@ package views;
 
 import domain.Address;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.model.CompoundPropertyModel;
+import panels.EditProfilePanel;
 import panels.PageHeadPanel;
+import panels.ProfileDataPanel;
 import panels.PurchasesListPanel;
 import war.CheesePage;
 
@@ -16,10 +19,13 @@ public class ViewProfile extends CheesePage {
 
         Address address = getCheeseSession().getAddress();
 
-        add(new Label("name", address.getName()));
-        add(new Label("street", address.getStreet()));
-        add(new Label("zipCode", address.getZipCode().toString()));
-        add(new Label("city", address.getCity()));
+        add(new ProfileDataPanel("profile",
+                new CompoundPropertyModel(address)));
+
+/*
+        add(new EditProfilePanel("editProfile",
+                new CompoundPropertyModel(address)));
+*/
 
         add(new PurchasesListPanel("purchases", address));
     }

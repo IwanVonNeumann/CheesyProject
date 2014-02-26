@@ -7,35 +7,17 @@
 <body>
 <div wicket:id="head"></div>
 <div class="content">
-    <h3 class="section">Profile View</h3>
     <div class="leftpanel">
-        <table class="dbcontent">
-            <thead>
-            <tr>
-                <th colspan="2">Your personal data</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="odd">
-                <td class="title">Name</td>
-                <td class="userdata" wicket:id="name"></td>
-            </tr>
-            <tr class="even">
-                <td class="title">Street</td>
-                <td class="userdata" wicket:id="street"></td>
-            </tr>
-            <tr class="odd">
-                <td class="title">Zip code</td>
-                <td class="userdata" wicket:id="zipCode"></td>
-            </tr>
-            <tr class="even">
-                <td class="title">City</td>
-                <td class="userdata" wicket:id="city"></td>
-            </tr>
-            </tbody>
-        </table>
+        <h3 class="panel">Profile Data</h3>
+        <div wicket:id="profile"></div>
+        <br/>
+        <!--<div wicket:id="editProfile"></div>-->
     </div>
-    <div class="rightpanel" wicket:id="purchases"></div>
+    <div class="rightpanel">
+        <h3 class="panel">Purchases history</h3>
+
+        <div wicket:id="purchases"></div>
+    </div>
 </div>
 </body>
 </html>
