@@ -24,7 +24,7 @@ public class CartDAO extends DAO {
             statement = connection.createStatement();
             result = statement.executeQuery(
                     "SELECT * FROM Carts;");
-            System.out.println("[JDBC] SELECT * FROM Carts");
+            System.out.println("[JDBC] SELECT * FROM Carts;");
             list = new ArrayList<Cart>();
             while (result.next()) {
                 Cart cart = new Cart(result.getTimestamp("Clock"),
@@ -52,6 +52,9 @@ public class CartDAO extends DAO {
             statement = connection.prepareStatement(
                     "SELECT * FROM Carts WHERE CustomerID = ?;");
             statement.setInt(1, address.getId());
+            result = statement.executeQuery();
+            System.out.println("[JDBC] SELECT * FROM Carts\n\t" +
+                    "WHERE CustomerID = " + address.getId() + ";");
             list = new ArrayList<Cart>();
             while (result.next()) {
                 Cart cart = new Cart(result.getTimestamp("Clock"),
@@ -60,8 +63,7 @@ public class CartDAO extends DAO {
                 );
                 list.add(cart);
             }
-            System.out.println("[JDBC] SELECT * FROM Carts\n\t" +
-                    "WHERE CustomerID = " + address.getId() + ";");
+
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
         } finally {

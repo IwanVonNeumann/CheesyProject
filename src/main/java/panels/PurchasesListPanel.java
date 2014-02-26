@@ -20,22 +20,34 @@ import java.text.SimpleDateFormat;
  */
 public class PurchasesListPanel extends CheesePanel {
 
-    public PurchasesListPanel(String id, Address address) {
+    public PurchasesListPanel(String id) {
+        this(id, null);
+    }
+
+    public PurchasesListPanel(String id, final Address address) {
         super(id);
 
-        CartsModel cartsModel = new CartsModel(
-                getCheeseSession().getCartDAO());
+        CartsModel cartsModel;
+        if (address == null) {
+            cartsModel = new CartsModel(
+                    getCheeseSession().getCartDAO());
+        } else {
+            cartsModel = new CartsModel(
+                    getCheeseSession().getCartDAO(), address);
+        }
 
         PageableListView customers =
                 new PageableListView("carts", cartsModel, 10) {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         Cart cart = (Cart) listItem.getModelObject();
-                        //System.out.println("Processing Cart with ID " +
-                        //        cart.getId() + "...");
-                        listItem.add(new Label("customer",
+                        Label customerName = new Label("customer",
                                 getCheeseSession().getAddressDAO().
-                                        getAddress(cart.getCustomerID()).getName()));
+                                        getAddress(cart.getCustomerID()).getName());
+                        if (address != null) {
+                            customerName.setVisible(false);
+                        }
+                        listItem.add(customerName);
                         DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
                         DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
                         listItem.add(new Label("date",

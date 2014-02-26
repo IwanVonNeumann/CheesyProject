@@ -33,7 +33,7 @@ public class CartsModel extends LoadableDetachableModel {
         if (address == null) {
             cartsList = dao.getCartsList();
         } else {
-            cartsList = null; // заменить!!
+            cartsList = dao.getCartsList(address);
         }
         return cartsList;
     }

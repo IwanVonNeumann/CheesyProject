@@ -21,6 +21,6 @@ public class ViewPurchases extends CheesePage {
 
     public ViewPurchases() {
         add(new PageHeadPanel("head"));
-        add(new PurchasesListPanel("purchases", null));
+        add(new PurchasesListPanel("purchases"));
     }
 }

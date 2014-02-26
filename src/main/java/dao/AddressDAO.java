@@ -23,7 +23,7 @@ public class AddressDAO extends DAO {
             statement = connection.createStatement();
             result = statement.executeQuery(
                     "SELECT * FROM Customers;");
-            System.out.println("[JDBC] SELECT * FROM Customers");
+            System.out.println("[JDBC] SELECT * FROM Customers;");
             list = new ArrayList<Address>();
             while (result.next()) {
                 Address address = new Address(result.getString("CustomerName"),
