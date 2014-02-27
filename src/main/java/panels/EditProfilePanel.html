@@ -7,29 +7,35 @@
 <wicket:panel>
     <form wicket:id="form">
         <table class="dbcontent">
+            <thead>
+            <tr>
+                <th colspan="2">Your personal data</th>
+            </tr>
+            </thead>
             <tbody>
             <tr class="odd">
-                <td class="title" wicket:id="name">Name:</td>
-                <td><input type="text" /></td>
+                <td class="title">Name</td>
+                <td><input type="text" wicket:id="name" /></td>
             </tr>
             <tr class="even">
-                <td class="title" wicket:id="street">Street:</td>
-                <td><input type="text" /></td>
+                <td class="title">Street</td>
+                <td><input type="text" wicket:id="street" /></td>
             </tr>
             <tr class="odd">
-                <td class="title" wicket:id="zipCode">Zip code:</td>
-                <td><input type="text" /></td>
+                <td class="title">Zip code</td>
+                <td><input type="text" wicket:id="zipCode" /></td>
             </tr>
             <tr class="even">
-                <td class="title" wicket:id="city">City:</td>
-                <td><input type="text" /></td>
+                <td class="title">City</td>
+                <td><input type="text" wicket:id="city" /></td>
             </tr>
             </tbody>
             <tfoot>
             <tr>
-                <td colspan="2">
-                    <input type="button" value="Cancel" />
-                    <input type="submit" value="Save" />
+                <td colspan="2" class="center">
+                    <a href="#" wicket:id="cancel">Cancel</a>
+                    &nbsp;
+                    <a href="#" wicket:id="save">Save</a>
                 </td>
             </tr>
             </tfoot>

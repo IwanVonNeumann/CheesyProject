@@ -1,6 +1,7 @@
 package panels;
 
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 
 /**
@@ -15,5 +16,13 @@ public class ProfileDataPanel extends CheesePanel {
         add(new Label("street"));
         add(new Label("zipCode"));
         add(new Label("city"));
+        add(new Link("edit") {
+            @Override
+            public void onClick() {
+                getParent().setVisible(false);
+                getParent().getParent().
+                        get("editProfile").setVisible(true);
+            }
+        });
     }
 }

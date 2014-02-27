@@ -1,7 +1,6 @@
 package views;
 
 import domain.Address;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.CompoundPropertyModel;
 import panels.EditProfilePanel;
 import panels.PageHeadPanel;
@@ -9,9 +8,6 @@ import panels.ProfileDataPanel;
 import panels.PurchasesListPanel;
 import war.CheesePage;
 
-/**
- * Created by IRuskevich on 14.25.2.
- */
 public class ViewProfile extends CheesePage {
 
     public ViewProfile() {
@@ -22,10 +18,11 @@ public class ViewProfile extends CheesePage {
         add(new ProfileDataPanel("profile",
                 new CompoundPropertyModel(address)));
 
-/*
-        add(new EditProfilePanel("editProfile",
-                new CompoundPropertyModel(address)));
-*/
+        EditProfilePanel editProfilePanel =
+                new EditProfilePanel("editProfile",
+                        new CompoundPropertyModel(address));
+        editProfilePanel.setVisible(false);
+        add(editProfilePanel);
 
         add(new PurchasesListPanel("purchases", address));
     }

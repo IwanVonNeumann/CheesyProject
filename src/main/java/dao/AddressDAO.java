@@ -1,6 +1,7 @@
 package dao;
 
 import domain.Address;
+import domain.Cheese;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -106,6 +107,36 @@ public class AddressDAO extends DAO {
         }
     }
 
+    public void updateAddress(Address address) {
+        PreparedStatement statement = null;
+
+        try {
+            //System.out.println("Updating Address with ID " + address.getId() + "...");
+            statement = connection.prepareStatement(
+                    "UPDATE Customers " +
+                            "SET CustomerName = ?, " +
+                            "Street = ?, " +
+                            "ZipCode = ?, " +
+                            "City = ? " +
+                            "WHERE CustomerID = ?;");
+            statement.setString(1, address.getName());
+            statement.setString(2, address.getStreet());
+            statement.setInt(3, address.getZipCode());
+            statement.setString(4, address.getCity());
+            statement.setInt(5, address.getId());
+            statement.executeUpdate();
+            System.out.println("[JDBC] UPDATE Customers \n" +
+                    "\tSET CustomerName = " + address.getName() + ", " +
+                    "Street = " + address.getStreet() + ", " +
+                    "ZipCode = " + address.getZipCode() + ", " +
+                    "City = " + address.getCity() + "\n" +
+                    "\tWHERE CustomerID = " + address.getId());
+        } catch (SQLException e) {
+            System.out.println("Exception while updating data...");
+        } finally {
+            closeStatement(statement);
+        }
+    }
 
     // заменено
     /*
