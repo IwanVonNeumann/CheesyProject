@@ -35,5 +35,12 @@ public class LoginPage extends CheesePage {
                     }
                 };
         add(customers);
+
+        add(new Link("signup") {
+            @Override
+            public void onClick() {
+                setResponsePage(SignupPage.class);
+            }
+        });
     }
 }
