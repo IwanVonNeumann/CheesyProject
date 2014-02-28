@@ -38,7 +38,9 @@ div.rightpanel {
 }
 
 div.navigator {
-	text-align: center;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 div.left50 {
@@ -281,6 +283,11 @@ a:hover {			/* mouse over link */
 }   
 
 a:active {	/* selected link */
+	color:yellow;
+}}/* selected link */
+	color:yellow;
+}}low;
+}}ed link */
 	color:yellow;
 }}/* selected link */
 	color:yellow;

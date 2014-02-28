@@ -19,6 +19,8 @@ public class ProfileDataPanel extends CheesePanel {
         add(new Link("edit") {
             @Override
             public void onClick() {
+                // getParent() == ProfileDataPanel
+                // getParent().getParent() == ViewProfile
                 getParent().setVisible(false);
                 getParent().getParent().
                         get("editProfile").setVisible(true);
