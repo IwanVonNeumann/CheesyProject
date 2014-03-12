@@ -1,15 +1,15 @@
 package models;
 
-import dao.jdbc.JDBCAddressDAO;
+import dao.iface.AddressDAO;
 import domain.Address;
 import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
 public class CustomersModel extends LoadableDetachableModel{
-    private JDBCAddressDAO dao;
+    private AddressDAO dao;
 
-    public CustomersModel(JDBCAddressDAO dao) {
+    public CustomersModel(AddressDAO dao) {
         super();
         this.dao = dao;
     }

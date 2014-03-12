@@ -1,6 +1,6 @@
 package models;
 
-import dao.jdbc.JDBCCartEntryDAO;
+import dao.iface.CartEntryDAO;
 import domain.Cart;
 import domain.MultiCheese;
 import org.apache.wicket.model.LoadableDetachableModel;
@@ -9,10 +9,10 @@ import java.util.List;
 
 public class CartEntriesModel extends LoadableDetachableModel {
 
-    private JDBCCartEntryDAO dao;
+    private CartEntryDAO dao;
     private Cart cart;
 
-    public CartEntriesModel(JDBCCartEntryDAO dao, Cart cart) {
+    public CartEntriesModel(CartEntryDAO dao, Cart cart) {
         this.dao = dao;
         this.cart = cart;
     }

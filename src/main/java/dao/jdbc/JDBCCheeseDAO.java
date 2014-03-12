@@ -12,7 +12,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
     public JDBCCheeseDAO(Connection connection) {
         super(connection);
-        System.out.println("Creating Cheese JDBCDAO...");
+        System.out.println("[JDBC] Creating Cheese DAO...");
     }
 
     public List<Cheese> getCheesesList() {

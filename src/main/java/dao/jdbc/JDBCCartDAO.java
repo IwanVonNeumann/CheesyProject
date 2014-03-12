@@ -12,7 +12,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
 
     public JDBCCartDAO(Connection connection) {
         super(connection);
-        System.out.println("Creating Cart JDBCDAO...");
+        System.out.println("[JDBC] Creating Cart DAO...");
     }
 
     public List<Cart> getCartsList() {

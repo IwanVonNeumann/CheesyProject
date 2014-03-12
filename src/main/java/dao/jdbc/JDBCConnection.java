@@ -8,7 +8,7 @@ public class JDBCConnection {
     private Connection connection;
 
     public JDBCConnection() {
-        System.out.println("Connecting to DB...");
+        System.out.println("[JDBC] Connecting to DB...");
         String url = "jdbc:mysql://localhost/cheesydb"; //URL к базе состоит из протокола:подпротокола://[хоста]:[порта_СУБД]/[БД] и других_сведений
         String name = "user"; //Имя пользователя БД
         String password = "userpwd"; //Пароль
