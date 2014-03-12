@@ -1,18 +1,14 @@
 package war;
 
 /* нельзя просто dao.*; !!!
-import dao.DBConnection;
-import dao.AddressDAO;
-import dao.CartEntryDAO;
-import dao.CheeseDAO;
-import dao.CartDAO;
+import dao.jdbc.JDBCConnection;
+import dao.jdbc.JDBCAddressDAO;
+import dao.jdbc.JDBCCartEntryDAO;
+import dao.jdbc.JDBCCheeseDAO;
+import dao.jdbc.JDBCCartDAO;
 */
 
-import dao.DBConnection;
-import dao.AddressDAO;
-import dao.CartEntryDAO;
-import dao.CheeseDAO;
-import dao.CartDAO;
+import dao.jdbc.*;
 
 import domain.Address;
 import domain.Cart;
@@ -22,43 +18,43 @@ import org.apache.wicket.protocol.http.WebSession;
 public class CheeseSession extends WebSession {
 
     private Cart cart;
-    private DBConnection connection;
+    private JDBCConnection connection;
 
-    private CheeseDAO cheeseDAO;
-    private AddressDAO addressDAO;
-    private CartEntryDAO cartEntryDAO;
-    private CartDAO cartDAO;
+    private JDBCCheeseDAO cheeseDAO;
+    private JDBCAddressDAO addressDAO;
+    private JDBCCartEntryDAO cartEntryDAO;
+    private JDBCCartDAO cartDAO;
 
     private Address address;
 
     protected CheeseSession(Request request) {
         super(request);
         cart = new Cart();
-        connection = new DBConnection();
+        connection = new JDBCConnection();
 
-        cheeseDAO = new CheeseDAO(connection.getConnection());
-        addressDAO = new AddressDAO(connection.getConnection());
-        cartEntryDAO = new CartEntryDAO(connection.getConnection());
-        cartDAO = new CartDAO(connection.getConnection());
+        cheeseDAO = new JDBCCheeseDAO(connection.getConnection());
+        addressDAO = new JDBCAddressDAO(connection.getConnection());
+        cartEntryDAO = new JDBCCartEntryDAO(connection.getConnection());
+        cartDAO = new JDBCCartDAO(connection.getConnection());
     }
 
     public Cart getCart() {
         return cart;
     }
 
-    public CheeseDAO getCheeseDAO() {
+    public JDBCCheeseDAO getCheeseDAO() {
         return cheeseDAO;
     }
 
-    public AddressDAO getAddressDAO() {
+    public JDBCAddressDAO getAddressDAO() {
         return addressDAO;
     }
 
-    public CartEntryDAO getCartEntryDAO() {
+    public JDBCCartEntryDAO getCartEntryDAO() {
         return cartEntryDAO;
     }
 
-    public CartDAO getCartDAO() {
+    public JDBCCartDAO getCartDAO() {
         return cartDAO;
     }
 

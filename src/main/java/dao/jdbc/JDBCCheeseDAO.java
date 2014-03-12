@@ -1,5 +1,6 @@
-package dao;
+package dao.jdbc;
 
+import dao.iface.CheeseDAO;
 import domain.Cheese;
 
 import java.sql.*;
@@ -7,11 +8,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheeseDAO extends DAO {
+public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
-    public CheeseDAO(Connection connection) {
+    public JDBCCheeseDAO(Connection connection) {
         super(connection);
-        System.out.println("Creating Cheese DAO...");
+        System.out.println("Creating Cheese JDBCDAO...");
     }
 
     public List<Cheese> getCheesesList() {

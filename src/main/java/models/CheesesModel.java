@@ -1,6 +1,6 @@
 package models;
 
-import dao.CheeseDAO;
+import dao.jdbc.JDBCCheeseDAO;
 import domain.Cheese;
 import org.apache.wicket.model.LoadableDetachableModel;
 
@@ -8,9 +8,9 @@ import java.util.List;
 
 public class CheesesModel extends LoadableDetachableModel {
 
-    private CheeseDAO dao;
+    private JDBCCheeseDAO dao;
 
-    public CheesesModel(CheeseDAO dao) {
+    public CheesesModel(JDBCCheeseDAO dao) {
         super();
         this.dao = dao;
     }

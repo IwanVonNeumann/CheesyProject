@@ -1,5 +1,6 @@
-package dao;
+package dao.jdbc;
 
+import dao.iface.CartEntryDAO;
 import domain.Cart;
 import domain.Cheese;
 import domain.MultiCheese;
@@ -8,14 +9,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartEntryDAO extends DAO {
+public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
 
-    private CheeseDAO cheeseDAO;
+    private JDBCCheeseDAO cheeseDAO;
 
-    public CartEntryDAO(Connection connection) {
+    public JDBCCartEntryDAO(Connection connection) {
         super(connection);
-        System.out.println("Creating Purchase DAO...");
-        cheeseDAO = new CheeseDAO(connection);
+        System.out.println("Creating Purchase JDBCDAO...");
+        cheeseDAO = new JDBCCheeseDAO(connection);
     }
 
     public void insertCartEntry(Cart cart, MultiCheese cheese) {

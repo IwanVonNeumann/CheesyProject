@@ -1,6 +1,6 @@
 package models;
 
-import dao.CartDAO;
+import dao.jdbc.JDBCCartDAO;
 import domain.Address;
 import domain.Cart;
 import org.apache.wicket.model.LoadableDetachableModel;
@@ -9,16 +9,16 @@ import java.util.List;
 
 public class CartsModel extends LoadableDetachableModel {
 
-    private CartDAO dao;
+    private JDBCCartDAO dao;
     private Address address;
 
-    public CartsModel(CartDAO dao) {
+    public CartsModel(JDBCCartDAO dao) {
         super();
         this.dao = dao;
         address = null;
     }
 
-    public CartsModel(CartDAO dao, Address address) {
+    public CartsModel(JDBCCartDAO dao, Address address) {
         this(dao);
         this.address = address;
     }

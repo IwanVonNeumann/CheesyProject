@@ -1,17 +1,17 @@
-package dao;
+package dao.jdbc;
 
+import dao.iface.AddressDAO;
 import domain.Address;
-import domain.Cheese;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddressDAO extends DAO {
+public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
-    public AddressDAO(Connection connection) {
+    public JDBCAddressDAO(Connection connection) {
         super(connection);
-        System.out.println("Creating Address DAO...");
+        System.out.println("[JDBC] Creating Address DAO...");
     }
 
     public List<Address> getAddressesList() {
