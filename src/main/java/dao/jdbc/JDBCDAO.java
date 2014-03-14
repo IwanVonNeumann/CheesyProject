@@ -1,15 +1,15 @@
-package dao;
+package dao.jdbc;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public abstract class DAO {
+public abstract class JDBCDAO {
 
 
     protected Connection connection;
 
-    public DAO(Connection connection) {
+    public JDBCDAO(Connection connection) {
         this.connection = connection;
     }
 

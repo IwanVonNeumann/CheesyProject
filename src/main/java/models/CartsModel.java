@@ -1,6 +1,6 @@
 package models;
 
-import dao.CartDAO;
+import dao.iface.CartDAO;
 import domain.Address;
 import domain.Cart;
 import org.apache.wicket.model.LoadableDetachableModel;

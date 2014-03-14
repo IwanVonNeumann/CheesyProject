@@ -1,9 +1,7 @@
 package models;
 
-import dao.AddressDAO;
-import dao.CheeseDAO;
+import dao.iface.AddressDAO;
 import domain.Address;
-import domain.Cheese;
 import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;

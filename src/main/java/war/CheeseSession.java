@@ -1,18 +1,23 @@
 package war;
 
 /* нельзя просто dao.*; !!!
-import dao.DBConnection;
-import dao.AddressDAO;
-import dao.CartEntryDAO;
-import dao.CheeseDAO;
-import dao.CartDAO;
+import dao.jdbc.JDBCConnection;
+import dao.jdbc.JDBCAddressDAO;
+import dao.jdbc.JDBCCartEntryDAO;
+import dao.jdbc.JDBCCheeseDAO;
+import dao.jdbc.JDBCCartDAO;
 */
 
-import dao.DBConnection;
-import dao.AddressDAO;
-import dao.CartEntryDAO;
-import dao.CheeseDAO;
-import dao.CartDAO;
+import dao.iface.AddressDAO;
+import dao.iface.CartDAO;
+import dao.iface.CartEntryDAO;
+import dao.iface.CheeseDAO;
+
+import dao.jdbc.JDBCConnection;
+import dao.jdbc.JDBCAddressDAO;
+import dao.jdbc.JDBCCartEntryDAO;
+import dao.jdbc.JDBCCheeseDAO;
+import dao.jdbc.JDBCCartDAO;
 
 import domain.Address;
 import domain.Cart;
@@ -22,7 +27,7 @@ import org.apache.wicket.protocol.http.WebSession;
 public class CheeseSession extends WebSession {
 
     private Cart cart;
-    private DBConnection connection;
+    JDBCConnection connection = new JDBCConnection();
 
     private CheeseDAO cheeseDAO;
     private AddressDAO addressDAO;
@@ -34,12 +39,11 @@ public class CheeseSession extends WebSession {
     protected CheeseSession(Request request) {
         super(request);
         cart = new Cart();
-        connection = new DBConnection();
 
-        cheeseDAO = new CheeseDAO(connection.getConnection());
-        addressDAO = new AddressDAO(connection.getConnection());
-        cartEntryDAO = new CartEntryDAO(connection.getConnection());
-        cartDAO = new CartDAO(connection.getConnection());
+        cheeseDAO = new JDBCCheeseDAO(connection.getConnection());
+        addressDAO = new JDBCAddressDAO(connection.getConnection());
+        cartEntryDAO = new JDBCCartEntryDAO(connection.getConnection());
+        cartDAO = new JDBCCartDAO(connection.getConnection());
     }
 
     public Cart getCart() {

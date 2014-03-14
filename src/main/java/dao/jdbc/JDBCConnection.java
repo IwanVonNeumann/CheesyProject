@@ -1,14 +1,14 @@
-package dao;
+package dao.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DBConnection {
+public class JDBCConnection {
 
     private Connection connection;
 
-    public DBConnection() {
-        System.out.println("Connecting to DB...");
+    public JDBCConnection() {
+        System.out.println("[JDBC] Connecting to DB...");
         String url = "jdbc:mysql://localhost/cheesydb"; //URL к базе состоит из протокола:подпротокола://[хоста]:[порта_СУБД]/[БД] и других_сведений
         String name = "user"; //Имя пользователя БД
         String password = "userpwd"; //Пароль

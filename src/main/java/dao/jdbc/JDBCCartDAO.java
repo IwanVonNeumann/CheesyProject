@@ -1,5 +1,6 @@
-package dao;
+package dao.jdbc;
 
+import dao.iface.CartDAO;
 import domain.Address;
 import domain.Cart;
 
@@ -7,11 +8,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CartDAO extends DAO {
+public class JDBCCartDAO extends JDBCDAO implements CartDAO {
 
-    public CartDAO(Connection connection) {
+    public JDBCCartDAO(Connection connection) {
         super(connection);
-        System.out.println("Creating Cart DAO...");
+        System.out.println("[JDBC] Creating Cart DAO...");
     }
 
     public List<Cart> getCartsList() {

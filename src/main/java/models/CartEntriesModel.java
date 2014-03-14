@@ -1,6 +1,6 @@
 package models;
 
-import dao.CartEntryDAO;
+import dao.iface.CartEntryDAO;
 import domain.Cart;
 import domain.MultiCheese;
 import org.apache.wicket.model.LoadableDetachableModel;

@@ -1,6 +1,6 @@
 package models;
 
-import dao.CheeseDAO;
+import dao.iface.CheeseDAO;
 import domain.Cheese;
 import org.apache.wicket.model.LoadableDetachableModel;
 
