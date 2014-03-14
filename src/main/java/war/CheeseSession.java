@@ -1,6 +1,22 @@
 package war;
 
+/*
+// компилится :)
+import dao.iface.DBConnection;
+import dao.iface.AddressDAO;
+import dao.iface.CartDAO;
+import dao.iface.CartEntryDAO;
+import dao.iface.CheeseDAO;
+// не компилится :(
 import dao.iface.*;
+*/
+
+import dao.iface.DBConnection;
+import dao.iface.AddressDAO;
+import dao.iface.CartDAO;
+import dao.iface.CartEntryDAO;
+import dao.iface.CheeseDAO;
+
 
 import domain.Address;
 import domain.Cart;
@@ -13,13 +29,13 @@ public class CheeseSession extends WebSession {
     private Cart cart;
     private Address address;
 
-    private DAOSet daoSet;
+    private DBConnection connection;
 
-    protected CheeseSession(Request request, DAOSet daoSet) {
+    protected CheeseSession(Request request, DBConnection connection) {
         super(request);
 
         cart = new Cart();
-        this.daoSet = daoSet;
+        this.connection = connection;
     }
 
     public Cart getCart() {
@@ -27,19 +43,19 @@ public class CheeseSession extends WebSession {
     }
 
     public CheeseDAO getCheeseDAO() {
-        return daoSet.geCheeseDAO();
+        return connection.getCheeseDAO();
     }
 
     public AddressDAO getAddressDAO() {
-        return daoSet.getAddressDAO();
+        return connection.getAddressDAO();
     }
 
     public CartEntryDAO getCartEntryDAO() {
-        return daoSet.geCartEntryDAO();
+        return connection.getCartEntryDAO();
     }
 
     public CartDAO getCartDAO() {
-        return daoSet.geCartDAO();
+        return connection.getCartDAO();
     }
 
     public Address getAddress() {

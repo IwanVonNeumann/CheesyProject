@@ -1,38 +1,43 @@
 package dao.jdbc;
 
+import dao.iface.*;
+
 import java.sql.Connection;
-import java.sql.DriverManager;
 
-public class JDBCConnection {
+/**
+ * Created by IRuskevich on 14.14.3.
+ */
+public class JDBCConnection implements DBConnection {
 
-    private Connection connection;
+    private CheeseDAO cheeseDAO;
+    private AddressDAO addressDAO;
+    private CartEntryDAO cartEntryDAO;
+    private CartDAO cartDAO;
 
-    public JDBCConnection() {
-        System.out.println("[JDBC] Connecting to DB...");
-        String url = "jdbc:mysql://localhost/cheesydb"; //URL к базе состоит из протокола:подпротокола://[хоста]:[порта_СУБД]/[БД] и других_сведений
-        String name = "user"; //Имя пользователя БД
-        String password = "userpwd"; //Пароль
-        try {
-            Class.forName("com.mysql.jdbc.Driver"); //Загружаем драйвер
-            connection = DriverManager.getConnection(url, name, password); //Создаём соединение
-        } catch (Exception e) {
-            System.out.println("DB connection failed...");
-            disconnect();
-        }
+    public JDBCConnection(Connection connection) {
+        cheeseDAO = new JDBCCheeseDAO(connection);
+        addressDAO = new JDBCAddressDAO(connection);
+        cartEntryDAO = new JDBCCartEntryDAO(connection);
+        cartDAO = new JDBCCartDAO(connection);
     }
 
-    public Connection getConnection() {
-        return connection;
+    @Override
+    public AddressDAO getAddressDAO() {
+        return addressDAO;
     }
 
-    public void disconnect() {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (Exception e) {
-            System.out.println("Exception while closing Connection...");
-        }
-        System.out.println("\nSuccessfully disconnected from the DB...");
+    @Override
+    public CartDAO getCartDAO() {
+        return cartDAO;
+    }
+
+    @Override
+    public CartEntryDAO getCartEntryDAO() {
+        return cartEntryDAO;
+    }
+
+    @Override
+    public CheeseDAO getCheeseDAO() {
+        return cheeseDAO;
     }
 }
