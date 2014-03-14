@@ -9,12 +9,18 @@ import java.util.List;
  */
 public interface AddressDAO {
 
-    public List<Address> getAddressesList();
+    List<Address> getAddressesList();
 
-    public void insertAddress(Address address);
+    Address getAddress(int id);
 
-    public Address getAddress(int id);
+    Address getAddress(String name);
 
-    public void updateAddress(Address address);
+    void insertAddress(Address address);
+
+    void updateAddress(Address address);
+
+    // void deleteAddress(Address address); // удалить со временем
+
+    void safeDeleteAddress(Address address);
 
 }

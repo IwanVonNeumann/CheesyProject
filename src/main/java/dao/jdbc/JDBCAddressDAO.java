@@ -21,12 +21,12 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
         try {
             statement = connection.prepareStatement(
-                    "SELECT * FROM Customers WHERE Deleted = ?;");
-            statement.setBoolean(1, false);
+                    "SELECT * FROM Customers WHERE Deleted <> ?;");
+            statement.setBoolean(1, true);
             result = statement.executeQuery();
 
             System.out.println("[JDBC] SELECT * FROM Customers\n" +
-                    "\tWHERE Deleted = false");
+                    "\tWHERE Deleted <> true;");
             list = new ArrayList<Address>();
             while (result.next()) {
                 Address address = new Address(result.getString("CustomerName"),
@@ -40,6 +40,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             }
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            System.out.println(e);
         } finally {
             closeResultSet(result);
             closeStatement(statement);
@@ -47,6 +48,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
+    // включая безопасно удаленные
     public List<Address> getFullAddressList() {
         //System.out.println("Accessing data...");
             /*statement = connection.createStatement();

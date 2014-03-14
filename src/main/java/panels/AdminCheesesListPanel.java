@@ -54,7 +54,8 @@ public class AdminCheesesListPanel extends CheesePanel {
 
                                 //удаление из базы
                                 getCheeseSession().getCheeseDAO().
-                                        deleteCheese(selected);
+                                        safeDeleteCheese(selected);
+                                        //deleteCheese(selected);
 
                                 // удаление из корзины
                                 // дописать, чтобы работало для всех сессий

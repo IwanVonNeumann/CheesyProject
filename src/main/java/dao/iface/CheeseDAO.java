@@ -13,11 +13,11 @@ public interface CheeseDAO {
 
     Cheese getCheese(int id);
 
-    void deleteCheese(Cheese cheese);
-
-    //void safeDeleteCheese(Cheese cheese);
-
     void addCheese(Cheese cheese);
 
     void updateCheese(Cheese cheese);
+
+    // void deleteCheese(Cheese cheese); // возможно, удалять по умлочанию стоит безопасно
+
+    void safeDeleteCheese(Cheese cheese);
 }

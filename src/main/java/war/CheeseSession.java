@@ -1,49 +1,25 @@
 package war;
 
-/* нельзя просто dao.*; !!!
-import dao.jdbc.JDBCConnection;
-import dao.jdbc.JDBCAddressDAO;
-import dao.jdbc.JDBCCartEntryDAO;
-import dao.jdbc.JDBCCheeseDAO;
-import dao.jdbc.JDBCCartDAO;
-*/
-
-import dao.iface.AddressDAO;
-import dao.iface.CartDAO;
-import dao.iface.CartEntryDAO;
-import dao.iface.CheeseDAO;
-
-import dao.jdbc.JDBCConnection;
-import dao.jdbc.JDBCAddressDAO;
-import dao.jdbc.JDBCCartEntryDAO;
-import dao.jdbc.JDBCCheeseDAO;
-import dao.jdbc.JDBCCartDAO;
+import dao.iface.*;
 
 import domain.Address;
 import domain.Cart;
+
 import org.apache.wicket.Request;
 import org.apache.wicket.protocol.http.WebSession;
 
 public class CheeseSession extends WebSession {
 
     private Cart cart;
-    JDBCConnection connection = new JDBCConnection();
-
-    private CheeseDAO cheeseDAO;
-    private AddressDAO addressDAO;
-    private CartEntryDAO cartEntryDAO;
-    private CartDAO cartDAO;
-
     private Address address;
 
-    protected CheeseSession(Request request) {
-        super(request);
-        cart = new Cart();
+    private DAOSet daoSet;
 
-        cheeseDAO = new JDBCCheeseDAO(connection.getConnection());
-        addressDAO = new JDBCAddressDAO(connection.getConnection());
-        cartEntryDAO = new JDBCCartEntryDAO(connection.getConnection());
-        cartDAO = new JDBCCartDAO(connection.getConnection());
+    protected CheeseSession(Request request, DAOSet daoSet) {
+        super(request);
+
+        cart = new Cart();
+        this.daoSet = daoSet;
     }
 
     public Cart getCart() {
@@ -51,19 +27,19 @@ public class CheeseSession extends WebSession {
     }
 
     public CheeseDAO getCheeseDAO() {
-        return cheeseDAO;
+        return daoSet.geCheeseDAO();
     }
 
     public AddressDAO getAddressDAO() {
-        return addressDAO;
+        return daoSet.getAddressDAO();
     }
 
     public CartEntryDAO getCartEntryDAO() {
-        return cartEntryDAO;
+        return daoSet.geCartEntryDAO();
     }
 
     public CartDAO getCartDAO() {
-        return cartDAO;
+        return daoSet.geCartDAO();
     }
 
     public Address getAddress() {

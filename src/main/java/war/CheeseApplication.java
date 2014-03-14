@@ -1,5 +1,6 @@
 package war;
 
+import dao.jdbc.JDBCDAOSet;
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -25,7 +26,7 @@ public class CheeseApplication extends WebApplication {
 
     @Override
     public Session newSession(Request request, Response response) {
-        return new CheeseSession(request);
+        return new CheeseSession(request, new JDBCDAOSet());
     }
 
     /*

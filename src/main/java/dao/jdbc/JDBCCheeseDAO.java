@@ -17,6 +17,38 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
     public List<Cheese> getCheesesList() {
         List<Cheese> list = null;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        try {
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Cheeses WHERE Deleted <> ?;");
+            statement.setBoolean(1, true);
+            result = statement.executeQuery();
+
+            System.out.println("[JDBC] SELECT * FROM Cheeses\n" +
+                    "\tWHERE Deleted <> true;");
+            list = new ArrayList<Cheese>();
+            while (result.next()) {
+                Cheese cheese = new Cheese(result.getString("CheeseName"),
+                        result.getString("Description"),
+                        result.getDouble("Price"),
+                        result.getInt("CheeseID"));
+                list.add(cheese);
+            }
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+            System.out.println(e);
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+            return list;
+        }
+    }
+
+    // включая безопасно удаленные
+    public List<Cheese> getFullCheesesList() {
+        List<Cheese> list = null;
         Statement statement = null;
         ResultSet result = null;
 
@@ -95,7 +127,25 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
     }
 
     public void safeDeleteCheese(Cheese cheese) {
-        // set deleted = 1;
+        PreparedStatement statement = null;
+
+        try {
+            //System.out.println("Safely Deleting Cheese with ID " + cheese.getId() + "...");
+            statement = connection.prepareStatement(
+                    "UPDATE Cheeses " +
+                            "SET Deleted = ? " +
+                            "WHERE CheeseID = ?;");
+            statement.setBoolean(1, true);
+            statement.setInt(2, cheese.getId());
+            statement.executeUpdate();
+            System.out.println("[JDBC] UPDATE Cheeses \n" +
+                    "\tSET Deleted = true \n" +
+                    "\tWHERE CheeseID = " + cheese.getId());
+        } catch (SQLException e) {
+            System.out.println("Exception while updating data...");
+        } finally {
+            closeStatement(statement);
+        }
     }
 
     public void addCheese(Cheese cheese) {
