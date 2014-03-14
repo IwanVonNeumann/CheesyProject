@@ -7,10 +7,21 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
+import panels.AuthentificationPanel;
 
 public class LoginPage extends CheesePage {
 
     public LoginPage() {
+
+        add(new AuthentificationPanel("enter"));
+
+        add(new Link("signup") {
+            @Override
+            public void onClick() {
+                setResponsePage(SignupPage.class);
+            }
+        });
+
         CustomersModel customersModel = new CustomersModel(
                 getCheeseSession().getAddressDAO());
 
@@ -36,11 +47,6 @@ public class LoginPage extends CheesePage {
                 };
         add(customers);
 
-        add(new Link("signup") {
-            @Override
-            public void onClick() {
-                setResponsePage(SignupPage.class);
-            }
-        });
+
     }
 }

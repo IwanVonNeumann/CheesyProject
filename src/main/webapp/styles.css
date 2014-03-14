@@ -63,6 +63,10 @@ div.left50 {
 	margin-right: 50px;
 }
 
+div.right50 {
+	margin-left: 50px;
+}
+
 div.checkout {
 	text-align: center;
 }
@@ -95,6 +99,11 @@ td.right {
 }
 
 
+/* Login / Signup */
+
+span.red {
+	color: red;
+}
 
 /* Menu */
 
@@ -223,6 +232,14 @@ td.userdata {
 	width: 125px;
 }
 
+td.wideuserdata {
+	padding-left:5px;
+	width: 220px;
+}
+
+div.monospace {
+	font-family: Monospace, "Courier New", sans-serif;
+}
 
 div.purchase {
 	padding-left: 200px;
@@ -230,6 +247,11 @@ div.purchase {
 
 div.customer {
 	font-weight: bold;
+}
+
+span.deleted {
+	font-weight: normal;
+	font-style:italic;
 }
 
 
@@ -314,4 +336,4 @@ a:active {	/* selected link */
 	color:yellow;
 }}/* selected link */
 	color:yellow;
-}}
+}}}

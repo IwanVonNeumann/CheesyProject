@@ -42,13 +42,19 @@ public class PurchasesListPanel extends CheesePanel {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         Cart cart = (Cart) listItem.getModelObject();
-                        Label customerName = new Label("customer",
-                                getCheeseSession().getAddressDAO().
-                                        getAddress(cart.getCustomerID()).getName());
+                        Address customer = getCheeseSession().getAddressDAO().
+                                getAddress(cart.getCustomerID());
+                        Label customerName = new Label("customer", customer.getName());
+
                         if (address != null) {
                             customerName.setVisible(false);
                         }
                         listItem.add(customerName);
+
+                        Label deleted = new Label("deleted", "profile deleted");
+                        if (!customer.isDeleted()) deleted.setVisible(false);
+                        listItem.add(deleted);
+
                         DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
                         DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
                         listItem.add(new Label("date",

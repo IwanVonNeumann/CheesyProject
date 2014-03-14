@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<wicket:panel>
+    <form wicket:id="form">
+        <table class="dbcontent center">
+            <thead>
+            <tr>
+                <th colspan="2">User data</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+                <td class="title">Name</td>
+                <td><input type="text" wicket:id="name"/></td>
+            </tr>
+            <tr class="even">
+                <td class="title">Password</td>
+                <td><input type="password" wicket:id="password"/></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="2" class="center">
+                    <a href="#" wicket:id="enter">Login</a>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </form>
+</wicket:panel>
+</body>
+</html>

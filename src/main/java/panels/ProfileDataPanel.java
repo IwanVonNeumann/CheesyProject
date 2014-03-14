@@ -1,6 +1,8 @@
 package panels;
 
+import domain.Address;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.basic.MultiLineLabel;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 
@@ -16,6 +18,7 @@ public class ProfileDataPanel extends CheesePanel {
         add(new Label("street"));
         add(new Label("zipCode"));
         add(new Label("city"));
+
         add(new Link("edit") {
             @Override
             public void onClick() {
@@ -26,5 +29,20 @@ public class ProfileDataPanel extends CheesePanel {
                         get("editProfile").setVisible(true);
             }
         });
+
+        add(new Link("changePassword") {
+            @Override
+            public void onClick() {
+                getParent().setVisible(false);
+                getParent().getParent().
+                        get("changePassword").setVisible(true);
+            }
+        });
+
+
+        String hexadecimalHash = (
+                (Address)getModelObject()).getHexHash(4, "<br/>");
+
+        add(new Label("hash", hexadecimalHash).setEscapeModelStrings(false));
     }
 }

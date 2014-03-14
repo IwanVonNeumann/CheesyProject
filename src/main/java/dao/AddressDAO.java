@@ -1,7 +1,6 @@
 package dao;
 
 import domain.Address;
-import domain.Cheese;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -16,22 +15,25 @@ public class AddressDAO extends DAO {
 
     public List<Address> getAddressesList() {
         List<Address> list = null;
-        Statement statement = null;
+        PreparedStatement statement = null;
         ResultSet result = null;
 
         try {
-            //System.out.println("Accessing data...");
-            statement = connection.createStatement();
-            result = statement.executeQuery(
-                    "SELECT * FROM Customers;");
-            System.out.println("[JDBC] SELECT * FROM Customers;");
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Customers WHERE Deleted = ?;");
+            statement.setBoolean(1, false);
+            result = statement.executeQuery();
+
+            System.out.println("[JDBC] SELECT * FROM Customers\n" +
+                    "\tWHERE Deleted = false");
             list = new ArrayList<Address>();
             while (result.next()) {
                 Address address = new Address(result.getString("CustomerName"),
                         result.getString("Street"),
                         result.getString("City"),
                         result.getInt("ZipCode"),
-                        result.getInt("CustomerID")
+                        result.getInt("CustomerID"),
+                        result.getBytes("PasswordHash")
                 );
                 list.add(address);
             }
@@ -44,6 +46,14 @@ public class AddressDAO extends DAO {
         }
     }
 
+    public List<Address> getFullAddressList() {
+        //System.out.println("Accessing data...");
+            /*statement = connection.createStatement();
+            result = statement.executeQuery(
+                    "SELECT * FROM Customers;");*/
+        return null; //все адреса, включая удаленные
+    }
+
     public void insertAddress(Address address) {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;
@@ -51,18 +61,20 @@ public class AddressDAO extends DAO {
         try {
             //System.out.println("Adding cheese " + cheese.getName() + "...");
             statement = connection.prepareStatement(
-                    "INSERT INTO Customers (CustomerName, Street, ZipCode, City) " +
-                            "VALUES (?, ?, ?, ?);");
+                    "INSERT INTO Customers (CustomerName, Street, ZipCode, City, PasswordHash, Deleted) " +
+                            "VALUES (?, ?, ?, ?, ?, ?);");
 
             statement.setString(1, address.getName());
             statement.setString(2, address.getStreet());
             statement.setInt(3, address.getZipCode());
             statement.setString(4, address.getCity());
+            statement.setBytes(5, address.getHash());
+            statement.setBoolean(6, false);
             statement.executeUpdate();
             System.out.println("[JDBC] INSERT INTO Customers (CustomerName, Street, ZipCode, City)\n" +
                     "\t\tVALUES (\"" + address.getName() + "\", \"" +
                     address.getStreet() + "\", " + address.getZipCode() + ", " +
-                    address.getCity() + ");");
+                    address.getCity() + ", hash);");
             // извлечение ID из базы
             //address.setId(getAddressId(address));
             generatedKeys = statement.getGeneratedKeys();
@@ -95,7 +107,39 @@ public class AddressDAO extends DAO {
                     result.getString("Street"),
                     result.getString("City"),
                     result.getInt("ZipCode"),
-                    result.getInt("CustomerID")
+                    result.getInt("CustomerID"),
+                    result.getBytes("PasswordHash"),
+                    result.getBoolean("Deleted")
+            );
+
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+            return address;
+        }
+    }
+
+    public Address getAddress(String name) {
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        Address address = null;
+
+        try {
+            //System.out.println("Accessing data...");
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Customers " +
+                            "WHERE CustomerName = ?;");
+            statement.setString(1, name);
+            result = statement.executeQuery();
+            result.next();
+            address = new Address(result.getString("CustomerName"),
+                    result.getString("Street"),
+                    result.getString("City"),
+                    result.getInt("ZipCode"),
+                    result.getInt("CustomerID"),
+                    result.getBytes("PasswordHash")
             );
 
         } catch (SQLException e) {
@@ -117,19 +161,63 @@ public class AddressDAO extends DAO {
                             "SET CustomerName = ?, " +
                             "Street = ?, " +
                             "ZipCode = ?, " +
-                            "City = ? " +
+                            "City = ?, " +
+                            "PasswordHash = ? " +
                             "WHERE CustomerID = ?;");
             statement.setString(1, address.getName());
             statement.setString(2, address.getStreet());
             statement.setInt(3, address.getZipCode());
             statement.setString(4, address.getCity());
-            statement.setInt(5, address.getId());
+            statement.setBytes(5, address.getHash());
+            statement.setInt(6, address.getId());
             statement.executeUpdate();
             System.out.println("[JDBC] UPDATE Customers \n" +
                     "\tSET CustomerName = " + address.getName() + ", " +
                     "Street = " + address.getStreet() + ", " +
                     "ZipCode = " + address.getZipCode() + ", " +
                     "City = " + address.getCity() + "\n" +
+                    "PasswordHash = hash\n" +
+                    "\tWHERE CustomerID = " + address.getId());
+        } catch (SQLException e) {
+            System.out.println("Exception while updating data...");
+        } finally {
+            closeStatement(statement);
+        }
+    }
+
+    // работает только если нет покупок
+    public void deleteAddress(Address address) {
+        PreparedStatement statement = null;
+
+        try {
+            //System.out.println("Deleting address " + address.getName() + "...");
+            statement = connection.prepareStatement(
+                    "DELETE FROM Customers WHERE CustomerID = ?;");
+            statement.setInt(1, address.getId());
+            statement.executeUpdate();
+            System.out.println("[JDBC] DELETE FROM Customers WHERE CustomerID = \"" +
+                    address.getId() + "\";");
+        } catch (SQLException e) {
+            System.out.println("Exception while deleting data...");
+        } finally {
+            closeStatement(statement);
+        }
+    }
+
+    public void safeDeleteAddress(Address address) {
+        PreparedStatement statement = null;
+
+        try {
+            //System.out.println("Safely Deleting Address with ID " + address.getId() + "...");
+            statement = connection.prepareStatement(
+                    "UPDATE Customers " +
+                            "SET Deleted = ? " +
+                            "WHERE CustomerID = ?;");
+            statement.setBoolean(1, true);
+            statement.setInt(2, address.getId());
+            statement.executeUpdate();
+            System.out.println("[JDBC] UPDATE Customers \n" +
+                    "\tSET Deleted = true \n" +
                     "\tWHERE CustomerID = " + address.getId());
         } catch (SQLException e) {
             System.out.println("Exception while updating data...");

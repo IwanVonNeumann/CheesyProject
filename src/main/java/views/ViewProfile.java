@@ -1,11 +1,9 @@
 package views;
 
 import domain.Address;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.CompoundPropertyModel;
-import panels.EditProfilePanel;
-import panels.PageHeadPanel;
-import panels.ProfileDataPanel;
-import panels.PurchasesListPanel;
+import panels.*;
 import war.CheesePage;
 
 public class ViewProfile extends CheesePage {
@@ -23,6 +21,9 @@ public class ViewProfile extends CheesePage {
                         new CompoundPropertyModel(address));
         editProfilePanel.setVisible(false);
         add(editProfilePanel);
+
+        add(new ChangePasswordPanel("changePassword")
+                .setVisible(false));
 
         add(new PurchasesListPanel("purchases", address));
     }
