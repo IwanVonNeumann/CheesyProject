@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="domain">
+    <class name="Cart" table="Carts">
+        <id name="id" column="CartID">
+            <generator class="increment"/>
+        </id>
+        <property name="time" column="Clock"/>
+        <many-to-one name="customerID" class="domain.Address" fetch="select">
+            <column name="CustomerID" not-null="true" />
+        </many-to-one>
+
+        <set name="cheeses" table="cheeses" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CheeseID" not-null="true" />
+            </key>
+            <one-to-many class="domain.MultiCheese" />
+        </set>
+    </class>
+</hibernate-mapping>

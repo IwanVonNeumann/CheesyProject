@@ -6,6 +6,7 @@ public class Cheese {
     private String description;
     private Double price;
     private int id;
+    private boolean deleted;
 
     public Cheese(String name, String description,
                   Double price) {
@@ -38,6 +39,10 @@ public class Cheese {
         return id;
     }
 
+    public boolean isDeleted() {
+        return deleted;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -48,6 +53,18 @@ public class Cheese {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
+    public void delete() {
+        setDeleted(true);
     }
 
     @Override

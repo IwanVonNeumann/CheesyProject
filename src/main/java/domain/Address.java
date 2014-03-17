@@ -2,6 +2,7 @@ package domain;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 public class Address {
 
@@ -12,6 +13,8 @@ public class Address {
     private int id;
     private byte[] hash;
     private boolean deleted;
+
+    private List<Cart> purchases; // for hibernate
 
     public Address(String name, String street, String city, Integer zipCode) {
         this.name = name;
@@ -98,6 +101,10 @@ public class Address {
         return sb.toString();
     }
 
+    public void delete() {
+        setDeleted(true);
+    }
+
     public String getName() {
         return name;
     }
@@ -126,6 +133,10 @@ public class Address {
         return deleted;
     }
 
+    public List<Cart> getPurchases() {
+        return purchases;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -146,6 +157,20 @@ public class Address {
         this.id = id;
     }
 
+    public void setHash(byte[] hash) {
+        this.hash = hash;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
+    public void setPurchases(List<Cart> purchases) {
+        this.purchases = purchases;
+    }
+
+
+
     public void setPassword(String password) {
         this.hash = calculateHash(password);
     }
@@ -154,5 +179,11 @@ public class Address {
     public boolean equals(Object o) {
         Address that = (Address)o;
         return (this.id == that.id);
+    }
+
+    @Override
+    public String toString() {
+        return name + ", " + street + ", " + city + ", " + zipCode +
+                (deleted ? " [deleted]" : "");
     }
 }

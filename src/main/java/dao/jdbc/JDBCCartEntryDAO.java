@@ -5,7 +5,10 @@ import domain.Cart;
 import domain.Cheese;
 import domain.MultiCheese;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,20 +30,20 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
             System.out.println("Adding CartEntry for " +
                     cheese.getName() + "...");
             System.out.println("Cart ID: " + cart.getId());
-            System.out.println("Cheese ID: " + cheese.getId());
+            System.out.println("Cheese ID: " + cheese.getCheeseId());
             System.out.println("Quantity: " + cheese.getQuantity());
 
             statement = connection.prepareStatement(
                     "INSERT INTO CartEntries " +
                             "(CheeseID, CartID, Quantity) " +
                             "VALUES (?, ?, ?);");
-            statement.setInt(1, cheese.getId());
+            statement.setInt(1, cheese.getCheeseId());
             statement.setInt(2, cart.getId());
             statement.setInt(3, cheese.getQuantity());
             statement.executeUpdate();
             System.out.println("[JDBC] INSERT INTO CartEntries " +
                     "(CheeseID, CartID, Quantity) " +
-                    "VALUES (" + cheese.getId() + ", " +
+                    "VALUES (" + cheese.getCheeseId() + ", " +
                     cart.getId() + ", " + cheese.getQuantity() + ");");
         } catch (SQLException e) {
             System.out.println("Exception while inserting data...");

@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Cart implements Serializable {
 
-    //private List<Cheese> cheeses = new ArrayList<Cheese>();
     private List<MultiCheese> cheeses = new ArrayList<MultiCheese>();
     private Address billingAddress = new Address();
     private Timestamp time;
@@ -94,5 +93,9 @@ public class Cart implements Serializable {
 
     public int getCustomerID() {
         return customerID;
+    }
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
     }
 }
