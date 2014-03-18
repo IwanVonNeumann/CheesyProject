@@ -1,8 +1,6 @@
 package views;
 
 import domain.Address;
-import domain.Cheese;
-import domain.MultiCheese;
 import look.RowModifier;
 import models.CustomersModel;
 import org.apache.wicket.markup.html.basic.Label;

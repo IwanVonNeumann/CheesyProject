@@ -2,7 +2,6 @@ package domain;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.List;
 
 public class Address {
 
@@ -14,41 +13,6 @@ public class Address {
     private byte[] hash;
     private boolean deleted;
 
-    private List<Cart> purchases; // for hibernate
-
-    public Address(String name, String street, String city, Integer zipCode) {
-        this.name = name;
-        this.street = street;
-        this.city = city;
-        this.zipCode = zipCode;
-    }
-
-    public Address(String name, String street, String city, Integer zipCode, int id) {
-        this(name, street, city, zipCode);
-        this.id = id;
-        this.hash = calculateHash("cheese"); // default test-password
-    }
-
-    public Address(String name, String street, String city,
-                   Integer zipCode, int id, byte[] hash) {
-        this(name, street, city, zipCode, id);
-        if (hash != null) {
-            this.hash = hash;
-        }
-        else this.hash = calculateHash("cheese");
-    }
-
-    public Address(String name, String street, String city,
-                   Integer zipCode, int id, byte[] hash, boolean deleted) {
-        this(name, street, city, zipCode, id, hash);
-        this.deleted = deleted;
-    }
-
-    public Address(String name, String street, String city, Integer zipCode, String password) {
-        this(name, street, city, zipCode);
-        hash = calculateHash(password);
-    }
-
     public Address() {
         /*
         name = "default";
@@ -56,6 +20,45 @@ public class Address {
         city = "default";
         zipCode = 101;*/
     }
+
+    // базовый конструктор
+    public Address(String name, String street, String city, Integer zipCode) {
+        this.name = name;
+        this.street = street;
+        this.city = city;
+        this.zipCode = zipCode;
+    }
+
+    // регистрация
+    public Address(String name, String street, String city, Integer zipCode, String password) {
+        this(name, street, city, zipCode);
+        hash = calculateHash(password);
+    }
+
+    // считывание из базы, запись создана скриптом
+    public Address(String name, String street, String city, Integer zipCode, int id) {
+        this(name, street, city, zipCode);
+        this.id = id;
+        this.hash = calculateHash("cheese"); // default test-password
+    }
+
+    // используется только в цепочке
+    protected Address(String name, String street, String city,
+                   Integer zipCode, int id, byte[] hash) {
+        this(name, street, city, zipCode, id);
+        if (hash != null) {
+            this.hash = hash;
+        }
+        // else this.hash = calculateHash("cheese"); // а может не надо?
+    }
+
+    // считывание из базы, запись создана программно
+    public Address(String name, String street, String city,
+                   Integer zipCode, int id, byte[] hash, boolean deleted) {
+        this(name, street, city, zipCode, id, hash);
+        this.deleted = deleted;
+    }
+
 
     public boolean correctHash(String password) {
         if (hash == null) System.out.println("Hash is null!");
@@ -69,15 +72,15 @@ public class Address {
     }
 
     public static byte[] calculateHash(String password) {
-        byte[] hash = null;
+        byte[] hash;
         try {
             byte[] passwordBytes = password.getBytes();
             MessageDigest md = MessageDigest.getInstance("MD5");
             hash = md.digest(passwordBytes);
+            return hash;
         } catch (NoSuchAlgorithmException ex) {
             System.out.println("No algorithm ex...");
-        } finally {
-            return hash;
+            return null;
         }
     }
 
@@ -133,10 +136,6 @@ public class Address {
         return deleted;
     }
 
-    public List<Cart> getPurchases() {
-        return purchases;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -164,11 +163,6 @@ public class Address {
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
     }
-
-    public void setPurchases(List<Cart> purchases) {
-        this.purchases = purchases;
-    }
-
 
 
     public void setPassword(String password) {

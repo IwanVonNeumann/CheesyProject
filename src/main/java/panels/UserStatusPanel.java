@@ -2,7 +2,6 @@ package panels;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import panels.CheesePanel;
 import war.LoginPage;
 
 /**

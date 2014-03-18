@@ -2,7 +2,6 @@ package panels;
 
 import domain.Address;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.basic.MultiLineLabel;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 

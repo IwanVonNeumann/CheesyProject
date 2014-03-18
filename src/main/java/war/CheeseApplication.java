@@ -1,7 +1,6 @@
 package war;
 
 import dao.iface.ConnectionManager;
-import dao.jdbc.JDBCConnection;
 import dao.jdbc.JDBCConnectionManager;
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;

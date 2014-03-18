@@ -3,7 +3,10 @@ package dao.jdbc;
 import dao.iface.AddressDAO;
 import domain.Address;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +37,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                         result.getString("City"),
                         result.getInt("ZipCode"),
                         result.getInt("CustomerID"),
-                        result.getBytes("PasswordHash")
+                        result.getBytes("PasswordHash"),
+                        result.getBoolean("deleted")
                 );
                 list.add(address);
             }
@@ -142,7 +146,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                     result.getString("City"),
                     result.getInt("ZipCode"),
                     result.getInt("CustomerID"),
-                    result.getBytes("PasswordHash")
+                    result.getBytes("PasswordHash"),
+                    result.getBoolean("deleted")
             );
 
         } catch (SQLException e) {

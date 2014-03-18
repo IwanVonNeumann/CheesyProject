@@ -2,11 +2,11 @@ package panels;
 
 
 import org.apache.wicket.markup.html.link.Link;
-import views.ViewProfile;
-import war.Index;
 import views.ViewCheeses;
 import views.ViewCustomers;
+import views.ViewProfile;
 import views.ViewPurchases;
+import war.Index;
 
 public class MenuPanel extends CheesePanel {
 
