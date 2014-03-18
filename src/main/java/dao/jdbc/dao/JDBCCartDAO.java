@@ -1,4 +1,4 @@
-package dao.jdbc;
+package dao.jdbc.dao;
 
 import dao.iface.CartDAO;
 import domain.Address;

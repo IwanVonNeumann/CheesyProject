@@ -7,10 +7,10 @@ import java.util.List;
 
 public class Cart implements Serializable {
 
+    private int id;
     private List<MultiCheese> cheeses = new ArrayList<MultiCheese>();
     private Address billingAddress = new Address();
     private Timestamp time;
-    private int id;
     private int customerID;
 
     public Cart() {

@@ -1,6 +1,10 @@
 package dao.jdbc;
 
 import dao.iface.*;
+import dao.jdbc.dao.JDBCAddressDAO;
+import dao.jdbc.dao.JDBCCartDAO;
+import dao.jdbc.dao.JDBCCartEntryDAO;
+import dao.jdbc.dao.JDBCCheeseDAO;
 
 import java.sql.Connection;
 

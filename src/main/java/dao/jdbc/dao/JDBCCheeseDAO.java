@@ -1,4 +1,4 @@
-package dao.jdbc;
+package dao.jdbc.dao;
 
 import dao.iface.CheeseDAO;
 import domain.Cheese;
@@ -105,26 +105,6 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
-    public void deleteCheese(Cheese cheese) {
-
-        PreparedStatement statement = null;
-
-        try {
-            //System.out.println("Deleting cheese " + cheese.getName() + "...");
-            statement = connection.prepareStatement(
-                    "DELETE FROM Cheeses WHERE CheeseName = ?;");
-            statement.setString(1, cheese.getName());
-            statement.executeUpdate();
-            System.out.println("[JDBC] DELETE FROM Cheeses WHERE CheeseName = \"" +
-                    cheese.getName() + "\";");
-
-        } catch (SQLException e) {
-            System.out.println("Exception while deleting data...");
-        } finally {
-            closeStatement(statement);
-        }
-    }
-
     public void safeDeleteCheese(Cheese cheese) {
         PreparedStatement statement = null;
 
@@ -196,6 +176,26 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
             closeStatement(statement);
         }
     }
+
+    /*public void deleteCheese(Cheese cheese) {
+
+        PreparedStatement statement = null;
+
+        try {
+            //System.out.println("Deleting cheese " + cheese.getName() + "...");
+            statement = connection.prepareStatement(
+                    "DELETE FROM Cheeses WHERE CheeseName = ?;");
+            statement.setString(1, cheese.getName());
+            statement.executeUpdate();
+            System.out.println("[JDBC] DELETE FROM Cheeses WHERE CheeseName = \"" +
+                    cheese.getName() + "\";");
+
+        } catch (SQLException e) {
+            System.out.println("Exception while deleting data...");
+        } finally {
+            closeStatement(statement);
+        }
+    }*/
 
 
 }

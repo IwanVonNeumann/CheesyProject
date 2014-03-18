@@ -2,24 +2,21 @@ package domain;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 public class Address {
 
+    private int id;
     private String name;
     private String street;
     private String city;
     private Integer zipCode;
-    private int id;
     private byte[] hash;
     private boolean deleted;
 
-    public Address() {
-        /*
-        name = "default";
-        street = "default";
-        city = "default";
-        zipCode = 101;*/
-    }
+    private List<Cart> purchases;
+
+    public Address() {}
 
     // базовый конструктор
     public Address(String name, String street, String city, Integer zipCode) {
@@ -59,6 +56,71 @@ public class Address {
         this.deleted = deleted;
     }
 
+
+
+    public String getName() {
+        return name;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public Integer getZipCode() {
+        return zipCode;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public byte[] getHash() {
+        return hash;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public List<Cart> getPurchases() {
+        return purchases;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public void setZipCode(Integer zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setHash(byte[] hash) {
+        this.hash = hash;
+    }
+
+    public void setDeleted(boolean deleted) {
+        this.deleted = deleted;
+    }
+
+    public void setPurchases(List<Cart> purchases) {
+        this.purchases = purchases;
+    }
 
     public boolean correctHash(String password) {
         if (hash == null) System.out.println("Hash is null!");
@@ -108,61 +170,7 @@ public class Address {
         setDeleted(true);
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public Integer getZipCode() {
-        return zipCode;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public byte[] getHash() {
-        return hash;
-    }
-
-    public boolean isDeleted() {
-        return deleted;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setZipCode(Integer zipCode) {
-        this.zipCode = zipCode;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setHash(byte[] hash) {
-        this.hash = hash;
-    }
-
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
-    }
 
 
     public void setPassword(String password) {

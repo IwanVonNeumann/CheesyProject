@@ -26,10 +26,10 @@
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
 
-        <mapping resource="domain/address.hbm.xml"/>
+<!--        <mapping resource="domain/address.hbm.xml"/>
         <mapping resource="domain/cheese.hbm.xml"/>
         <mapping resource="domain/cart.hbm.xml"/>
-        <mapping resource="domain/cartentry.hbm.xml"/>
+        <mapping resource="domain/cartentry.hbm.xml"/>-->
 
     </session-factory>
 

@@ -2,26 +2,22 @@ package domain;
 
 public class Cheese {
 
+    private int id;
     private String name;
     private String description;
     private Double price;
-    private int id;
     private boolean deleted;
-
-    public Cheese(String name, String description,
-                  Double price) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
-
-    public Cheese(String name, String description, Double price, int id) {
-        this(name, description, price);
-        this.id = id;
-    }
 
     public Cheese() {
     }
+
+    public Cheese(String name, String description, Double price, int id) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.id = id;
+    }
+
 
     public String getName() {
         return name;
@@ -62,6 +58,8 @@ public class Cheese {
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
     }
+
+
 
     public void delete() {
         setDeleted(true);

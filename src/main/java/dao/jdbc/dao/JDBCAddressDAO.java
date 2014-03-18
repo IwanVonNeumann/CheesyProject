@@ -1,6 +1,7 @@
-package dao.jdbc;
+package dao.jdbc.dao;
 
 import dao.iface.AddressDAO;
+import dao.jdbc.proxy.JDBCAddressProxy;
 import domain.Address;
 
 import java.sql.Connection;
@@ -32,7 +33,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                     "\tWHERE Deleted <> true;");
             list = new ArrayList<Address>();
             while (result.next()) {
-                Address address = new Address(result.getString("CustomerName"),
+                //Address address = new Address(result.getString("CustomerName"),
+                Address address = new JDBCAddressProxy(result.getString("CustomerName"),
                         result.getString("Street"),
                         result.getString("City"),
                         result.getInt("ZipCode"),
@@ -110,7 +112,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             statement.setInt(1, id);
             result = statement.executeQuery();
             result.next();
-            address = new Address(result.getString("CustomerName"),
+            //address = new Address(result.getString("CustomerName"),
+            address = new JDBCAddressProxy(result.getString("CustomerName"),
                     result.getString("Street"),
                     result.getString("City"),
                     result.getInt("ZipCode"),
@@ -141,7 +144,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             statement.setString(1, name);
             result = statement.executeQuery();
             result.next();
-            address = new Address(result.getString("CustomerName"),
+            //address = new Address(result.getString("CustomerName"),
+            address = new JDBCAddressProxy(result.getString("CustomerName"),
                     result.getString("Street"),
                     result.getString("City"),
                     result.getInt("ZipCode"),
@@ -193,25 +197,6 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
-    // работает только если нет покупок
-    public void deleteAddress(Address address) {
-        PreparedStatement statement = null;
-
-        try {
-            //System.out.println("Deleting address " + address.getName() + "...");
-            statement = connection.prepareStatement(
-                    "DELETE FROM Customers WHERE CustomerID = ?;");
-            statement.setInt(1, address.getId());
-            statement.executeUpdate();
-            System.out.println("[JDBC] DELETE FROM Customers WHERE CustomerID = \"" +
-                    address.getId() + "\";");
-        } catch (SQLException e) {
-            System.out.println("Exception while deleting data...");
-        } finally {
-            closeStatement(statement);
-        }
-    }
-
     public void safeDeleteAddress(Address address) {
         PreparedStatement statement = null;
 
@@ -233,6 +218,28 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             closeStatement(statement);
         }
     }
+
+    /*
+    // работает только если нет покупок
+    public void deleteAddress(Address address) {
+        PreparedStatement statement = null;
+
+        try {
+            //System.out.println("Deleting address " + address.getName() + "...");
+            statement = connection.prepareStatement(
+                    "DELETE FROM Customers WHERE CustomerID = ?;");
+            statement.setInt(1, address.getId());
+            statement.executeUpdate();
+            System.out.println("[JDBC] DELETE FROM Customers WHERE CustomerID = \"" +
+                    address.getId() + "\";");
+        } catch (SQLException e) {
+            System.out.println("Exception while deleting data...");
+        } finally {
+            closeStatement(statement);
+        }
+    }
+    */
+
 
     // заменено
     /*

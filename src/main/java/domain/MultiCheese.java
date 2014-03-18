@@ -6,8 +6,10 @@ public class MultiCheese implements Serializable { // какого?
 
     private int id;
     private Cheese cheese;
-    private int cheeseId;
     private int quantity;
+
+    // для реляционной модели
+    private int cheeseId;
     private int cartId;
 
     public MultiCheese() {
