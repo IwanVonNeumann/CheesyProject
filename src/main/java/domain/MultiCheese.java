@@ -8,26 +8,16 @@ public class MultiCheese implements Serializable { // какого?
     private Cheese cheese;
     private int quantity;
 
-    // для реляционной модели
-    private int cheeseId;
-    private int cartId;
+    public MultiCheese() {}
 
-    public MultiCheese() {
-    }
-
+    // используется при создании из Cheese в корзине
     public MultiCheese(Cheese cheese) {
         this.cheese = cheese;
-        cheeseId = cheese.getId();
         quantity = 1;
     }
 
-    public MultiCheese(Cheese cheese, int cartId) {
+    public MultiCheese(Cheese cheese, int quantity) {
         this(cheese);
-        this.cartId = cartId;
-    }
-
-    public MultiCheese(Cheese cheese, int quantity, int cartId) {
-        this(cheese, cartId);
         this.quantity = quantity;
     }
 
@@ -39,17 +29,10 @@ public class MultiCheese implements Serializable { // какого?
         return cheese;
     }
 
-    public int getCheeseId() {
-        return cheeseId;
-    }
-
     public int getQuantity() {
         return quantity;
     }
 
-    public int getCartId() {
-        return cartId;
-    }
 
     public void setId(int id) {
         this.id = id;
@@ -59,16 +42,13 @@ public class MultiCheese implements Serializable { // какого?
         this.cheese = cheese;
     }
 
-    public void setCheeseId(int cheeseId) {
-        this.cheeseId = cheeseId;
-    }
-
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
 
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
+
+    public int getCheeseId() {
+        return cheese.getId();
     }
 
     public String getName() {

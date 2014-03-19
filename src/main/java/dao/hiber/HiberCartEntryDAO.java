@@ -25,4 +25,11 @@ public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
     public List<MultiCheese> getCartEntries(Cart cart) {
         return null;
     }
+
+    @Override
+    public List<MultiCheese> getCartEntries(int cartId) {
+        return null;
+    }
+
+
 }

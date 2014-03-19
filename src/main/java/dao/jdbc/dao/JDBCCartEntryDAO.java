@@ -26,11 +26,11 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
         PreparedStatement statement = null;
 
         try {
-
             System.out.println("Adding CartEntry for " +
                     cheese.getName() + "...");
             System.out.println("Cart ID: " + cart.getId());
             System.out.println("Cheese ID: " + cheese.getCheeseId());
+            System.out.println("Cheese name: " + cheese.getName());
             System.out.println("Quantity: " + cheese.getQuantity());
 
             statement = connection.prepareStatement(
@@ -53,6 +53,10 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
     }
 
     public List<MultiCheese> getCartEntries(Cart cart) {
+        return getCartEntries(cart.getId());
+    }
+
+    public List<MultiCheese> getCartEntries(int cartId) {
         List<MultiCheese> list = null;
         PreparedStatement statement = null;
         ResultSet result = null;
@@ -62,11 +66,11 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
             statement = connection.prepareStatement(
                     "SELECT * FROM CartEntries " +
                             "WHERE CartID = ?;");
-            statement.setInt(1, cart.getId());
+            statement.setInt(1, cartId);
             result = statement.executeQuery();
 
             System.out.println("[JDBC] SELECT * FROM CartEntries " +
-                    "WHERE CartID = " + cart.getId() + ";");
+                    "WHERE CartID = " + cartId + ";");
 
             list = new ArrayList<MultiCheese>();
             while (result.next()) {
@@ -74,8 +78,7 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
                 Cheese cheese = cheeseDAO.getCheese(cheeseID);
                 MultiCheese multiCheese = new MultiCheese(
                         cheese,
-                        result.getInt("Quantity"),
-                        result.getInt("CartID")
+                        result.getInt("Quantity")
                 );
                 list.add(multiCheese);
             }

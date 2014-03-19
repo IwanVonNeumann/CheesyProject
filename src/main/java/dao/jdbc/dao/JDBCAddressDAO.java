@@ -36,16 +36,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                     "\tWHERE Deleted <> true;");
             list = new ArrayList<Address>();
             while (result.next()) {
-                //Address address = new Address(result.getString("CustomerName"),
-                Address address = new JDBCAddressProxy(result.getString("CustomerName"),
-                        result.getString("Street"),
-                        result.getString("City"),
-                        result.getInt("ZipCode"),
-                        result.getInt("CustomerID"),
-                        result.getBytes("PasswordHash"),
-                        result.getBoolean("deleted"),
-                        connection
-                );
+                Address address = buildAddress(result);
                 list.add(address);
             }
         } catch (SQLException e) {
@@ -58,13 +49,50 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
-    // включая безопасно удаленные
-    public List<Address> getFullAddressList() {
-        //System.out.println("Accessing data...");
-            /*statement = connection.createStatement();
-            result = statement.executeQuery(
-                    "SELECT * FROM Customers;");*/
-        return null; //все адреса, включая удаленные
+    public Address getAddress(int id) {
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        Address address = null;
+
+        try {
+            //System.out.println("Accessing data...");
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Customers " +
+                            "WHERE CustomerID = ?;");
+            statement.setInt(1, id);
+            result = statement.executeQuery();
+            result.next();
+            address = buildAddress(result);
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+            return address;
+        }
+    }
+
+    public Address getAddress(String name) {
+        PreparedStatement statement = null;
+        ResultSet result = null;
+        Address address = null;
+
+        try {
+            //System.out.println("Accessing data...");
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Customers " +
+                            "WHERE CustomerName = ?;");
+            statement.setString(1, name);
+            result = statement.executeQuery();
+            result.next();
+            address = buildAddress(result);
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+            return address;
+        }
     }
 
     public void insertAddress(Address address) {
@@ -88,8 +116,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                     "\t\tVALUES (\"" + address.getName() + "\", \"" +
                     address.getStreet() + "\", " + address.getZipCode() + ", " +
                     address.getCity() + ", hash);");
-            // извлечение ID из базы
-            //address.setId(getAddressId(address));
+
             generatedKeys = statement.getGeneratedKeys();
             generatedKeys.next();
             address.setId(generatedKeys.getInt(1));
@@ -100,72 +127,6 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         } finally {
             closeStatement(statement);
             closeResultSet(generatedKeys);
-        }
-    }
-
-    public Address getAddress(int id) {
-        PreparedStatement statement = null;
-        ResultSet result = null;
-        Address address = null;
-
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Customers " +
-                            "WHERE CustomerID = ?;");
-            statement.setInt(1, id);
-            result = statement.executeQuery();
-            result.next();
-            //address = new Address(result.getString("CustomerName"),
-            address = new JDBCAddressProxy(result.getString("CustomerName"),
-                    result.getString("Street"),
-                    result.getString("City"),
-                    result.getInt("ZipCode"),
-                    result.getInt("CustomerID"),
-                    result.getBytes("PasswordHash"),
-                    result.getBoolean("Deleted"),
-                    connection
-            );
-
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-            return address;
-        }
-    }
-
-    public Address getAddress(String name) {
-        PreparedStatement statement = null;
-        ResultSet result = null;
-        Address address = null;
-
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Customers " +
-                            "WHERE CustomerName = ?;");
-            statement.setString(1, name);
-            result = statement.executeQuery();
-            result.next();
-            //address = new Address(result.getString("CustomerName"),
-            address = new JDBCAddressProxy(result.getString("CustomerName"),
-                    result.getString("Street"),
-                    result.getString("City"),
-                    result.getInt("ZipCode"),
-                    result.getInt("CustomerID"),
-                    result.getBytes("PasswordHash"),
-                    result.getBoolean("deleted"),
-                    connection
-            );
-
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-            return address;
         }
     }
 
@@ -224,6 +185,29 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             closeStatement(statement);
         }
     }
+
+    private Address buildAddress(ResultSet result) throws SQLException {
+        return new JDBCAddressProxy(result.getString("CustomerName"),
+                result.getString("Street"),
+                result.getString("City"),
+                result.getInt("ZipCode"),
+                result.getInt("CustomerID"),
+                result.getBytes("PasswordHash"),
+                result.getBoolean("deleted"),
+                connection);
+    }
+
+
+    // включая безопасно удаленные
+    /*
+    public List<Address> getFullAddressList() {
+        //System.out.println("Accessing data...");
+            *//*statement = connection.createStatement();
+            result = statement.executeQuery(
+                    "SELECT * FROM Customers;");*//*
+        return null; //все адреса, включая удаленные
+    }*/
+
 
     /*
     // работает только если нет покупок

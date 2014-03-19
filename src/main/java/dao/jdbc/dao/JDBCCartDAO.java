@@ -1,8 +1,12 @@
 package dao.jdbc.dao;
 
+import dao.iface.AddressDAO;
 import dao.iface.CartDAO;
+import dao.iface.CartEntryDAO;
+
 import domain.Address;
 import domain.Cart;
+import domain.MultiCheese;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,8 +14,13 @@ import java.util.List;
 
 public class JDBCCartDAO extends JDBCDAO implements CartDAO {
 
+    private AddressDAO addressDAO;
+    private CartEntryDAO cartEntryDAO;
+
     public JDBCCartDAO(Connection connection) {
         super(connection);
+        addressDAO = new JDBCAddressDAO(connection);
+        cartEntryDAO = new JDBCCartEntryDAO(connection);
         System.out.println("[JDBC] Creating Cart DAO...");
     }
 
@@ -28,11 +37,19 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             System.out.println("[JDBC] SELECT * FROM Carts;");
             list = new ArrayList<Cart>();
             while (result.next()) {
-                Cart cart = new Cart(
+                /*Cart cart = new Cart(
                         result.getTimestamp("Clock"),
                         result.getInt("CartID"),
                         result.getInt("CustomerID")
-                );
+                );*/
+                int cartId = result.getInt("CartID");
+                List<MultiCheese> cheeses = cartEntryDAO.getCartEntries(cartId);
+
+                int customerId = result.getInt("CustomerID");
+                Address address = addressDAO.getAddress(customerId);
+
+                Cart cart = new Cart(cartId, cheeses, address,
+                        result.getTimestamp("Clock"));
                 list.add(cart);
             }
         } catch (SQLException e) {
@@ -59,10 +76,16 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
                     "WHERE CustomerID = " + address.getId() + ";");
             list = new ArrayList<Cart>();
             while (result.next()) {
-                Cart cart = new Cart(result.getTimestamp("Clock"),
+                /*Cart cart = new Cart(result.getTimestamp("Clock"),
                         result.getInt("CartID"),
                         result.getInt("CustomerID")
-                );
+                );*/
+                int cartId = result.getInt("CartID");
+                List<MultiCheese> cheeses = cartEntryDAO.getCartEntries(cartId);
+
+                Cart cart = new Cart(cartId, cheeses, address,
+                        result.getTimestamp("Clock"));
+
                 list.add(cart);
             }
 
@@ -76,6 +99,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
     }
 
     //public void insertCart(Address address, Cart cart) {
+    // TODO организовать каскадную вставку элементов
     public void insertCart(Cart cart) {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;

@@ -17,7 +17,5 @@ public interface CheeseDAO {
 
     void updateCheese(Cheese cheese);
 
-    // void deleteCheese(Cheese cheese); // возможно, удалять по умлочанию стоит безопасно
-
     void safeDeleteCheese(Cheese cheese);
 }

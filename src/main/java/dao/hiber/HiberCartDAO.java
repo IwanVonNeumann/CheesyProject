@@ -42,11 +42,11 @@ public class HiberCartDAO extends HiberDAO implements CartDAO {
 
     @Override
     public void insertCart(Cart cart) {
-        cart.setCustomerID(address.getId());
+        /*cart.setCustomerID(address.getId());
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.save(cart);
         session.getTransaction().commit();
-        session.close();
+        session.close();*/
     }
 }

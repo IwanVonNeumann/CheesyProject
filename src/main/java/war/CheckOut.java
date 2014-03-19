@@ -8,15 +8,53 @@ import org.apache.wicket.markup.html.link.Link;
 import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
 
-import java.sql.Timestamp;
-
 public class CheckOut extends CheesePage {
-
-    //private Address address;
 
     public CheckOut() {
 
-        /*
+        add(new PageHeadPanel("head"));
+
+        Address address = getCheeseSession().getAddress();
+
+        add(new Label("name", address.getName()));
+        add(new Label("street", address.getStreet()));
+        add(new Label("zipCode", address.getZipCode().toString()));
+        add(new Label("city", address.getCity()));
+
+        add(new Link("cancel") {
+            @Override
+            public void onClick() {
+                setResponsePage(Index.class);
+            }
+        });
+
+        //form.add(new Button("order") {
+        //add(new Button("order") {
+        add(new Link("order") {
+            @Override
+            //public void onSubmit() {
+            public void onClick() {
+                Cart cart = getCart();
+                // обслуживание
+                cart.order();
+
+                // TODO сделать сохранение корзины и всех товаров как одну операцию
+                getCheeseSession().getCartDAO().insertCart(cart);
+
+                for (MultiCheese cheese : cart.getCheeses()) {
+                    getCheeseSession().getCartEntryDAO().insertCartEntry(
+                            cart, cheese);
+                }
+
+                // сброс корзины
+                cart.reset();
+                setResponsePage(Index.class);
+            }
+        });
+
+        add(new ShoppingCartPanel("shoppingCart", getCart()));
+
+         /*
         add(new FeedbackPanel("feedback"));
 
         Form form = new Form("form");
@@ -43,47 +81,6 @@ public class CheckOut extends CheesePage {
             }
         });
         */
-
-        add(new PageHeadPanel("head"));
-
-        Address address = getCheeseSession().getAddress();
-
-        add(new Label("name", address.getName()));
-        add(new Label("street", address.getStreet()));
-        add(new Label("zipCode", address.getZipCode().toString()));
-        add(new Label("city", address.getCity()));
-
-        add(new Link("cancel") {
-            @Override
-            public void onClick() {
-                setResponsePage(Index.class);
-            }
-        });
-
-
-        //form.add(new Button("order") {
-        //add(new Button("order") {
-        add(new Link("order") {
-            @Override
-            //public void onSubmit() {
-            public void onClick() {
-                Cart cart = getCart();
-                // обслуживание
-                cart.setTime(new Timestamp(System.currentTimeMillis()));
-                getCheeseSession().getCartDAO().insertCart(cart);
-
-                for (MultiCheese cheese : cart.getCheeses()) {
-                    getCheeseSession().getCartEntryDAO().insertCartEntry(
-                            cart, cheese);
-                }
-
-                // сброс корзины
-                cart.getCheeses().clear();
-                setResponsePage(Index.class);
-            }
-        });
-
-        add(new ShoppingCartPanel("shoppingCart", getCart()));
     }
 
 }

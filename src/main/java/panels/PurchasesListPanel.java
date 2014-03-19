@@ -6,7 +6,6 @@ import domain.MultiCheese;
 
 import look.RowModifier;
 
-import models.CartEntriesModel;
 import models.CartsModel;
 
 import org.apache.wicket.markup.html.basic.Label;
@@ -14,7 +13,6 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
-
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
@@ -32,23 +30,8 @@ public class PurchasesListPanel extends CheesePanel {
         this(id, null);
     }
 
-    // TODO проверить двухкратное обращение к базе
-    // TODO начать пользоваться ленивой инициализацией
     public PurchasesListPanel(String id, final Address address) {
         super(id);
-
-
-        /* // старая версия, когда корзины грузились из базы
-        CartsModel cartsModel;
-        if (address == null) {
-            cartsModel = new CartsModel(
-                    getCheeseSession().getCartDAO());
-        }
-        else {
-            cartsModel = new CartsModel(
-                    getCheeseSession().getCartDAO(), address);
-        }
-        */
 
         // передан ли конкретный покупатель в качестве параметра?
         IModel cartsModel = address == null ?
@@ -63,8 +46,8 @@ public class PurchasesListPanel extends CheesePanel {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         Cart cart = (Cart) listItem.getModelObject();
-                        Address customer = getCheeseSession().getAddressDAO().
-                                getAddress(cart.getCustomerID());
+                        Address customer = cart.getAddress();
+
                         Label customerName = new Label("customer", customer.getName());
 
                         if (address != null) {
@@ -83,17 +66,7 @@ public class PurchasesListPanel extends CheesePanel {
                         listItem.add(new Label("time",
                                 timeFormat.format(cart.getTime())));
 
-                        CartEntriesModel entriesModel =
-                                new CartEntriesModel(
-                                        getCheeseSession().getCartEntryDAO(), cart);
-
-                        // возможно, неэффективно:
-                        // потом сразу же еще раз полезем в базу
-                        cart.setCheeses(
-                                getCheeseSession().getCartEntryDAO().
-                                        getCartEntries(cart));
-
-                        listItem.add(new ListView("entries", entriesModel) {
+                        listItem.add(new ListView("entries", cart.getCheeses()) {
                             @Override
                             protected void populateItem(ListItem listItem) {
                                 MultiCheese cheese =
@@ -115,7 +88,6 @@ public class PurchasesListPanel extends CheesePanel {
 
                         listItem.add(new Label("total",
                                 String.format("$%.2f", cart.getTotal())));
-
                     }
                 };
         add(customers);

@@ -59,8 +59,9 @@ public class AdminCheesesListPanel extends CheesePanel {
 
                                 // удаление из корзины
                                 // дописать, чтобы работало для всех сессий
-                                getCheeseSession().getCart().removeCheese(
-                                        new MultiCheese(selected));
+                                /*getCheeseSession().getCart().removeCheese(
+                                        new MultiCheese(selected));*/
+                                getCheeseSession().getCart().removeCheese(selected);
 
                                 setResponsePage(ViewCheeses.class);
                             }

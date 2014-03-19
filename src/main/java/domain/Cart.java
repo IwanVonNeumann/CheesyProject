@@ -2,28 +2,19 @@ package domain;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Cart implements Serializable {
 
     private int id;
-    private List<MultiCheese> cheeses = new ArrayList<MultiCheese>();
+    private List<MultiCheese> cheeses;
     private Address address;
     private Timestamp time;
-    private int customerID;
 
     // создание вместе с сессией
     public Cart() {
         cheeses = new LinkedList<MultiCheese>();
-    }
-
-    // извлечение из базы
-    public Cart(Timestamp time, int id, int customerID) {
-        this.time = time;
-        this.id = id;
-        this.customerID = customerID;
     }
 
     // цивилизованное извлечение из базы
@@ -50,10 +41,6 @@ public class Cart implements Serializable {
         return time;
     }
 
-    public int getCustomerID() {
-        return customerID;
-    }
-
 
     public void setId(int id) {
         this.id = id;
@@ -69,10 +56,6 @@ public class Cart implements Serializable {
 
     public void setTime(Timestamp time) {
         this.time = time;
-    }
-
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
     }
 
 
@@ -101,7 +84,7 @@ public class Cart implements Serializable {
         }
     }
 
-    public void removeCheese(MultiCheese cheese) {
+    public void removeCheese(Cheese cheese) {
         int n = cheeses.size();
         for (int i = 0; i < n; i++) {
             if(cheeses.get(i).getName().equals(cheese.getName())) {
@@ -109,6 +92,14 @@ public class Cart implements Serializable {
                 break;
             }
         }
+    }
+
+    public void order() {
+        time = new Timestamp(System.currentTimeMillis());
+    }
+
+    public void reset() {
+        cheeses.clear();
     }
 
 }

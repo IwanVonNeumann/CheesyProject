@@ -6,7 +6,6 @@ import java.sql.Statement;
 
 public abstract class JDBCDAO {
 
-
     protected Connection connection;
 
     public JDBCDAO(Connection connection) {

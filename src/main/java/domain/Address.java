@@ -14,12 +14,10 @@ public class Address {
     private Integer zipCode;
     private byte[] hash;
     private boolean deleted;
-
     private List<Cart> purchases;
 
 
-    public Address() {
-    }
+    public Address() {}
 
     // базовый конструктор
     public Address(String name, String street, String city, Integer zipCode) {
@@ -115,6 +113,8 @@ public class Address {
         this.purchases = purchases;
     }
 
+
+
     public boolean correctHash(String password) {
         if (hash == null) System.out.println("Hash is null!");
         boolean correct = true;
@@ -162,7 +162,6 @@ public class Address {
     public void delete() {
         setDeleted(true);
     }
-
 
     public void setPassword(String password) {
         this.hash = calculateHash(password);

@@ -19,8 +19,6 @@ public interface AddressDAO {
 
     void updateAddress(Address address);
 
-    // void deleteAddress(Address address); // удалить со временем
-
     void safeDeleteAddress(Address address);
 
 }

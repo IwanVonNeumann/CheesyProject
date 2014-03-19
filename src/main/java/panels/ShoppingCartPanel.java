@@ -21,7 +21,7 @@ public class ShoppingCartPanel extends CheesePanel {
                 new PropertyModel(this, "cart.cheeses")) {
             @Override
             protected void populateItem(ListItem listItem) {
-                MultiCheese cheese = (MultiCheese) listItem.getModelObject();
+                final MultiCheese cheese = (MultiCheese) listItem.getModelObject();
                 listItem.add(new Label("name", cheese.getName()));
                 listItem.add(new ArticleCounter("articleCounter", cheese));
                 listItem.add(new Label("price", "$" + cheese.getPrice().toString()));
@@ -29,8 +29,7 @@ public class ShoppingCartPanel extends CheesePanel {
                 listItem.add(new Link("remove", listItem.getModel()) {
                     @Override
                     public void onClick() {
-                        MultiCheese selected = (MultiCheese) getModelObject();
-                        getCart().removeCheese(selected);
+                        getCart().removeCheese(cheese.getCheese());
                     }
                 });
             }
