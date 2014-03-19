@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface CartEntryDAO {
 
-    public void insertCartEntry(Cart cart, MultiCheese cheese);
+    void insertCartEntry(Cart cart, MultiCheese cheese);
 
-    public List<MultiCheese> getCartEntries(Cart cart);
+    List<MultiCheese> getCartEntries(Cart cart);
 }

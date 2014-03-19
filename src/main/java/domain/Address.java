@@ -2,6 +2,7 @@ package domain;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Address {
@@ -16,7 +17,9 @@ public class Address {
 
     private List<Cart> purchases;
 
-    public Address() {}
+
+    public Address() {
+    }
 
     // базовый конструктор
     public Address(String name, String street, String city, Integer zipCode) {
@@ -30,32 +33,21 @@ public class Address {
     public Address(String name, String street, String city, Integer zipCode, String password) {
         this(name, street, city, zipCode);
         hash = calculateHash(password);
+        purchases = new LinkedList<Cart>();
     }
 
-    // считывание из базы, запись создана скриптом
-    public Address(String name, String street, String city, Integer zipCode, int id) {
-        this(name, street, city, zipCode);
-        this.id = id;
-        this.hash = calculateHash("cheese"); // default test-password
-    }
-
-    // используется только в цепочке
-    protected Address(String name, String street, String city,
-                   Integer zipCode, int id, byte[] hash) {
-        this(name, street, city, zipCode, id);
-        if (hash != null) {
-            this.hash = hash;
-        }
-        // else this.hash = calculateHash("cheese"); // а может не надо?
-    }
-
-    // считывание из базы, запись создана программно
+    // считывание из базы
     public Address(String name, String street, String city,
                    Integer zipCode, int id, byte[] hash, boolean deleted) {
-        this(name, street, city, zipCode, id, hash);
+        this(name, street, city, zipCode);
+        this.id = id;
+        if (hash != null) {
+            this.hash = hash;
+        } else {
+            this.hash = calculateHash("cheese"); // default test-password
+        }
         this.deleted = deleted;
     }
-
 
 
     public String getName() {
@@ -89,6 +81,7 @@ public class Address {
     public List<Cart> getPurchases() {
         return purchases;
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -127,7 +120,7 @@ public class Address {
         boolean correct = true;
         byte[] pass = calculateHash(password);
         int k = pass.length;
-        for(int i = 0; i < k; i++) {
+        for (int i = 0; i < k; i++) {
             correct &= hash[i] == pass[i];
         }
         return correct;
@@ -171,15 +164,13 @@ public class Address {
     }
 
 
-
-
     public void setPassword(String password) {
         this.hash = calculateHash(password);
     }
 
     @Override
     public boolean equals(Object o) {
-        Address that = (Address)o;
+        Address that = (Address) o;
         return (this.id == that.id);
     }
 

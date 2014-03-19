@@ -3,43 +3,79 @@ package domain;
 import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Cart implements Serializable {
 
     private int id;
     private List<MultiCheese> cheeses = new ArrayList<MultiCheese>();
-    private Address billingAddress = new Address();
+    private Address address;
     private Timestamp time;
     private int customerID;
 
+    // создание вместе с сессией
     public Cart() {
+        cheeses = new LinkedList<MultiCheese>();
     }
 
+    // извлечение из базы
     public Cart(Timestamp time, int id, int customerID) {
         this.time = time;
         this.id = id;
         this.customerID = customerID;
     }
 
-    // зачем??
+    // цивилизованное извлечение из базы
+    public Cart(int id, List<MultiCheese> cheeses, Address address, Timestamp time) {
+        this.id = id;
+        this.cheeses = cheeses;
+        this.address = address;
+        this.time = time;
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public List<MultiCheese> getCheeses() {
         return cheeses;
     }
 
-    // Если понадобится - написать
-    // понадобилось =)
-    public void setCheeses(List<MultiCheese> other) {
-        cheeses = other;
+    public Address getAddress() {
+        return address;
     }
 
-    public Address getBillingAddress() {
-        return billingAddress;
+    public Timestamp getTime() {
+        return time;
     }
 
-    public void setBillingAddress(Address other) {
-        billingAddress = other;
+    public int getCustomerID() {
+        return customerID;
     }
+
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCheeses(List<MultiCheese> cheeses) {
+        this.cheeses = cheeses;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setTime(Timestamp time) {
+        this.time = time;
+    }
+
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
+
+
 
     public Double getTotal() {
         double total = 0;
@@ -75,27 +111,4 @@ public class Cart implements Serializable {
         }
     }
 
-    public void setTime(Timestamp time) {
-        this.time = time;
-    }
-
-    public Timestamp getTime() {
-        return time;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public int getCustomerID() {
-        return customerID;
-    }
-
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
-    }
 }

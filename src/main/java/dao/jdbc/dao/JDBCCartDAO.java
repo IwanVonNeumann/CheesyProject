@@ -28,7 +28,8 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             System.out.println("[JDBC] SELECT * FROM Carts;");
             list = new ArrayList<Cart>();
             while (result.next()) {
-                Cart cart = new Cart(result.getTimestamp("Clock"),
+                Cart cart = new Cart(
+                        result.getTimestamp("Clock"),
                         result.getInt("CartID"),
                         result.getInt("CustomerID")
                 );
@@ -74,7 +75,8 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
         }
     }
 
-    public void insertCart(Address address, Cart cart) {
+    //public void insertCart(Address address, Cart cart) {
+    public void insertCart(Cart cart) {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;
 
@@ -83,7 +85,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
                     "INSERT INTO Carts (Clock, CustomerID) " +
                             "VALUES (?, ?);");
             statement.setTimestamp(1, cart.getTime());
-            statement.setInt(2, address.getId());
+            statement.setInt(2, cart.getAddress().getId());
             statement.executeUpdate();
 
             generatedKeys = statement.getGeneratedKeys();
@@ -92,7 +94,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
 
             System.out.println("[JDBC] INSERT INTO Carts " +
                     "(Clock, CustomerID)\n" +
-                    "\t\tVALUES (date, \"" + address.getId() + "\");");
+                    "\t\tVALUES (date, \"" + cart.getAddress().getId() + "\");");
         } catch (SQLException e) {
             System.out.println("Exception while inserting data...");
         } finally {

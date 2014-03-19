@@ -22,7 +22,7 @@ public class CheckOut extends CheesePage {
         Form form = new Form("form");
         add(form);
 
-        address = getCart().getBillingAddress();
+        address = getCart().getAddress();
 
         form.add(new TextField("name",
                 new PropertyModel(address, "name")).setRequired(true));
@@ -46,7 +46,7 @@ public class CheckOut extends CheesePage {
 
         add(new PageHeadPanel("head"));
 
-        final Address address = getCheeseSession().getAddress();
+        Address address = getCheeseSession().getAddress();
 
         add(new Label("name", address.getName()));
         add(new Label("street", address.getStreet()));
@@ -70,7 +70,7 @@ public class CheckOut extends CheesePage {
                 Cart cart = getCart();
                 // обслуживание
                 cart.setTime(new Timestamp(System.currentTimeMillis()));
-                getCheeseSession().getCartDAO().insertCart(address, cart);
+                getCheeseSession().getCartDAO().insertCart(cart);
 
                 for (MultiCheese cheese : cart.getCheeses()) {
                     getCheeseSession().getCartEntryDAO().insertCartEntry(

@@ -3,14 +3,22 @@ package panels;
 import domain.Address;
 import domain.Cart;
 import domain.MultiCheese;
+
 import look.RowModifier;
+
 import models.CartEntriesModel;
 import models.CartsModel;
+
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+
+import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.Model;
+
+import java.io.Serializable;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -24,9 +32,13 @@ public class PurchasesListPanel extends CheesePanel {
         this(id, null);
     }
 
+    // TODO проверить двухкратное обращение к базе
+    // TODO начать пользоваться ленивой инициализацией
     public PurchasesListPanel(String id, final Address address) {
         super(id);
 
+
+        /* // старая версия, когда корзины грузились из базы
         CartsModel cartsModel;
         if (address == null) {
             cartsModel = new CartsModel(
@@ -36,6 +48,15 @@ public class PurchasesListPanel extends CheesePanel {
             cartsModel = new CartsModel(
                     getCheeseSession().getCartDAO(), address);
         }
+        */
+
+        // передан ли конкретный покупатель в качестве параметра?
+        IModel cartsModel = address == null ?
+                // полный список из базы
+                new CartsModel(getCheeseSession().getCartDAO()) :
+                // список покупок текущего пользователя
+                new Model((Serializable) address.getPurchases());
+
 
         PageableListView customers =
                 new PageableListView("carts", cartsModel, 10) {

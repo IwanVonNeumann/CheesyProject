@@ -13,8 +13,11 @@ import java.util.List;
 
 public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
+    Connection connection;
+
     public JDBCAddressDAO(Connection connection) {
         super(connection);
+        this.connection = connection;
         System.out.println("[JDBC] Creating Address DAO...");
     }
 
@@ -40,7 +43,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                         result.getInt("ZipCode"),
                         result.getInt("CustomerID"),
                         result.getBytes("PasswordHash"),
-                        result.getBoolean("deleted")
+                        result.getBoolean("deleted"),
+                        connection
                 );
                 list.add(address);
             }
@@ -119,7 +123,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                     result.getInt("ZipCode"),
                     result.getInt("CustomerID"),
                     result.getBytes("PasswordHash"),
-                    result.getBoolean("Deleted")
+                    result.getBoolean("Deleted"),
+                    connection
             );
 
         } catch (SQLException e) {
@@ -151,7 +156,8 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                     result.getInt("ZipCode"),
                     result.getInt("CustomerID"),
                     result.getBytes("PasswordHash"),
-                    result.getBoolean("deleted")
+                    result.getBoolean("deleted"),
+                    connection
             );
 
         } catch (SQLException e) {

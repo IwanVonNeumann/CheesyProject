@@ -10,9 +10,9 @@ import java.util.List;
  */
 public interface CartDAO {
 
-    public List<Cart> getCartsList();
+    List<Cart> getCartsList();
 
-    public List<Cart> getCartsList(Address address);
+    List<Cart> getCartsList(Address address);
 
-    public void insertCart(Address address, Cart cart);
+    void insertCart(Cart cart);
 }
