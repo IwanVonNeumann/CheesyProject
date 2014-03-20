@@ -19,7 +19,7 @@ public class CheesesListPanel extends CheesePanel {
         super(id);
 
         cheesesModel = new CheesesModel(
-                getCheeseSession().getCheeseDAO());
+                getCheeseSession().getDataCache());
 
         PageableListView cheeses =
                 new PageableListView("cheeses", cheesesModel, 3) {
@@ -54,7 +54,7 @@ public class CheesesListPanel extends CheesePanel {
     }
 
     protected List<Cheese> getCheeses() {
-        return getCheeseSession().getCheeseDAO().getCheesesList();
+        return getCheeseSession().getDataCache().getCheesesList();
         //return CheeseApplication.get().getCheeses();
     }
 }

@@ -9,14 +9,14 @@ import org.apache.wicket.model.PropertyModel;
 import war.Index;
 
 /**
- * Created by Iwan on 14.1.3.
+ * Created by Iwan on 14.1.3
  */
-public class AuthentificationPanel extends CheesePanel {
+public class AuthenticationPanel extends CheesePanel {
 
-    String username = new String();
-    String password = new String();
+    String username;
+    String password;
 
-    public AuthentificationPanel(String id) {
+    public AuthenticationPanel(String id) {
         super(id);
 
         Form form = new Form("form");
@@ -35,8 +35,8 @@ public class AuthentificationPanel extends CheesePanel {
             public void onSubmit() {
                 super.onSubmit();
                 Address address = getCheeseSession().
-                        getAddressDAO().getAddress(username);
-                if ((address != null) & (address.correctHash(password))) {
+                        getDataCache().getAddress(username);
+                if ((address != null) && (address.correctHash(password))) {
                     getCheeseSession().setAddress(address);
                     setResponsePage(Index.class);
                 }

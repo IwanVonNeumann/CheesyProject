@@ -36,7 +36,7 @@ public class PurchasesListPanel extends CheesePanel {
         // передан ли конкретный покупатель в качестве параметра?
         IModel cartsModel = address == null ?
                 // полный список из базы
-                new CartsModel(getCheeseSession().getCartDAO()) :
+                new CartsModel(getCheeseSession().getDataCache()) :
                 // список покупок текущего пользователя
                 new Model((Serializable) address.getPurchases());
 

@@ -19,7 +19,7 @@ public class ViewCustomers extends CheesePage {
         add(new PageHeadPanel("head"));
 
         CustomersModel customersModel = new CustomersModel(
-                getCheeseSession().getAddressDAO());
+                getCheeseSession().getDataCache());
 
         PageableListView customers =
                 new PageableListView("customers", customersModel, 10) {
@@ -41,7 +41,7 @@ public class ViewCustomers extends CheesePage {
 
                                 //удаление из базы
                                 //getCheeseSession().getAddressDAO().deleteAddress(address);
-                                getCheeseSession().getAddressDAO().
+                                getCheeseSession().getDataCache().
                                         safeDeleteAddress(address);
 
                                 if (address.equals(getCheeseSession().getAddress())) {

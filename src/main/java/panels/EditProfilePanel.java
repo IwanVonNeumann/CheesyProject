@@ -37,7 +37,7 @@ public class EditProfilePanel extends CheesePanel {
                 getParent().getParent().setVisible(false);
                 getParent().getParent().getParent().
                         get("profile").setVisible(true);
-                getCheeseSession().getAddressDAO().updateAddress(
+                getCheeseSession().getDataCache().updateAddress(
                         (Address)(getParent().getModelObject()));
             }
         });

@@ -11,15 +11,9 @@ import dao.iface.CheeseDAO;
 import dao.iface.*;
 */
 
-import dao.iface.DBConnection;
-import dao.iface.AddressDAO;
-import dao.iface.CartDAO;
-import dao.iface.CartEntryDAO;
-import dao.iface.CheeseDAO;
-
+import cache.iface.IDataCache;
 import domain.Address;
 import domain.Cart;
-
 import org.apache.wicket.Request;
 import org.apache.wicket.protocol.http.WebSession;
 
@@ -28,33 +22,16 @@ public class CheeseSession extends WebSession {
     private Cart cart;
     private Address address;
 
-    private DBConnection connection;
+    private IDataCache dataCache;
 
-    protected CheeseSession(Request request, DBConnection connection) {
+    protected CheeseSession(Request request, IDataCache dataCache) {
         super(request);
-
         cart = new Cart();
-        this.connection = connection;
+        this.dataCache = dataCache;
     }
 
     public Cart getCart() {
         return cart;
-    }
-
-    public CheeseDAO getCheeseDAO() {
-        return connection.getCheeseDAO();
-    }
-
-    public AddressDAO getAddressDAO() {
-        return connection.getAddressDAO();
-    }
-
-    public CartEntryDAO getCartEntryDAO() {
-        return connection.getCartEntryDAO();
-    }
-
-    public CartDAO getCartDAO() {
-        return connection.getCartDAO();
     }
 
     public Address getAddress() {
@@ -63,6 +40,10 @@ public class CheeseSession extends WebSession {
 
     public void setAddress(Address address) {
         this.address = address;
+    }
+
+    public IDataCache getDataCache() {
+        return  dataCache;
     }
 
     public void logout() {

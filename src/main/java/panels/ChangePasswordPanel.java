@@ -9,13 +9,13 @@ import org.apache.wicket.model.PropertyModel;
 import views.ViewProfile;
 
 /**
- * Created by Iwan on 14.1.3.
+ * Created by Iwan on 14.1.3
  */
 public class ChangePasswordPanel extends CheesePanel {
 
-    String oldPassword = new String();
-    String password1 = new String();
-    String password2 = new String();
+    String oldPassword;
+    String password1;
+    String password2;
 
     public ChangePasswordPanel(String id) {
         super(id);
@@ -50,7 +50,7 @@ public class ChangePasswordPanel extends CheesePanel {
                 if (address.correctHash(oldPassword)
                         & (password1.equals(password2))) {
                     address.setPassword(password1);
-                    getCheeseSession().getAddressDAO().updateAddress(address);
+                    getCheeseSession().getDataCache().updateAddress(address);
                     System.out.println("Password set to " + password1);
                 }
                 setResponsePage(ViewProfile.class);

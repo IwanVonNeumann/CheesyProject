@@ -40,7 +40,7 @@ public class AddCheesePanel extends CheesePanel {
             @Override
             public void onSubmit() {
                 System.out.println("Add Cheese clicked;");
-                getCheeseSession().getCheeseDAO().addCheese(cheese);
+                getCheeseSession().getDataCache().addCheese(cheese);
                 setResponsePage(ViewCheeses.class);
             }
         });

@@ -12,7 +12,7 @@ import war.Index;
 import war.LoginPage;
 
 /**
- * Created by IRuskevich on 14.28.2.
+ * Created by IRuskevich on 14.28.2
  */
 public class RegisterUserPanel extends CheesePanel {
 
@@ -50,7 +50,7 @@ public class RegisterUserPanel extends CheesePanel {
                 super.onSubmit();
                 Address address = (Address) getParent().getModelObject();
                 address.setPassword(password1);
-                getCheeseSession().getAddressDAO().insertAddress(address);
+                getCheeseSession().getDataCache().insertAddress(address);
                 getCheeseSession().setAddress(address);
                 setResponsePage(Index.class);
             }

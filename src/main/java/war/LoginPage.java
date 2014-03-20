@@ -7,13 +7,13 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
-import panels.AuthentificationPanel;
+import panels.AuthenticationPanel;
 
 public class LoginPage extends CheesePage {
 
     public LoginPage() {
 
-        add(new AuthentificationPanel("enter"));
+        add(new AuthenticationPanel("enter"));
 
         add(new Link("signup") {
             @Override
@@ -23,7 +23,7 @@ public class LoginPage extends CheesePage {
         });
 
         CustomersModel customersModel = new CustomersModel(
-                getCheeseSession().getAddressDAO());
+                getCheeseSession().getDataCache());
 
         ListView customers =
                 new ListView("customers", customersModel) {
@@ -42,11 +42,8 @@ public class LoginPage extends CheesePage {
                         };
                         link.add(new Label("name", address.getName()));
                         listItem.add(link);
-
                     }
                 };
         add(customers);
-
-
     }
 }

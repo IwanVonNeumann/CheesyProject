@@ -1,22 +1,21 @@
 package war;
 
-import cache.DataCache;
+import cache.iface.IDataCache;
+import cache.mock.DataCacheMock;
+
 import dao.iface.ConnectionManager;
 import dao.jdbc.JDBCConnectionManager;
+
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
 
 public class CheeseApplication extends WebApplication {
 
-    //private List<Cheese> cheeses;
-
-    private ConnectionManager cm;
-    private DataCache dataCache;
+    private IDataCache dataCache;
 
     public CheeseApplication() {
-        //cheeses = getCheeses();
-        cm = new JDBCConnectionManager();
-        dataCache = new DataCache();
+        ConnectionManager cm = new JDBCConnectionManager();
+        dataCache = new DataCacheMock(cm.getConnection());
     }
 
     @Override
@@ -33,12 +32,11 @@ public class CheeseApplication extends WebApplication {
 
     @Override
     public Session newSession(Request request, Response response) {
-        return new CheeseSession(request, cm.getConnection());
+        return new CheeseSession(request, dataCache);
     }
 
     /*
     public List<Cheese> getCheeses() {
         return Collections.unmodifiableList(cheeses);
-
     } */
 }

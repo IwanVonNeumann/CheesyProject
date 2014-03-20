@@ -38,7 +38,7 @@ public class EditCheesePanel extends CheesePanel {
             public void onSubmit() {
                 //System.out.println("Update " +
                   //      cheese.getName() + " Cheese clicked;");
-                getCheeseSession().getCheeseDAO().updateCheese(cheese);
+                getCheeseSession().getDataCache().updateCheese(cheese);
                 setResponsePage(ViewCheeses.class);
             }
         });

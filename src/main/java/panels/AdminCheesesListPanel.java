@@ -1,7 +1,6 @@
 package panels;
 
 import domain.Cheese;
-import domain.MultiCheese;
 import look.RowModifier;
 import models.CheesesModel;
 import org.apache.wicket.markup.html.basic.Label;
@@ -21,7 +20,7 @@ public class AdminCheesesListPanel extends CheesePanel {
         super(id);
 
         cheesesModel = new CheesesModel(
-                getCheeseSession().getCheeseDAO());
+                getCheeseSession().getDataCache());
 
         PageableListView cheeses =
                 new PageableListView("cheeses", cheesesModel, 10) {
@@ -53,7 +52,7 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 Cheese selected = (Cheese) getModelObject();
 
                                 //удаление из базы
-                                getCheeseSession().getCheeseDAO().
+                                getCheeseSession().getDataCache().
                                         safeDeleteCheese(selected);
                                         //deleteCheese(selected);
 
@@ -70,7 +69,8 @@ public class AdminCheesesListPanel extends CheesePanel {
 
                     }
 
-                    /* переделывай wi:157
+                    /*
+                    // переделывай wi:157
                     @Override
                     protected IModel getListItemModel(IModel listViewModel, int index) {
                         Cheese cheese = ((List<Cheese>)listViewModel).get(index);
@@ -86,7 +86,7 @@ public class AdminCheesesListPanel extends CheesePanel {
     }
 
     protected List<Cheese> getCheeses() {
-        return getCheeseSession().getCheeseDAO().getCheesesList();
+        return getCheeseSession().getDataCache().getCheesesList();
     }
 
 }

@@ -37,7 +37,7 @@ public class CheckOut extends CheesePage {
             public void onClick() {
                 Cart cart = getCart();
                 cart.order(); // обслуживание
-                getCheeseSession().getCartDAO().insertCart(cart); // сохранение в базе
+                getCheeseSession().getDataCache().insertCart(cart); // сохранение в базе
                 cart.reset(); // сброс корзины
                 setResponsePage(Index.class);
             }
