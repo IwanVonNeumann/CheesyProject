@@ -11,7 +11,7 @@ public class Cheese {
     public Cheese() {
     }
 
-    public Cheese(String name, String description, Double price, int id) {
+    public Cheese(int id, String name, String description, Double price) {
         this.name = name;
         this.description = description;
         this.price = price;

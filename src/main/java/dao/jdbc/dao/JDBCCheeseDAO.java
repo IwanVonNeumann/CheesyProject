@@ -15,7 +15,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
     }
 
     public List<Cheese> getCheesesList() {
-        List<Cheese> list = null;
+        List<Cheese> list;
         PreparedStatement statement = null;
         ResultSet result = null;
 
@@ -29,58 +29,23 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
                     "\tWHERE Deleted <> true;");
             list = new ArrayList<Cheese>();
             while (result.next()) {
-                Cheese cheese = new Cheese(result.getString("CheeseName"),
-                        result.getString("Description"),
-                        result.getDouble("Price"),
-                        result.getInt("CheeseID"));
+                Cheese cheese = buildCheese(result);
                 list.add(cheese);
             }
+            return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
             System.out.println(e);
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return list;
-        }
-    }
-
-    // включая безопасно удаленные
-    public List<Cheese> getFullCheesesList() {
-        List<Cheese> list = null;
-        Statement statement = null;
-        ResultSet result = null;
-
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.createStatement();
-            result = statement.executeQuery( //Выполним запрос
-                    "SELECT * FROM Cheeses");
-            System.out.println("[JDBC] SELECT * FROM Cheeses;");
-            //result это указатель на первую строку с выборки
-            //чтобы вывести данные мы будем использовать
-            //метод next() , с помощью которого переходим к следующему элементу
-            list = new ArrayList<Cheese>();
-            while (result.next()) {
-                Cheese cheese = new Cheese(result.getString("CheeseName"),
-                        result.getString("Description"),
-                        result.getDouble("Price"),
-                        result.getInt("CheeseID"));
-                list.add(cheese);
-            }
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-            return list;
         }
     }
 
     public Cheese getCheese(int id) {
         PreparedStatement statement = null;
         ResultSet result = null;
-        Cheese cheese = null;
 
         try {
             //System.out.println("Searching for Cheese by ID...");
@@ -92,16 +57,13 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
             System.out.println("[JDBC] SELECT * FROM Cheeses " +
                     "WHERE CheeseID = " + id + ";");
             result.next();
-            cheese = new Cheese(result.getString("CheeseName"),
-                    result.getString("Description"),
-                    result.getDouble("Price"),
-                    result.getInt("CheeseID"));
+            return buildCheese(result);
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return cheese;
         }
     }
 
@@ -176,6 +138,46 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
             closeStatement(statement);
         }
     }
+
+    private Cheese buildCheese(ResultSet result) throws SQLException {
+        return new Cheese(result.getInt("CheeseID"),
+                result.getString("CheeseName"),
+                result.getString("Description"),
+                result.getDouble("Price"));
+    }
+
+    /*
+    // включая безопасно удаленные
+    public List<Cheese> getFullCheesesList() {
+        List<Cheese> list = null;
+        Statement statement = null;
+        ResultSet result = null;
+
+        try {
+            //System.out.println("Accessing data...");
+            statement = connection.createStatement();
+            result = statement.executeQuery( //Выполним запрос
+                    "SELECT * FROM Cheeses");
+            System.out.println("[JDBC] SELECT * FROM Cheeses;");
+            //result это указатель на первую строку с выборки
+            //чтобы вывести данные мы будем использовать
+            //метод next() , с помощью которого переходим к следующему элементу
+            list = new ArrayList<Cheese>();
+            while (result.next()) {
+                Cheese cheese = new Cheese(result.getString("CheeseName"),
+                        result.getString("Description"),
+                        result.getDouble("Price"),
+                        result.getInt("CheeseID"));
+                list.add(cheese);
+            }
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+            return list;
+        }
+    }*/
 
     /*public void deleteCheese(Cheese cheese) {
 

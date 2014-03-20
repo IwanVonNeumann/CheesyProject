@@ -2,9 +2,10 @@ package war;
 
 import domain.Address;
 import domain.Cart;
-import domain.MultiCheese;
+
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
+
 import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
 
@@ -35,19 +36,9 @@ public class CheckOut extends CheesePage {
             //public void onSubmit() {
             public void onClick() {
                 Cart cart = getCart();
-                // обслуживание
-                cart.order();
-
-                // TODO сделать сохранение корзины и всех товаров как одну операцию
-                getCheeseSession().getCartDAO().insertCart(cart);
-
-                for (MultiCheese cheese : cart.getCheeses()) {
-                    getCheeseSession().getCartEntryDAO().insertCartEntry(
-                            cart, cheese);
-                }
-
-                // сброс корзины
-                cart.reset();
+                cart.order(); // обслуживание
+                getCheeseSession().getCartDAO().insertCart(cart); // сохранение в базе
+                cart.reset(); // сброс корзины
                 setResponsePage(Index.class);
             }
         });
@@ -82,5 +73,4 @@ public class CheckOut extends CheesePage {
         });
         */
     }
-
 }

@@ -1,5 +1,6 @@
 package war;
 
+import cache.DataCache;
 import dao.iface.ConnectionManager;
 import dao.jdbc.JDBCConnectionManager;
 import org.apache.wicket.*;
@@ -10,10 +11,12 @@ public class CheeseApplication extends WebApplication {
     //private List<Cheese> cheeses;
 
     private ConnectionManager cm;
+    private DataCache dataCache;
 
     public CheeseApplication() {
         //cheeses = getCheeses();
         cm = new JDBCConnectionManager();
+        dataCache = new DataCache();
     }
 
     @Override

@@ -57,7 +57,7 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
     }
 
     public List<MultiCheese> getCartEntries(int cartId) {
-        List<MultiCheese> list = null;
+        List<MultiCheese> list;
         PreparedStatement statement = null;
         ResultSet result = null;
 
@@ -74,20 +74,21 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
 
             list = new ArrayList<MultiCheese>();
             while (result.next()) {
-                int cheeseID = result.getInt("CheeseID");
-                Cheese cheese = cheeseDAO.getCheese(cheeseID);
-                MultiCheese multiCheese = new MultiCheese(
-                        cheese,
-                        result.getInt("Quantity")
-                );
-                list.add(multiCheese);
+                list.add(buildMultiCheese(result));
             }
+            return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return list;
         }
+    }
+
+    private MultiCheese buildMultiCheese(ResultSet result) throws SQLException {
+        int cheeseID = result.getInt("CheeseID");
+        Cheese cheese = cheeseDAO.getCheese(cheeseID);
+        return new MultiCheese(cheese, result.getInt("Quantity"));
     }
 }

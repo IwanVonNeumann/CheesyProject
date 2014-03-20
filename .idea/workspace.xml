@@ -2,24 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="First commit&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_4_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\Cheese\.idea\libraries\Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\Cheese\.idea\libraries\Maven__org_springframework_spring_core_4_0_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\Cheese\src\main\webapp\Thumbs.db" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MavenProject.iml" afterPath="$PROJECT_DIR$/MavenProject.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cache/AddressCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cache/CartCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cache/CartEntryCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cache/CheeseCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cache/DataCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="DELETED" beforePath="D:\Users\User\My Documents\IdeaProjects\Cheese\CheeseProject.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/models/DataDiagram.vsd" afterPath="$PROJECT_DIR$/docs/models/DataDiagram.vsd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/CheckOut.java" afterPath="$PROJECT_DIR$/src/main/java/war/CheckOut.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/domain/Cheese.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Cheese.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/CheeseApplication.java" afterPath="$PROJECT_DIR$/src/main/java/war/CheeseApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/MavenProject_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/MavenProject_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MavenProject.iws" />
@@ -89,50 +91,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CheeseSession.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseSession.java">
+      <file leaf-file-name="DataCache.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cache/DataCache.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="28" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1258">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="48" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Index.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/war/Index.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="11" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NativeApiIllustrationTest.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/hibernate-tutorials/basic/src/test/java/org/hibernate/tutorial/hbm/NativeApiIllustrationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="32" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.47842762" vertical-offset="249" max-vertical-offset="1292">
+            <state line="27" column="0" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5910596" vertical-offset="102" max-vertical-offset="3944">
               <folding>
-                <element signature="e#0#2592#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/hibernate-tutorials/basic/src/test/java/org/hibernate/tutorial/hbm/Event.java">
+      <file leaf-file-name="CheeseApplication.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+            <state line="13" column="29" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="850">
               <folding>
-                <element signature="e#0#1681#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheeseSession.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseSession.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="5" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1071">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddressCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cache/AddressCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="48" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cache/CartCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="39" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartEntryCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cache/CartEntryCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="1" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="663">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheeseCache.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cache/CheeseCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="32" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="833">
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,64 +188,64 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/war/Index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/ViewCheeses.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/ViewCustomers.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/CheckOut.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/UserIdPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/CartEntriesList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/MultiCheese.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/EditCheesePanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/AddCheesePanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/ViewCheeses.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/AdminCheesesListPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/ViewCustomers.html" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Cart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/CheeseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/ViewPurchases.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/CartEntryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/UserIdPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/PageHeadPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/MenuPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/MenuPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/PageHeadPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/ViewPurchases.html" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/DAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/DBConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/CheckOut.html" />
-        <option value="$PROJECT_DIR$/src/main/java/war/SignupPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/SignupPage.html" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JDBCDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/JDBCConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/iface/AddressDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCAddressDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CartDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/CheeseSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/CustomersModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/CartEntriesModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/CartsModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/CheesesModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCheeseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/war/CheesePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCartDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/iface/ConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/iface/DBConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCartEntryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/EditCheesePanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberConnectionManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/hiber/TestHiberAddressDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberAddressDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/domain/cheese.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberCheeseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/domain/multicheese.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/domain/address.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartEntryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/MultiCheese.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/domain/cartentry.hbm.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/domain/cart.hbm.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/models/CartEntriesModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCartEntryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCAddressDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/war/CheeseSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCAddressProxy.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Cart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CartDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/war/CheckOut.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/domain/Cheese.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/war/CheeseApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cache/DataCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cache/CartEntryCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cache/CheeseCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cache/CartCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cache/AddressCache.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files (x86)\Apache\Maven-3.1.1" />
+        <option name="mavenHome" value="C:\Program Files\Apache\apache-maven-3.1.1" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -234,8 +262,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
     <option name="y" value="-4" />
-    <option name="width" value="1928" />
-    <option name="height" value="1164" />
+    <option name="width" value="1032" />
+    <option name="height" value="746" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -263,17 +291,18 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MavenProject" />
+              <option name="myItemId" value="CheeseProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MavenProject" />
+              <option name="myItemId" value="CheeseProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -283,7 +312,39 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MavenProject" />
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -299,13 +360,39 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MavenProject" />
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -327,7 +414,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="MavenProject" />
+              <option name="myItemId" value="CheeseProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -351,15 +438,102 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iface" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cache" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -381,9 +555,12 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="SearchEverywhereHistory" value="" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntries" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\docs\database" />
       <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\java\war" />
       <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese [MavenProject]\src\main\java\war" />
     </key>
@@ -463,6 +640,9 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -490,8 +670,51 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Maven.MavenProject [org.mortbay.jetty:maven-jetty-plugin:6.1.26:run]" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HibernateTest01" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="dao.hiber.TestHiberAddressDAO" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MavenProject" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Application.HibernateTest01" />
+      <item index="1" class="java.lang.String" itemvalue="Maven.MavenProject [org.mortbay.jetty:maven-jetty-plugin:6.1.26:run]" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -518,24 +741,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1928" height="1164" extended-state="6" />
+    <frame x="-4" y="-4" width="1032" height="746" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16979167" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16894531" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24895833" sideWeight="0.6983333" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27408794" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.265625" sideWeight="0.6983333" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
@@ -544,8 +768,8 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.6976744" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834426" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -567,7 +791,11 @@
     <MESSAGE value="Registration" />
     <MESSAGE value="DAO interfaces" />
     <MESSAGE value="JDBC ifaces&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="JDBC ifaces&#10;" />
+    <MESSAGE value="DAO ifaces refactoring" />
+    <MESSAGE value="Hibernate integration" />
+    <MESSAGE value="Domain objects linking reorganization" />
+    <MESSAGE value="Lazy init implementation for Address;&#10;Domain layer reconstruction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lazy init implementation for Address;&#10;Domain layer reconstruction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,271 +809,333 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/Index.html">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.3.4.Final/hibernate-core-4.3.4.Final.jar!/org/hibernate/cfg/Configuration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="185" selection-end="213" vertical-scroll-proportion="0.28333333" vertical-offset="0" max-vertical-offset="850" />
+        <state line="667" column="0" selection-start="44347" selection-end="44347" vertical-scroll-proportion="0.6744186" vertical-offset="11119" max-vertical-offset="11424" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MavenProject.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833" />
+        <state line="10" column="42" selection-start="177" selection-end="215" vertical-scroll-proportion="0.041666668" vertical-offset="153" max-vertical-offset="714" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/MenuPanel.html">
+    <entry file="file://$USER_HOME$/Desktop/hiber/basic/src/test/java/org/hibernate/tutorial/hbm/NativeApiIllustrationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750" />
+        <state line="52" column="8" selection-start="1782" selection-end="1844" vertical-scroll-proportion="-0.065162905" vertical-offset="910" max-vertical-offset="1411" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/PageHeadPanel.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="45" selection-start="236" selection-end="277" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="306" />
+        <state line="22" column="5" selection-start="812" selection-end="812" vertical-scroll-proportion="0.60362697" vertical-offset="141" max-vertical-offset="680" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheckOut.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="16" selection-start="1421" selection-end="1421" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="952" />
+        <state line="11" column="0" selection-start="177" selection-end="177" vertical-scroll-proportion="0.46867168" vertical-offset="0" max-vertical-offset="399" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/hiber/TestHiberAddressDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="63" selection-end="63" vertical-scroll-proportion="0.06519655" vertical-offset="0" max-vertical-offset="1043" />
+        <state line="26" column="1" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="544" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="63" selection-start="233" selection-end="233" vertical-scroll-proportion="0.19960861" vertical-offset="0" max-vertical-offset="1022" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="16" selection-start="1504" selection-end="1504" vertical-scroll-proportion="0.7522124" vertical-offset="0" max-vertical-offset="1017" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1352" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="867" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/SignupPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="50" selection-start="381" selection-end="381" vertical-scroll-proportion="0.20058997" vertical-offset="0" max-vertical-offset="1017" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/LoginPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="212" selection-end="265" vertical-scroll-proportion="0.13372664" vertical-offset="0" max-vertical-offset="1017" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="44" selection-start="469" selection-end="469" vertical-scroll-proportion="0.13866666" vertical-offset="32" max-vertical-offset="782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/AddressDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="3" selection-start="112" selection-end="112" vertical-scroll-proportion="0.18133333" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="6" selection-start="254" selection-end="254" vertical-scroll-proportion="0.38533333" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheesePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="98" selection-end="98" vertical-scroll-proportion="0.11333334" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheckOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="10" selection-start="1174" selection-end="1174" vertical-scroll-proportion="-0.156" vertical-offset="729" max-vertical-offset="1479" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="761" selection-end="761" vertical-scroll-proportion="0.79333335" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/SignupPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="231" selection-end="231" vertical-scroll-proportion="0.15866667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewCheeses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="202" selection-end="202" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewCustomers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="394" selection-end="394" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="257" selection-end="257" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewPurchases.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="597" selection-end="597" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AddCheesePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="276" selection-end="276" vertical-scroll-proportion="0.022666667" vertical-offset="51" max-vertical-offset="833" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="0" selection-start="3519" selection-end="3519" vertical-scroll-proportion="1.7453333" vertical-offset="0" max-vertical-offset="1445" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="244" selection-end="244" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="22" selection-start="200" selection-end="200" vertical-scroll-proportion="0.15866667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="434" selection-end="434" vertical-scroll-proportion="-0.20133333" vertical-offset="219" max-vertical-offset="969" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditCheesePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="324" selection-end="324" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="884" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="13" selection-start="973" selection-end="973" vertical-scroll-proportion="0.43333334" vertical-offset="49" max-vertical-offset="799" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/MenuPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="35" selection-start="719" selection-end="719" vertical-scroll-proportion="0.41066667" vertical-offset="134" max-vertical-offset="884" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/PageHeadPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="13" selection-start="31" selection-end="31" vertical-scroll-proportion="0.068" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="213" selection-end="213" vertical-scroll-proportion="0.15866667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="580" selection-end="580" vertical-scroll-proportion="-0.45066667" vertical-offset="457" max-vertical-offset="1564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="603" selection-end="603" vertical-scroll-proportion="0.29733333" vertical-offset="32" max-vertical-offset="782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="364" selection-end="364" vertical-scroll-proportion="0.09066667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/UserStatusPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="223" selection-end="223" vertical-scroll-proportion="0.15866667" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="802" selection-end="802" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697">
+        <state line="35" column="26" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="697">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCartDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberCheeseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="347" selection-end="347" vertical-scroll-proportion="0.18133333" vertical-offset="0" max-vertical-offset="1751" />
+        <state line="44" column="24" selection-start="1071" selection-end="1252" vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="1071" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCAddressDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartEntryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="156" selection-end="156" vertical-scroll-proportion="0.204" vertical-offset="0" max-vertical-offset="3060" />
+        <state line="20" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/address.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="15" selection-start="189" selection-end="189" vertical-scroll-proportion="0.24933334" vertical-offset="0" max-vertical-offset="750" />
+        <state line="23" column="0" selection-start="848" selection-end="848" vertical-scroll-proportion="0.64735097" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/cartentry.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="211" selection-end="211" vertical-scroll-proportion="0.204" vertical-offset="0" max-vertical-offset="750" />
+        <state line="18" column="22" selection-start="699" selection-end="699" vertical-scroll-proportion="0.5066225" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCheeseDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/cheese.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="514" selection-end="514" vertical-scroll-proportion="0.36266667" vertical-offset="0" max-vertical-offset="2584" />
+        <state line="15" column="20" selection-start="546" selection-end="546" vertical-scroll-proportion="0.42218542" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/CustomersModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/domain/cart.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.18133333" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/CheesesModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="161" selection-end="161" vertical-scroll-proportion="0.18133333" vertical-offset="0" max-vertical-offset="782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/CartsModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="5" selection-start="832" selection-end="832" vertical-scroll-proportion="0.8613333" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/CartEntriesModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="579" selection-end="579" vertical-scroll-proportion="0.58933336" vertical-offset="0" max-vertical-offset="750" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCCartEntryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="20" selection-start="465" selection-end="465" vertical-scroll-proportion="-0.84248555" vertical-offset="770" max-vertical-offset="1462" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="28" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="1258">
-          <folding />
-        </state>
+        <state line="13" column="22" selection-start="552" selection-end="552" vertical-scroll-proportion="0.36589405" vertical-offset="0" max-vertical-offset="604" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="48" selection-start="1309" selection-end="1309" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
-          <folding />
-        </state>
+        <state line="8" column="24" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2074" />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/hibernate-tutorials/basic/src/test/java/org/hibernate/tutorial/hbm/Event.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/look/RowModifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1043">
+        <state line="7" column="13" selection-start="127" selection-end="127" vertical-scroll-proportion="0.1904" vertical-offset="0" max-vertical-offset="625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/CartEntriesModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="32" selection-start="611" selection-end="611" vertical-scroll-proportion="0.5215232" vertical-offset="127" max-vertical-offset="731">
           <folding>
-            <element signature="e#0#1681#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/hibernate-tutorials/basic/src/test/java/org/hibernate/tutorial/hbm/NativeApiIllustrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/MultiCheese.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="32" selection-start="1763" selection-end="1763" vertical-scroll-proportion="0.47842762" vertical-offset="249" max-vertical-offset="1292">
+        <state line="10" column="23" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="1683">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="62" selection-start="2207" selection-end="2207" vertical-scroll-proportion="0.5873786" vertical-offset="557" max-vertical-offset="969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="2635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCConnectionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewPurchases.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="30" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="40" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1768">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/database/CreateTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/database/InsertData.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="31" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.5778146" vertical-offset="994" max-vertical-offset="1598" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="129" selection-end="129" vertical-scroll-proportion="0.19966443" vertical-offset="0" max-vertical-offset="596">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="5" selection-start="767" selection-end="767" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="1887">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/AddressDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="17" selection-start="130" selection-end="130" vertical-scroll-proportion="0.08695652" vertical-offset="85" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="22" selection-start="262" selection-end="262" vertical-scroll-proportion="0.5652174" vertical-offset="0" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="0" selection-start="2271" selection-end="2271" vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="4471" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="12" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1003">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="356" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3553" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheckOut.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="45" selection-start="1070" selection-end="1070" vertical-scroll-proportion="0.46867168" vertical-offset="459" max-vertical-offset="1394">
           <folding>
-            <element signature="e#0#2592#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="697" selection-end="697" vertical-scroll-proportion="1.0880952" vertical-offset="2" max-vertical-offset="969" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="35" selection-start="2834" selection-end="2834" vertical-scroll-proportion="0.31666666" vertical-offset="1346" max-vertical-offset="2227">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCAddressProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="158" selection-end="158" vertical-scroll-proportion="-0.20238096" vertical-offset="170" max-vertical-offset="646" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberAddressDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="13" selection-start="1539" selection-end="1539" vertical-scroll-proportion="0.21854305" vertical-offset="650" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="3389" selection-end="3389" vertical-scroll-proportion="1.2947019" vertical-offset="646" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="170" selection-end="170" vertical-scroll-proportion="0.33774835" vertical-offset="0" max-vertical-offset="604">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MavenProject.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheesePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="103" selection-end="103" vertical-scroll-proportion="0.14072847" vertical-offset="0" max-vertical-offset="604">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="29" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="850">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="5" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cache/CartEntryCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="1" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="663">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cache/CheeseCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="32" selection-start="211" selection-end="211" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="833">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cache/CartCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="39" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cache/AddressCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="48" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cache/DataCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="627" selection-end="627" vertical-scroll-proportion="0.5910596" vertical-offset="102" max-vertical-offset="3944">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -869,7 +1159,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -892,7 +1182,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.7 EE</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -909,7 +1199,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

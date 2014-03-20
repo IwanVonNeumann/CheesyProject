@@ -10,11 +10,11 @@ import java.util.List;
  */
 public interface CartEntryDAO {
 
-    // TODO сделать каскадным
-    // MultiCheese никогда сам по себе не добавляется, а только в составе корзины
-    void insertCartEntry(Cart cart, MultiCheese cheese);
-
     List<MultiCheese> getCartEntries(Cart cart);
 
     List<MultiCheese> getCartEntries(int cartId);
+
+    // возможно, стоит переделать на
+    // void insertCartEntry(int cartId, MultiCheese cheese);
+    void insertCartEntry(Cart cart, MultiCheese cheese);
 }

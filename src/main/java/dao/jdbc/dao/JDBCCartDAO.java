@@ -25,7 +25,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
     }
 
     public List<Cart> getCartsList() {
-        List<Cart> list = null;
+        List<Cart> list;
         Statement statement = null;
         ResultSet result = null;
 
@@ -37,32 +37,20 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             System.out.println("[JDBC] SELECT * FROM Carts;");
             list = new ArrayList<Cart>();
             while (result.next()) {
-                /*Cart cart = new Cart(
-                        result.getTimestamp("Clock"),
-                        result.getInt("CartID"),
-                        result.getInt("CustomerID")
-                );*/
-                int cartId = result.getInt("CartID");
-                List<MultiCheese> cheeses = cartEntryDAO.getCartEntries(cartId);
-
-                int customerId = result.getInt("CustomerID");
-                Address address = addressDAO.getAddress(customerId);
-
-                Cart cart = new Cart(cartId, cheeses, address,
-                        result.getTimestamp("Clock"));
-                list.add(cart);
+                list.add(buildCart(result));
             }
+            return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return list;
         }
     }
 
     public List<Cart> getCartsList(Address address) {
-        List<Cart> list = null;
+        List<Cart> list;
         PreparedStatement statement = null;
         ResultSet result = null;
 
@@ -76,30 +64,18 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
                     "WHERE CustomerID = " + address.getId() + ";");
             list = new ArrayList<Cart>();
             while (result.next()) {
-                /*Cart cart = new Cart(result.getTimestamp("Clock"),
-                        result.getInt("CartID"),
-                        result.getInt("CustomerID")
-                );*/
-                int cartId = result.getInt("CartID");
-                List<MultiCheese> cheeses = cartEntryDAO.getCartEntries(cartId);
-
-                Cart cart = new Cart(cartId, cheeses, address,
-                        result.getTimestamp("Clock"));
-
-                list.add(cart);
+                list.add(buildCart(result, address));
             }
-
+            return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return list;
         }
     }
 
-    //public void insertCart(Address address, Cart cart) {
-    // TODO организовать каскадную вставку элементов
     public void insertCart(Cart cart) {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;
@@ -119,11 +95,31 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             System.out.println("[JDBC] INSERT INTO Carts " +
                     "(Clock, CustomerID)\n" +
                     "\t\tVALUES (date, \"" + cart.getAddress().getId() + "\");");
+
+            for (MultiCheese item : cart.getCheeses()) {
+                cartEntryDAO.insertCartEntry(cart, item);
+            }
+
         } catch (SQLException e) {
             System.out.println("Exception while inserting data...");
         } finally {
             closeStatement(statement);
             closeResultSet(generatedKeys);
         }
+    }
+
+
+
+    private Cart buildCart(ResultSet result) throws SQLException {
+        int customerId = result.getInt("CustomerID");
+        Address address = addressDAO.getAddress(customerId);
+        return buildCart(result, address);
+    }
+
+    private Cart buildCart(ResultSet result, Address address) throws SQLException {
+        int cartId = result.getInt("CartID");
+        List<MultiCheese> cheeses = cartEntryDAO.getCartEntries(cartId);
+        return new Cart(cartId, cheeses, address,
+                result.getTimestamp("Clock"));
     }
 }

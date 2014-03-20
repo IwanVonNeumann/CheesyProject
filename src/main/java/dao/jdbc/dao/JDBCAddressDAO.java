@@ -22,7 +22,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
     }
 
     public List<Address> getAddressesList() {
-        List<Address> list = null;
+        List<Address> list;
         PreparedStatement statement = null;
         ResultSet result = null;
 
@@ -39,20 +39,20 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                 Address address = buildAddress(result);
                 list.add(address);
             }
+            return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
             System.out.println(e);
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return list;
         }
     }
 
     public Address getAddress(int id) {
         PreparedStatement statement = null;
         ResultSet result = null;
-        Address address = null;
 
         try {
             //System.out.println("Accessing data...");
@@ -62,20 +62,19 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             statement.setInt(1, id);
             result = statement.executeQuery();
             result.next();
-            address = buildAddress(result);
+            return buildAddress(result);
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return address;
         }
     }
 
     public Address getAddress(String name) {
         PreparedStatement statement = null;
         ResultSet result = null;
-        Address address = null;
 
         try {
             //System.out.println("Accessing data...");
@@ -85,13 +84,13 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             statement.setString(1, name);
             result = statement.executeQuery();
             result.next();
-            address = buildAddress(result);
+            return buildAddress(result);
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return address;
         }
     }
 
