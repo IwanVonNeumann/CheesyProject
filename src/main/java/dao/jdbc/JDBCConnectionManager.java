@@ -12,9 +12,9 @@ public class JDBCConnectionManager implements ConnectionManager {
     String name; //Имя пользователя БД
     String password; //Пароль
 
-    public JDBCConnectionManager() {
+    public JDBCConnectionManager(String schema) {
         System.out.println("[JDBC] Connecting to DB...");
-        url = "jdbc:mysql://localhost/cheesydb";
+        url = "jdbc:mysql://localhost/" + schema;
         name = "user";
         password = "userpwd";
     }

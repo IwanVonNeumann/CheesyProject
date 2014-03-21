@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/docs/database/CreateTables.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/docs/database/InsertData.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/CreateTables.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql/InsertData.sql" dialect="MySQL" />
   </component>
 </project>
 
