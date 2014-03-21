@@ -8,13 +8,13 @@ import java.sql.DriverManager;
 
 public class JDBCConnectionManager implements ConnectionManager {
 
-    String url; //URL к базе состоит из протокола:подпротокола://[хоста]:[порта_СУБД]/[БД] и других_сведений
-    String name; //Имя пользователя БД
-    String password; //Пароль
+    private String url; //URL к базе состоит из протокола:подпротокола://[хоста]:[порта_СУБД]/[БД] и других_сведений
+    private String name; //Имя пользователя БД
+    private String password; //Пароль
 
-    public JDBCConnectionManager(String schema) {
+    public JDBCConnectionManager() {
         System.out.println("[JDBC] Connecting to DB...");
-        url = "jdbc:mysql://localhost/" + schema;
+        url = "jdbc:mysql://localhost/cheesydb";
         name = "user";
         password = "userpwd";
     }

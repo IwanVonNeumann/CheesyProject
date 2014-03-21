@@ -14,7 +14,7 @@ public class CheeseApplication extends WebApplication {
     private IDataCache dataCache;
 
     public CheeseApplication() {
-        ConnectionManager cm = new JDBCConnectionManager("cheesydb");
+        ConnectionManager cm = new JDBCConnectionManager();
         dataCache = new DataCacheMock(cm.getConnection());
     }
 

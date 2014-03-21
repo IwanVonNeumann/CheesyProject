@@ -67,6 +67,12 @@ public class Cheese {
     }
 
     @Override
+    public boolean equals(Object o) {
+        Cheese that = (Cheese) o;
+        return (this.id == that.id);
+    }
+
+    @Override
     public String toString() {
         return "Cheese{" + name + '\t' + description + '\t' + price + '}';
     }
