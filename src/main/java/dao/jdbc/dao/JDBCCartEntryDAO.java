@@ -22,40 +22,12 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
         cheeseDAO = new JDBCCheeseDAO(connection); // нужен ли этот объект?
     }
 
-    public void insertCartEntry(Cart cart, MultiCheese cheese) {
-        PreparedStatement statement = null;
-
-        try {
-            System.out.println("Adding CartEntry for " +
-                    cheese.getName() + "...");
-            System.out.println("Cart ID: " + cart.getId());
-            System.out.println("Cheese ID: " + cheese.getCheeseId());
-            System.out.println("Cheese name: " + cheese.getName());
-            System.out.println("Quantity: " + cheese.getQuantity());
-
-            statement = connection.prepareStatement(
-                    "INSERT INTO CartEntries " +
-                            "(CheeseID, CartID, Quantity) " +
-                            "VALUES (?, ?, ?);");
-            statement.setInt(1, cheese.getCheeseId());
-            statement.setInt(2, cart.getId());
-            statement.setInt(3, cheese.getQuantity());
-            statement.executeUpdate();
-            System.out.println("[JDBC] INSERT INTO CartEntries " +
-                    "(CheeseID, CartID, Quantity) " +
-                    "VALUES (" + cheese.getCheeseId() + ", " +
-                    cart.getId() + ", " + cheese.getQuantity() + ");");
-        } catch (SQLException e) {
-            System.out.println("Exception while inserting data...");
-        } finally {
-            closeStatement(statement);
-        }
-    }
-
+    /*@Override
     public List<MultiCheese> getCartEntries(Cart cart) {
         return getCartEntries(cart.getId());
-    }
+    }*/
 
+    @Override
     public List<MultiCheese> getCartEntries(int cartId) {
         List<MultiCheese> list;
         PreparedStatement statement = null;
@@ -82,6 +54,37 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
             return null;
         } finally {
             closeResultSet(result);
+            closeStatement(statement);
+        }
+    }
+
+    @Override
+    public void insertCartEntry(Cart cart, MultiCheese cheese) {
+        PreparedStatement statement = null;
+
+        try {
+            System.out.println("Adding CartEntry for " +
+                    cheese.getName() + "...");
+            System.out.println("Cart ID: " + cart.getId());
+            System.out.println("Cheese ID: " + cheese.getCheeseId());
+            System.out.println("Cheese name: " + cheese.getName());
+            System.out.println("Quantity: " + cheese.getQuantity());
+
+            statement = connection.prepareStatement(
+                    "INSERT INTO CartEntries " +
+                            "(CheeseID, CartID, Quantity) " +
+                            "VALUES (?, ?, ?);");
+            statement.setInt(1, cheese.getCheeseId());
+            statement.setInt(2, cart.getId());
+            statement.setInt(3, cheese.getQuantity());
+            statement.executeUpdate();
+            System.out.println("[JDBC] INSERT INTO CartEntries " +
+                    "(CheeseID, CartID, Quantity) " +
+                    "VALUES (" + cheese.getCheeseId() + ", " +
+                    cart.getId() + ", " + cheese.getQuantity() + ");");
+        } catch (SQLException e) {
+            System.out.println("Exception while inserting data...");
+        } finally {
             closeStatement(statement);
         }
     }

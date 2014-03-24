@@ -26,6 +26,7 @@ public class DataCacheMock implements IDataCache {
         cartDAO = dbConnection.getCartDAO();
         cartEntryDAO = dbConnection.getCartEntryDAO();
         cheeseDAO = dbConnection.getCheeseDAO();
+        System.out.println("Data Cache mock created...");
     }
 
 
@@ -34,6 +35,11 @@ public class DataCacheMock implements IDataCache {
     @Override
     public List<Address> getAddressesList() {
         return addressDAO.getAddressesList();
+    }
+
+    @Override
+    public boolean exists(Address address) {
+        return addressDAO.exists(address);
     }
 
     @Override
@@ -82,10 +88,10 @@ public class DataCacheMock implements IDataCache {
 
     // CartEntryDAO
 
-    @Override
+    /*@Override
     public List<MultiCheese> getCartEntries(Cart cart) {
         return cartEntryDAO.getCartEntries(cart);
-    }
+    }*/
 
     @Override
     public List<MultiCheese> getCartEntries(int cartId) {
@@ -123,5 +129,10 @@ public class DataCacheMock implements IDataCache {
     @Override
     public void safeDeleteCheese(Cheese cheese) {
         cheeseDAO.safeDeleteCheese(cheese);
+    }
+
+    @Override
+    public boolean exists(Cheese cheese) {
+        return cheeseDAO.exists(cheese);
     }
 }

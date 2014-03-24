@@ -5,11 +5,13 @@ import domain.Cheese;
 import java.util.List;
 
 /**
- * Created by IRuskevich on 14.12.3.
+ * Created by IRuskevich on 14.12.3
  */
 public interface CheeseDAO {
 
     List<Cheese> getCheesesList();
+
+    boolean exists(Cheese cheese);
 
     Cheese getCheese(int id);
 

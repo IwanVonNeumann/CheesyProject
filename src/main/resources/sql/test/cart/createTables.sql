@@ -1,10 +1,10 @@
 CREATE TABLE Cheeses
- (
-	CheeseID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	CheeseName varchar(25),
-	Description varchar(255),
-	Price real,
-	Deleted bit
+(
+  CheeseID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  CheeseName varchar(25),
+  Description varchar(255),
+  Price real,
+  Deleted bit
 );
 
 CREATE TABLE Customers
@@ -28,10 +28,10 @@ CREATE TABLE Carts
 
 CREATE TABLE CartEntries
 (
-	EntryID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	CartID int NOT NULL,
-	CheeseID int NOT NULL,
-	Quantity int,
-	FOREIGN KEY (CartID) REFERENCES Carts(CartID),
-	FOREIGN KEY (CheeseID) REFERENCES Cheeses(CheeseID)
+  EntryID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  CartID int NOT NULL,
+  CheeseID int NOT NULL,
+  Quantity int,
+  FOREIGN KEY (CartID) REFERENCES Carts(CartID),
+  FOREIGN KEY (CheeseID) REFERENCES Cheeses(CheeseID)
 );

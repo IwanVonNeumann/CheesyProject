@@ -14,6 +14,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         System.out.println("[JDBC] Creating Cheese DAO...");
     }
 
+    @Override
     public List<Cheese> getCheesesList() {
         List<Cheese> list;
         PreparedStatement statement = null;
@@ -43,6 +44,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
+    @Override
     public Cheese getCheese(int id) {
         PreparedStatement statement = null;
         ResultSet result = null;
@@ -67,6 +69,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
+    @Override
     public void safeDeleteCheese(Cheese cheese) {
         PreparedStatement statement = null;
 
@@ -89,21 +92,32 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
+    @Override
     public void addCheese(Cheese cheese) {
+        if (exists(cheese)) return; // уже в базе
+
         PreparedStatement statement = null;
+        ResultSet generatedKeys;
 
         try {
             //System.out.println("Adding cheese " + cheese.getName() + "...");
             statement = connection.prepareStatement(
-                    "INSERT INTO Cheeses (CheeseName, Description, Price) " +
-                            "VALUES (?, ?, ?);");
+                    "INSERT INTO Cheeses (CheeseName, Description, Price, Deleted) " +
+                            "VALUES (?, ?, ?, ?);");
             statement.setString(1, cheese.getName());
             statement.setString(2, cheese.getDescription());
             statement.setDouble(3, cheese.getPrice());
+            statement.setBoolean(4, false);
             statement.executeUpdate();
             System.out.println("[JDBC] INSERT INTO Cheeses (CheeseName, Description, Price)\n" +
                     "\t\tVALUES (\"" + cheese.getName() + "\", \"" +
                     cheese.getDescription() + "\", " + cheese.getPrice() + ");");
+
+            generatedKeys = statement.getGeneratedKeys();
+            generatedKeys.next();
+            cheese.setId(generatedKeys.getInt(1));
+
+            System.out.println("ID granted: " + cheese.getId());
         } catch (SQLException e) {
             System.out.println("Exception while inserting data...");
         } finally {
@@ -111,6 +125,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
+    @Override
     public void updateCheese(Cheese cheese) {
         PreparedStatement statement = null;
 
@@ -139,17 +154,30 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
+    @Override
+    public boolean exists(Cheese cheese) {
+        List<Cheese> cheeses = getCheesesList();
+        boolean found = false;
+        for (Cheese current : cheeses) {
+            found = current.equals(cheese);
+            if (found) break;
+        }
+        return found;
+    }
+
     private Cheese buildCheese(ResultSet result) throws SQLException {
         return new Cheese(result.getInt("CheeseID"),
                 result.getString("CheeseName"),
                 result.getString("Description"),
-                result.getDouble("Price"));
+                result.getDouble("Price"),
+                result.getBoolean("Deleted"));
     }
 
     /*
     // включая безопасно удаленные
+    @Override
     public List<Cheese> getFullCheesesList() {
-        List<Cheese> list = null;
+        List<Cheese> list;
         Statement statement = null;
         ResultSet result = null;
 
@@ -164,18 +192,16 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
             //метод next() , с помощью которого переходим к следующему элементу
             list = new ArrayList<Cheese>();
             while (result.next()) {
-                Cheese cheese = new Cheese(result.getString("CheeseName"),
-                        result.getString("Description"),
-                        result.getDouble("Price"),
-                        result.getInt("CheeseID"));
+                Cheese cheese = buildCheese(result);
                 list.add(cheese);
             }
+            return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);
-            return list;
         }
     }*/
 

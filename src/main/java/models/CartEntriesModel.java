@@ -7,21 +7,25 @@ import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
+// возможно, класс ненужен
 public class CartEntriesModel extends LoadableDetachableModel {
 
-    private CartEntryDAO dao;
+
+    /*private CartEntryDAO dao;
     private Cart cart;
 
     public CartEntriesModel(CartEntryDAO dao, Cart cart) {
         this.dao = dao;
         this.cart = cart;
-    }
+    }*/
 
     @Override
     protected Object load() {
-        return getCartEntries();
+        //return getCartEntries();
+        return null;
     }
 
+    // давно закомментировано :)
     // было protected...
     // используется при cart.setCheeses() из ViewPurchases
     // возможно, неэффективно: не используется свойство Loadable/Detachable
@@ -31,7 +35,7 @@ public class CartEntriesModel extends LoadableDetachableModel {
     }
     */
 
-    protected List<MultiCheese> getCartEntries() {
+    /*protected List<MultiCheese> getCartEntries() {
         return dao.getCartEntries(cart);
-    }
+    }*/
 }

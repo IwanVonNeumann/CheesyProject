@@ -16,8 +16,8 @@ import war.LoginPage;
  */
 public class RegisterUserPanel extends CheesePanel {
 
-    String password1 = new String();
-    String password2 = new String();
+    String password1;
+    String password2;
 
     public RegisterUserPanel(String id, IModel model) {
         super(id);

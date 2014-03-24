@@ -59,4 +59,9 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
         cheese.delete();
         updateCheese(cheese);
     }
+
+    @Override
+    public boolean exists(Cheese cheese) {
+        return false;
+    }
 }

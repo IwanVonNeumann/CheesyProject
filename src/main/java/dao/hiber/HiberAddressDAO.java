@@ -28,6 +28,11 @@ public class HiberAddressDAO extends HiberDAO implements AddressDAO {
     }
 
     @Override
+    public boolean exists(Address address) {
+        return false;
+    }
+
+    @Override
     public Address getAddress(int id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();

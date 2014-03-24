@@ -31,6 +31,7 @@ public class Address {
     public Address(String name, String street, String city, Integer zipCode, String password) {
         this(name, street, city, zipCode);
         hash = calculateHash(password);
+        deleted = false;
         purchases = new LinkedList<Cart>();
     }
 
@@ -170,7 +171,7 @@ public class Address {
     @Override
     public boolean equals(Object o) {
         Address that = (Address) o;
-        return (this.id == that.id);
+        return (this.name.equals(that.name));
     }
 
     @Override

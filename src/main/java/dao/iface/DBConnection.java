@@ -1,7 +1,7 @@
 package dao.iface;
 
 /**
- * Created by IRuskevich on 14.14.3.
+ * Created by IRuskevich on 14.14.3
  */
 public interface DBConnection {
 

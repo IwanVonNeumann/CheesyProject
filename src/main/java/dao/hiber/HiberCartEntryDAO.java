@@ -8,7 +8,7 @@ import org.hibernate.SessionFactory;
 import java.util.List;
 
 /**
- * Created by Iwan on 14.15.3.
+ * Created by Iwan on 14.15.3
  */
 public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
 
@@ -21,10 +21,10 @@ public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
 
     }
 
-    @Override
+    /*@Override
     public List<MultiCheese> getCartEntries(Cart cart) {
         return null;
-    }
+    }*/
 
     @Override
     public List<MultiCheese> getCartEntries(int cartId) {

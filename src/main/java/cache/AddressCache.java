@@ -22,6 +22,11 @@ public class AddressCache implements AddressDAO {
     }
 
     @Override
+    public boolean exists(Address address) {
+        return false;
+    }
+
+    @Override
     public Address getAddress(int id) {
         return addressDAO.getAddress(id);
     }

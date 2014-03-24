@@ -6,7 +6,7 @@ import domain.Cart;
 import java.util.List;
 
 /**
- * Created by IRuskevich on 14.12.3.
+ * Created by IRuskevich on 14.12.3
  */
 public interface CartDAO {
 

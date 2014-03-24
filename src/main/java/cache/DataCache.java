@@ -10,7 +10,7 @@ import domain.MultiCheese;
 import java.util.List;
 
 /**
- * Created by Iwan on 14.20.3.
+ * Created by Iwan on 14.20.3
  */
 public class DataCache implements IDataCache {
 
@@ -20,15 +20,18 @@ public class DataCache implements IDataCache {
     private CheeseCache cheeseCache;
 
     public DataCache() {
-
     }
-
 
     // AddressDAO
 
     @Override
     public List<Address> getAddressesList() {
         return addressCache.getAddressesList();
+    }
+
+    @Override
+    public boolean exists(Address address) {
+        return addressCache.exists(address);
     }
 
     @Override
@@ -83,10 +86,10 @@ public class DataCache implements IDataCache {
         cartEntryCache.insertCartEntry(cart, cheese);
     }
 
-    @Override
+    /*@Override
     public List<MultiCheese> getCartEntries(Cart cart) {
         return cartEntryCache.getCartEntries(cart);
-    }
+    }*/
 
     @Override
     public List<MultiCheese> getCartEntries(int cartId) {
@@ -119,6 +122,11 @@ public class DataCache implements IDataCache {
     @Override
     public void safeDeleteCheese(Cheese cheese) {
         cheeseCache.safeDeleteCheese(cheese);
+    }
+
+    @Override
+    public boolean exists(Cheese cheese) {
+        return cheeseCache.exists(cheese);
     }
 
 }

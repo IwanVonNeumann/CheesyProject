@@ -7,7 +7,7 @@ import domain.MultiCheese;
 import java.util.List;
 
 /**
- * Created by Iwan on 14.20.3.
+ * Created by Iwan on 14.20.3
  */
 public class CartEntryCache implements CartEntryDAO {
 
@@ -17,10 +17,10 @@ public class CartEntryCache implements CartEntryDAO {
         this.cartEntryDAO = cartEntryDAO;
     }
 
-    @Override
+    /*@Override
     public List<MultiCheese> getCartEntries(Cart cart) {
         return cartEntryDAO.getCartEntries(cart);
-    }
+    }*/
 
     @Override
     public List<MultiCheese> getCartEntries(int cartId) {

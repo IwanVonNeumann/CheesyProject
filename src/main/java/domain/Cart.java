@@ -102,4 +102,15 @@ public class Cart implements Serializable {
         cheeses.clear();
     }
 
+    @Override
+    public boolean equals(Object o) {
+        Cart that = (Cart)o;
+        return (Math.abs(this.getTime().getTime() - that.getTime().getTime()) < 1000) &&
+                this.getAddress().equals(that.getAddress());
+    }
+
+    @Override
+    public String toString() {
+        return "Cart: " + address.getName() + ", " + cheeses.size() + " items at " + time;
+    }
 }

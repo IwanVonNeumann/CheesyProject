@@ -40,4 +40,9 @@ public class CheeseCache implements CheeseDAO {
     public void safeDeleteCheese(Cheese cheese) {
         cheeseDAO.safeDeleteCheese(cheese);
     }
+
+    @Override
+    public boolean exists(Cheese cheese) {
+        return cheeseDAO.exists(cheese);
+    }
 }

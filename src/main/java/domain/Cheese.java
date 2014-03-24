@@ -12,12 +12,17 @@ public class Cheese {
     }
 
     public Cheese(int id, String name, String description, Double price) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
-        this.id = id;
     }
 
+    // добавлен для отладки
+    public Cheese(int id, String name, String description, Double price, boolean deleted) {
+        this(id, name, description, price);
+        this.deleted = deleted;
+    }
 
     public String getName() {
         return name;
@@ -69,7 +74,7 @@ public class Cheese {
     @Override
     public boolean equals(Object o) {
         Cheese that = (Cheese) o;
-        return (this.id == that.id);
+        return (this.name.equals(that.name));
     }
 
     @Override

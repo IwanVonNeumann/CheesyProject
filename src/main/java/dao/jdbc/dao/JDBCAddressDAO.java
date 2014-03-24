@@ -21,6 +21,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         System.out.println("[JDBC] Creating Address DAO...");
     }
 
+    @Override
     public List<Address> getAddressesList() {
         List<Address> list;
         PreparedStatement statement = null;
@@ -50,6 +51,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
+    @Override
     public Address getAddress(int id) {
         PreparedStatement statement = null;
         ResultSet result = null;
@@ -72,6 +74,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
+    @Override
     public Address getAddress(String name) {
         PreparedStatement statement = null;
         ResultSet result = null;
@@ -94,7 +97,10 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
+    @Override
     public void insertAddress(Address address) {
+        if (exists(address)) return; // уже в базе
+
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;
 
@@ -129,6 +135,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
+    @Override
     public void updateAddress(Address address) {
         PreparedStatement statement = null;
 
@@ -163,6 +170,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         }
     }
 
+    @Override
     public void safeDeleteAddress(Address address) {
         PreparedStatement statement = null;
 
@@ -183,6 +191,17 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         } finally {
             closeStatement(statement);
         }
+    }
+
+    @Override
+    public boolean exists(Address address) {
+        List<Address> addresses = getAddressesList();
+        boolean found = false;
+        for (Address current : addresses) {
+            found = current.equals(address);
+            if (found) break;
+        }
+        return found;
     }
 
     private Address buildAddress(ResultSet result) throws SQLException {

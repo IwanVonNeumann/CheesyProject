@@ -24,6 +24,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
         System.out.println("[JDBC] Creating Cart DAO...");
     }
 
+    @Override
     public List<Cart> getCartsList() {
         List<Cart> list;
         Statement statement = null;
@@ -49,6 +50,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
         }
     }
 
+    @Override
     public List<Cart> getCartsList(Address address) {
         List<Cart> list;
         PreparedStatement statement = null;
@@ -76,6 +78,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
         }
     }
 
+    @Override
     public void insertCart(Cart cart) {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;
@@ -84,7 +87,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             statement = connection.prepareStatement(
                     "INSERT INTO Carts (Clock, CustomerID) " +
                             "VALUES (?, ?);");
-            statement.setTimestamp(1, cart.getTime());
+            statement.setTimestamp(1, cart.getTime()); // База отбрасывает милисекунды
             statement.setInt(2, cart.getAddress().getId());
             statement.executeUpdate();
 
@@ -107,7 +110,6 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             closeResultSet(generatedKeys);
         }
     }
-
 
 
     private Cart buildCart(ResultSet result) throws SQLException {

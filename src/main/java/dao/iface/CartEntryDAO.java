@@ -6,12 +6,14 @@ import domain.MultiCheese;
 import java.util.List;
 
 /**
- * Created by IRuskevich on 14.12.3.
+ * Created by IRuskevich on 14.12.3
  */
 public interface CartEntryDAO {
 
-    List<MultiCheese> getCartEntries(Cart cart);
+    // List<MultiCheese> getCartEntries(Cart cart);
 
+    // какой из жвух методов логичнее оставить?
+    // или нужны оба?
     List<MultiCheese> getCartEntries(int cartId);
 
     // возможно, стоит переделать на

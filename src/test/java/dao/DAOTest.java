@@ -1,5 +1,6 @@
 package dao;
 
+import domain.MultiCheese;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -8,37 +9,34 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 /**
  * Created by IRuskevich on 20.03.2014
  */
-public class DAOTest {
+public abstract class DAOTest {
 
     private static String url;
     private static String name;
     private static String password;
 
+    protected static String entity;
+
     protected static Connection connection;
 
     @BeforeClass
     public static void prepareData() {
-
         url = "jdbc:mysql://localhost/cheese_test";
         name = "user";
         password = "userpwd";
 
         connect();
-        executeFile("CreateTables.sql");
-        executeFile("InsertData.sql");
     }
-
 
     @AfterClass
     public static void discardData() {
-        executeFile("dropTables.sql");
         disconnect(connection);
     }
-
 
     private static void connect() {
         try {
@@ -52,7 +50,7 @@ public class DAOTest {
         }
     }
 
-    private static void disconnect(Connection connection) {
+    protected static void disconnect(Connection connection) {
         try {
             if (connection != null) {
                 connection.close();
@@ -63,12 +61,13 @@ public class DAOTest {
         System.out.println("\nSuccessfully disconnected from the DB...");
     }
 
-    private static void executeFile(String fileName) {
+    protected static void executeFile(String entity, String fileName) {
         try {
             BufferedReader br =
                     new BufferedReader(
                             new FileReader(
-                                    new File("./src/main/resources/sql/" + fileName)));
+                                    new File("./src/main/resources/sql/test/" +
+                                            entity + "/" + fileName)));
 
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -93,5 +92,13 @@ public class DAOTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    protected boolean listsEqual(List<MultiCheese> list1, List<MultiCheese> list2) {
+        if (list1.size() != list2.size()) return false;
+        for (MultiCheese cheese : list1) {
+
+        }
+        return false;
     }
 }
