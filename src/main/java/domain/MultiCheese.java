@@ -80,6 +80,7 @@ public class MultiCheese implements Serializable { // какого?
         MultiCheese cheese1 = (MultiCheese) o;
 
         if (quantity != cheese1.quantity) return false;
+
         return cheese.equals(cheese1.cheese);
     }
 }
