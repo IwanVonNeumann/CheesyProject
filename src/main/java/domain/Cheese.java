@@ -73,8 +73,12 @@ public class Cheese {
 
     @Override
     public boolean equals(Object o) {
-        Cheese that = (Cheese) o;
-        return (this.name.equals(that.name));
+        if (this == o) return true;
+        if (!(o instanceof Cheese)) return false;
+
+        Cheese cheese = (Cheese) o;
+
+        return name.equals(cheese.name);
     }
 
     @Override

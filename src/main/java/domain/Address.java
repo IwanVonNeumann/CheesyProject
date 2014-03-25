@@ -170,8 +170,12 @@ public class Address {
 
     @Override
     public boolean equals(Object o) {
-        Address that = (Address) o;
-        return (this.name.equals(that.name));
+        if (this == o) return true;
+        if (!(o instanceof Address)) return false;
+
+        Address address = (Address) o;
+
+        return name.equals(address.name);
     }
 
     @Override

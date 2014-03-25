@@ -104,9 +104,18 @@ public class Cart implements Serializable {
 
     @Override
     public boolean equals(Object o) {
-        Cart that = (Cart)o;
-        return (Math.abs(this.getTime().getTime() - that.getTime().getTime()) < 1000) &&
-                this.getAddress().equals(that.getAddress());
+        if (this == o) return true;
+        if (!(o instanceof Cart)) return false;
+
+        Cart cart = (Cart) o;
+
+        if (!address.equals(cart.address)) return false;
+
+        return timestampsEqual(time, cart.time);
+    }
+
+    private boolean timestampsEqual(Timestamp t1, Timestamp t2) {
+        return Math.abs(t1.getTime() - t2.getTime()) < 1000;
     }
 
     @Override
