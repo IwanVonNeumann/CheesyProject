@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="DAO Layer tests almost done">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sql/test/address/dropTables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sql/test/cart/dropTables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sql/test/cartentry/dropTables.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/sql/test/cheese/dropTables.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MavenProject.iws" />
@@ -26,8 +30,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -63,8 +67,8 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules />
-    <ui_properties />
+    <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -72,10 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CartDAOTest.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CartDAOTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/dao/CartDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="47" selection-start="3005" selection-end="3005" vertical-scroll-proportion="0.0" vertical-offset="1645" max-vertical-offset="2074">
+            <state vertical-scroll-proportion="0.5512943" vertical-offset="292" max-vertical-offset="1683">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -84,7 +89,8 @@
       <file leaf-file-name="CartEntryDAOTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/dao/CartEntryDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="29" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1445">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1445">
+              <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -93,7 +99,8 @@
       <file leaf-file-name="insertData.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cartentry/insertData.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="15" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="935">
+            <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="935">
+              <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -102,7 +109,8 @@
       <file leaf-file-name="CartEntryDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="18" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="476">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -111,7 +119,8 @@
       <file leaf-file-name="JDBCCartEntryDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="41" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1751">
+            <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1751">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -120,7 +129,8 @@
       <file leaf-file-name="JDBCCartDAO.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="122" column="66" selection-start="4087" selection-end="4087" vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2261">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2261">
+              <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -129,7 +139,8 @@
       <file leaf-file-name="Address.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="0" selection-start="4134" selection-end="4134" vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="3247">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="3247">
+              <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,16 +149,18 @@
       <file leaf-file-name="Cheese.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cheese.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="0" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1598">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1598">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiCheese.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MultiCheese.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/MultiCheese.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="29" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.49337748" vertical-offset="535" max-vertical-offset="1139">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1037" max-vertical-offset="1343">
+              <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -156,7 +169,8 @@
       <file leaf-file-name="Cart.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="0" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2227">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2227">
+              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -258,8 +272,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-4" />
     <option name="y" value="-4" />
-    <option name="width" value="1032" />
-    <option name="height" value="746" />
+    <option name="width" value="1928" />
+    <option name="height" value="1164" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -294,7 +308,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -306,8 +320,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -322,7 +336,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,7 +346,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -358,7 +372,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -376,7 +390,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -398,7 +412,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -411,16 +425,16 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cheese" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -428,7 +442,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -444,7 +458,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cartentry" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheesyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -462,7 +502,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
+              <option name="myItemId" value="CheesyProject" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -475,10 +515,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -487,262 +523,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="address" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sql" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="domain" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdbc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdbc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="iface" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cheese" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -789,18 +569,18 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="war" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
-      <recent name="D:\Users\User\IdeaProjects\MavenProject\src\main" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="sql.test" />
       <recent name="dao" />
       <recent name="dao.jdbc" />
       <recent name="models" />
       <recent name="domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
+      <recent name="D:\Users\User\IdeaProjects\MavenProject\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.dao in MavenProject">
@@ -960,9 +740,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
-      <method />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -1052,8 +829,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1032" height="746" extended-state="6" />
-    <editor active="false" />
+    <frame x="-4" y="-4" width="1928" height="1164" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1064,14 +841,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16894531" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.265625" sideWeight="0.6983333" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31490016" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14166667" sideWeight="0.6983333" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31431243" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
@@ -1081,12 +857,16 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718894" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32647333" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -1123,185 +903,234 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2261">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="3247">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1598">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/MultiCheese.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="731" max-vertical-offset="1003">
+          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2227">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cache/CheeseCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="937" selection-end="937" vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="867" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="455" max-vertical-offset="867">
+          <caret line="48" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberCheeseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="5" selection-start="1729" selection-end="1729" vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="1156" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="552" max-vertical-offset="1156">
+          <caret line="65" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberAddressDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="824" selection-end="824" vertical-scroll-proportion="0.85213035" vertical-offset="102" max-vertical-offset="1360">
-          <folding />
+        <state vertical-scroll-proportion="0.85213035" vertical-offset="102" max-vertical-offset="1360">
+          <caret line="32" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cache/AddressCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="5" selection-start="512" selection-end="512" vertical-scroll-proportion="0.9799499" vertical-offset="0" max-vertical-offset="952" />
+        <state vertical-scroll-proportion="0.9799499" vertical-offset="0" max-vertical-offset="952">
+          <caret line="26" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="21" selection-start="549" selection-end="549" vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="1122" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="314" max-vertical-offset="1122">
+          <caret line="18" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/domain/address.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="30" selection-start="443" selection-end="443" vertical-scroll-proportion="0.46867168" vertical-offset="0" max-vertical-offset="527">
-          <folding />
+        <state vertical-scroll-proportion="0.46867168" vertical-offset="0" max-vertical-offset="527">
+          <caret line="11" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.80569947" vertical-offset="311" max-vertical-offset="697">
+        <state vertical-scroll-proportion="-0.80569947" vertical-offset="311" max-vertical-offset="697">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/address/dropTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="10" selection-start="10" selection-end="10" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/address/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="2" selection-start="200" selection-end="200" vertical-scroll-proportion="0.3642857" vertical-offset="0" max-vertical-offset="420" />
+        <state vertical-scroll-proportion="0.3642857" vertical-offset="0" max-vertical-offset="420">
+          <caret line="9" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCAddressProxy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="38" selection-start="702" selection-end="702" vertical-scroll-proportion="0.44523808" vertical-offset="153" max-vertical-offset="646">
-          <folding />
+        <state vertical-scroll-proportion="0.44523808" vertical-offset="153" max-vertical-offset="646">
+          <caret line="25" column="38" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="49" selection-start="3168" selection-end="3209" vertical-scroll-proportion="0.41353384" vertical-offset="1382" max-vertical-offset="3910">
-          <folding />
+        <state vertical-scroll-proportion="0.41353384" vertical-offset="1382" max-vertical-offset="3910">
+          <caret line="96" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="12" selection-start="3290" selection-end="3290" vertical-scroll-proportion="0.6093366" vertical-offset="1401" max-vertical-offset="4794">
-          <folding />
+        <state vertical-scroll-proportion="0.6093366" vertical-offset="1401" max-vertical-offset="4794">
+          <caret line="106" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/address/insertData.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="69" selection-end="116" vertical-scroll-proportion="0.04047619" vertical-offset="0" max-vertical-offset="420" />
+        <state vertical-scroll-proportion="0.04047619" vertical-offset="0" max-vertical-offset="420">
+          <caret line="1" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.23327616" vertical-offset="0" max-vertical-offset="816" />
+        <state vertical-scroll-proportion="0.23327616" vertical-offset="0" max-vertical-offset="816">
+          <caret line="8" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/ConnectionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="131" selection-end="131" vertical-scroll-proportion="0.22516556" vertical-offset="0" max-vertical-offset="604">
-          <folding />
+        <state vertical-scroll-proportion="0.22516556" vertical-offset="0" max-vertical-offset="604">
+          <caret line="8" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="1" selection-start="362" selection-end="362" vertical-scroll-proportion="0.5629139" vertical-offset="0" max-vertical-offset="604">
-          <folding />
+        <state vertical-scroll-proportion="0.5629139" vertical-offset="0" max-vertical-offset="604">
+          <caret line="22" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="31" selection-start="223" selection-end="223" vertical-scroll-proportion="0.30960265" vertical-offset="0" max-vertical-offset="604">
-          <folding />
+        <state vertical-scroll-proportion="0.30960265" vertical-offset="0" max-vertical-offset="604">
+          <caret line="14" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/DBConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0816" vertical-offset="0" max-vertical-offset="625">
-          <folding />
+        <state vertical-scroll-proportion="0.0816" vertical-offset="0" max-vertical-offset="625">
+          <caret line="3" column="35" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/AddressDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="143" selection-end="143" vertical-scroll-proportion="0.2448" vertical-offset="0" max-vertical-offset="625">
-          <folding />
+        <state vertical-scroll-proportion="0.2448" vertical-offset="0" max-vertical-offset="625">
+          <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/production/insertData.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="0" selection-start="1458" selection-end="1572" vertical-scroll-proportion="1.0025063" vertical-offset="994" max-vertical-offset="1598" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/production/createTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="305" selection-end="305" vertical-scroll-proportion="0.63909775" vertical-offset="0" max-vertical-offset="714" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cart/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="159" selection-end="159" vertical-scroll-proportion="-0.46867168" vertical-offset="306" max-vertical-offset="714" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cart/dropTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="86" selection-end="86" vertical-scroll-proportion="0.2556391" vertical-offset="0" max-vertical-offset="399" />
+        <state vertical-scroll-proportion="-0.46867168" vertical-offset="306" max-vertical-offset="714">
+          <caret line="7" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/CheeseDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="28" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1700">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1700">
+          <caret line="29" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="16" selection-start="2766" selection-end="2766" vertical-scroll-proportion="0.33333334" vertical-offset="738" max-vertical-offset="1224" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="738" max-vertical-offset="1224">
+          <caret line="50" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/statements/RunAfters.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="16" selection-start="612" selection-end="612" vertical-scroll-proportion="0.6111111" vertical-offset="17" max-vertical-offset="323" />
+        <state vertical-scroll-proportion="0.6111111" vertical-offset="17" max-vertical-offset="323">
+          <caret line="13" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="40" selection-start="388" selection-end="388" vertical-scroll-proportion="0.53291535" vertical-offset="0" max-vertical-offset="319" />
+        <state vertical-scroll-proportion="0.53291535" vertical-offset="0" max-vertical-offset="319">
+          <caret line="11" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/model/FrameworkMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="28" selection-start="504" selection-end="504" vertical-scroll-proportion="0.33639145" vertical-offset="94" max-vertical-offset="901" />
+        <state vertical-scroll-proportion="0.33639145" vertical-offset="94" max-vertical-offset="901">
+          <caret line="13" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="519" selection-end="519" vertical-scroll-proportion="0.35947713" vertical-offset="128" max-vertical-offset="2567" />
+        <state vertical-scroll-proportion="0.35947713" vertical-offset="128" max-vertical-offset="2567">
+          <caret line="15" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cheese/insertData.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="2" selection-start="0" selection-end="389" vertical-scroll-proportion="0.16190477" vertical-offset="0" max-vertical-offset="425" />
+        <state vertical-scroll-proportion="0.16190477" vertical-offset="0" max-vertical-offset="425">
+          <caret line="4" column="2" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cart/insertData.sql">
@@ -1309,126 +1138,144 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="4" selection-start="375" selection-end="375" vertical-scroll-proportion="0.81772155" vertical-offset="0" max-vertical-offset="765" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cartentry/dropTables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="399" />
+        <state vertical-scroll-proportion="0.81772155" vertical-offset="0" max-vertical-offset="765">
+          <caret line="19" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cartentry/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="6" selection-start="671" selection-end="671" vertical-scroll-proportion="0.6165413" vertical-offset="315" max-vertical-offset="714" />
+        <state vertical-scroll-proportion="0.6165413" vertical-offset="315" max-vertical-offset="714">
+          <caret line="33" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/DAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="4" selection-start="2675" selection-end="2675" vertical-scroll-proportion="0.0" vertical-offset="1233" max-vertical-offset="1700">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1233" max-vertical-offset="1700">
+          <caret line="96" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/AddressDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="75" selection-start="2138" selection-end="2205" vertical-scroll-proportion="0.0" vertical-offset="940" max-vertical-offset="1819">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="940" max-vertical-offset="1819">
+          <caret line="80" column="75" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/CartEntriesModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
+          <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cache/mock/DataCacheMock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="0" selection-start="1879" selection-end="1879" vertical-scroll-proportion="0.05263158" vertical-offset="1288" max-vertical-offset="2278" />
+        <state vertical-scroll-proportion="0.05263158" vertical-offset="1288" max-vertical-offset="2278">
+          <caret line="86" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cache/DataCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="7" selection-start="1756" selection-end="1884" vertical-scroll-proportion="0.3508772" vertical-offset="1288" max-vertical-offset="2227" />
+        <state vertical-scroll-proportion="0.3508772" vertical-offset="1288" max-vertical-offset="2227">
+          <caret line="91" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cache/CartEntryCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="152" selection-end="152" vertical-scroll-proportion="0.37593985" vertical-offset="3" max-vertical-offset="663" />
+        <state vertical-scroll-proportion="0.37593985" vertical-offset="3" max-vertical-offset="663">
+          <caret line="9" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartEntryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="193" selection-end="193" vertical-scroll-proportion="-0.320802" vertical-offset="213" max-vertical-offset="612" />
+        <state vertical-scroll-proportion="-0.320802" vertical-offset="213" max-vertical-offset="612">
+          <caret line="10" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="41" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" vertical-offset="336" max-vertical-offset="1751">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/CartDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="47" selection-start="3005" selection-end="3005" vertical-scroll-proportion="0.0" vertical-offset="1645" max-vertical-offset="2074">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1751">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/CartEntryDAOTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="29" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.0" vertical-offset="922" max-vertical-offset="1445">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1275" max-vertical-offset="1445">
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/test/cartentry/insertData.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="15" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0" vertical-offset="519" max-vertical-offset="935">
+        <state vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="935">
+          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="18" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="476">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="66" selection-start="4087" selection-end="4087" vertical-scroll-proportion="0.0" vertical-offset="1590" max-vertical-offset="2091">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2261">
+          <caret line="122" column="66" selection-start-line="122" selection-start-column="66" selection-end-line="122" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="0" selection-start="4134" selection-end="4134" vertical-scroll-proportion="0.0" vertical-offset="2159" max-vertical-offset="2652">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2992" max-vertical-offset="3247">
+          <caret line="176" column="0" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="0" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="1955">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2227">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cheese.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1304" selection-end="1304" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1258">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="1598">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/MultiCheese.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="29" selection-start="1126" selection-end="1126" vertical-scroll-proportion="0.49337748" vertical-offset="535" max-vertical-offset="1139">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/CartDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5512943" vertical-offset="292" max-vertical-offset="1683">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding />
         </state>
       </provider>
