@@ -157,12 +157,10 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
     @Override
     public boolean exists(Cheese cheese) {
         List<Cheese> cheeses = getCheesesList();
-        boolean found = false;
         for (Cheese current : cheeses) {
-            found = current.equals(cheese);
-            if (found) break;
+            if (current.equals(cheese)) return  true;
         }
-        return found;
+        return false;
     }
 
     private Cheese buildCheese(ResultSet result) throws SQLException {

@@ -71,4 +71,15 @@ public class MultiCheese implements Serializable { // какого?
         if (quantity > 1)
             quantity -= 1;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MultiCheese)) return false;
+
+        MultiCheese cheese1 = (MultiCheese) o;
+
+        if (quantity != cheese1.quantity) return false;
+        return cheese.equals(cheese1.cheese);
+    }
 }
