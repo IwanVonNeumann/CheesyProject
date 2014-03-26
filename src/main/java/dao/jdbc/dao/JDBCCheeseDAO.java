@@ -28,7 +28,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
             System.out.println("[JDBC] SELECT * FROM Cheeses\n" +
                     "\tWHERE Deleted <> true;");
-            list = new ArrayList<Cheese>();
+            list = new ArrayList<>();
             while (result.next()) {
                 Cheese cheese = buildCheese(result);
                 list.add(cheese);

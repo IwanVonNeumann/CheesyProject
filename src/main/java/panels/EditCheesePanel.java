@@ -5,7 +5,7 @@ import org.apache.wicket.markup.html.form.Button;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.link.Link;
-import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.model.CompoundPropertyModel;
 import views.ViewCheeses;
 
 public class EditCheesePanel extends CheesePanel {
@@ -17,27 +17,33 @@ public class EditCheesePanel extends CheesePanel {
 
         this.cheese = cheese;
 
-        Form form = new Form("form");
+        Form form = new Form("form", new CompoundPropertyModel(cheese));
         add(form);
 
-        form.add(new TextField("name",
+        form.add(new TextField("name"));
+        form.add(new TextField("description"));
+        form.add(new TextField("price"));
+
+        // TODO test this:
+        /*form.add(new TextField("name",
                 new PropertyModel(cheese, "name")));
         form.add(new TextField("description",
                 new PropertyModel(cheese, "description")));
         form.add(new TextField("price",
-                new PropertyModel(cheese, "price")));
-        form.add(new Link("cancel"){
+                new PropertyModel(cheese, "price")));*/
+
+        form.add(new Link("cancel") {
             @Override
             public void onClick() {
                 getParent().setVisible(false);
             }
         });
 
-        form.add(new Button("update"){
+        form.add(new Button("update") {
             @Override
             public void onSubmit() {
                 //System.out.println("Update " +
-                  //      cheese.getName() + " Cheese clicked;");
+                //      cheese.getName() + " Cheese clicked;");
                 getCheeseSession().getDataCache().updateCheese(cheese);
                 setResponsePage(ViewCheeses.class);
             }

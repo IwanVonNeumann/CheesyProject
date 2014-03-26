@@ -6,12 +6,10 @@ import dao.iface.CartEntryDAO;
 import dao.iface.CheeseDAO;
 import dao.jdbc.dao.JDBCAddressDAO;
 import dao.jdbc.dao.JDBCCartDAO;
-
 import dao.jdbc.dao.JDBCCartEntryDAO;
 import dao.jdbc.dao.JDBCCheeseDAO;
 import domain.Address;
 import domain.Cart;
-
 import domain.MultiCheese;
 import org.junit.After;
 import org.junit.Before;
@@ -19,9 +17,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  * Created by Iwan on 14.22.3
@@ -81,11 +77,11 @@ public class CartDAOTest extends DAOTest {
         cart1.order(); // текущее время
 
         List<Cart> list1 = cartDAO.getCartsList();
-        assertFalse(cartInList(list1, cart1));
+        assertFalse(itemInList(list1, cart1));
 
         cartDAO.insertCart(cart1);
         List<Cart> list2 = cartDAO.getCartsList();
-        assertTrue(cartInList(list2, cart1));
+        assertTrue(itemInList(list2, cart1));
 
         Cart cart2 = new Cart();
         cart2.setAddress(addressDAO.getAddress(2));
@@ -94,23 +90,14 @@ public class CartDAOTest extends DAOTest {
         cart2.order();
 
         List<Cart> list3 = cartDAO.getCartsList();
-        assertFalse(cartInList(list3, cart2));
+        assertFalse(itemInList(list3, cart2));
 
         cartDAO.insertCart(cart2);
         List<Cart> list4 = cartDAO.getCartsList();
-        assertTrue(cartInList(list4, cart2));
+        assertTrue(itemInList(list4, cart2));
 
         List<MultiCheese> items = cartEntryDAO.getCartEntries(cart2.getId());
-        assertEquals(cart2.getCheeses().size(), items.size());
 
-        assertTrue(items.retainAll(cart2.getCheeses()));
-        assertTrue(cart2.getCheeses().retainAll(items));
-    }
-
-    private boolean cartInList(List<Cart> list, Cart cart) {
-        for (Cart current : list) {
-            if (current.equals(cart)) return true;
-        }
-        return false;
+        assertTrue(listsEqual(items, cart2.getCheeses()));
     }
 }

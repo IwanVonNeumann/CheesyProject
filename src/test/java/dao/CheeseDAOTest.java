@@ -2,14 +2,14 @@ package dao;
 
 import dao.iface.CheeseDAO;
 import dao.jdbc.dao.JDBCCheeseDAO;
-
 import domain.Cheese;
-
-import org.junit.*;
-
-import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.List;
+
+import static org.junit.Assert.*;
 
 /**
  * Created by IRuskevich on 20.03.2014
@@ -91,13 +91,13 @@ public class CheeseDAOTest extends DAOTest {
     }
 
     @Test
-        public void deletingTest() {
-            List<Cheese> list1 = dao.getCheesesList();
-            Cheese cheese1 = list1.get(1);
-            dao.safeDeleteCheese(cheese1);
-            assertFalse(dao.exists(cheese1));
+    public void deletingTest() {
+        List<Cheese> list1 = dao.getCheesesList();
+        Cheese cheese1 = list1.get(1);
+        dao.safeDeleteCheese(cheese1);
+        assertFalse(dao.exists(cheese1));
 
-            Cheese cheese2 = dao.getCheese(cheese1.getId());
-            assertTrue(cheese2.isDeleted());
+        Cheese cheese2 = dao.getCheese(cheese1.getId());
+        assertTrue(cheese2.isDeleted());
     }
 }

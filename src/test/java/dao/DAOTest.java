@@ -1,6 +1,5 @@
 package dao;
 
-import domain.MultiCheese;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -43,9 +42,7 @@ public abstract class DAOTest {
             System.out.println("Connecting to the Test DB...\n");
             Class.forName("com.mysql.jdbc.Driver"); //Загружаем драйвер
             connection = DriverManager.getConnection(url, name, password);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
@@ -85,20 +82,23 @@ public abstract class DAOTest {
                 statement.executeUpdate(s);
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+        } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
     }
 
-    protected boolean listsEqual(List<MultiCheese> list1, List<MultiCheese> list2) {
-        if (list1.size() != list2.size()) return false;
-        for (MultiCheese cheese : list1) {
-
+    protected <T> boolean itemInList(List<T> list, T item) {
+        for (T current : list) {
+            if (current.equals(item)) return true;
         }
         return false;
+    }
+
+    protected <T> boolean listsEqual(List<T> list1, List<T> list2) {
+        if (list1.size() != list2.size()) return false;
+        for (T item : list1) {
+            if (!itemInList(list2, item)) return false;
+        }
+        return true;
     }
 }

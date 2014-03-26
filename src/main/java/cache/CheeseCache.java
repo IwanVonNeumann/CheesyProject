@@ -3,31 +3,47 @@ package cache;
 import dao.iface.CheeseDAO;
 import domain.Cheese;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Iwan on 14.20.3.
+ * Created by Iwan on 14.20.3
  */
 public class CheeseCache implements CheeseDAO {
 
     private CheeseDAO cheeseDAO;
 
+    private LinkedList<Cheese> cheeses;
+    private LinkedList<Cheese> deletedCheeses;
+
     public CheeseCache(CheeseDAO cheeseDAO) {
         this.cheeseDAO = cheeseDAO;
+        cheeses = new LinkedList<>(cheeseDAO.getCheesesList());
+        deletedCheeses = new LinkedList<>();
     }
 
     @Override
     public List<Cheese> getCheesesList() {
-        return cheeseDAO.getCheesesList();
+        return cheeses;
     }
 
     @Override
     public Cheese getCheese(int id) {
-        return cheeseDAO.getCheese(id);
+        for (Cheese cheese : cheeses) {
+            if (cheese.getId() == id)
+                return cheese;
+        }
+        for (Cheese cheese : deletedCheeses) {
+            if (cheese.getId() == id) {
+                return cheese;
+            }
+        }
+        return null;
     }
 
     @Override
     public void addCheese(Cheese cheese) {
+        cheeses.add(cheese);
         cheeseDAO.addCheese(cheese);
     }
 
@@ -38,11 +54,18 @@ public class CheeseCache implements CheeseDAO {
 
     @Override
     public void safeDeleteCheese(Cheese cheese) {
+        cheeses.remove(cheese);
+        cheese.delete();
+        deletedCheeses.add(cheese);
+
         cheeseDAO.safeDeleteCheese(cheese);
     }
 
     @Override
     public boolean exists(Cheese cheese) {
-        return cheeseDAO.exists(cheese);
+        for (Cheese current : cheeses) {
+            if (current.equals(cheese)) return true;
+        }
+        return false;
     }
 }

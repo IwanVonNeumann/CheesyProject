@@ -14,7 +14,7 @@ public class Cart implements Serializable {
 
     // создание вместе с сессией
     public Cart() {
-        cheeses = new LinkedList<MultiCheese>();
+        cheeses = new LinkedList<>();
     }
 
     // цивилизованное извлечение из базы
@@ -109,9 +109,7 @@ public class Cart implements Serializable {
 
         Cart cart = (Cart) o;
 
-        if (!address.equals(cart.address)) return false;
-
-        return timestampsEqual(time, cart.time);
+        return address.equals(cart.address) && timestampsEqual(time, cart.time);
     }
 
     private boolean timestampsEqual(Timestamp t1, Timestamp t2) {
