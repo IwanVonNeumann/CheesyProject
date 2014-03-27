@@ -1,25 +1,33 @@
 package cache;
 
+import cache.iface.IDataCache;
 import dao.iface.CartDAO;
 import domain.Address;
 import domain.Cart;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by Iwan on 14.20.3.
+ * Created by Iwan on 14.20.3
  */
 public class CartCache implements CartDAO {
 
     private CartDAO cartDAO;
 
-    public CartCache(CartDAO cartDAO) {
+    private IDataCache dataCache;
+
+    private List<Cart> carts;
+
+    public CartCache(IDataCache dataCache, CartDAO cartDAO) {
+        this.dataCache = dataCache;
         this.cartDAO = cartDAO;
+        carts = new LinkedList<>(cartDAO.getCartsList());
     }
 
     @Override
     public List<Cart> getCartsList() {
-        return cartDAO.getCartsList();
+        return carts;
     }
 
     @Override

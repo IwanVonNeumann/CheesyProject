@@ -1,5 +1,6 @@
 package cache;
 
+import cache.iface.IDataCache;
 import dao.iface.CartEntryDAO;
 import domain.Cart;
 import domain.MultiCheese;
@@ -13,7 +14,10 @@ public class CartEntryCache implements CartEntryDAO {
 
     private CartEntryDAO cartEntryDAO;
 
-    public CartEntryCache(CartEntryDAO cartEntryDAO) {
+    private IDataCache dataCache;
+
+    public CartEntryCache(IDataCache dataCache, CartEntryDAO cartEntryDAO) {
+        this.dataCache = dataCache;
         this.cartEntryDAO = cartEntryDAO;
     }
 

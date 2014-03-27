@@ -2,6 +2,7 @@ package cache;
 
 import cache.iface.IDataCache;
 
+import dao.iface.DBConnection;
 import domain.Address;
 import domain.Cart;
 import domain.Cheese;
@@ -19,7 +20,14 @@ public class DataCache implements IDataCache {
     private CartEntryCache cartEntryCache;
     private CheeseCache cheeseCache;
 
-    public DataCache() {
+    public DataCache(DBConnection dbConnection) {
+        // step 1
+        cheeseCache = new CheeseCache(this, dbConnection.getCheeseDAO());
+        // step 2
+        addressCache = new AddressCache(this, dbConnection.getAddressDAO());
+        cartEntryCache = new CartEntryCache(this, dbConnection.getCartEntryDAO());
+        // step 3
+        cartCache = new CartCache(this, dbConnection.getCartDAO());
     }
 
     // AddressDAO

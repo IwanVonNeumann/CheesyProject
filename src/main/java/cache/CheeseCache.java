@@ -1,5 +1,6 @@
 package cache;
 
+import cache.iface.IDataCache;
 import dao.iface.CheeseDAO;
 import domain.Cheese;
 
@@ -13,10 +14,13 @@ public class CheeseCache implements CheeseDAO {
 
     private CheeseDAO cheeseDAO;
 
-    private LinkedList<Cheese> cheeses;
-    private LinkedList<Cheese> deletedCheeses;
+    private IDataCache dataCache;
 
-    public CheeseCache(CheeseDAO cheeseDAO) {
+    private List<Cheese> cheeses;
+    private List<Cheese> deletedCheeses;
+
+    public CheeseCache(IDataCache dataCache, CheeseDAO cheeseDAO) {
+        this.dataCache = dataCache;
         this.cheeseDAO = cheeseDAO;
         cheeses = new LinkedList<>(cheeseDAO.getCheesesList());
         deletedCheeses = new LinkedList<>();
@@ -25,6 +29,14 @@ public class CheeseCache implements CheeseDAO {
     @Override
     public List<Cheese> getCheesesList() {
         return cheeses;
+    }
+
+    @Override
+    public boolean exists(Cheese cheese) {
+        for (Cheese current : cheeses) {
+            if (current.equals(cheese)) return true;
+        }
+        return false;
     }
 
     @Override
@@ -59,13 +71,5 @@ public class CheeseCache implements CheeseDAO {
         deletedCheeses.add(cheese);
 
         cheeseDAO.safeDeleteCheese(cheese);
-    }
-
-    @Override
-    public boolean exists(Cheese cheese) {
-        for (Cheese current : cheeses) {
-            if (current.equals(cheese)) return true;
-        }
-        return false;
     }
 }
