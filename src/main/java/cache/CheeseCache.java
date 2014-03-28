@@ -1,6 +1,5 @@
 package cache;
 
-import cache.iface.IDataCache;
 import dao.iface.CheeseDAO;
 import domain.Cheese;
 
@@ -14,13 +13,10 @@ public class CheeseCache implements CheeseDAO {
 
     private CheeseDAO cheeseDAO;
 
-    private IDataCache dataCache;
-
     private List<Cheese> cheeses;
     private List<Cheese> deletedCheeses;
 
-    public CheeseCache(IDataCache dataCache, CheeseDAO cheeseDAO) {
-        this.dataCache = dataCache;
+    public CheeseCache(CheeseDAO cheeseDAO) {
         this.cheeseDAO = cheeseDAO;
         cheeses = new LinkedList<>(cheeseDAO.getCheesesList());
         deletedCheeses = new LinkedList<>();

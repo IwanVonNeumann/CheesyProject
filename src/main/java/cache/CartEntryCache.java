@@ -1,7 +1,7 @@
 package cache;
 
-import cache.iface.IDataCache;
 import dao.iface.CartEntryDAO;
+import dao.iface.CheeseDAO;
 import domain.Cart;
 import domain.MultiCheese;
 
@@ -13,12 +13,11 @@ import java.util.List;
 public class CartEntryCache implements CartEntryDAO {
 
     private CartEntryDAO cartEntryDAO;
+    private CheeseDAO cheeseDAO;
 
-    private IDataCache dataCache;
-
-    public CartEntryCache(IDataCache dataCache, CartEntryDAO cartEntryDAO) {
-        this.dataCache = dataCache;
+    public CartEntryCache(CartEntryDAO cartEntryDAO, CheeseDAO cheeseDAO) {
         this.cartEntryDAO = cartEntryDAO;
+        this.cheeseDAO = cheeseDAO;
     }
 
     /*@Override

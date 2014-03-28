@@ -1,7 +1,8 @@
 package cache;
 
-import cache.iface.IDataCache;
+import dao.iface.AddressDAO;
 import dao.iface.CartDAO;
+import dao.iface.CartEntryDAO;
 import domain.Address;
 import domain.Cart;
 
@@ -14,14 +15,15 @@ import java.util.List;
 public class CartCache implements CartDAO {
 
     private CartDAO cartDAO;
-
-    private IDataCache dataCache;
+    private CartEntryDAO cartEntryDAO;
+    private AddressDAO addressDAO;
 
     private List<Cart> carts;
 
-    public CartCache(IDataCache dataCache, CartDAO cartDAO) {
-        this.dataCache = dataCache;
+    public CartCache(CartDAO cartDAO, CartEntryDAO cartEntryDAO, AddressDAO addressDAO) {
         this.cartDAO = cartDAO;
+        this.cartEntryDAO = cartEntryDAO;
+        this.addressDAO = addressDAO;
         carts = new LinkedList<>(cartDAO.getCartsList());
     }
 

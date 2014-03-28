@@ -1,6 +1,5 @@
 package cache;
 
-import cache.iface.IDataCache;
 import dao.iface.AddressDAO;
 import domain.Address;
 
@@ -13,13 +12,11 @@ import java.util.List;
 public class AddressCache implements AddressDAO {
 
     private AddressDAO addressDAO;
+
     private List<Address> addresses;
     private List<Address> deletedAddresses;
 
-    private IDataCache dataCache;
-
-    public AddressCache(IDataCache dataCache, AddressDAO addressDAO) {
-        this.dataCache = dataCache;
+    public AddressCache(AddressDAO addressDAO) {
         this.addressDAO = addressDAO;
         addresses = new LinkedList<>(addressDAO.getAddressesList());
         deletedAddresses = new LinkedList<>();

@@ -22,12 +22,12 @@ public class DataCache implements IDataCache {
 
     public DataCache(DBConnection dbConnection) {
         // step 1
-        cheeseCache = new CheeseCache(this, dbConnection.getCheeseDAO());
+        cheeseCache = new CheeseCache(dbConnection.getCheeseDAO());
         // step 2
-        addressCache = new AddressCache(this, dbConnection.getAddressDAO());
-        cartEntryCache = new CartEntryCache(this, dbConnection.getCartEntryDAO());
+        addressCache = new AddressCache(dbConnection.getAddressDAO());
+        cartEntryCache = new CartEntryCache(dbConnection.getCartEntryDAO(), cheeseCache);
         // step 3
-        cartCache = new CartCache(this, dbConnection.getCartDAO());
+        cartCache = new CartCache(dbConnection.getCartDAO(), cartEntryCache, addressCache);
     }
 
     // AddressDAO
