@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 
 /**
- * Created by IRuskevich on 14.26.2.
+ * Created by IRuskevich on 14.26.2
  */
 public class ProfileDataPanel extends CheesePanel {
 
@@ -37,7 +37,6 @@ public class ProfileDataPanel extends CheesePanel {
                         get("changePassword").setVisible(true);
             }
         });
-
 
         String hexadecimalHash = (
                 (Address)getModelObject()).getHexHash(4, "<br/>");

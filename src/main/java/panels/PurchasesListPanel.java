@@ -22,7 +22,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 /**
- * Created by IRuskevich on 14.25.2.
+ * Created by IRuskevich on 14.25.2
  */
 public class PurchasesListPanel extends CheesePanel {
 

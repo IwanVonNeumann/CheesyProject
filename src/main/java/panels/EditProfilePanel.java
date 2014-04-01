@@ -19,6 +19,7 @@ public class EditProfilePanel extends CheesePanel {
         form.add(new TextField("street"));
         form.add(new TextField("zipCode"));
         form.add(new TextField("city"));
+
         form.add(new Link("cancel") {
             @Override
             public void onClick() {
@@ -27,6 +28,7 @@ public class EditProfilePanel extends CheesePanel {
                         get("profile").setVisible(true);
             }
         });
+
         form.add(new SubmitLink("save") {
             @Override
             public void onSubmit() {
@@ -41,6 +43,5 @@ public class EditProfilePanel extends CheesePanel {
                         (Address)(getParent().getModelObject()));
             }
         });
-
     }
 }

@@ -10,16 +10,12 @@ import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import views.ViewCheeses;
 
-import java.util.List;
-
 public class AdminCheesesListPanel extends CheesePanel {
-
-    CheesesModel cheesesModel;
 
     public AdminCheesesListPanel(String id) {
         super(id);
 
-        cheesesModel = new CheesesModel(
+        CheesesModel cheesesModel = new CheesesModel(
                 getCheeseSession().getDataCache());
 
         PageableListView cheeses =
@@ -54,7 +50,6 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 //удаление из базы
                                 getCheeseSession().getDataCache().
                                         safeDeleteCheese(selected);
-                                        //deleteCheese(selected);
 
                                 // удаление из корзины
                                 // дописать, чтобы работало для всех сессий
@@ -65,8 +60,6 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 setResponsePage(ViewCheeses.class);
                             }
                         });
-
-
                     }
 
                     /*
@@ -82,11 +75,9 @@ public class AdminCheesesListPanel extends CheesePanel {
         add(cheeses);
 
         add(new PagingNavigator("navigator", cheeses));
-
     }
 
-    protected List<Cheese> getCheeses() {
+    /*protected List<Cheese> getCheeses() {
         return getCheeseSession().getDataCache().getCheesesList();
-    }
-
+    }*/
 }

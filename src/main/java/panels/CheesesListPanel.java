@@ -2,41 +2,46 @@ package panels;
 
 import domain.Cart;
 import domain.Cheese;
+
 import models.CheesesModel;
+
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+import org.apache.wicket.model.CompoundPropertyModel;
 
 import java.util.List;
 
-public class CheesesListPanel extends CheesePanel {
 
-    private CheesesModel cheesesModel;
+public class CheesesListPanel extends CheesePanel {
 
     public CheesesListPanel(String id) {
         super(id);
 
-        cheesesModel = new CheesesModel(
+        CheesesModel cheesesModel = new CheesesModel(
                 getCheeseSession().getDataCache());
 
         PageableListView cheeses =
                 new PageableListView("cheeses", cheesesModel, 3) {
                     @Override
                     protected void populateItem(ListItem listItem) {
-                        Cheese cheese = (Cheese) listItem.getModelObject();
-                        listItem.add(new Label("name", cheese.getName()));
-                        listItem.add(new Label("description",
-                                cheese.getDescription()));
-                        listItem.add(new Label("price",
-                                "$" + cheese.getPrice().toString()));
+                        listItem.setModel(
+                                new CompoundPropertyModel(
+                                        listItem.getModel()));
+
+                        listItem.add(new Label("name"));
+                        listItem.add(new Label("description"));
+                        listItem.add(new Label("price"));
+                                //"$" + cheese.getPrice().toString()));
+
                         listItem.add(new Link("add", listItem.getModel()) {
                             //listItem.add(new AjaxFallbackLink("add", listItem.getModel()) {
                             @Override
                             public void onClick() { //AjaxRequestTarget target) {
-                                Cheese selected = (Cheese) getModelObject();
-                                getCart().addCheese(selected);
+                                getCart().addCheese(
+                                        (Cheese)getModelObject());
                         /*
                         if (target != null) {
                             target.addComponent(shoppingCart);
@@ -55,6 +60,5 @@ public class CheesesListPanel extends CheesePanel {
 
     protected List<Cheese> getCheeses() {
         return getCheeseSession().getDataCache().getCheesesList();
-        //return CheeseApplication.get().getCheeses();
     }
 }

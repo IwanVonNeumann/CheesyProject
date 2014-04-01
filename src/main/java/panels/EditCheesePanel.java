@@ -12,7 +12,7 @@ public class EditCheesePanel extends CheesePanel {
 
     private Cheese cheese;
 
-    public EditCheesePanel(String id, final Cheese cheese) {
+    public EditCheesePanel(String id, Cheese cheese) {
         super(id);
 
         this.cheese = cheese;
@@ -23,14 +23,6 @@ public class EditCheesePanel extends CheesePanel {
         form.add(new TextField("name"));
         form.add(new TextField("description"));
         form.add(new TextField("price"));
-
-        // TODO test this:
-        /*form.add(new TextField("name",
-                new PropertyModel(cheese, "name")));
-        form.add(new TextField("description",
-                new PropertyModel(cheese, "description")));
-        form.add(new TextField("price",
-                new PropertyModel(cheese, "price")));*/
 
         form.add(new Link("cancel") {
             @Override
@@ -44,7 +36,8 @@ public class EditCheesePanel extends CheesePanel {
             public void onSubmit() {
                 //System.out.println("Update " +
                 //      cheese.getName() + " Cheese clicked;");
-                getCheeseSession().getDataCache().updateCheese(cheese);
+                getCheeseSession().getDataCache().updateCheese(
+                        (Cheese)getParent().getModelObject());
                 setResponsePage(ViewCheeses.class);
             }
         });
@@ -54,5 +47,4 @@ public class EditCheesePanel extends CheesePanel {
     public boolean isVisible() {
         return cheese.getName() != null;
     }
-
 }
