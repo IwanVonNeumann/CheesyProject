@@ -1,6 +1,7 @@
 package panels;
 
 import domain.Cheese;
+import look.CurrencyLabel;
 import look.RowModifier;
 import models.CheesesModel;
 import org.apache.wicket.markup.html.basic.Label;
@@ -8,6 +9,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+import org.apache.wicket.model.CompoundPropertyModel;
 import views.ViewCheeses;
 
 public class AdminCheesesListPanel extends CheesePanel {
@@ -22,15 +24,16 @@ public class AdminCheesesListPanel extends CheesePanel {
                 new PageableListView("cheeses", cheesesModel, 10) {
                     @Override
                     protected void populateItem(ListItem listItem) {
-                        Cheese cheese = (Cheese) listItem.getModelObject();
+                        listItem.setModel(
+                                new CompoundPropertyModel(
+                                        listItem.getModel()));
+
                         final int i = listItem.getIndex() + 1;
                         listItem.add(new RowModifier(i));
                         listItem.add(new Label("num", String.valueOf(i)));
-                        listItem.add(new Label("name", cheese.getName()));
-                        listItem.add(new Label("description",
-                                cheese.getDescription()));
-                        listItem.add(new Label("price",
-                                "$" + cheese.getPrice().toString()));
+                        listItem.add(new Label("name"));
+                        listItem.add(new Label("description"));
+                        listItem.add(new CurrencyLabel("price"));
 
                         listItem.add(new Link("edit", listItem.getModel()) {
                             @Override
@@ -46,17 +49,8 @@ public class AdminCheesesListPanel extends CheesePanel {
                             public void onClick() {
                                 //System.out.println("Deleting Cheese clicked...");
                                 Cheese selected = (Cheese) getModelObject();
-
-                                //удаление из базы
                                 getCheeseSession().getDataCache().
                                         safeDeleteCheese(selected);
-
-                                // удаление из корзины
-                                // дописать, чтобы работало для всех сессий
-                                /*getCheeseSession().getCart().removeCheese(
-                                        new MultiCheese(selected));*/
-                                getCheeseSession().getCart().removeCheese(selected);
-
                                 setResponsePage(ViewCheeses.class);
                             }
                         });

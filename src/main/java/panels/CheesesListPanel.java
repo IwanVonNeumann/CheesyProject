@@ -3,6 +3,7 @@ package panels;
 import domain.Cart;
 import domain.Cheese;
 
+import look.CurrencyLabel;
 import models.CheesesModel;
 
 import org.apache.wicket.markup.html.basic.Label;
@@ -33,8 +34,7 @@ public class CheesesListPanel extends CheesePanel {
 
                         listItem.add(new Label("name"));
                         listItem.add(new Label("description"));
-                        listItem.add(new Label("price"));
-                                //"$" + cheese.getPrice().toString()));
+                        listItem.add(new CurrencyLabel("price"));
 
                         listItem.add(new Link("add", listItem.getModel()) {
                             //listItem.add(new AjaxFallbackLink("add", listItem.getModel()) {

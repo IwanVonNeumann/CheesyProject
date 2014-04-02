@@ -8,12 +8,8 @@ import org.apache.wicket.model.Model;
 
 public class ArticleCounter extends Panel {
 
-    private final MultiCheese cheese;
-
     public ArticleCounter(String id, MultiCheese cheese) {
         super(id);
-
-        this.cheese = cheese;
 
         add(new Link("decLink", new Model(cheese)) {
             @Override
@@ -34,5 +30,4 @@ public class ArticleCounter extends Panel {
             }
         });
     }
-
 }

@@ -2,22 +2,19 @@ package panels;
 
 import domain.Address;
 import domain.Cart;
-import domain.MultiCheese;
-
+import look.CurrencyLabel;
 import look.RowModifier;
-
 import models.CartsModel;
-
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
 import java.io.Serializable;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
@@ -69,25 +66,21 @@ public class PurchasesListPanel extends CheesePanel {
                         listItem.add(new ListView("entries", cart.getCheeses()) {
                             @Override
                             protected void populateItem(ListItem listItem) {
-                                MultiCheese cheese =
-                                        (MultiCheese) listItem.getModelObject();
+                                CompoundPropertyModel multiCheeseModel =
+                                        new CompoundPropertyModel(listItem.getModel());
+                                listItem.setModel(multiCheeseModel);
+
                                 int i = listItem.getIndex() + 1;
                                 listItem.add(new RowModifier(i));
                                 listItem.add(new Label("num", String.valueOf(i)));
-                                listItem.add(new Label("cheese", cheese.getName()));
-                                listItem.add(new Label("price",
-                                        String.format("$%.2f",
-                                                cheese.getPrice())));
-                                listItem.add(new Label("quantity",
-                                        String.valueOf(cheese.getQuantity())));
-                                listItem.add(new Label("cost",
-                                        String.format("$%.2f",
-                                                cheese.getCost())));
+                                listItem.add(new Label("cheese.name"));
+                                listItem.add(new CurrencyLabel("price"));
+                                listItem.add(new Label("quantity"));
+                                listItem.add(new CurrencyLabel("cost"));
                             }
                         });
 
-                        listItem.add(new Label("total",
-                                String.format("$%.2f", cart.getTotal())));
+                        listItem.add(new CurrencyLabel("total", new Model(cart.getTotal())));
                     }
                 };
         add(customers);

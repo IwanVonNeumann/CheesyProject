@@ -24,6 +24,7 @@ public class CurrencyLabel  extends Label{
 
     @Override
     protected void onComponentTagBody(MarkupStream markupStream, ComponentTag openTag) {
-        super.onComponentTagBody(markupStream, openTag);
+        String formatted = String.format("$%.2f", (Double)getModelObject());
+        replaceComponentTagBody(markupStream, openTag, formatted);
     }
 }

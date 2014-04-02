@@ -5,7 +5,7 @@ import org.apache.wicket.markup.html.link.Link;
 import war.LoginPage;
 
 /**
- * Created by IRuskevich on 14.24.2.
+ * Created by IRuskevich on 14.24.2
  */
 public class UserStatusPanel extends CheesePanel {
 
