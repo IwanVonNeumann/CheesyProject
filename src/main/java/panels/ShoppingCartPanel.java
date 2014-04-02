@@ -24,7 +24,7 @@ public class ShoppingCartPanel extends CheesePanel {
                 final MultiCheese cheese = (MultiCheese) listItem.getModelObject();
                 listItem.add(new Label("name", cheese.getName()));
                 listItem.add(new ArticleCounter("articleCounter", cheese));
-                listItem.add(new Label("price", "$" + cheese.getPrice().toString()));
+                listItem.add(new Label("price", "$" + cheese.getPrice()));
 
                 listItem.add(new Link("remove", listItem.getModel()) {
                     @Override
@@ -38,9 +38,15 @@ public class ShoppingCartPanel extends CheesePanel {
         add(new Label("total", new Model() {
             @Override
             public Object getObject() {
-                return String.format("$%.2f", getCart().getTotal().doubleValue());
+                return String.format("$%.2f", getCart().getTotal());
             }
         }));
+
+        /*add(new Label("total", new Model() {
+            public Object getObject() {
+                return String.format("$%.2f", getCart().getTotal().doubleValue());
+            }
+        }));*/
     }
 
     private Cart getCart() {
