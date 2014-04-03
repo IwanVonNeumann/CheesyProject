@@ -2,7 +2,9 @@ package panels;
 
 import domain.Cart;
 import domain.MultiCheese;
+
 import look.CurrencyLabel;
+
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -27,25 +29,25 @@ public class ShoppingCartPanel extends CheesePanel {
                         new CompoundPropertyModel(
                                 listItem.getModel()));
 
-                final MultiCheese cheese = (MultiCheese) listItem.getModelObject();
-
                 listItem.add(new Label("name"));
-                listItem.add(new ArticleCounter("articleCounter", cheese));
+                listItem.add(new ArticleCounter("articleCounter",
+                        (MultiCheese) listItem.getModelObject()));
                 listItem.add(new CurrencyLabel("price"));
 
                 listItem.add(new Link("remove", listItem.getModel()) {
                     @Override
                     public void onClick() {
-                        getCart().removeCheese(cheese.getCheese());
+                        getCart().removeCheese(
+                                ((MultiCheese) getModelObject()).getCheese());
                     }
                 });
             }
         });
 
-        add(new Label("total", new Model() {
+        add(new CurrencyLabel("total", new Model() {
             @Override
             public Object getObject() {
-                return String.format("$%.2f", getCart().getTotal());
+                return getCart().getTotal();
             }
         }));
 
