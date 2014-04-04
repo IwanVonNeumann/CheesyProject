@@ -9,7 +9,7 @@ import org.hibernate.SessionFactory;
 import java.util.List;
 
 /**
- * Created by Iwan on 14.15.3.
+ * Created by Iwan on 14.15.3
  */
 public class HiberAddressDAO extends HiberDAO implements AddressDAO {
 

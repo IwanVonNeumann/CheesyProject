@@ -32,7 +32,7 @@ public class Address {
         this(name, street, city, zipCode);
         hash = calculateHash(password);
         deleted = false;
-        purchases = new LinkedList<Cart>();
+        purchases = new LinkedList<>();
     }
 
     // считывание из базы
@@ -140,13 +140,13 @@ public class Address {
         }
     }
 
-    public String getHexHash() {
+    /*public String getHexHash() {
         StringBuilder sb = new StringBuilder();
         for (byte b : hash) {
             sb.append(String.format("%02X ", b));
         }
         return sb.toString();
-    }
+    }*/
 
     public String getHexHash(int width, String symbol) {
         StringBuilder sb = new StringBuilder();

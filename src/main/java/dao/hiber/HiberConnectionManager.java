@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 /**
- * Created by Iwan on 14.15.3.
+ * Created by Iwan on 14.15.3
  */
 public class HiberConnectionManager implements ConnectionManager {
 

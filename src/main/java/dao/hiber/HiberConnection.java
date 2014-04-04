@@ -4,7 +4,7 @@ import dao.iface.*;
 import org.hibernate.SessionFactory;
 
 /**
- * Created by Iwan on 14.15.3.
+ * Created by Iwan on 14.15.3
  */
 public class HiberConnection implements DBConnection {
 
