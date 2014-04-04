@@ -20,7 +20,7 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
     public List<Cheese> getCheesesList() {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        List result = session.createQuery("from Cheese where deleted <> true").list();
+        List result = session.createQuery("from Cheeses where deleted <> true").list();
         session.getTransaction().commit();
         session.close();
         return result;
@@ -62,6 +62,10 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
 
     @Override
     public boolean exists(Cheese cheese) {
+        List<Cheese> cheeses = getCheesesList();
+        for (Cheese current : cheeses) {
+            if (current.equals(cheese)) return  true;
+        }
         return false;
     }
 }

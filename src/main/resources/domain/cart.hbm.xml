@@ -10,15 +10,18 @@
         </id>
         <property name="time" column="Clock"/>
 
-        <many-to-one name="address" class="domain.Address" fetch="select">
+        <!--<many-to-one name="address" class="domain.Address" fetch="select">
             <column name="CustomerID" not-null="true" />
-        </many-to-one>
+        </many-to-one>-->
 
-        <!--<set name="cheeses" table="cheeses" inverse="true" lazy="true" fetch="select">
+        <one-to-one name="address" class="domain.Address"
+                    cascade="save-update"/>
+
+        <set name="cheeses" table="Cartentries" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="CheeseID" not-null="true" />
+                <column name="CartID" not-null="true" />
             </key>
             <one-to-many class="domain.MultiCheese" />
-        </set>-->
+        </set>
     </class>
 </hibernate-mapping>

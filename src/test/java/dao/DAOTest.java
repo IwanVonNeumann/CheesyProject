@@ -1,5 +1,7 @@
 package dao;
 
+import dao.iface.ConnectionManager;
+import dao.jdbc.JDBCConnectionManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -23,6 +25,8 @@ public abstract class DAOTest {
 
     protected static Connection connection;
 
+    protected static ConnectionManager connectionManager;
+
     @BeforeClass
     public static void prepareData() {
         url = "jdbc:mysql://localhost/cheese_test";
@@ -30,6 +34,8 @@ public abstract class DAOTest {
         password = "userpwd";
 
         connect();
+
+        connectionManager = new JDBCConnectionManager();
     }
 
     @AfterClass

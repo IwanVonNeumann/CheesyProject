@@ -2,10 +2,9 @@ package war;
 
 import cache.iface.IDataCache;
 import cache.mock.DataCacheMock;
-
+import dao.hiber.HiberConnectionManager;
 import dao.iface.ConnectionManager;
 import dao.jdbc.JDBCConnectionManager;
-
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -15,6 +14,7 @@ public class CheeseApplication extends WebApplication {
 
     public CheeseApplication() {
         ConnectionManager cm = new JDBCConnectionManager();
+        //ConnectionManager cm = new HiberConnectionManager();
         dataCache = new DataCacheMock(cm.getConnection());
     }
 

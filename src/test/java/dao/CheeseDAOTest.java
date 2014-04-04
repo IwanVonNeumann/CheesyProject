@@ -2,7 +2,9 @@ package dao;
 
 import dao.iface.CheeseDAO;
 import dao.jdbc.dao.JDBCCheeseDAO;
+
 import domain.Cheese;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +25,8 @@ public class CheeseDAOTest extends DAOTest {
         entity = "cheese";
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        dao = new JDBCCheeseDAO(connection);
+        //dao = new JDBCCheeseDAO(connection);
+        dao = connectionManager.getConnection().getCheeseDAO();
     }
 
     @After
@@ -34,6 +37,11 @@ public class CheeseDAOTest extends DAOTest {
     @Test
     public void gettingListTest() {
         List<Cheese> cheeses = dao.getCheesesList();
+
+        for (Cheese cheese : cheeses) {
+            System.out.println(cheese);
+        }
+
         assertEquals(3, cheeses.size());
     }
 

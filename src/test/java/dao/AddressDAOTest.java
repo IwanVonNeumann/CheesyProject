@@ -1,11 +1,11 @@
 package dao;
 
+import dao.hiber.HiberAddressDAO;
 import dao.iface.AddressDAO;
 import dao.jdbc.dao.JDBCAddressDAO;
 
 import domain.Address;
 
-import domain.Cheese;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,7 +27,8 @@ public class AddressDAOTest extends DAOTest {
         entity = "address";
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        dao = new JDBCAddressDAO(connection);
+        //dao = new JDBCAddressDAO(connection);
+        dao = connectionManager.getConnection().getAddressDAO();
     }
 
     @After

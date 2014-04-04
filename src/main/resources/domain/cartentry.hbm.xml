@@ -10,12 +10,6 @@
         </id>
         <property name="quantity"/>
 
-        <many-to-one name="cheeseId" class="domain.Cheese" fetch="select">
-            <column name="cheeseid" not-null="true" />
-        </many-to-one>
-
-        <many-to-one name="cartId" class="domain.Cart" fetch="select">
-            <column name="cartid" not-null="true" />
-        </many-to-one>
+        <one-to-one name="cheese" class="domain.Cheese" cascade="save-update"/>
     </class>
 </hibernate-mapping>

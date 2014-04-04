@@ -28,8 +28,8 @@
 
         <mapping resource="domain/address.hbm.xml"/>
         <mapping resource="domain/cheese.hbm.xml"/>
-        <!--<mapping resource="domain/cart.hbm.xml"/>-->
-        <!--<mapping resource="domain/cartentry.hbm.xml"/>-->
+        <mapping resource="domain/cart.hbm.xml"/>
+        <mapping resource="domain/cartentry.hbm.xml"/>
 
     </session-factory>
 
