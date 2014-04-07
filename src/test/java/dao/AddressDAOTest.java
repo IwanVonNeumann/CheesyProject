@@ -27,8 +27,8 @@ public class AddressDAOTest extends DAOTest {
         entity = "address";
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        //dao = new JDBCAddressDAO(connection);
-        dao = connectionManager.getConnection().getAddressDAO();
+        dao = new JDBCAddressDAO(connection);
+        //dao = connectionManager.getConnection().getAddressDAO();
     }
 
     @After

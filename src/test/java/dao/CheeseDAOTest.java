@@ -25,8 +25,8 @@ public class CheeseDAOTest extends DAOTest {
         entity = "cheese";
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        //dao = new JDBCCheeseDAO(connection);
-        dao = connectionManager.getConnection().getCheeseDAO();
+        dao = new JDBCCheeseDAO(connection);
+        //dao = connectionManager.getConnection().getCheeseDAO();
     }
 
     @After
