@@ -195,13 +195,26 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
     @Override
     public boolean exists(Address address) {
-        List<Address> addresses = getAddressesList();
-        boolean found = false;
-        for (Address current : addresses) {
-            found = current.equals(address);
-            if (found) break;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        try {
+            //System.out.println("Searching for Address with ID " + address.getId() + "...");
+            statement = connection.prepareStatement(
+                    "SELECT 1 FROM Customers WHERE CustomerName = ? AND Deleted <> true;");
+            statement.setString(1, address.getName());
+            System.out.println("[JDBC] SELECT 1 FROM Customers\n" +
+                    "\tWHERE CustomerName = " + address.getName() +
+                    " AND Deleted <> true");
+            result =  statement.executeQuery();
+            return result.next();
+        } catch (SQLException e) {
+            System.out.println("Exception while searching for data...");
+            return false;
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
         }
-        return found;
     }
 
     private Address buildAddress(ResultSet result) throws SQLException {

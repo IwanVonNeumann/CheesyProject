@@ -156,11 +156,25 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
     @Override
     public boolean exists(Cheese cheese) {
-        List<Cheese> cheeses = getCheesesList();
-        for (Cheese current : cheeses) {
-            if (current.equals(cheese)) return  true;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        try {
+            statement = connection.prepareStatement(
+                    "SELECT 1 FROM Cheeses WHERE CheeseName = ? AND Deleted <> true;");
+            statement.setString(1, cheese.getName());
+            System.out.println("[JDBC] SELECT 1 FROM Cheeses\n" +
+                    "\tWHERE CheeseName = " + cheese.getName() +
+                    " AND Deleted <> true");
+            result =  statement.executeQuery();
+            return result.next();
+        } catch (SQLException e) {
+            System.out.println("Exception while searching for data...");
+            return false;
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
         }
-        return false;
     }
 
     private Cheese buildCheese(ResultSet result) throws SQLException {

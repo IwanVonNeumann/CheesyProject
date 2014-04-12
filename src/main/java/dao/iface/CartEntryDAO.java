@@ -12,7 +12,7 @@ public interface CartEntryDAO {
 
     // List<MultiCheese> getCartEntries(Cart cart);
 
-    // какой из жвух методов логичнее оставить?
+    // какой из двух методов логичнее оставить?
     // или нужны оба?
     List<MultiCheese> getCartEntries(int cartId);
 
