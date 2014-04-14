@@ -12,24 +12,39 @@ import org.hibernate.service.ServiceRegistry;
  */
 public class HiberConnectionManager implements ConnectionManager {
 
-    private SessionFactory sessionFactory;
+    private SessionFactory prodSessionFactory;
+    private SessionFactory testSessionFactory;
 
     public HiberConnectionManager() {
-        Configuration configuration = new Configuration();
-        configuration.configure("hibernate.cfg.xml");
-        ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().
-                applySettings(configuration.getProperties()).build();
-        sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+        Configuration prodConf = new Configuration();
+        prodConf.configure("hibernate.cfg.xml");
+        ServiceRegistry prodServiceRegistry = new StandardServiceRegistryBuilder().
+                applySettings(prodConf.getProperties()).build();
+        prodSessionFactory = prodConf.buildSessionFactory(prodServiceRegistry);
+
+        Configuration testConf = new Configuration();
+        testConf.configure("hibernate_test.cfg.xml");
+        ServiceRegistry testServiceRegistry = new StandardServiceRegistryBuilder().
+                applySettings(testConf.getProperties()).build();
+        testSessionFactory = testConf.buildSessionFactory(testServiceRegistry);
     }
 
     @Override
     public DBConnection getConnection() {
-        return new HiberConnection(sessionFactory);
+        return new HiberConnection(prodSessionFactory);
+    }
+
+    @Override
+    public DBConnection getTestConnection() {
+        return new HiberConnection(testSessionFactory);
     }
 
     public void shutDown() {
-        if ( sessionFactory != null ) {
-            sessionFactory.close();
+        if ( prodSessionFactory != null ) {
+            prodSessionFactory.close();
+        }
+        if (testSessionFactory != null) {
+            testSessionFactory.close();
         }
     }
 }

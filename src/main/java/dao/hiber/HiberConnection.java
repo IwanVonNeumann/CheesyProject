@@ -31,6 +31,6 @@ public class HiberConnection implements DBConnection {
 
     @Override
     public CheeseDAO getCheeseDAO() {
-        return null;
+        return new HiberCheeseDAO(sessionFactory);
     }
 }

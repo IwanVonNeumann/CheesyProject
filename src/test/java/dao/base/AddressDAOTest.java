@@ -1,6 +1,5 @@
-package dao;
+package dao.base;
 
-import dao.hiber.HiberAddressDAO;
 import dao.iface.AddressDAO;
 import dao.jdbc.dao.JDBCAddressDAO;
 
@@ -8,6 +7,7 @@ import domain.Address;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
@@ -19,17 +19,18 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by Iwan on 14.22.3
  */
-public class AddressDAOTest extends DAOTest {
-    private static AddressDAO dao;
+
+public abstract class AddressDAOTest extends DAOTest {
+
+    protected static AddressDAO dao;
+
+    @BeforeClass
+    public static void setEntity() {
+        entity = "address";
+    }
 
     @Before
-    public void initDAO() {
-        entity = "address";
-        executeFile(entity, "createTables.sql");
-        executeFile(entity, "insertData.sql");
-        dao = new JDBCAddressDAO(connection);
-        //dao = connectionManager.getConnection().getAddressDAO();
-    }
+    public abstract void initDAO();
 
     @After
     public void cleanupData() {

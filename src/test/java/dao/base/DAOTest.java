@@ -1,4 +1,4 @@
-package dao;
+package dao.base;
 
 import dao.iface.ConnectionManager;
 import dao.jdbc.JDBCConnectionManager;

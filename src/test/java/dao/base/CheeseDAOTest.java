@@ -1,12 +1,12 @@
-package dao;
+package dao.base;
 
 import dao.iface.CheeseDAO;
-import dao.jdbc.dao.JDBCCheeseDAO;
 
 import domain.Cheese;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.List;
@@ -16,18 +16,18 @@ import static org.junit.Assert.*;
 /**
  * Created by IRuskevich on 20.03.2014
  */
-public class CheeseDAOTest extends DAOTest {
 
-    private static CheeseDAO dao;
+public abstract class CheeseDAOTest extends DAOTest {
+
+    protected static CheeseDAO dao;
+
+    @BeforeClass
+    public static void setEntity() {
+        entity = "cheese";
+    }
 
     @Before
-    public void initDAO() {
-        entity = "cheese";
-        executeFile(entity, "createTables.sql");
-        executeFile(entity, "insertData.sql");
-        dao = new JDBCCheeseDAO(connection);
-        //dao = connectionManager.getConnection().getCheeseDAO();
-    }
+    public abstract void initDAO();
 
     @After
     public void cleanupData() {

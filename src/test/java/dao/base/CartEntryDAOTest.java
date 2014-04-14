@@ -1,4 +1,4 @@
-package dao;
+package dao.base;
 
 import dao.iface.CartDAO;
 import dao.iface.CartEntryDAO;

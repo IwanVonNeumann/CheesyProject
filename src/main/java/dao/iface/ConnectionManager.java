@@ -6,4 +6,6 @@ package dao.iface;
 public interface ConnectionManager {
 
     DBConnection getConnection();
+
+    DBConnection getTestConnection();
 }
