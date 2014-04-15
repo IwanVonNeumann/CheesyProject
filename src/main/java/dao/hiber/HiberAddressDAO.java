@@ -29,7 +29,14 @@ public class HiberAddressDAO extends HiberDAO implements AddressDAO {
 
     @Override
     public boolean exists(Address address) {
-        return false;
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("from Address where name = :name and deleted <> true");
+        query.setParameter("name", address.getName());
+        List list = query.list();
+        session.getTransaction().commit();
+        session.close();
+        return (list.size() > 0);
     }
 
     @Override
@@ -49,7 +56,7 @@ public class HiberAddressDAO extends HiberDAO implements AddressDAO {
         Query query = session.createQuery("from Address where name = :name ");
         query.setParameter("name", name);
         List list = query.list();
-        Address address = list != null ? (Address) list.get(0) : null;
+        Address address = list.size() > 0 ? (Address) list.get(0) : null;
         session.getTransaction().commit();
         session.close();
         return address;
@@ -57,11 +64,13 @@ public class HiberAddressDAO extends HiberDAO implements AddressDAO {
 
     @Override
     public void insertAddress(Address address) {
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        session.save(address);
-        session.getTransaction().commit();
-        session.close();
+        if (!exists(address)) {
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            session.save(address);
+            session.getTransaction().commit();
+            session.close();
+        }
     }
 
     @Override

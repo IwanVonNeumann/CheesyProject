@@ -2,6 +2,7 @@ package dao.hiber;
 
 import dao.iface.CheeseDAO;
 import domain.Cheese;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
@@ -30,19 +31,23 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
     public Cheese getCheese(int id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
-        Cheese cheese = (Cheese)session.get(Cheese.class, id);
+        Cheese cheese = (Cheese) session.get(Cheese.class, id);
         session.getTransaction().commit();
         session.close();
         return cheese;
     }
 
+    // TODO refactor
+    // http://stackoverflow.com/questions/18558618/hibernate-insert-if-record-does-not-exist
     @Override
     public void addCheese(Cheese cheese) {
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        session.save(cheese);
-        session.getTransaction().commit();
-        session.close();
+        if (!exists(cheese)) {
+            Session session = sessionFactory.openSession();
+            session.beginTransaction();
+            session.save(cheese);
+            session.getTransaction().commit();
+            session.close();
+        }
     }
 
     @Override
@@ -62,10 +67,13 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
 
     @Override
     public boolean exists(Cheese cheese) {
-        List<Cheese> cheeses = getCheesesList();
-        for (Cheese current : cheeses) {
-            if (current.equals(cheese)) return  true;
-        }
-        return false;
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery("from Cheese where name = :name and deleted <> true");
+        query.setParameter("name", cheese.getName());
+        List list = query.list();
+        session.getTransaction().commit();
+        session.close();
+        return (list.size() > 0);
     }
 }

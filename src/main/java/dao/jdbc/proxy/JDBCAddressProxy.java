@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.util.List;
 
 /**
- * Created by IRuskevich on 14.18.3.
+ * Created by IRuskevich on 14.18.3
  */
 public class JDBCAddressProxy extends Address {
 
