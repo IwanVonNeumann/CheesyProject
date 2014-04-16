@@ -15,12 +15,12 @@
         <property name="hash" column="PasswordHash"/>
         <property name="deleted"/>
 
-        <!--<set name="purchases" table="carts" inverse="true" lazy="true" fetch="select">
+        <set name="purchases" table="carts" lazy="true" fetch="select"> <!--inverse="true"-->
             <key>
-                <column name="CartID" not-null="true" />
+                <column name="CustomerID" not-null="true" />
             </key>
             <one-to-many class="domain.Cart" />
-        </set>-->
+        </set>
 
     </class>
 </hibernate-mapping>

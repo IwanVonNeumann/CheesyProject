@@ -21,12 +21,12 @@ public class HiberConnection implements DBConnection {
 
     @Override
     public CartDAO getCartDAO() {
-        return null;
+        return new HiberCartDAO(sessionFactory);
     }
 
     @Override
     public CartEntryDAO getCartEntryDAO() {
-        return null;
+        return new HiberCartEntryDAO(sessionFactory);
     }
 
     @Override

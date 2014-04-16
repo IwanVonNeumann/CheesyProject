@@ -59,6 +59,8 @@ public class MultiCheese implements Serializable { // какого?
         return cheese.getPrice();
     }
 
+
+
     public Double getCost() {
         return quantity * cheese.getPrice();
     }
@@ -82,5 +84,13 @@ public class MultiCheese implements Serializable { // какого?
         if (quantity != cheese1.quantity) return false;
 
         return cheese.equals(cheese1.cheese);
+    }
+
+    @Override
+    public String toString() {
+        return "MultiCheese [" + id + "]: {" +
+                "Cheese [" + cheese.getId() + "]: " + cheese.getName() +
+                ", quantity = " + quantity +
+                '}';
     }
 }

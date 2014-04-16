@@ -12,8 +12,7 @@
 
         <one-to-one name="address" class="domain.Address"/>
 
-        <set name="cheeses" table="Cartentries" cascade="save-update" lazy="false" fetch="select">
-            <!--inverse="true"-->
+        <set name="cheeses" table="Cartentries" cascade="save-update" lazy="false" fetch="select"> <!--inverse="true"-->
             <key>
                 <column name="CartID" not-null="true" />
             </key>

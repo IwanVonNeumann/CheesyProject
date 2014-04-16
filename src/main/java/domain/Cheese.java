@@ -24,6 +24,11 @@ public class Cheese {
         this.deleted = deleted;
     }
 
+
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -36,14 +41,14 @@ public class Cheese {
         return price;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public boolean isDeleted() {
         return deleted;
     }
 
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -55,10 +60,6 @@ public class Cheese {
 
     public void setPrice(Double price) {
         this.price = price;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setDeleted(boolean deleted) {
