@@ -10,14 +10,10 @@
         </id>
         <property name="time" column="Clock"/>
 
-        <!--<many-to-one name="address" class="domain.Address" fetch="select">
-            <column name="CustomerID" not-null="true" />
-        </many-to-one>-->
+        <one-to-one name="address" class="domain.Address"/>
 
-        <one-to-one name="address" class="domain.Address"
-                    cascade="save-update"/>
-
-        <set name="cheeses" table="Cartentries" inverse="true" lazy="true" fetch="select">
+        <set name="cheeses" table="Cartentries" cascade="save-update" lazy="false" fetch="select">
+            <!--inverse="true"-->
             <key>
                 <column name="CartID" not-null="true" />
             </key>

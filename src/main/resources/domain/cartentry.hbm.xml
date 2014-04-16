@@ -10,6 +10,6 @@
         </id>
         <property name="quantity"/>
 
-        <one-to-one name="cheese" class="domain.Cheese" cascade="save-update"/>
+        <one-to-one name="cheese" class="domain.Cheese"/>
     </class>
 </hibernate-mapping>

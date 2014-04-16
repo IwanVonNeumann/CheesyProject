@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1832763817">
+  <component name="DataSourceManagerImpl" format="xml" hash="2528937730">
     <data-source source="LOCAL" name="hibernate.cfg.xml" uuid="66a0b1f3-0273-4a44-9aaa-ab76a76fb028">
       <driver-ref>mysql</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/cheesydb</jdbc-url>
+      <user-name>user</user-name>
+      <user-password>dfdfdfd9dfcfdfd8dfdadfdddfce</user-password>
+      <libraries>
+        <library>
+          <url>file://D:\Users\User\.m2\repository\mysql\mysql-connector-java\5.1.6\mysql-connector-java-5.1.6.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate_test.cfg.xml" uuid="0275f3df-28ed-4d3a-83f3-1412b34c9109">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/cheese_test</jdbc-url>
       <user-name>user</user-name>
       <user-password>dfdfdfd9dfcfdfd8dfdadfdddfce</user-password>
       <libraries>
