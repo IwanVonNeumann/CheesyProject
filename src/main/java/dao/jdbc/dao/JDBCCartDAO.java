@@ -6,7 +6,7 @@ import dao.iface.CartEntryDAO;
 
 import domain.Address;
 import domain.Cart;
-import domain.MultiCheese;
+import domain.CartEntry;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -99,7 +99,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
                     "(Clock, CustomerID)\n" +
                     "\t\tVALUES (date, \"" + cart.getAddress().getId() + "\");");
 
-            for (MultiCheese item : cart.getCheeses()) {
+            for (CartEntry item : cart.getCheeses()) {
                 cartEntryDAO.insertCartEntry(cart, item);
             }
 
@@ -120,7 +120,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
 
     private Cart buildCart(ResultSet result, Address address) throws SQLException {
         int cartId = result.getInt("CartID");
-        List<MultiCheese> cheeses = cartEntryDAO.getCartEntries(cartId);
+        List<CartEntry> cheeses = cartEntryDAO.getCartEntries(cartId);
         return new Cart(cartId, cheeses, address,
                 result.getTimestamp("Clock"));
     }

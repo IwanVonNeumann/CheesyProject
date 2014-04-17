@@ -1,7 +1,7 @@
 package dao.iface;
 
 import domain.Cart;
-import domain.MultiCheese;
+import domain.CartEntry;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import java.util.List;
  */
 public interface CartEntryDAO {
 
-    // List<MultiCheese> getCartEntries(Cart cart);
+    // List<CartEntry> getCartEntries(Cart cart);
 
     // какой из двух методов логичнее оставить?
     // или нужны оба?
-    List<MultiCheese> getCartEntries(int cartId);
+    List<CartEntry> getCartEntries(int cartId);
 
     // возможно, стоит переделать на
-    // void insertCartEntry(int cartId, MultiCheese cheese);
-    void insertCartEntry(Cart cart, MultiCheese cheese);
+    // void insertCartEntry(int cartId, CartEntry cheese);
+    void insertCartEntry(Cart cart, CartEntry cheese);
 }

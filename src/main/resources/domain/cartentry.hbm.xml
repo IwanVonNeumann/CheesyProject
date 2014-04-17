@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="domain">
-    <class name="MultiCheese" table="CartEntries">
+    <class name="domain.CartEntry" table="CartEntries">
         <id name="id" column="EntryID">
             <generator class="increment"/>
         </id>

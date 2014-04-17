@@ -1,7 +1,7 @@
 package panels;
 
 import domain.Cart;
-import domain.MultiCheese;
+import domain.CartEntry;
 
 import look.CurrencyLabel;
 
@@ -31,14 +31,14 @@ public class ShoppingCartPanel extends CheesePanel {
 
                 listItem.add(new Label("name"));
                 listItem.add(new ArticleCounter("articleCounter",
-                        (MultiCheese) listItem.getModelObject()));
+                        (CartEntry) listItem.getModelObject()));
                 listItem.add(new CurrencyLabel("price"));
 
                 listItem.add(new Link("remove", listItem.getModel()) {
                     @Override
                     public void onClick() {
                         getCart().removeCheese(
-                                ((MultiCheese) getModelObject()).getCheese());
+                                ((CartEntry) getModelObject()).getCheese());
                     }
                 });
             }

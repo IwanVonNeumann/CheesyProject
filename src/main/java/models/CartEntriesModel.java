@@ -1,11 +1,6 @@
 package models;
 
-import dao.iface.CartEntryDAO;
-import domain.Cart;
-import domain.MultiCheese;
 import org.apache.wicket.model.LoadableDetachableModel;
-
-import java.util.List;
 
 // возможно, класс ненужен
 public class CartEntriesModel extends LoadableDetachableModel {
@@ -30,12 +25,12 @@ public class CartEntriesModel extends LoadableDetachableModel {
     // используется при cart.setCheeses() из ViewPurchases
     // возможно, неэффективно: не используется свойство Loadable/Detachable
     /*  сменим обратно =)
-    public List<MultiCheese> getCartEntries() {
+    public List<CartEntry> getCartEntries() {
         return dao.getCartEntries(cart);
     }
     */
 
-    /*protected List<MultiCheese> getCartEntries() {
+    /*protected List<CartEntry> getCartEntries() {
         return dao.getCartEntries(cart);
     }*/
 }

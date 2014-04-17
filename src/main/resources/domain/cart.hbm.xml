@@ -16,7 +16,7 @@
             <key>
                 <column name="CartID" not-null="true" />
             </key>
-            <one-to-many class="domain.MultiCheese" />
+            <one-to-many class="CartEntry" />
         </set>
     </class>
 </hibernate-mapping>

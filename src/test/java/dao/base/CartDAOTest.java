@@ -10,7 +10,7 @@ import dao.jdbc.dao.JDBCCartEntryDAO;
 import dao.jdbc.dao.JDBCCheeseDAO;
 import domain.Address;
 import domain.Cart;
-import domain.MultiCheese;
+import domain.CartEntry;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -96,7 +96,7 @@ public class CartDAOTest extends DAOTest {
         List<Cart> list4 = cartDAO.getCartsList();
         assertTrue(itemInList(list4, cart2));
 
-        List<MultiCheese> items = cartEntryDAO.getCartEntries(cart2.getId());
+        List<CartEntry> items = cartEntryDAO.getCartEntries(cart2.getId());
 
         assertTrue(listsEqual(items, cart2.getCheeses()));
     }

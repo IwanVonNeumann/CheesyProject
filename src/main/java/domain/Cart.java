@@ -8,7 +8,7 @@ import java.util.List;
 public class Cart implements Serializable {
 
     private int id;
-    private List<MultiCheese> cheeses;
+    private List<CartEntry> cheeses;
     private Address address;
     private Timestamp time;
 
@@ -18,7 +18,7 @@ public class Cart implements Serializable {
     }
 
     // цивилизованное извлечение из базы
-    public Cart(int id, List<MultiCheese> cheeses, Address address, Timestamp time) {
+    public Cart(int id, List<CartEntry> cheeses, Address address, Timestamp time) {
         this.id = id;
         this.cheeses = cheeses;
         this.address = address;
@@ -29,7 +29,7 @@ public class Cart implements Serializable {
         return id;
     }
 
-    public List<MultiCheese> getCheeses() {
+    public List<CartEntry> getCheeses() {
         return cheeses;
     }
 
@@ -46,7 +46,7 @@ public class Cart implements Serializable {
         this.id = id;
     }
 
-    public void setCheeses(List<MultiCheese> cheeses) {
+    public void setCheeses(List<CartEntry> cheeses) {
         this.cheeses = cheeses;
     }
 
@@ -64,15 +64,15 @@ public class Cart implements Serializable {
         double total = 0;
         //System.out.println("Counting cost of Cart with ID " + id);
         //System.out.println("Cheeses total: " + cheeses.size());
-        for(MultiCheese multiCheese : cheeses) {
-            total += multiCheese.getCost();
+        for(CartEntry cartEntry : cheeses) {
+            total += cartEntry.getCost();
         }
         return total;
     }
 
     public void addCheese(Cheese cheese) {
         boolean found = false;
-        for (MultiCheese cheese1 : cheeses) {
+        for (CartEntry cheese1 : cheeses) {
             if (cheese1.getName().equals(cheese.getName())) {
                 cheese1.incQuantity();
                 found = true;
@@ -80,7 +80,7 @@ public class Cart implements Serializable {
             }
         }
         if (!found) {
-            cheeses.add(new MultiCheese(cheese));
+            cheeses.add(new CartEntry(cheese));
         }
     }
 

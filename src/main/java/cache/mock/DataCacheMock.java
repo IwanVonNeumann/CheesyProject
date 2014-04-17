@@ -6,8 +6,8 @@ import dao.iface.*;
 
 import domain.Address;
 import domain.Cart;
+import domain.CartEntry;
 import domain.Cheese;
-import domain.MultiCheese;
 
 import java.util.List;
 
@@ -89,17 +89,17 @@ public class DataCacheMock implements IDataCache {
     // CartEntryDAO
 
     /*@Override
-    public List<MultiCheese> getCartEntries(Cart cart) {
+    public List<CartEntry> getCartEntries(Cart cart) {
         return cartEntryDAO.getCartEntries(cart);
     }*/
 
     @Override
-    public List<MultiCheese> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(int cartId) {
         return cartEntryDAO.getCartEntries(cartId);
     }
 
     @Override
-    public void insertCartEntry(Cart cart, MultiCheese cheese) {
+    public void insertCartEntry(Cart cart, CartEntry cheese) {
         cartEntryDAO.insertCartEntry(cart, cheese);
     }
 

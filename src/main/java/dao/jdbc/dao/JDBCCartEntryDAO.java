@@ -2,8 +2,8 @@ package dao.jdbc.dao;
 
 import dao.iface.CartEntryDAO;
 import domain.Cart;
+import domain.CartEntry;
 import domain.Cheese;
-import domain.MultiCheese;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -23,13 +23,13 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
     }
 
     /*@Override
-    public List<MultiCheese> getCartEntries(Cart cart) {
+    public List<CartEntry> getCartEntries(Cart cart) {
         return getCartEntries(cart.getId());
     }*/
 
     @Override
-    public List<MultiCheese> getCartEntries(int cartId) {
-        List<MultiCheese> list;
+    public List<CartEntry> getCartEntries(int cartId) {
+        List<CartEntry> list;
         PreparedStatement statement = null;
         ResultSet result = null;
 
@@ -44,7 +44,7 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
             System.out.println("[JDBC] SELECT * FROM CartEntries " +
                     "WHERE CartID = " + cartId + ";");
 
-            list = new ArrayList<MultiCheese>();
+            list = new ArrayList<CartEntry>();
             while (result.next()) {
                 list.add(buildMultiCheese(result));
             }
@@ -59,7 +59,7 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
     }
 
     @Override
-    public void insertCartEntry(Cart cart, MultiCheese cheese) {
+    public void insertCartEntry(Cart cart, CartEntry cheese) {
         PreparedStatement statement = null;
 
         try {
@@ -89,9 +89,9 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
         }
     }
 
-    private MultiCheese buildMultiCheese(ResultSet result) throws SQLException {
+    private CartEntry buildMultiCheese(ResultSet result) throws SQLException {
         int cheeseID = result.getInt("CheeseID");
         Cheese cheese = cheeseDAO.getCheese(cheeseID);
-        return new MultiCheese(cheese, result.getInt("Quantity"));
+        return new CartEntry(cheese, result.getInt("Quantity"));
     }
 }

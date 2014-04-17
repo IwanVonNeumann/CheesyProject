@@ -2,21 +2,21 @@ package domain;
 
 import java.io.Serializable;
 
-public class MultiCheese implements Serializable { // какого?
+public class CartEntry implements Serializable { // какого?
 
     private int id;
     private Cheese cheese;
     private int quantity;
 
-    public MultiCheese() {}
+    public CartEntry() {}
 
     // используется при создании из Cheese в корзине
-    public MultiCheese(Cheese cheese) {
+    public CartEntry(Cheese cheese) {
         this.cheese = cheese;
         quantity = 1;
     }
 
-    public MultiCheese(Cheese cheese, int quantity) {
+    public CartEntry(Cheese cheese, int quantity) {
         this(cheese);
         this.quantity = quantity;
     }
@@ -77,9 +77,9 @@ public class MultiCheese implements Serializable { // какого?
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof MultiCheese)) return false;
+        if (!(o instanceof CartEntry)) return false;
 
-        MultiCheese cheese1 = (MultiCheese) o;
+        CartEntry cheese1 = (CartEntry) o;
 
         if (quantity != cheese1.quantity) return false;
 
@@ -88,7 +88,7 @@ public class MultiCheese implements Serializable { // какого?
 
     @Override
     public String toString() {
-        return "MultiCheese [" + id + "]: {" +
+        return "CartEntry [" + id + "]: {" +
                 "Cheese [" + cheese.getId() + "]: " + cheese.getName() +
                 ", quantity = " + quantity +
                 '}';

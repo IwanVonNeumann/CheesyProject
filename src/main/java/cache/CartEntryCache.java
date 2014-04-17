@@ -3,7 +3,7 @@ package cache;
 import dao.iface.CartEntryDAO;
 import dao.iface.CheeseDAO;
 import domain.Cart;
-import domain.MultiCheese;
+import domain.CartEntry;
 
 import java.util.List;
 
@@ -21,17 +21,17 @@ public class CartEntryCache implements CartEntryDAO {
     }
 
     /*@Override
-    public List<MultiCheese> getCartEntries(Cart cart) {
+    public List<CartEntry> getCartEntries(Cart cart) {
         return cartEntryDAO.getCartEntries(cart);
     }*/
 
     @Override
-    public List<MultiCheese> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(int cartId) {
         return cartEntryDAO.getCartEntries(cartId);
     }
 
     @Override
-    public void insertCartEntry(Cart cart, MultiCheese cheese) {
+    public void insertCartEntry(Cart cart, CartEntry cheese) {
         cartEntryDAO.insertCartEntry(cart, cheese);
     }
 }

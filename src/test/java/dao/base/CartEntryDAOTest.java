@@ -7,8 +7,8 @@ import dao.jdbc.dao.JDBCCartDAO;
 import dao.jdbc.dao.JDBCCartEntryDAO;
 import dao.jdbc.dao.JDBCCheeseDAO;
 import domain.Cart;
+import domain.CartEntry;
 import domain.Cheese;
-import domain.MultiCheese;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,22 +43,22 @@ public class CartEntryDAOTest extends DAOTest {
 
     @Test
     public void gettingCartEntriesListByIdTest() {
-        List<MultiCheese> list1 = cartEntryDAO.getCartEntries(1);
+        List<CartEntry> list1 = cartEntryDAO.getCartEntries(1);
         assertEquals(2, list1.size());
 
-        List<MultiCheese> list2 = cartEntryDAO.getCartEntries(2);
+        List<CartEntry> list2 = cartEntryDAO.getCartEntries(2);
         assertEquals(1, list2.size());
 
-        List<MultiCheese> list3 = cartEntryDAO.getCartEntries(3);
+        List<CartEntry> list3 = cartEntryDAO.getCartEntries(3);
         assertEquals(0, list3.size());
 
 
         Cart cart1 = cartDAO.getCartsList().get(0);
-        List<MultiCheese> list4 = cartEntryDAO.getCartEntries(cart1.getId());
+        List<CartEntry> list4 = cartEntryDAO.getCartEntries(cart1.getId());
         assertTrue(listsEqual(list4, cart1.getCheeses()));
 
 
-        List<MultiCheese> list5 = cartEntryDAO.getCartEntries(0);
+        List<CartEntry> list5 = cartEntryDAO.getCartEntries(0);
         assertEquals(0, list5.size());
     }
 
@@ -66,13 +66,13 @@ public class CartEntryDAOTest extends DAOTest {
     public void insertingTest() {
         Cart cart1 = cartDAO.getCartsList().get(0);
         Cheese cheese = cheeseDAO.getCheese(3);
-        MultiCheese multiCheese = new MultiCheese(cheese, 5);
+        CartEntry cartEntry = new CartEntry(cheese, 5);
 
-        assertFalse(itemInList(cart1.getCheeses(), multiCheese));
+        assertFalse(itemInList(cart1.getCheeses(), cartEntry));
 
-        cartEntryDAO.insertCartEntry(cart1, multiCheese);
+        cartEntryDAO.insertCartEntry(cart1, cartEntry);
         Cart cart2 = cartDAO.getCartsList().get(0);
 
-        assertTrue(itemInList(cart2.getCheeses(), multiCheese));
+        assertTrue(itemInList(cart2.getCheeses(), cartEntry));
     }
 }
