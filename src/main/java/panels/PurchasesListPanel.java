@@ -63,7 +63,7 @@ public class PurchasesListPanel extends CheesePanel {
                         listItem.add(new Label("time",
                                 timeFormat.format(cart.getTime())));
 
-                        listItem.add(new ListView("entries", cart.getCheeses()) {
+                        listItem.add(new ListView("entries", cart.getEntries()) {
                             @Override
                             protected void populateItem(ListItem listItem) {
                                 CompoundPropertyModel multiCheeseModel =

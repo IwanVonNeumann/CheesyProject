@@ -55,7 +55,7 @@ public class CartEntryDAOTest extends DAOTest {
 
         Cart cart1 = cartDAO.getCartsList().get(0);
         List<CartEntry> list4 = cartEntryDAO.getCartEntries(cart1.getId());
-        assertTrue(listsEqual(list4, cart1.getCheeses()));
+        assertTrue(listsEqual(list4, cart1.getEntries()));
 
 
         List<CartEntry> list5 = cartEntryDAO.getCartEntries(0);
@@ -68,11 +68,11 @@ public class CartEntryDAOTest extends DAOTest {
         Cheese cheese = cheeseDAO.getCheese(3);
         CartEntry cartEntry = new CartEntry(cheese, 5);
 
-        assertFalse(itemInList(cart1.getCheeses(), cartEntry));
+        assertFalse(itemInList(cart1.getEntries(), cartEntry));
 
         cartEntryDAO.insertCartEntry(cart1, cartEntry);
         Cart cart2 = cartDAO.getCartsList().get(0);
 
-        assertTrue(itemInList(cart2.getCheeses(), cartEntry));
+        assertTrue(itemInList(cart2.getEntries(), cartEntry));
     }
 }

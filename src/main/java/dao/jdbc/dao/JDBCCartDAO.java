@@ -99,7 +99,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
                     "(Clock, CustomerID)\n" +
                     "\t\tVALUES (date, \"" + cart.getAddress().getId() + "\");");
 
-            for (CartEntry item : cart.getCheeses()) {
+            for (CartEntry item : cart.getEntries()) {
                 cartEntryDAO.insertCartEntry(cart, item);
             }
 

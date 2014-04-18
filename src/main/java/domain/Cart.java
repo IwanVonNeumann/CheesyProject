@@ -8,19 +8,19 @@ import java.util.List;
 public class Cart implements Serializable {
 
     private int id;
-    private List<CartEntry> cheeses;
+    private List<CartEntry> entries;
     private Address address;
     private Timestamp time;
 
     // создание вместе с сессией
     public Cart() {
-        cheeses = new LinkedList<>();
+        entries = new LinkedList<>();
     }
 
     // цивилизованное извлечение из базы
-    public Cart(int id, List<CartEntry> cheeses, Address address, Timestamp time) {
+    public Cart(int id, List<CartEntry> entries, Address address, Timestamp time) {
         this.id = id;
-        this.cheeses = cheeses;
+        this.entries = entries;
         this.address = address;
         this.time = time;
     }
@@ -29,8 +29,8 @@ public class Cart implements Serializable {
         return id;
     }
 
-    public List<CartEntry> getCheeses() {
-        return cheeses;
+    public List<CartEntry> getEntries() {
+        return entries;
     }
 
     public Address getAddress() {
@@ -46,8 +46,8 @@ public class Cart implements Serializable {
         this.id = id;
     }
 
-    public void setCheeses(List<CartEntry> cheeses) {
-        this.cheeses = cheeses;
+    public void setEntries(List<CartEntry> cheeses) {
+        this.entries = cheeses;
     }
 
     public void setAddress(Address address) {
@@ -64,7 +64,7 @@ public class Cart implements Serializable {
         double total = 0;
         //System.out.println("Counting cost of Cart with ID " + id);
         //System.out.println("Cheeses total: " + cheeses.size());
-        for(CartEntry cartEntry : cheeses) {
+        for(CartEntry cartEntry : entries) {
             total += cartEntry.getCost();
         }
         return total;
@@ -72,7 +72,7 @@ public class Cart implements Serializable {
 
     public void addCheese(Cheese cheese) {
         boolean found = false;
-        for (CartEntry cheese1 : cheeses) {
+        for (CartEntry cheese1 : entries) {
             if (cheese1.getName().equals(cheese.getName())) {
                 cheese1.incQuantity();
                 found = true;
@@ -80,15 +80,15 @@ public class Cart implements Serializable {
             }
         }
         if (!found) {
-            cheeses.add(new CartEntry(cheese));
+            entries.add(new CartEntry(cheese));
         }
     }
 
     public void removeCheese(Cheese cheese) {
-        int n = cheeses.size();
+        int n = entries.size();
         for (int i = 0; i < n; i++) {
-            if(cheeses.get(i).getName().equals(cheese.getName())) {
-                cheeses.remove(i);
+            if(entries.get(i).getName().equals(cheese.getName())) {
+                entries.remove(i);
                 break;
             }
         }
@@ -99,7 +99,7 @@ public class Cart implements Serializable {
     }
 
     public void reset() {
-        cheeses.clear();
+        entries.clear();
     }
 
     @Override
@@ -118,6 +118,15 @@ public class Cart implements Serializable {
 
     @Override
     public String toString() {
-        return "Cart: " + address.getName() + ", " + cheeses.size() + " items at " + time;
+        StringBuilder result = new StringBuilder(
+                "Cart [" + id + "]: " + address.getName() + " [" + address.getId() + "], " +
+                        entries.size() + " items at " + time);
+        result.append(":\n");
+        for (CartEntry cartEntry : entries) {
+            result.append("\t");
+            result.append(cartEntry.toString());
+            result.append("\n");
+        }
+        return result.toString();
     }
 }

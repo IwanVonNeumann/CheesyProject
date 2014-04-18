@@ -22,7 +22,7 @@ public class CartEntriesModel extends LoadableDetachableModel {
 
     // давно закомментировано :)
     // было protected...
-    // используется при cart.setCheeses() из ViewPurchases
+    // используется при cart.setEntries() из ViewPurchases
     // возможно, неэффективно: не используется свойство Loadable/Detachable
     /*  сменим обратно =)
     public List<CartEntry> getCartEntries() {

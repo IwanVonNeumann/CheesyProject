@@ -180,7 +180,9 @@ public class Address {
 
     @Override
     public String toString() {
-        return name + ", " + street + ", " + city + ", " + zipCode +
+        return "Address [" + id + "]: " + name + ", " +
+                street + ", " + city + ", " + zipCode +
+                ", purchases: " + purchases.size() +
                 (deleted ? " [deleted]" : "");
     }
 }

@@ -5,11 +5,16 @@
 
 <hibernate-mapping package="domain">
     <class name="domain.CartEntry" table="CartEntries">
+
         <id name="id" column="EntryID">
             <generator class="increment"/>
         </id>
+
         <property name="quantity"/>
 
-        <one-to-one name="cheese" class="domain.Cheese"/>
+        <many-to-one name="cheese" class="domain.Cheese" fetch="select" lazy="false">
+            <column name="CheeseID" not-null="true" />
+        </many-to-one>
+
     </class>
 </hibernate-mapping>

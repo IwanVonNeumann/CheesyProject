@@ -36,7 +36,7 @@ public class CheeseApplication extends WebApplication {
     }
 
     /*
-    public List<Cheese> getCheeses() {
+    public List<Cheese> getEntries() {
         return Collections.unmodifiableList(cheeses);
     } */
 }

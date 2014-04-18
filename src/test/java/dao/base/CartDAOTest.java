@@ -98,6 +98,6 @@ public class CartDAOTest extends DAOTest {
 
         List<CartEntry> items = cartEntryDAO.getCartEntries(cart2.getId());
 
-        assertTrue(listsEqual(items, cart2.getCheeses()));
+        assertTrue(listsEqual(items, cart2.getEntries()));
     }
 }

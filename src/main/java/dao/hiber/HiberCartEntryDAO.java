@@ -19,6 +19,9 @@ public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
         super(sessionFactory);
     }
 
+
+    // TODO пересмотреть, нужен ли метод:
+    // добавление корзины должно вызывать каскадную вставку
     @Override
     public void insertCartEntry(Cart cart, CartEntry cheese) {
         Session session = sessionFactory.openSession();
@@ -33,7 +36,8 @@ public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
         return null;
     }*/
 
-    //TODO пересмотреть, нужен ли метод
+    // TODO пересмотреть, нужен ли метод:
+    // загрузка корзины должна вытащить записи каскадом
     @Override
     public List<CartEntry> getCartEntries(int cartId) {
         Session session = sessionFactory.openSession();
@@ -52,8 +56,6 @@ public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
                 .uniqueResult();
         transaction.commit();
         session.close();
-        return cart.getCheeses();*/
+        return cart.getEntries();*/
     }
-
-
 }

@@ -22,7 +22,7 @@ public class ShoppingCartPanel extends CheesePanel {
         this.cart = cart;
 
         add(new ListView("cart",
-                new PropertyModel(this, "cart.cheeses")) {
+                new PropertyModel(this, "cart.entries")) {
             @Override
             protected void populateItem(ListItem listItem) {
                 listItem.setModel(

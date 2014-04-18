@@ -71,7 +71,7 @@ public class AdminCheesesListPanel extends CheesePanel {
         add(new PagingNavigator("navigator", cheeses));
     }
 
-    /*protected List<Cheese> getCheeses() {
+    /*protected List<Cheese> getEntries() {
         return getCheeseSession().getDataCache().getCheesesList();
     }*/
 }

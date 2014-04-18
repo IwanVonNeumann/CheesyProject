@@ -27,7 +27,7 @@ public class Index extends CheesePage {
 
             @Override
             public boolean isVisible() {
-                return !getCart().getCheeses().isEmpty();
+                return !getCart().getEntries().isEmpty();
             }
         });
 

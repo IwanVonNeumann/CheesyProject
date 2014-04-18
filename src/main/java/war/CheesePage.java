@@ -14,7 +14,7 @@ public abstract class CheesePage extends WebPage {
     }
 
     /*
-    public List<Cheese> getCheeses() {
+    public List<Cheese> getEntries() {
         return getCheeseSession().getCheeseDAO().getCheesesList();
     } */
 }
