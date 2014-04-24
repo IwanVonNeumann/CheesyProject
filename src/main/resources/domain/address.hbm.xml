@@ -17,10 +17,10 @@
         <property name="hash" column="PasswordHash"/>
         <property name="deleted"/>
 
-        <!--<bag name="purchases" table="Carts" lazy="true" fetch="select">
+        <bag name="purchases" table="Carts" lazy="false" fetch="select"> <!--lazy="true"-->
             <key column="CustomerID" />
             <one-to-many class="domain.Cart" />
-        </bag>-->
+        </bag>
 
     </class>
 </hibernate-mapping>

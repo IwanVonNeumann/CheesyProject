@@ -2,20 +2,24 @@ package war;
 
 import cache.iface.IDataCache;
 import cache.mock.DataCacheMock;
-import dao.hiber.HiberConnectionManager;
 import dao.iface.ConnectionManager;
-import dao.jdbc.JDBCConnectionManager;
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class CheeseApplication extends WebApplication {
 
     private IDataCache dataCache;
 
     public CheeseApplication() {
-        ConnectionManager cm = new JDBCConnectionManager();
-        //ConnectionManager cm = new HiberConnectionManager();
-        dataCache = new DataCacheMock(cm.getConnection());
+
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.cfg.xml");
+
+        ConnectionManager connectionManager = (ConnectionManager)context.getBean("connectionManager");
+
+        dataCache = new DataCacheMock(connectionManager.getConnection());
     }
 
     @Override
