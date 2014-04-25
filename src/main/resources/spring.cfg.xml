@@ -7,8 +7,7 @@
     <bean id="connectionManager" class="dao.hiber.HiberConnectionManager"/>
 
     <!--<bean id="dataCache" class="cache.mock.DataCacheMock">
-        <constructor-arg name="dbConnection" type="dao.iface.DBConnection"
-                         ref="connectionManager.getConnection()"></constructor-arg>
+        <constructor-arg name="dbConnection" type="dao.iface.DBConnection"/>
     </bean>-->
 
 </beans>
