@@ -80,10 +80,10 @@ INSERT INTO Cheeses (
 UPDATE Cheeses SET Deleted = 0;
 
 
-INSERT INTO Customers (CustomerName, Street, ZipCode, City)
-VALUES ('John Wayne', 'Penny Lane', 1123, 'New York');
+INSERT INTO Customers (Title, CustomerName, Street, ZipCode, City)
+VALUES ('MR', 'John Wayne', 'Penny Lane', 1123, 'New York');
 
-INSERT INTO Customers (CustomerName, Street, ZipCode, City)
-VALUES ('Yanni Wirmann', 'Memory Lane', 1101, 'Espoo');
+INSERT INTO Customers (Title, CustomerName, Street, ZipCode, City)
+VALUES ('MR', 'Yanni Wirmann', 'Memory Lane', 1101, 'Espoo');
 
 UPDATE Customers SET Deleted = 0;

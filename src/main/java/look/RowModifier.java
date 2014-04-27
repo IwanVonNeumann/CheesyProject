@@ -3,7 +3,7 @@ package look;
 import org.apache.wicket.behavior.SimpleAttributeModifier;
 
 /**
- * Created by User on 14.15.2.
+ * Created by User on 14.15.2
  */
 public class RowModifier extends SimpleAttributeModifier {
 

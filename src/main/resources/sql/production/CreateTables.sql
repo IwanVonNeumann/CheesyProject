@@ -10,6 +10,7 @@ CREATE TABLE Cheeses
 CREATE TABLE Customers
 (
 	CustomerID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Title varchar(4),
 	CustomerName varchar(25),
 	Street varchar(25),
 	ZipCode int,

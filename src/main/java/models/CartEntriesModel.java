@@ -2,7 +2,7 @@ package models;
 
 import org.apache.wicket.model.LoadableDetachableModel;
 
-// возможно, класс ненужен
+// TODO: пересмотреть: возможно, класс не нужен
 public class CartEntriesModel extends LoadableDetachableModel {
 
 

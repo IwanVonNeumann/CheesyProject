@@ -3,6 +3,7 @@ package dao.jdbc.proxy;
 import dao.jdbc.dao.JDBCCartDAO;
 import domain.Address;
 import domain.Cart;
+import domain.Title;
 
 import java.sql.Connection;
 import java.util.List;
@@ -15,10 +16,10 @@ public class JDBCAddressProxy extends Address {
     private Connection connection;
 
     // считывание из базы, запись создана программно
-    public JDBCAddressProxy(String name, String street, String city,
+    public JDBCAddressProxy(Title title, String name, String street, String city,
                             Integer zipCode, int id, byte[] hash, boolean deleted,
                             Connection connection) {
-        super(name, street, city, zipCode, id, hash, deleted);
+        super(title, name, street, city, zipCode, id, hash, deleted);
         this.connection = connection;
     }
 

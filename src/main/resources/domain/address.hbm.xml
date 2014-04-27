@@ -10,6 +10,12 @@
             <generator class="increment"/>
         </id>
 
+        <property name="title">
+                <type name="org.hibernate.type.EnumType">
+                    <param name="enumClass">domain.Title</param>
+                </type>
+        </property>
+
         <property name="name" column="CustomerName"/>
         <property name="street"/>
         <property name="city"/>

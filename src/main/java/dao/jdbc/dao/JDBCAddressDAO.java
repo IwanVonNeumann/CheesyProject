@@ -3,6 +3,7 @@ package dao.jdbc.dao;
 import dao.iface.AddressDAO;
 import dao.jdbc.proxy.JDBCAddressProxy;
 import domain.Address;
+import domain.Title;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -218,7 +219,9 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
     }
 
     private Address buildAddress(ResultSet result) throws SQLException {
-        return new JDBCAddressProxy(result.getString("CustomerName"),
+        return new JDBCAddressProxy(
+                Title.valueOf(result.getString("Title")),
+                result.getString("CustomerName"),
                 result.getString("Street"),
                 result.getString("City"),
                 result.getInt("ZipCode"),

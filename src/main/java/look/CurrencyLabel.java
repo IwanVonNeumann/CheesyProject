@@ -14,9 +14,9 @@ public class CurrencyLabel  extends Label{
         super(id);
     }
 
-    /*public CurrencyLabel(String id, String label) {
+    public CurrencyLabel(String id, String label) {
         super(id, label);
-    }*/
+    }
 
     public CurrencyLabel(String id, IModel model) {
         super(id, model);

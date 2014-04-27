@@ -17,6 +17,7 @@ public class CheeseApplication extends WebApplication {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.cfg.xml");
 
+        //TODO: JDBCConnectionManager перестал работать
         ConnectionManager connectionManager = (ConnectionManager)context.getBean("connectionManager");
 
         dataCache = new DataCacheMock(connectionManager.getConnection());

@@ -8,6 +8,7 @@ import java.util.List;
 public class Address {
 
     private int id;
+    private Title title;
     private String name;
     private String street;
     private String city;
@@ -20,7 +21,8 @@ public class Address {
     public Address() {}
 
     // базовый конструктор
-    public Address(String name, String street, String city, Integer zipCode) {
+    public Address(Title title, String name, String street, String city, Integer zipCode) {
+        this.title = title;
         this.name = name;
         this.street = street;
         this.city = city;
@@ -28,17 +30,17 @@ public class Address {
     }
 
     // регистрация
-    public Address(String name, String street, String city, Integer zipCode, String password) {
-        this(name, street, city, zipCode);
+    public Address(Title title, String name, String street, String city, Integer zipCode, String password) {
+        this(title, name, street, city, zipCode);
         hash = calculateHash(password);
         deleted = false;
         purchases = new LinkedList<>();
     }
 
     // считывание из базы
-    public Address(String name, String street, String city,
+    public Address(Title title, String name, String street, String city,
                    Integer zipCode, int id, byte[] hash, boolean deleted) {
-        this(name, street, city, zipCode);
+        this(title, name, street, city, zipCode);
         this.id = id;
         if (hash != null) {
             this.hash = hash;
@@ -48,6 +50,10 @@ public class Address {
         this.deleted = deleted;
     }
 
+
+    public Title getTitle() {
+        return title;
+    }
 
     public String getName() {
         return name;
@@ -82,6 +88,10 @@ public class Address {
     }
 
 
+    public void setTitle(Title title) {
+        this.title = title;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -115,7 +125,7 @@ public class Address {
     }
 
 
-
+    // TODO refactor
     public boolean correctHash(String password) {
         if (hash == null) System.out.println("Hash is null!");
         boolean correct = true;
@@ -140,26 +150,6 @@ public class Address {
         }
     }
 
-    /*public String getHexHash() {
-        StringBuilder sb = new StringBuilder();
-        for (byte b : hash) {
-            sb.append(String.format("%02X ", b));
-        }
-        return sb.toString();
-    }*/
-
-    public String getHexHash(int width, String symbol) {
-        StringBuilder sb = new StringBuilder();
-        int i = 0;
-        for (byte b : hash) {
-            sb.append(String.format("%02X ", b));
-            i++;
-            if ((i % width == 0) & (i != hash.length))
-                sb.append(symbol);
-        }
-        return sb.toString();
-    }
-
     public void delete() {
         setDeleted(true);
     }
@@ -180,7 +170,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address [" + id + "]: " + name + ", " +
+        return "Address [" + id + "]: " + title + " " + name + ", " +
                 street + ", " + city + ", " + zipCode +
                 ", purchases: " + purchases.size() +
                 (deleted ? " [deleted]" : "");

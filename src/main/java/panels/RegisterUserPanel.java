@@ -1,10 +1,8 @@
 package panels;
 
 import domain.Address;
-import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.PasswordTextField;
-import org.apache.wicket.markup.html.form.SubmitLink;
-import org.apache.wicket.markup.html.form.TextField;
+import domain.Title;
+import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
@@ -25,6 +23,11 @@ public class RegisterUserPanel extends CheesePanel {
         Form form = new Form("form", model);
         add(form);
 
+        Address address = (Address)form.getModelObject();
+        address.setName("Janis");
+        address.setTitle(Title.MR);
+
+        form.add(new DropDownChoice("title", Title.toStringArray()).setRequired(true));
         form.add(new TextField("name").setRequired(true));
         form.add(new TextField("street").setRequired(true));
         form.add(new TextField("zipCode").setRequired(true));
