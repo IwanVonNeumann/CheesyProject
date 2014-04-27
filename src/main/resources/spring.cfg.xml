@@ -6,6 +6,9 @@
 
     <bean id="connectionManager" class="dao.hiber.HiberConnectionManager"/>
 
+    <!-- Switch data access layer to JDBC: -->
+    <!--<bean id="connectionManager" class="dao.jdbc.JDBCConnectionManager"/>-->
+
     <!--<bean id="dataCache" class="cache.mock.DataCacheMock">
         <constructor-arg name="dbConnection" type="dao.iface.DBConnection"/>
     </bean>-->

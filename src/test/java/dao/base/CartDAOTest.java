@@ -11,6 +11,7 @@ import dao.jdbc.dao.JDBCCheeseDAO;
 import domain.Address;
 import domain.Cart;
 import domain.CartEntry;
+import domain.Title;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -65,7 +66,7 @@ public class CartDAOTest extends DAOTest {
         List<Cart> carts2 = cartDAO.getCartsList(address2);
         assertEquals(0, carts2.size());
 
-        Address address3 = new Address("Iwan", "Muzyczna", "Lublin", 2102);
+        Address address3 = new Address(Title.MR, "Iwan", "Muzyczna", "Lublin", 2102);
         List<Cart> carts3 = cartDAO.getCartsList(address3);
         assertEquals(0, carts3.size());
     }

@@ -21,6 +21,14 @@ public enum Title {
         return state;
     }
 
+    public static Title getConstant(String value) {
+        for (Title title : Title.values()) {
+            if (title.toString().equals(value)) return title;
+        }
+        throw new IllegalArgumentException(
+                "[Java.Enum] No constant with text '" + value + "' found for Title...");
+    }
+
     public static List<String> toStringArray() {
         ArrayList<String> result =
                 new ArrayList<>(Title.values().length);

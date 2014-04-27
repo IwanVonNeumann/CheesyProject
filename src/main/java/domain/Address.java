@@ -1,9 +1,10 @@
 package domain;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.LinkedList;
 import java.util.List;
+
+import static security.PasswordManager.calculateHash;
+import static security.PasswordManager.passwordIsCorrect;
 
 public class Address {
 
@@ -16,6 +17,9 @@ public class Address {
     private byte[] hash;
     private boolean deleted;
     private List<Cart> purchases;
+
+
+    private final String defaultPassword = "cheese";
 
 
     public Address() {}
@@ -42,12 +46,8 @@ public class Address {
                    Integer zipCode, int id, byte[] hash, boolean deleted) {
         this(title, name, street, city, zipCode);
         this.id = id;
-        if (hash != null) {
-            this.hash = hash;
-        } else {
-            this.hash = calculateHash("cheese"); // default test-password
-        }
         this.deleted = deleted;
+        setHash(hash);
     }
 
 
@@ -113,7 +113,11 @@ public class Address {
     }
 
     public void setHash(byte[] hash) {
-        this.hash = hash;
+        if (hash != null) {
+            this.hash = hash;
+        } else {
+            this.hash = calculateHash(defaultPassword); // default test-password
+        }
     }
 
     public void setDeleted(boolean deleted) {
@@ -125,29 +129,8 @@ public class Address {
     }
 
 
-    // TODO refactor
     public boolean correctHash(String password) {
-        if (hash == null) System.out.println("Hash is null!");
-        boolean correct = true;
-        byte[] pass = calculateHash(password);
-        int k = pass.length;
-        for (int i = 0; i < k; i++) {
-            correct &= hash[i] == pass[i];
-        }
-        return correct;
-    }
-
-    public static byte[] calculateHash(String password) {
-        byte[] hash;
-        try {
-            byte[] passwordBytes = password.getBytes();
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            hash = md.digest(passwordBytes);
-            return hash;
-        } catch (NoSuchAlgorithmException ex) {
-            System.out.println("No algorithm ex...");
-            return null;
-        }
+        return passwordIsCorrect(password, hash);
     }
 
     public void delete() {
@@ -172,7 +155,7 @@ public class Address {
     public String toString() {
         return "Address [" + id + "]: " + title + " " + name + ", " +
                 street + ", " + city + ", " + zipCode +
-                ", purchases: " + purchases.size() +
+                ", purchases: " + getPurchases().size() +
                 (deleted ? " [deleted]" : "");
     }
 }

@@ -24,6 +24,7 @@ public class RegisterUserPanel extends CheesePanel {
         add(form);
 
         Address address = (Address)form.getModelObject();
+        //TODO: сделать MR по умолчанию
         address.setName("Janis");
         address.setTitle(Title.MR);
 

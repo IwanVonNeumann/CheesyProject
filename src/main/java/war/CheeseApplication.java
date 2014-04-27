@@ -3,6 +3,7 @@ package war;
 import cache.iface.IDataCache;
 import cache.mock.DataCacheMock;
 import dao.iface.ConnectionManager;
+import dao.jdbc.JDBCConnectionManager;
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -17,7 +18,6 @@ public class CheeseApplication extends WebApplication {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.cfg.xml");
 
-        //TODO: JDBCConnectionManager перестал работать
         ConnectionManager connectionManager = (ConnectionManager)context.getBean("connectionManager");
 
         dataCache = new DataCacheMock(connectionManager.getConnection());

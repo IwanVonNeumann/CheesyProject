@@ -5,6 +5,7 @@ import dao.jdbc.dao.JDBCAddressDAO;
 
 import domain.Address;
 
+import domain.Title;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -45,14 +46,14 @@ public abstract class AddressDAOTest extends DAOTest {
 
     @Test
     public void existenceTest() {
-        Address address1 = new Address("John Wayne", "Penny Lane", "New York", 1123);
+        Address address1 = new Address(Title.MR, "John Wayne", "Penny Lane", "New York", 1123);
         assertTrue(dao.exists(address1));
 
         List<Address> addresses = dao.getAddressesList();
         Address address2 = addresses.get(0);
         assertTrue(dao.exists(address2));
 
-        Address address3 = new Address("Iwan", "Muzyczna", "Lublin", 2102);
+        Address address3 = new Address(Title.MR, "Iwan", "Muzyczna", "Lublin", 2102);
         assertFalse(dao.exists(address3));
     }
 
@@ -80,7 +81,7 @@ public abstract class AddressDAOTest extends DAOTest {
 
     @Test
     public void insertingTest() {
-        Address address1 = new Address("Iwan", "Muzyczna", "Lublin", 2102);
+        Address address1 = new Address(Title.MR, "Iwan", "Muzyczna", "Lublin", 2102);
         assertFalse(dao.exists(address1));
 
         dao.insertAddress(address1);
