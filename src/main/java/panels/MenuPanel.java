@@ -2,10 +2,7 @@ package panels;
 
 
 import org.apache.wicket.markup.html.link.Link;
-import views.ViewCheeses;
-import views.ViewCustomers;
-import views.ViewProfile;
-import views.ViewPurchases;
+import views.*;
 import war.Index;
 
 public class MenuPanel extends CheesePanel {
@@ -13,10 +10,17 @@ public class MenuPanel extends CheesePanel {
     public MenuPanel(String id) {
         super(id);
 
-        add(new Link("home") {
+        add(new Link("store") {
             @Override
             public void onClick() {
                 setResponsePage(Index.class);
+            }
+        });
+
+        add(new Link("search") {
+            @Override
+            public void onClick() {
+                setResponsePage(SearchPage.class);
             }
         });
 

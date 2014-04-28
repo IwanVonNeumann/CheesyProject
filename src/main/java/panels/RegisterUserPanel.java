@@ -23,12 +23,11 @@ public class RegisterUserPanel extends CheesePanel {
         Form form = new Form("form", model);
         add(form);
 
-        Address address = (Address)form.getModelObject();
+        form.add(new DropDownChoice("title", Title.toStringArray()).setRequired(true));
         //TODO: сделать MR по умолчанию
-        address.setName("Janis");
+        Address address = (Address) form.getModelObject();
         address.setTitle(Title.MR);
 
-        form.add(new DropDownChoice("title", Title.toStringArray()).setRequired(true));
         form.add(new TextField("name").setRequired(true));
         form.add(new TextField("street").setRequired(true));
         form.add(new TextField("zipCode").setRequired(true));

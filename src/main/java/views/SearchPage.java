@@ -1,19 +1,23 @@
-package war;
+package views;
 
 import org.apache.wicket.markup.html.link.Link;
-import panels.CheesesListPanel;
 import panels.PageHeadPanel;
+import panels.SearchPanel;
 import panels.ShoppingCartPanel;
+import war.CheckOut;
+import war.CheesePage;
 
-public class Index extends CheesePage {
+/**
+ * Created by Iwan on 28.04.2014
+ */
+public class SearchPage extends CheesePage {
 
-    public Index() {
+    public SearchPage() {
 
         add(new PageHeadPanel("head"));
 
-        add(new CheesesListPanel("cheesesListPanel"));
+        add(new SearchPanel("search"));
 
-        //TODO: объединить панель с кнопкой
         ShoppingCartPanel shoppingCart =
                 new ShoppingCartPanel("shoppingCart", getCart());
 
@@ -31,5 +35,6 @@ public class Index extends CheesePage {
                 return !getCart().getEntries().isEmpty();
             }
         });
+
     }
 }

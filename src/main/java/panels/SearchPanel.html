@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<wicket:panel>
+    <form wicket:id="form">
+        <input type="text" wicket:id="query"/>
+        <input type="submit" value="Search"/>
+        <br/><br/>
+        <label>
+            <input type="checkbox" wicket:id="advanced"/>Show advanced options
+        </label>
+
+        <div wicket:id="wmc" class="searchoptions">
+            <div>Search in</div>
+            <div wicket:id="criteria"></div>
+        </div>
+    </form>
+</wicket:panel>
+</body>
+</html>
