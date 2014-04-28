@@ -4,10 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
 
-    <bean id="connectionManager" class="dao.hiber.HiberConnectionManager"/>
+    <!--<bean id="connectionManager" class="dao.hiber.HiberConnectionManager"/>-->
 
     <!-- Switch data access layer to JDBC: -->
-    <!--<bean id="connectionManager" class="dao.jdbc.JDBCConnectionManager"/>-->
+    <bean id="connectionManager" class="dao.jdbc.JDBCConnectionManager"/>
 
     <!--<bean id="dataCache" class="cache.mock.DataCacheMock">
         <constructor-arg name="dbConnection" type="dao.iface.DBConnection"/>

@@ -3,16 +3,18 @@ package panels;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxCheckBox;
 import org.apache.wicket.markup.html.WebMarkupContainer;
-import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.CheckBoxMultipleChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.util.value.ValueMap;
+import search.SearchResult;
+import static search.SearchEngine.search;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Iwan on 28.04.2014
@@ -42,22 +44,10 @@ public class SearchPanel extends CheesePanel {
                 new CompoundPropertyModel(searchPars)) {
             @Override
             protected void onSubmit() {
-                //TODO: search
-
-                System.out.println("Advanced search options " +
-                        (wmc.isVisible() ? "on..." : "off..."));
-
-                if (wmc.isVisible()) {
-                    LinkedList<String> searchCriteria =
-                            (LinkedList<String>)searchPars.get("criteria");
-
-                    if (searchCriteria.size() > 0) {
-                        System.out.print("Searching by");
-                        for (String criterion : searchCriteria) {
-                            System.out.print(" " + criterion);
-                        }
-                        System.out.println("...");
-                    }
+                List<SearchResult> results = search(
+                        getCheeseSession().getDataCache(), searchPars);
+                for (SearchResult result : results) {
+                    System.out.println(result);
                 }
             }
         };

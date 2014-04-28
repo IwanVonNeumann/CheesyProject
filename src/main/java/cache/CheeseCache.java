@@ -68,4 +68,9 @@ public class CheeseCache implements CheeseDAO {
 
         cheeseDAO.safeDeleteCheese(cheese);
     }
+
+    @Override
+    public List<Cheese> searchCheeseByName(String key) {
+        return cheeseDAO.searchCheeseByName(key);
+    }
 }

@@ -135,4 +135,9 @@ public class DataCacheMock implements IDataCache {
     public boolean exists(Cheese cheese) {
         return cheeseDAO.exists(cheese);
     }
+
+    @Override
+    public List<Cheese> searchCheeseByName(String key) {
+        return cheeseDAO.searchCheeseByName(key);
+    }
 }

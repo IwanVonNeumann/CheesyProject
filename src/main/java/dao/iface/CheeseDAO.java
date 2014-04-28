@@ -1,6 +1,7 @@
 package dao.iface;
 
 import domain.Cheese;
+import search.SearchEngine;
 
 import java.util.List;
 
@@ -20,4 +21,6 @@ public interface CheeseDAO {
     void updateCheese(Cheese cheese);
 
     void safeDeleteCheese(Cheese cheese);
+
+    List<Cheese> searchCheeseByName(String key);
 }

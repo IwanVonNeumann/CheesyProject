@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="MavenProject" />
+        <module name="CheeseStore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="MavenProject" target="1.7" />
+      <module name="CheeseStore" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

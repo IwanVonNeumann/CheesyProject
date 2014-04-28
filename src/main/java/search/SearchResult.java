@@ -1,23 +1,23 @@
 package search;
 
+import domain.Cheese;
+
 /**
  * Created by Iwan on 28.04.2014
  */
 public class SearchResult {
 
-    private String name;
-    private String description;
+    private Cheese cheese;
+    private String key;
 
-    public SearchResult(String name, String description) {
-        this.name = name;
-        this.description = description;
+    public SearchResult(Cheese cheese, String key) {
+        this.cheese = cheese;
+        this.key = key;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
+    @Override
+    public String toString() {
+        return "SearchResult {Cheese " + cheese.getName() +
+                " found by key '" + key + "'";
     }
 }

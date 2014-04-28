@@ -36,7 +36,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
             return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
-            System.out.println(e);
+            //System.out.println(e);
             return null;
         } finally {
             closeResultSet(result);
@@ -171,6 +171,38 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         } catch (SQLException e) {
             System.out.println("Exception while searching for data...");
             return false;
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+        }
+    }
+
+    @Override
+    public List<Cheese> searchCheeseByName(String key) {
+        List<Cheese> list;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        try {
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Cheeses WHERE Deleted <> ? AND CheeseName LIKE ?;");
+            statement.setBoolean(1, true);
+            statement.setString(2, "%" + key + "%");
+            result = statement.executeQuery();
+
+            System.out.println("[JDBC] SELECT * FROM Cheeses\n" +
+                    "\tWHERE Deleted <> true\n" +
+                    "\tAND CheeseName LIKE %" + key + "%;");
+            list = new ArrayList<>();
+            while (result.next()) {
+                Cheese cheese = buildCheese(result);
+                list.add(cheese);
+            }
+            return list;
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+            //System.out.println(e);
+            return null;
         } finally {
             closeResultSet(result);
             closeStatement(statement);

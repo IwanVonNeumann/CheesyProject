@@ -76,4 +76,10 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
         session.close();
         return (list.size() > 0);
     }
+
+    @Override
+    public List<Cheese> searchCheeseByName(String key) {
+        //TODO: implement
+        return null;
+    }
 }
