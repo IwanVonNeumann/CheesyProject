@@ -33,6 +33,13 @@ public class SearchEngine {
 
         SearchResultsSet resultsSet = new SearchResultsSet();
 
+        // no search pars defined
+        if (criteria.size() == 0) {
+            criteria.add("name");
+            criteria.add("description");
+        }
+
+        // advanced search
         for(String criterion : criteria) {
             System.out.println("Searching by " + criterion + "...");
             List<Cheese> cheeses = procedures.get(criterion).search(dataCache, key);
@@ -41,6 +48,7 @@ public class SearchEngine {
                 resultsSet.add(new SearchResult(cheese, key));
             }
         }
+        resultsSet.sort();
 
         return resultsSet;
     }

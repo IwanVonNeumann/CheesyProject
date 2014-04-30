@@ -2,17 +2,23 @@ package search;
 
 import domain.Cheese;
 
+import static search.StringUtils.countSubstrings;
+import static search.StringUtils.highlightAllKeys;
+
 /**
  * Created by Iwan on 28.04.2014
  */
-public class SearchResult {
+public class SearchResult implements Comparable<SearchResult> {
 
     private Cheese cheese;
     private String key;
 
+    private int rank;
+
     public SearchResult(Cheese cheese, String key) {
         this.cheese = cheese;
         this.key = key;
+        rank = calculateRank();
     }
 
     @Override
@@ -32,42 +38,22 @@ public class SearchResult {
     }
 
     public String getFormattedName() {
-        return highlightKey(cheese.getName(), key);
+        return highlightAllKeys(cheese.getName(), key);
     }
 
     public String getFormattedDescription() {
-        return highlightKey(cheese.getDescription(), key);
+        return highlightAllKeys(cheese.getDescription(), key);
     }
 
-    private String highlightKey(String string, String key) {
-        StringBuilder stringBuilder = new StringBuilder();
-
-        String[] elements = string.split(key);
-        int k = elements.length - 1;
-
-        for (int i = 0; i < k; i++) {
-            stringBuilder.append(elements[i]);
-            stringBuilder = appendKey(stringBuilder, key);
-        }
-        stringBuilder.append(elements[k]);
-
-        int checkSum = 0;
-        for (String element : elements) {
-            checkSum += element.length();
-        }
-        checkSum += key.length() * k;
-
-        if (checkSum < string.length()) {
-            stringBuilder = appendKey(stringBuilder, key);
-        }
-
-        return stringBuilder.toString();
+    @Override
+    public int compareTo(SearchResult searchResult) {
+        return searchResult.rank - rank;
     }
 
-    private StringBuilder appendKey(StringBuilder stringBuilder, String key) {
-        stringBuilder.append("<b>")
-                .append(key)
-                .append("</b>");
-        return stringBuilder;
+    private int calculateRank() {
+        final int NAME_WEIGHT = 10;
+        final int DESC_WEIGHT = 1;
+        return countSubstrings(cheese.getName(), key) * NAME_WEIGHT +
+                countSubstrings(cheese.getDescription(), key) * DESC_WEIGHT;
     }
 }

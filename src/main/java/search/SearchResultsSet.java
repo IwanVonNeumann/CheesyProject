@@ -1,5 +1,6 @@
 package search;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -26,6 +27,10 @@ public class SearchResultsSet {
 
     public int size() {
         return searchResults.size();
+    }
+
+    public void sort() {
+        Collections.sort(searchResults);
     }
 
     private boolean presents(SearchResult searchResult) {

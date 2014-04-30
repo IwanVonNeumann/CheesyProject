@@ -1,12 +1,5 @@
-import dao.hiber.HiberConnectionManager;
-import dao.iface.ConnectionManager;
-import dao.iface.DBConnection;
-import domain.Address;
-import domain.Cart;
-import domain.CartEntry;
-import domain.Title;
-
-import java.util.List;
+import search.SearchResult;
+import search.StringUtils;
 
 /**
  * Created by IRuskevich on 16.04.2014
@@ -14,8 +7,10 @@ import java.util.List;
 public class TestTest {
 
     public static void main(String[] args) {
+        String string = "Aabaa";
+        String substring = "aa";
 
-        Title title = Title.getConstant("Mr.");
-        System.out.println(title);
-     }
+        String markup = StringUtils.highlightAllKeys(string, substring);
+        System.out.println(markup);
+    }
 }
