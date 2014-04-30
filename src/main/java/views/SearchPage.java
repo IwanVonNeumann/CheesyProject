@@ -5,6 +5,7 @@ import panels.PageHeadPanel;
 import panels.SearchPanel;
 import panels.ShoppingCartPanel;
 import search.SearchResult;
+import search.SearchResultsSet;
 import war.CheckOut;
 import war.CheesePage;
 
@@ -16,7 +17,7 @@ import java.util.List;
  */
 public class SearchPage extends CheesePage {
 
-    public SearchPage(List<SearchResult> searchResults) {
+    public SearchPage(SearchResultsSet searchResults) {
         add(new PageHeadPanel("head"));
 
         add(new SearchPanel("search", searchResults));

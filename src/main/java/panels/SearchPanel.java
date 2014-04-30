@@ -10,6 +10,7 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.util.value.ValueMap;
 import search.SearchResult;
+import search.SearchResultsSet;
 import views.SearchPage;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import static search.SearchEngine.search;
 public class SearchPanel extends CheesePanel {
 
 
-    public SearchPanel(String id, List<SearchResult> searchResults) {
+    public SearchPanel(String id, SearchResultsSet searchResults) {
         super(id);
 
         final ValueMap searchPars = new ValueMap();
@@ -51,13 +52,13 @@ public class SearchPanel extends CheesePanel {
 
             @Override
             protected void onSubmit() {
-                List<SearchResult> newResults = search(
+                SearchResultsSet newResults = search(
                         getCheeseSession().getDataCache(), searchPars);
-                for (SearchResult result : newResults) {
+                /*for (SearchResult result : newResults.getSearchResults()) {
                     System.out.println(result);
                     System.out.println(result.getFormattedName());
                     System.out.println(result.getFormattedDescription());
-                }
+                }*/
                 setResponsePage(new SearchPage(newResults));
             }
         };

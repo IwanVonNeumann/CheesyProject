@@ -16,6 +16,16 @@ public class SearchResult {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof SearchResult)) return false;
+
+        SearchResult that = (SearchResult) o;
+
+        return cheese.equals(that.cheese);
+    }
+
+    @Override
     public String toString() {
         return "SearchResult {Cheese " + cheese.getName() +
                 " found by key '" + key + "'}";
@@ -55,7 +65,9 @@ public class SearchResult {
     }
 
     private StringBuilder appendKey(StringBuilder stringBuilder, String key) {
-        stringBuilder.append("<b>" + key + "</b>");
+        stringBuilder.append("<b>")
+                .append(key)
+                .append("</b>");
         return stringBuilder;
     }
 }

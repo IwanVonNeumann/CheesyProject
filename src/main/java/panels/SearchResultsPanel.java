@@ -3,12 +3,9 @@ package panels;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
-import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 import search.SearchResult;
-
-import java.util.LinkedList;
-import java.util.List;
+import search.SearchResultsSet;
 
 /**
  * Created by Iwan on 29.04.2014
@@ -16,12 +13,12 @@ import java.util.List;
  */
 public class SearchResultsPanel extends CheesePanel {
 
-    protected SearchResultsPanel(String id, List<SearchResult> searchResults) {
+    protected SearchResultsPanel(String id, SearchResultsSet searchResults) {
         super(id);
 
         if (searchResults == null) {
             this.setVisible(false);
-            searchResults = new LinkedList<>();
+            searchResults = new SearchResultsSet();
         }
 
         Label resultsCount = new Label("total",
@@ -29,7 +26,8 @@ public class SearchResultsPanel extends CheesePanel {
         add(resultsCount);
 
         ListView resultsList =
-                new ListView("results", new Model((java.io.Serializable) searchResults)) {
+                new ListView("results", new Model(
+                        (java.io.Serializable) searchResults.getSearchResults())) {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         SearchResult searchResult =
