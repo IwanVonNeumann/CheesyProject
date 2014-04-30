@@ -141,4 +141,9 @@ public class DataCache implements IDataCache {
     public List<Cheese> searchCheeseByName(String key) {
         return cheeseCache.searchCheeseByName(key);
     }
+
+    @Override
+    public List<Cheese> searchCheeseByDescription(String key) {
+        return cheeseCache.searchCheeseByDescription(key);
+    }
 }

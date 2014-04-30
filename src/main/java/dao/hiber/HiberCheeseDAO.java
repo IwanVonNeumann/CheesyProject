@@ -82,4 +82,10 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
         //TODO: implement
         return null;
     }
+
+    @Override
+    public List<Cheese> searchCheeseByDescription(String key) {
+        //TODO: implement
+        return null;
+    }
 }

@@ -23,4 +23,6 @@ public interface CheeseDAO {
     void safeDeleteCheese(Cheese cheese);
 
     List<Cheese> searchCheeseByName(String key);
+
+    List<Cheese> searchCheeseByDescription(String key);
 }

@@ -54,7 +54,7 @@ INSERT INTO Cheeses (
 INSERT INTO Cheeses (
 	CheeseName, Description, Price
 		) VALUES (
-	'Boursin', 'Boursin Cheese is a soft...', 1.33
+	'Boursin', 'Boursin cheese is a soft...', 1.33
 );
 
 

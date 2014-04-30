@@ -20,8 +20,8 @@ public class SearchEngine {
     private static Map<String, ISearchProcedure> procedures = new HashMap<>();
 
     static {
-        procedures.put("Name", new NameSearchProcedure());
-        procedures.put("Description", new DescriptionSearchProcedure());
+        procedures.put("name", new NameSearchProcedure());
+        procedures.put("description", new DescriptionSearchProcedure());
     }
 
     public static List<SearchResult> search(IDataCache dataCache, ValueMap pars) {
@@ -35,7 +35,9 @@ public class SearchEngine {
         List<SearchResult> resultList = new LinkedList<>();
 
         for(String criterion : criteria) {
+            System.out.println("Searching by " + criterion + "...");
             List<Cheese> cheeses = procedures.get(criterion).search(dataCache, key);
+            System.out.println(cheeses.size() + " items found;");
             for (Cheese cheese : cheeses) {
                 resultList.add(new SearchResult(cheese, key));
             }

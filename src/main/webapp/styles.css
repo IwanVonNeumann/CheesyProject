@@ -76,6 +76,15 @@ div.checkout {
 	text-align: center;
 }
 
+/* search */
+div.maroon {
+    color: maroon;
+}
+
+div.resultname {
+    font-size: 18px;
+}
+
 h3.section {
 	padding-left: 100px;
 	color: #5C0000;

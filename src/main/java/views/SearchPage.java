@@ -4,19 +4,22 @@ import org.apache.wicket.markup.html.link.Link;
 import panels.PageHeadPanel;
 import panels.SearchPanel;
 import panels.ShoppingCartPanel;
+import search.SearchResult;
 import war.CheckOut;
 import war.CheesePage;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by Iwan on 28.04.2014
  */
 public class SearchPage extends CheesePage {
 
-    public SearchPage() {
-
+    public SearchPage(List<SearchResult> searchResults) {
         add(new PageHeadPanel("head"));
 
-        add(new SearchPanel("search"));
+        add(new SearchPanel("search", searchResults));
 
         ShoppingCartPanel shoppingCart =
                 new ShoppingCartPanel("shoppingCart", getCart());
@@ -35,6 +38,10 @@ public class SearchPage extends CheesePage {
                 return !getCart().getEntries().isEmpty();
             }
         });
-
     }
+
+    public SearchPage() {
+        this(null);
+    }
+
 }

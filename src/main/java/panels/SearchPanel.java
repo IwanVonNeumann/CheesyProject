@@ -10,18 +10,21 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.util.value.ValueMap;
 import search.SearchResult;
-import static search.SearchEngine.search;
+import views.SearchPage;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import static search.SearchEngine.search;
 
 /**
  * Created by Iwan on 28.04.2014
  */
 public class SearchPanel extends CheesePanel {
 
-    public SearchPanel(String id) {
+
+    public SearchPanel(String id, List<SearchResult> searchResults) {
         super(id);
 
         final ValueMap searchPars = new ValueMap();
@@ -34,27 +37,34 @@ public class SearchPanel extends CheesePanel {
         wmc.setOutputMarkupPlaceholderTag(true);
 
         ArrayList<String> criteria = new ArrayList<>();
-        criteria.add("Names");
-        criteria.add("Descriptions");
+        criteria.add("name");
+        criteria.add("description");
 
         wmc.add(new CheckBoxMultipleChoice("criteria", criteria)
                 .setPrefix("").setSuffix("&nbsp;"));
 
+        final SearchResultsPanel searchResultsPanel =
+                new SearchResultsPanel("results", searchResults);
+
         Form form = new Form("form",
                 new CompoundPropertyModel(searchPars)) {
+
             @Override
             protected void onSubmit() {
-                List<SearchResult> results = search(
+                List<SearchResult> newResults = search(
                         getCheeseSession().getDataCache(), searchPars);
-                for (SearchResult result : results) {
+                for (SearchResult result : newResults) {
                     System.out.println(result);
+                    System.out.println(result.getFormattedName());
+                    System.out.println(result.getFormattedDescription());
                 }
+                setResponsePage(new SearchPage(newResults));
             }
         };
 
         add(form);
 
-        form.add(new TextField("query"));
+        form.add(new TextField("query").setRequired(true));
         form.add(wmc);
 
         form.add(new AjaxCheckBox("advanced",
@@ -64,5 +74,8 @@ public class SearchPanel extends CheesePanel {
                 target.addComponent(wmc);
             }
         });
+
+        add(searchResultsPanel);
     }
+
 }

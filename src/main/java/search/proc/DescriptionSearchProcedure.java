@@ -12,6 +12,6 @@ public class DescriptionSearchProcedure implements ISearchProcedure {
 
     @Override
     public List<Cheese> search(IDataCache dataCache, String key) {
-        return null;
+        return dataCache.searchCheeseByDescription(key);
     }
 }

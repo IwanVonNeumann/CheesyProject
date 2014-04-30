@@ -209,6 +209,38 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         }
     }
 
+    @Override
+    public List<Cheese> searchCheeseByDescription(String key) {
+        List<Cheese> list;
+        PreparedStatement statement = null;
+        ResultSet result = null;
+
+        try {
+            statement = connection.prepareStatement(
+                    "SELECT * FROM Cheeses WHERE Deleted <> ? AND Description LIKE ?;");
+            statement.setBoolean(1, true);
+            statement.setString(2, "%" + key + "%");
+            result = statement.executeQuery();
+
+            System.out.println("[JDBC] SELECT * FROM Cheeses\n" +
+                    "\tWHERE Deleted <> true\n" +
+                    "\tAND Description LIKE %" + key + "%;");
+            list = new ArrayList<>();
+            while (result.next()) {
+                Cheese cheese = buildCheese(result);
+                list.add(cheese);
+            }
+            return list;
+        } catch (SQLException e) {
+            System.out.println("Exception while accessing data...");
+            //System.out.println(e);
+            return null;
+        } finally {
+            closeResultSet(result);
+            closeStatement(statement);
+        }
+    }
+
     private Cheese buildCheese(ResultSet result) throws SQLException {
         return new Cheese(result.getInt("CheeseID"),
                 result.getString("CheeseName"),

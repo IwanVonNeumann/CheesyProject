@@ -73,4 +73,9 @@ public class CheeseCache implements CheeseDAO {
     public List<Cheese> searchCheeseByName(String key) {
         return cheeseDAO.searchCheeseByName(key);
     }
+
+    @Override
+    public List<Cheese> searchCheeseByDescription(String key) {
+        return cheeseDAO.searchCheeseByDescription(key);
+    }
 }
