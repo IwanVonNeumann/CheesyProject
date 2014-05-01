@@ -2,12 +2,11 @@ package panels;
 
 import domain.Cart;
 import domain.Cheese;
-
 import look.CurrencyLabel;
 import models.CheesesModel;
-
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
@@ -30,22 +29,26 @@ public class CheesesListPanel extends CheesePanel {
                     protected void populateItem(ListItem listItem) {
                         listItem.setModel(
                                 new CompoundPropertyModel(
-                                        listItem.getModel()));
+                                        listItem.getModel())
+                        );
 
                         listItem.add(new Label("name"));
                         listItem.add(new Label("description"));
                         listItem.add(new CurrencyLabel("price"));
 
-                        listItem.add(new Link("add", listItem.getModel()) {
-                            //listItem.add(new AjaxFallbackLink("add", listItem.getModel()) {
+                        listItem.add(new AjaxFallbackLink("add", listItem.getModel()) {
                             @Override
-                            public void onClick() { //AjaxRequestTarget target) {
+                            public void onClick(AjaxRequestTarget target) {
                                 getCart().addCheese(
-                                        (Cheese)getModelObject());
-                        /*
-                        if (target != null) {
-                            target.addComponent(shoppingCart);
-                        } */
+                                        (Cheese) getModelObject());
+                                //class org.apache.wicket.markup.html.list.ListItem
+                                //class panels.CheesesListPanel$1
+                                //class panels.CheesesListPanel
+                                //class war.Index
+                                if (target != null) {
+                                    target.addComponent(getParent().getParent().getParent().
+                                            getParent().get("shoppingCart"));
+                                }
                             }
                         });
                     }

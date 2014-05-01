@@ -45,6 +45,10 @@ public class SearchResult implements Comparable<SearchResult> {
         return highlightAllKeys(cheese.getDescription(), key);
     }
 
+    public Cheese getCheese() {
+        return cheese;
+    }
+
     @Override
     public int compareTo(SearchResult searchResult) {
         return searchResult.rank - rank;

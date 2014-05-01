@@ -19,7 +19,7 @@ public class SearchResultsSet {
         if (!presents(searchResult)) {
             searchResults.add(searchResult);
         }
-    };
+    }
 
     public List<SearchResult> getSearchResults() {
         return searchResults;
