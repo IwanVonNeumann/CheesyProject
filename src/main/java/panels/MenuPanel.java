@@ -3,7 +3,7 @@ package panels;
 
 import org.apache.wicket.markup.html.link.Link;
 import views.*;
-import war.Index;
+import views.StoreView;
 
 public class MenuPanel extends CheesePanel {
 
@@ -13,42 +13,42 @@ public class MenuPanel extends CheesePanel {
         add(new Link("store") {
             @Override
             public void onClick() {
-                setResponsePage(Index.class);
+                setResponsePage(StoreView.class);
             }
         });
 
         add(new Link("search") {
             @Override
             public void onClick() {
-                setResponsePage(SearchPage.class);
+                setResponsePage(SearchView.class);
             }
         });
 
         add(new Link("cheeses") {
             @Override
             public void onClick() {
-                setResponsePage(ViewCheeses.class);
+                setResponsePage(CheesesView.class);
             }
         });
 
         add(new Link("purchases") {
             @Override
             public void onClick() {
-                setResponsePage(ViewPurchases.class);
+                setResponsePage(PurchasesView.class);
             }
         });
 
         add(new Link("customers") {
             @Override
             public void onClick() {
-                setResponsePage(ViewCustomers.class);
+                setResponsePage(CustomersView.class);
             }
         });
 
         add(new Link("profile") {
             @Override
             public void onClick() {
-                setResponsePage(ViewProfile.class);
+                setResponsePage(ProfileView.class);
             }
         });
     }

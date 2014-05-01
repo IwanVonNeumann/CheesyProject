@@ -9,13 +9,11 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.util.value.ValueMap;
-import search.SearchResult;
 import search.SearchResultsSet;
-import views.SearchPage;
+import views.SearchView;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 import static search.SearchEngine.search;
 
@@ -59,7 +57,7 @@ public class SearchPanel extends CheesePanel {
                     System.out.println(result.getFormattedName());
                     System.out.println(result.getFormattedDescription());
                 }*/
-                setResponsePage(new SearchPage(newResults));
+                setResponsePage(new SearchView(newResults));
             }
         };
 

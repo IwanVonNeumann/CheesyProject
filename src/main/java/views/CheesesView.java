@@ -7,13 +7,13 @@ import panels.EditCheesePanel;
 import panels.PageHeadPanel;
 import war.CheesePage;
 
-public class ViewCheeses extends CheesePage {
+public class CheesesView extends CheesePage {
 
-    public ViewCheeses() {
+    public CheesesView() {
         this(new Cheese());
     }
 
-    public ViewCheeses(Cheese cheese) {
+    public CheesesView(Cheese cheese) {
         add(new PageHeadPanel("head"));
         add(new AdminCheesesListPanel("cheesesListPanel"));
         add(new AddCheesePanel("addCheesePanel"));

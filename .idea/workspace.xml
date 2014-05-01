@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/search/SearchResult.java" afterPath="$PROJECT_DIR$/src/main/java/search/SearchResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/search/SearchResultsSet.java" afterPath="$PROJECT_DIR$/src/main/java/search/SearchResultsSet.java" />
+    <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="Almost done with Search Engine: checkbox and bookmarkable issues left; Add to cart and ArticleCounter links changed to Ajax">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AddCheesePanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/AddCheesePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AuthenticationPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/AuthenticationPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/CheckOut.java" afterPath="$PROJECT_DIR$/src/main/java/war/CheckOut.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/EditCheesePanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/EditCheesePanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/MenuPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/MenuPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\SearchPage.html" afterPath="$PROJECT_DIR$/src/main/java/views/SearchView.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\SearchPage.java" afterPath="$PROJECT_DIR$/src/main/java/views/SearchView.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewCheeses.html" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewCheeses.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewCustomers.html" afterPath="$PROJECT_DIR$/src/main/java/views/CustomersView.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewCustomers.java" afterPath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewProfile.html" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewProfile.java" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewPurchases.html" afterPath="$PROJECT_DIR$/src/main/java/views/PurchasesView.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views\ViewPurchases.java" afterPath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\war\Index.html" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\war\Index.java" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
     </list>
     <ignored path="MavenProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,8 +96,8 @@
       <file leaf-file-name="CheesesListPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1496">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1496">
+              <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,34 +105,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/war/Index.java">
+      <file leaf-file-name="StoreView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="748">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingCartPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java">
+      <file leaf-file-name="StoreView.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="1122">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.19213974" vertical-offset="0" max-vertical-offset="572">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleCounter.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29142857" vertical-offset="148" max-vertical-offset="1166">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -142,10 +147,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/domain/address.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/look/TitleLabel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/SignupPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/look/RowModifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/look/CurrencyLabel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/look/HashLabel.java" />
@@ -193,6 +194,10 @@
         <option value="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/war/StoreView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
       </list>
     </option>
   </component>
@@ -446,30 +451,8 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheesyProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,14 +475,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="search" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,6 +557,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/views" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -594,18 +570,19 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="war" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
+      <recent name="D:\Users\User\IdeaProjects\MavenProject\src\main" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="search" />
       <recent name="dao.base" />
       <recent name="sql.test" />
       <recent name="dao" />
       <recent name="dao.jdbc" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
-      <recent name="D:\Users\User\IdeaProjects\MavenProject\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.Jetty">
@@ -881,8 +858,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1608" height="856" extended-state="0" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1608" height="856" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36813188" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -893,13 +870,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28838453" sideWeight="0.603125" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32142857" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16880617" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20924261" sideWeight="0.5824847" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28846154" sideWeight="0.396875" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20924261" sideWeight="0.5824847" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28787878" sideWeight="0.396875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19897304" sideWeight="0.41751528" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
@@ -910,7 +888,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554945" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32142857" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -960,7 +937,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="JDBC ifaces&#10;" />
     <MESSAGE value="DAO ifaces refactoring" />
     <MESSAGE value="Hibernate integration" />
     <MESSAGE value="Domain objects linking reorganization" />
@@ -985,7 +961,8 @@
     <MESSAGE value="SearchResultsSet idea implemented" />
     <MESSAGE value="SearchResultsSet concept implemented" />
     <MESSAGE value="Almost done with Search Engine: appearance issues left" />
-    <option name="LAST_COMMIT_MESSAGE" value="Almost done with Search Engine: appearance issues left" />
+    <MESSAGE value="Almost done with Search Engine: checkbox and bookmarkable issues left; Add to cart and ArticleCounter links changed to Ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost done with Search Engine: checkbox and bookmarkable issues left; Add to cart and ArticleCounter links changed to Ajax" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1063,7 +1040,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewCheeses.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/CheesesView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52884614" vertical-offset="0" max-vertical-offset="506">
           <caret line="10" column="62" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="62" />
@@ -1084,7 +1061,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/SearchPage.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/SearchView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49327356" vertical-offset="0" max-vertical-offset="669">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
@@ -1210,13 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46261683" vertical-offset="110" max-vertical-offset="572">
-          <caret line="14" column="16" selection-start-line="11" selection-start-column="4" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/sql/production/InsertData.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4773218" vertical-offset="1011" max-vertical-offset="2068">
@@ -1224,7 +1194,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ViewProfile.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20465116" vertical-offset="0" max-vertical-offset="638">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
@@ -1336,7 +1306,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/SearchPage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/SearchView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5387755" vertical-offset="0" max-vertical-offset="836">
           <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
@@ -1344,39 +1314,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="264" max-vertical-offset="1122">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
+        <state vertical-scroll-proportion="0.5902579" vertical-offset="204" max-vertical-offset="1166">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1496">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1496">
+          <caret line="43" column="50" selection-start-line="43" selection-start-column="50" selection-end-line="43" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/Index.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="748">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.37014315" vertical-offset="303" max-vertical-offset="1540">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29142857" vertical-offset="148" max-vertical-offset="1166">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.19213974" vertical-offset="0" max-vertical-offset="572">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>

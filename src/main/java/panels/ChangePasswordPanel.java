@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.SubmitLink;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.PropertyModel;
-import views.ViewProfile;
+import views.ProfileView;
 
 /**
  * Created by Iwan on 14.1.3
@@ -53,7 +53,7 @@ public class ChangePasswordPanel extends CheesePanel {
                     getCheeseSession().getDataCache().updateAddress(address);
                     System.out.println("Password set to " + password1);
                 }
-                setResponsePage(ViewProfile.class);
+                setResponsePage(ProfileView.class);
                 /*
                 getParent().getParent().setVisible(false);
                 getParent().getParent().getParent().

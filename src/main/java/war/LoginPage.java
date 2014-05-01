@@ -8,6 +8,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import panels.AuthenticationPanel;
+import views.StoreView;
 
 public class LoginPage extends CheesePage {
 
@@ -37,7 +38,7 @@ public class LoginPage extends CheesePage {
                             @Override
                             public void onClick() {
                                 getCheeseSession().setAddress(address);
-                                setResponsePage(Index.class);
+                                setResponsePage(StoreView.class);
                             }
                         };
                         link.add(new Label("name", address.getName()));

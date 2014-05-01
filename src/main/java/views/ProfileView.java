@@ -5,9 +5,9 @@ import org.apache.wicket.model.CompoundPropertyModel;
 import panels.*;
 import war.CheesePage;
 
-public class ViewProfile extends CheesePage {
+public class ProfileView extends CheesePage {
 
-    public ViewProfile() {
+    public ProfileView() {
         add(new PageHeadPanel("head"));
 
         Address address = getCheeseSession().getAddress();

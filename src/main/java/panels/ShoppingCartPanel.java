@@ -2,11 +2,10 @@ package panels;
 
 import domain.Cart;
 import domain.CartEntry;
-
 import look.CurrencyLabel;
-
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
@@ -27,18 +26,27 @@ public class ShoppingCartPanel extends CheesePanel {
             protected void populateItem(ListItem listItem) {
                 listItem.setModel(
                         new CompoundPropertyModel(
-                                listItem.getModel()));
+                                listItem.getModel())
+                );
 
                 listItem.add(new Label("name"));
                 listItem.add(new ArticleCounter("articleCounter",
                         (CartEntry) listItem.getModelObject()));
                 listItem.add(new CurrencyLabel("price"));
 
-                listItem.add(new Link("remove", listItem.getModel()) {
+                listItem.add(new AjaxFallbackLink("remove", listItem.getModel()) {
                     @Override
-                    public void onClick() {
+                    public void onClick(AjaxRequestTarget target) {
                         getCart().removeCheese(
                                 ((CartEntry) getModelObject()).getCheese());
+
+                        //class org.apache.wicket.markup.html.list.ListItem
+                        //class panels.ShoppingCartPanel$1
+                        //class panels.ShoppingCartPanel
+
+                        if (target != null) {
+                            target.addComponent(getParent().getParent().getParent());
+                        }
                     }
                 });
             }

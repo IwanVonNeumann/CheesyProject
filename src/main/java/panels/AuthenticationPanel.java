@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.SubmitLink;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.PropertyModel;
-import war.Index;
+import views.StoreView;
 
 /**
  * Created by Iwan on 14.1.3
@@ -38,7 +38,7 @@ public class AuthenticationPanel extends CheesePanel {
                         getDataCache().getAddress(username);
                 if ((address != null) && (address.correctHash(password))) {
                     getCheeseSession().setAddress(address);
-                    setResponsePage(Index.class);
+                    setResponsePage(StoreView.class);
                 }
             }
         });

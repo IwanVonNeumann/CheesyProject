@@ -1,13 +1,15 @@
-package war;
+package views;
 
 import org.apache.wicket.markup.html.link.Link;
 import panels.CheesesListPanel;
 import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
+import war.CheckOut;
+import war.CheesePage;
 
-public class Index extends CheesePage {
+public class StoreView extends CheesePage {
 
-    public Index() {
+    public StoreView() {
 
         add(new PageHeadPanel("head"));
 

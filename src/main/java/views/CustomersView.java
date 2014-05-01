@@ -12,9 +12,9 @@ import panels.PageHeadPanel;
 import war.CheesePage;
 import war.LoginPage;
 
-public class ViewCustomers extends CheesePage {
+public class CustomersView extends CheesePage {
 
-    public ViewCustomers() {
+    public CustomersView() {
 
         add(new PageHeadPanel("head"));
 
@@ -48,7 +48,7 @@ public class ViewCustomers extends CheesePage {
                                     getCheeseSession().logout();
                                     setResponsePage(LoginPage.class);
                                 } else {
-                                    setResponsePage(ViewCustomers.class);
+                                    setResponsePage(CustomersView.class);
                                 }
                             }
                         });

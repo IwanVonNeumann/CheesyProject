@@ -6,7 +6,7 @@ import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
-import war.Index;
+import views.StoreView;
 import war.LoginPage;
 
 /**
@@ -55,7 +55,7 @@ public class RegisterUserPanel extends CheesePanel {
                 address.setPassword(password1);
                 getCheeseSession().getDataCache().insertAddress(address);
                 getCheeseSession().setAddress(address);
-                setResponsePage(Index.class);
+                setResponsePage(StoreView.class);
             }
         });
 

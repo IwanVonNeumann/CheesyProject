@@ -8,6 +8,7 @@ import org.apache.wicket.markup.html.link.Link;
 
 import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
+import views.StoreView;
 
 public class CheckOut extends CheesePage {
 
@@ -25,7 +26,7 @@ public class CheckOut extends CheesePage {
         add(new Link("cancel") {
             @Override
             public void onClick() {
-                setResponsePage(Index.class);
+                setResponsePage(StoreView.class);
             }
         });
 
@@ -39,7 +40,7 @@ public class CheckOut extends CheesePage {
                 cart.order(); // обслуживание
                 getCheeseSession().getDataCache().insertCart(cart); // сохранение в базе
                 cart.reset(); // сброс корзины
-                setResponsePage(Index.class);
+                setResponsePage(StoreView.class);
             }
         });
 

@@ -7,7 +7,7 @@ import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 
-import views.ViewCheeses;
+import views.CheesesView;
 
 public class AddCheesePanel extends CheesePanel {
 
@@ -30,7 +30,7 @@ public class AddCheesePanel extends CheesePanel {
                 System.out.println("Add Cheese clicked;");
                 getCheeseSession().getDataCache().addCheese(
                         (Cheese)getParent().getModelObject());
-                setResponsePage(ViewCheeses.class);
+                setResponsePage(CheesesView.class);
             }
         });
     }
