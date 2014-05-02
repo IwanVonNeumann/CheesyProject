@@ -6,11 +6,13 @@ import look.CurrencyLabel;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
+import war.CheckOut;
 
 public class ShoppingCartPanel extends CheesePanel {
 
@@ -64,6 +66,18 @@ public class ShoppingCartPanel extends CheesePanel {
                 return String.format("$%.2f", getCart().getTotal().doubleValue());
             }
         }));*/
+
+        add(new Link("checkout") {
+            @Override
+            public void onClick() {
+                setResponsePage(new CheckOut());
+            }
+
+            @Override
+            public boolean isVisible() {
+                return !getCart().getEntries().isEmpty();
+            }
+        });
     }
 
     private Cart getCart() {

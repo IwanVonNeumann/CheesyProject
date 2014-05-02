@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <link href="styles.css" rel="stylesheet"/>
+</head>
 <body>
 <wicket:panel>
     <form wicket:id="form">
-        <table border="1">
+        <table class="dbcontent">
             <thead>
-            <th colspan="2">Add cheese</th>
+            <tr>
+                <th colspan="2">Add cheese</th>
+            </tr>
             </thead>
-            <tr>
-                <th align="right">Name:</th>
-                <td><input type="text" wicket:id="name" /></td>
+            <tbody>
+            <tr class="odd">
+                <td class="title">Name</td>
+                <td><input type="text" wicket:id="name"/></td>
             </tr>
-            <tr>
-                <th align="right">Description:</th>
-                <td><input type="text" wicket:id="description" /></td>
+            <tr class="even">
+                <td class="title">Description</td>
+                <td><input type="text" wicket:id="description"/></td>
             </tr>
-            <tr>
-                <th align="right">Price:</th>
-                <td><input type="text" wicket:id="price" /></td>
+            <tr class="odd">
+                <td class="title">Price, $</td>
+                <td><input type="text" wicket:id="price"/></td>
             </tr>
+            </tbody>
+            <tfoot>
             <tr>
-                <td colspan="2" align="center">
-                    <input type="reset" value="Clear" />
-                    <input type="submit" wicket:id="add" value="Add" />
+                <td colspan="2" class="center">
+                    <input type="reset" value="Clear"/>
+                    <input type="submit" wicket:id="add" value="Add"/>
                 </td>
             </tr>
+            </tfoot>
         </table>
     </form>
 </wicket:panel>

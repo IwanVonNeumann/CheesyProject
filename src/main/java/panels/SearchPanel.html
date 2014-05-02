@@ -6,19 +6,23 @@
 </head>
 <body>
 <wicket:panel>
-    <form wicket:id="form">
-        <input type="text" wicket:id="query"/>
-        <input type="submit" value="Search"/>
-        <br/><br/>
-        <label>
-            <input type="checkbox" wicket:id="advanced"/>Show advanced options
-        </label>
+    <h3 class="panel">Cheeses search</h3>
 
-        <div wicket:id="wmc" class="searchoptions">
-            <div>Search in</div>
-            <div wicket:id="criteria"></div>
-        </div>
-    </form>
+    <div>
+        <form wicket:id="form">
+            <input type="text" wicket:id="query"/>
+            <input type="submit" value="Search"/>
+            <br/><br/>
+            <label>
+                <input type="checkbox" wicket:id="advanced"/>Show advanced options
+            </label>
+
+            <div wicket:id="wmc" class="searchoptions">
+                <div>Search in</div>
+                <div wicket:id="criteria"></div>
+            </div>
+        </form>
+    </div>
     <div wicket:id="results"></div>
 </wicket:panel>
 </body>

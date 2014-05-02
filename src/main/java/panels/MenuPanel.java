@@ -13,42 +13,42 @@ public class MenuPanel extends CheesePanel {
         add(new Link("store") {
             @Override
             public void onClick() {
-                setResponsePage(StoreView.class);
+                setResponsePage(new StoreView());
             }
         });
 
         add(new Link("search") {
             @Override
             public void onClick() {
-                setResponsePage(SearchView.class);
+                setResponsePage(new SearchView());
             }
         });
 
         add(new Link("cheeses") {
             @Override
             public void onClick() {
-                setResponsePage(CheesesView.class);
+                setResponsePage(new CheesesView());
             }
         });
 
         add(new Link("purchases") {
             @Override
             public void onClick() {
-                setResponsePage(PurchasesView.class);
+                setResponsePage(new PurchasesView());
             }
         });
 
         add(new Link("customers") {
             @Override
             public void onClick() {
-                setResponsePage(CustomersView.class);
+                setResponsePage(new CustomersView());
             }
         });
 
         add(new Link("profile") {
             @Override
             public void onClick() {
-                setResponsePage(ProfileView.class);
+                setResponsePage(new ProfileView());
             }
         });
     }

@@ -6,26 +6,33 @@
 <body>
 <wicket:panel>
     <h3 class="panel">Your selection</h3>
-    <table>
-        <tbody>
-        <tr wicket:id="cart">
-            <td wicket:id="name" class="cheesename">Gouda</td>
-            <td wicket:id="articleCounter">x1</td>
-            <td wicket:id="price" class="cheeseprice">$2.99</td>
-            <td class="remove">
-                <a wicket:id="remove" href="#">remove</a>
-            </td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <th class="cheesename"></th>
-            <th class="total">Total:</th>
-            <th wicket:id="total" class="cheeseprice">$1.99</th>
-            <td class="remove">&nbsp;</td>
-        </tr>
-        </tfoot>
-    </table>
+
+    <div>
+        <table>
+            <tbody>
+            <tr wicket:id="cart">
+                <td wicket:id="name" class="cheesename">Gouda</td>
+                <td wicket:id="articleCounter">x1</td>
+                <td wicket:id="price" class="cheeseprice">$2.99</td>
+                <td class="remove">
+                    <a wicket:id="remove" href="#">remove</a>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th class="cheesename"></th>
+                <th class="total">Total:</th>
+                <th wicket:id="total" class="cheeseprice">$1.99</th>
+                <td class="remove">&nbsp;</td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="checkout">
+        <input type="button" wicket:id="checkout"
+               value="Check Out"/>
+    </div>
 </wicket:panel>
 </body>
 </html>

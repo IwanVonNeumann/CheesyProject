@@ -1,11 +1,9 @@
 package views;
 
-import org.apache.wicket.markup.html.link.Link;
 import panels.PageHeadPanel;
 import panels.SearchPanel;
 import panels.ShoppingCartPanel;
 import search.SearchResultsSet;
-import war.CheckOut;
 import war.CheesePage;
 
 /**
@@ -23,18 +21,6 @@ public class SearchView extends CheesePage {
 
         shoppingCart.setOutputMarkupId(true);
         add(shoppingCart);
-
-        add(new Link("checkout") {
-            @Override
-            public void onClick() {
-                setResponsePage(new CheckOut());
-            }
-
-            @Override
-            public boolean isVisible() {
-                return !getCart().getEntries().isEmpty();
-            }
-        });
     }
 
     public SearchView() {

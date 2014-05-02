@@ -4,6 +4,8 @@ import domain.Cheese;
 import look.CurrencyLabel;
 import look.RowModifier;
 import models.CheesesModel;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -23,7 +25,7 @@ public class AdminCheesesListPanel extends CheesePanel {
         PageableListView cheeses =
                 new PageableListView("cheeses", cheesesModel, 10) {
                     @Override
-                    protected void populateItem(ListItem listItem) {
+                    protected void populateItem(final ListItem listItem) {
                         listItem.setModel(
                                 new CompoundPropertyModel(
                                         listItem.getModel()));
@@ -35,15 +37,17 @@ public class AdminCheesesListPanel extends CheesePanel {
                         listItem.add(new Label("description"));
                         listItem.add(new CurrencyLabel("price"));
 
-                        listItem.add(new Link("edit", listItem.getModel()) {
+                        //TODO: Ajax :)
+                        listItem.add(new AjaxFallbackLink("edit", listItem.getModel()) {
                             @Override
-                            public void onClick() {
+                            public void onClick(AjaxRequestTarget target) {
                                 //System.out.println("Edit Cheese clicked...");
                                 Cheese selected = (Cheese) getModelObject();
                                 setResponsePage(new CheesesView(selected));
                             }
                         });
 
+                        // TODO: Ajax ;)
                         listItem.add(new Link("delete", listItem.getModel()) {
                             @Override
                             public void onClick() {

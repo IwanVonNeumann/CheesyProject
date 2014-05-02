@@ -16,7 +16,13 @@ public class CheesesView extends CheesePage {
     public CheesesView(Cheese cheese) {
         add(new PageHeadPanel("head"));
         add(new AdminCheesesListPanel("cheesesListPanel"));
-        add(new AddCheesePanel("addCheesePanel"));
-        add(new EditCheesePanel("editCheesePanel", cheese));
+
+        AddCheesePanel addCheesePanel = new AddCheesePanel("addCheesePanel");
+        addCheesePanel.setOutputMarkupId(true);
+        add(addCheesePanel);
+
+        EditCheesePanel editCheesePanel = new EditCheesePanel("editCheesePanel", cheese);
+        editCheesePanel.setOutputMarkupId(true);
+        add(editCheesePanel);
     }
 }
