@@ -72,12 +72,12 @@ public class ShoppingCartPanel extends CheesePanel {
             public void onClick() {
                 setResponsePage(new CheckOut());
             }
-
-            @Override
-            public boolean isVisible() {
-                return !getCart().getEntries().isEmpty();
-            }
         });
+    }
+
+    @Override
+    public boolean isVisible() {
+        return !getCart().getEntries().isEmpty();
     }
 
     private Cart getCart() {

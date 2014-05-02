@@ -20,6 +20,7 @@ public class SearchView extends CheesePage {
                 new ShoppingCartPanel("shoppingCart", getCart());
 
         shoppingCart.setOutputMarkupId(true);
+        shoppingCart.setOutputMarkupPlaceholderTag(true);
         add(shoppingCart);
     }
 

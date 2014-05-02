@@ -42,8 +42,20 @@ public class AdminCheesesListPanel extends CheesePanel {
                             @Override
                             public void onClick(AjaxRequestTarget target) {
                                 //System.out.println("Edit Cheese clicked...");
-                                Cheese selected = (Cheese) getModelObject();
-                                setResponsePage(new CheesesView(selected));
+
+                                //class org.apache.wicket.markup.html.list.ListItem
+                                //class panels.AdminCheesesListPanel$1
+                                //class panels.AdminCheesesListPanel
+                                //class views.CheesesView
+                                EditCheesePanel editCheesePanel = (EditCheesePanel)getParent().getParent().
+                                        getParent().getParent().get("editCheesePanel");
+
+                                editCheesePanel.get("form").setModel(getModel());
+                                editCheesePanel.setVisible(true);
+
+                                if (target != null) {
+                                    target.addComponent(editCheesePanel);
+                                }
                             }
                         });
 

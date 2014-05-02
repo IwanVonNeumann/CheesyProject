@@ -17,6 +17,7 @@ public class StoreView extends CheesePage {
                 new ShoppingCartPanel("shoppingCart", getCart());
 
         shoppingCart.setOutputMarkupId(true);
+        shoppingCart.setOutputMarkupPlaceholderTag(true);
         add(shoppingCart);
     }
 }

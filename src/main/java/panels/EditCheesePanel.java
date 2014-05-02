@@ -10,14 +10,11 @@ import views.CheesesView;
 
 public class EditCheesePanel extends CheesePanel {
 
-    private Cheese cheese;
-
-    public EditCheesePanel(String id, Cheese cheese) {
+    public EditCheesePanel(String id) {
         super(id);
 
-        this.cheese = cheese;
-
-        Form form = new Form("form", new CompoundPropertyModel(cheese));
+        Form form = new Form("form",
+                new CompoundPropertyModel(new Cheese()));
         add(form);
 
         form.add(new TextField("name"));
@@ -27,7 +24,7 @@ public class EditCheesePanel extends CheesePanel {
         form.add(new Link("cancel") {
             @Override
             public void onClick() {
-                getParent().setVisible(false);
+                getParent().getParent().setVisible(false);
             }
         });
 
@@ -43,8 +40,8 @@ public class EditCheesePanel extends CheesePanel {
         });
     }
 
-    @Override
+    /*@Override
     public boolean isVisible() {
         return cheese.getName() != null;
-    }
+    }*/
 }

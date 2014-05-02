@@ -44,7 +44,13 @@ public class CheckOut extends CheesePage {
             }
         });
 
-        add(new ShoppingCartPanel("shoppingCart", getCart()));
+        // TODO: manage empty checkout issue
+        ShoppingCartPanel shoppingCart =
+                new ShoppingCartPanel("shoppingCart", getCart());
+
+        shoppingCart.setOutputMarkupId(true);
+        shoppingCart.setOutputMarkupPlaceholderTag(true);
+        add(shoppingCart);
 
          /*
         add(new FeedbackPanel("feedback"));
