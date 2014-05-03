@@ -1,12 +1,12 @@
 package panels;
 
 import domain.Cheese;
-import org.apache.wicket.markup.html.form.Button;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
+import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.CompoundPropertyModel;
-import views.CheesesView;
 
 public class EditCheesePanel extends CheesePanel {
 
@@ -21,27 +21,38 @@ public class EditCheesePanel extends CheesePanel {
         form.add(new TextField("description"));
         form.add(new TextField("price"));
 
-        form.add(new Link("cancel") {
+        form.add(new AjaxFallbackLink("cancel") {
             @Override
-            public void onClick() {
-                getParent().getParent().setVisible(false);
+            public void onClick(AjaxRequestTarget target) {
+                EditCheesePanel editCheesePanel =
+                        (EditCheesePanel) getParent().getParent();
+                editCheesePanel.setVisible(false);
+
+                if (target != null) {
+                    target.addComponent(editCheesePanel);
+                }
             }
         });
 
-        form.add(new Button("update") {
+        form.add(new AjaxSubmitLink("save") {
             @Override
-            public void onSubmit() {
+            protected void onSubmit(AjaxRequestTarget target, Form form) {
                 //System.out.println("Update " +
                 //      cheese.getName() + " Cheese clicked;");
-                getCheeseSession().getDataCache().updateCheese(
-                        (Cheese)getParent().getModelObject());
-                setResponsePage(CheesesView.class);
+                Form parentForm = (Form) getParent();
+                Cheese cheese = (Cheese) parentForm.getModelObject();
+                getCheeseSession().getDataCache().updateCheese(cheese);
+                EditCheesePanel editCheesePanel =
+                        (EditCheesePanel) parentForm.getParent();
+                editCheesePanel.setVisible(false);
+
+                if (target != null) {
+                    target.addComponent(editCheesePanel);
+                    AdminCheesesListPanel adminCheesesListPanel =
+                            (AdminCheesesListPanel) editCheesePanel.getParent().get("cheesesListPanel");
+                    target.addComponent(adminCheesesListPanel);
+                }
             }
         });
     }
-
-    /*@Override
-    public boolean isVisible() {
-        return cheese.getName() != null;
-    }*/
 }

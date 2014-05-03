@@ -37,7 +37,6 @@ public class AdminCheesesListPanel extends CheesePanel {
                         listItem.add(new Label("description"));
                         listItem.add(new CurrencyLabel("price"));
 
-                        //TODO: Ajax :)
                         listItem.add(new AjaxFallbackLink("edit", listItem.getModel()) {
                             @Override
                             public void onClick(AjaxRequestTarget target) {

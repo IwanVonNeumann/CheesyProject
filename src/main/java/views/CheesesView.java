@@ -1,6 +1,5 @@
 package views;
 
-import domain.Cheese;
 import panels.AddCheesePanel;
 import panels.AdminCheesesListPanel;
 import panels.EditCheesePanel;
@@ -11,7 +10,11 @@ public class CheesesView extends CheesePage {
 
     public CheesesView() {
         add(new PageHeadPanel("head"));
-        add(new AdminCheesesListPanel("cheesesListPanel"));
+
+        AdminCheesesListPanel adminCheesesListPanel =
+                new AdminCheesesListPanel("cheesesListPanel");
+        adminCheesesListPanel.setOutputMarkupId(true);
+        add(adminCheesesListPanel);
 
         AddCheesePanel addCheesePanel = new AddCheesePanel("addCheesePanel");
         addCheesePanel.setOutputMarkupId(true);
@@ -20,7 +23,7 @@ public class CheesesView extends CheesePage {
         add(addCheesePanel);
 
         EditCheesePanel editCheesePanel =
-                new EditCheesePanel("editCheesePanel", new Cheese());
+                new EditCheesePanel("editCheesePanel");
         editCheesePanel.setOutputMarkupId(true);
         editCheesePanel.setOutputMarkupPlaceholderTag(true);
         editCheesePanel.setVisible(false);
