@@ -14,7 +14,6 @@ import org.apache.wicket.model.CompoundPropertyModel;
 
 import java.util.List;
 
-
 public class CheesesListPanel extends CheesePanel {
 
     public CheesesListPanel(String id) {

@@ -42,12 +42,8 @@ public class ShoppingCartPanel extends CheesePanel {
                         getCart().removeCheese(
                                 ((CartEntry) getModelObject()).getCheese());
 
-                        //class org.apache.wicket.markup.html.list.ListItem
-                        //class panels.ShoppingCartPanel$1
-                        //class panels.ShoppingCartPanel
-
                         if (target != null) {
-                            target.addComponent(getParent().getParent().getParent());
+                            target.addComponent(getShoppingCartPanel());
                         }
                     }
                 });
@@ -82,5 +78,9 @@ public class ShoppingCartPanel extends CheesePanel {
 
     private Cart getCart() {
         return cart;
+    }
+
+    private ShoppingCartPanel getShoppingCartPanel() {
+        return this;
     }
 }

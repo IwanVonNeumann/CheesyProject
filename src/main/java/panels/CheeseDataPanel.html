@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<wicket:panel>
+    <div>
+        <a href="#" wicket:id="create">Add new cheese</a>
+    </div>
+    <div>
+        <form wicket:id="cheeseForm">
+            <table class="dbcontent">
+                <thead>
+                <tr>
+                    <th colspan="2">
+                        <span wicket:id="createCaption"></span>
+                        <span wicket:id="editCaption"></span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="odd">
+                    <td class="title">Name</td>
+                    <td><input type="text" wicket:id="name"/></td>
+                </tr>
+                <tr class="even">
+                    <td class="title">Description</td>
+                    <td><input type="text" wicket:id="description"/></td>
+                </tr>
+                <tr class="odd">
+                    <td class="title">Price, $</td>
+                    <td><input type="text" wicket:id="price"/></td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <!--<tr>
+                    <td colspan="2" class="center">
+
+                        <input type="reset" value="Clear"/>
+                    </td>
+                </tr>-->
+                <tr>
+                    <td colspan="2" class="center">
+                        <a href="#" wicket:id="cancel">Cancel</a>
+                        &nbsp;
+                        <a href="#" wicket:id="add">Add</a>
+                        <a href="#" wicket:id="update">Update</a>
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+    </div>
+</wicket:panel>
+</body>
+</html>
