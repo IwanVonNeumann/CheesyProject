@@ -186,7 +186,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             statement.executeUpdate();
             System.out.println("[JDBC] UPDATE Customers \n" +
                     "\tSET Deleted = true \n" +
-                    "\tWHERE CustomerID = " + address.getId());
+                    "\tWHERE CustomerID = " + address.getId() + ";");
         } catch (SQLException e) {
             System.out.println("Exception while updating data...");
         } finally {

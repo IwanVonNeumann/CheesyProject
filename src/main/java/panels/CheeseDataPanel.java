@@ -60,9 +60,9 @@ public class CheeseDataPanel extends CheesePanel {
         cheeseForm.setOutputMarkupPlaceholderTag(true);
         add(cheeseForm);
 
-        cheeseForm.add(new TextField("name").setRequired(true));          // запрет на
-        cheeseForm.add(new TextField("description").setRequired(true));   // сохнарение
-        cheeseForm.add(new TextField("price").setRequired(true));         // пустого поля
+        cheeseForm.add(new TextField("name").setRequired(true));
+        cheeseForm.add(new TextField("description").setRequired(true));
+        cheeseForm.add(new TextField("price").setRequired(true));
 
         final AjaxFallbackLink cancelLink = new AjaxFallbackLink("cancel") {
             @Override

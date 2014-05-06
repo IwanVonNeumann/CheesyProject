@@ -32,8 +32,13 @@ public class ShoppingCartPanel extends CheesePanel {
                 );
 
                 listItem.add(new Label("name"));
-                listItem.add(new ArticleCounter("articleCounter",
-                        (CartEntry) listItem.getModelObject()));
+
+                ArticleCounter articleCounter =
+                        new ArticleCounter("articleCounter",
+                        (CartEntry) listItem.getModelObject());
+                articleCounter.setOutputMarkupId(true);
+                listItem.add(articleCounter);
+
                 listItem.add(new CurrencyLabel("price"));
 
                 listItem.add(new AjaxFallbackLink("remove", listItem.getModel()) {

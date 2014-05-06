@@ -17,13 +17,10 @@ public class ArticleCounter extends CheesePanel {
                 CartEntry selected = (CartEntry) getModelObject();
                 selected.decQuantity();
 
-                //class panels.ArticleCounter
-                //class org.apache.wicket.markup.html.list.ListItem
-                //class panels.ShoppingCartPanel$1
-                //class panels.ShoppingCartPanel
-
                 if (target != null) {
-                    target.addComponent(getParent().getParent().getParent().getParent());
+                    target.addComponent(getShoppingCartPanel()); // точно работает
+                    // TODO: почему не работает?
+                    // target.addComponent(getArticleCounter());
                 }
             }
         });
@@ -38,9 +35,18 @@ public class ArticleCounter extends CheesePanel {
                 selected.incQuantity();
 
                 if (target != null) {
-                    target.addComponent(getParent().getParent().getParent().getParent());
+                    target.addComponent(getShoppingCartPanel()); // точно работает
+                    // target.addComponent(getArticleCounter()); // не работает
                 }
             }
         });
+    }
+
+    private ArticleCounter getArticleCounter() {
+        return this;
+    }
+
+    private ShoppingCartPanel getShoppingCartPanel() {
+        return (ShoppingCartPanel)getParent().getParent().getParent();
     }
 }

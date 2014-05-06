@@ -2,18 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\AddCheesePanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\AddCheesePanel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\EditCheesePanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\EditCheesePanel.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/models/CheesesModel.java" afterPath="$PROJECT_DIR$/src/main/java/models/CheesesModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/ProfileView.html" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MavenProject.iws" />
@@ -82,21 +81,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdminCheesesListPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java">
+      <file leaf-file-name="ProfileView.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1848">
-              <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="858">
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheeseDataPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java">
+      <file leaf-file-name="ProfileView.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1658" max-vertical-offset="3762">
-              <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="638">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProfileDataPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1122">
+              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddressDataPanel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6707317" vertical-offset="66" max-vertical-offset="2244">
+              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheeseDataPanel.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html">
+      <file leaf-file-name="AddressDataPanel.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5127056" vertical-offset="0" max-vertical-offset="1386">
-              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+            <state vertical-scroll-proportion="-11.354838" vertical-offset="0" max-vertical-offset="1562">
+              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -136,14 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/search/ISearchProcedure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/NameSearchProcedure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/DescriptionSearchProcedure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/proc/ISearchProcedure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/proc/NameSearchProcedure.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberCheeseDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/cache/mock/DataCacheMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/cache/DataCache.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" />
@@ -170,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/main/java/panels/MenuPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/SearchPanel.html" />
         <option value="$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/SearchView.java" />
         <option value="$PROJECT_DIR$/src/main/java/war/CheckOut.java" />
@@ -179,14 +189,23 @@
         <option value="$PROJECT_DIR$/src/main/resources/domain/address.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/AddCheesePanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/AddCheesePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/EditCheesePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html" />
         <option value="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/CustomersModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/CheesesModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/ProfileView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.java" />
       </list>
     </option>
   </component>
@@ -312,7 +331,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -495,6 +513,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -832,7 +851,6 @@
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36639118" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19897304" sideWeight="0.41751528" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554945" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32692307" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -845,7 +863,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16880617" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.190629" sideWeight="0.5824847" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27747253" sideWeight="0.44223362" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2857143" sideWeight="0.44223362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
@@ -854,6 +872,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.6976744" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32554945" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32142857" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -904,7 +923,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Data Cache layer construction" />
     <MESSAGE value="DAO Layer tests preparation" />
     <MESSAGE value="DAO Layer tests almost done" />
     <MESSAGE value="Still testing DAO layer" />
@@ -929,7 +947,8 @@
     <MESSAGE value="Shopping Cart refactored" />
     <MESSAGE value="Transferring Cheeses View to Ajax" />
     <MESSAGE value="EditCheesePanel fully on Ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditCheesePanel fully on Ajax" />
+    <MESSAGE value="Add/Edit Cheese organized via CheeseDataPanel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add/Edit Cheese organized via CheeseDataPanel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -944,48 +963,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.045643155" vertical-offset="4620" max-vertical-offset="6732">
-          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cache/CheeseCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86307055" vertical-offset="1080" max-vertical-offset="1672">
-          <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cache/DataCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8174274" vertical-offset="1806" max-vertical-offset="2398">
-          <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.1290324" vertical-offset="66" max-vertical-offset="792">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql/production/InsertData.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4773218" vertical-offset="1011" max-vertical-offset="2068">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/search/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1232">
-          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/SearchPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="796" max-vertical-offset="1496">
@@ -1070,13 +1047,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47826087" vertical-offset="132" max-vertical-offset="638">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/PageHeadPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13441955" vertical-offset="0" max-vertical-offset="491">
@@ -1112,20 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1606">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0610998" vertical-offset="653" max-vertical-offset="1144">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.4304348" vertical-offset="198" max-vertical-offset="704">
@@ -1133,24 +1089,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="265" max-vertical-offset="1320">
-          <caret line="26" column="10" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/SearchView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67346936" vertical-offset="0" max-vertical-offset="682">
           <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62857145" vertical-offset="132" max-vertical-offset="638">
-          <caret line="20" column="26" selection-start-line="15" selection-start-column="8" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1199,20 +1141,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09347826" vertical-offset="573" max-vertical-offset="1122">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17922607" vertical-offset="0" max-vertical-offset="1056">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/Title.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.5234216" vertical-offset="0" max-vertical-offset="880">
@@ -1238,7 +1166,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1260745" vertical-offset="0" max-vertical-offset="748">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,36 +1176,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/CartEntriesModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2312374" vertical-offset="0" max-vertical-offset="1452">
-          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.22088353" vertical-offset="0" max-vertical-offset="924">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/CustomersModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1848">
-          <caret line="50" column="52" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
-          <folding />
+        <state vertical-scroll-proportion="0.5582329" vertical-offset="30" max-vertical-offset="550">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1658" max-vertical-offset="3762">
-          <caret line="73" column="45" selection-start-line="73" selection-start-column="45" selection-end-line="73" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-3.3071895" vertical-offset="1848" max-vertical-offset="6512">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5387755" vertical-offset="66" max-vertical-offset="572">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5127056" vertical-offset="0" max-vertical-offset="1386">
-          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1386">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10216718" vertical-offset="924" max-vertical-offset="1606">
+          <caret line="45" column="12" selection-start-line="8" selection-start-column="4" selection-end-line="45" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1048745" vertical-offset="0" max-vertical-offset="1034">
+          <caret line="44" column="52" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/CheesesModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77252585" vertical-offset="93" max-vertical-offset="858">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.64" vertical-offset="0" max-vertical-offset="1980">
+          <caret line="101" column="1" selection-start-line="101" selection-start-column="1" selection-end-line="101" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7614286" vertical-offset="413" max-vertical-offset="1122">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.057142857" vertical-offset="598" max-vertical-offset="1562">
+          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6457143" vertical-offset="2006" max-vertical-offset="3564">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="638">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="1034">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5345529" vertical-offset="133" max-vertical-offset="1320">
+          <caret line="25" column="85" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5022831" vertical-offset="264" max-vertical-offset="1518">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1056">
+          <caret line="20" column="40" selection-start-line="17" selection-start-column="8" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23644252" vertical-offset="507" max-vertical-offset="1122">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.354838" vertical-offset="0" max-vertical-offset="1562">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6707317" vertical-offset="66" max-vertical-offset="2244">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

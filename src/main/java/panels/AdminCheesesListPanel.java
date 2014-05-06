@@ -44,7 +44,6 @@ public class AdminCheesesListPanel extends CheesePanel {
                         listItem.add(new AjaxFallbackLink("edit", listItem.getModel()) {
                             @Override
                             public void onClick(AjaxRequestTarget target) {
-                                //System.out.println("Edit Cheese clicked...");
                                 CheeseDataPanel cheeseDataPanel =
                                         getCheesesView().getCheeseDataPanel();
                                 cheeseDataPanel.setFormModel(getModel());
@@ -60,12 +59,22 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 getCheeseSession().getDataCache().
                                         safeDeleteCheese(selected);
 
+                                // TODO:
                                 // не работает
-                                // вероятно, из-за модели
+                                // вероятно, из-за модели:
+                                // Deleting Cheese clicked...
+                                // [Wicket] CheesesModel.load();
+                                // [JDBC] SELECT * FROM Cheeses
+                                // WHERE Deleted <> true;
+                                // [Wicket] CheesesModel.onAttach();
+                                // [JDBC] UPDATE Cheeses
+                                // SET Deleted = true
+                                // WHERE CheeseID = 19
+                                //         [Wicket] CheesesModel.onDetach();
+
                                 if (target != null) {
                                     AdminCheesesListPanel adminCheesesListPanel =
-                                            getAdminCheesesListPanel();
-                                    System.out.println(adminCheesesListPanel);
+                                            getCheesesView().getAdminCheesesListPanel();
                                     target.addComponent(adminCheesesListPanel);
                                 }
                             }
@@ -85,10 +94,6 @@ public class AdminCheesesListPanel extends CheesePanel {
         add(cheeses);
 
         add(new PagingNavigator("navigator", cheeses));
-    }
-
-    private AdminCheesesListPanel getAdminCheesesListPanel() {
-        return this;
     }
 
     private CheesesView getCheesesView() {

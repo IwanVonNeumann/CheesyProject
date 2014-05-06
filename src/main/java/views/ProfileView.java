@@ -12,7 +12,10 @@ public class ProfileView extends CheesePage {
 
         Address address = getCheeseSession().getAddress();
 
-        add(new ProfileDataPanel("profile",
+        add(new AddressDataPanel("profile",
+                new CompoundPropertyModel(address)));
+
+        /*add(new ProfileDataPanel("profile",
                 new CompoundPropertyModel(address)));
 
         EditProfilePanel editProfilePanel =
@@ -22,7 +25,7 @@ public class ProfileView extends CheesePage {
         add(editProfilePanel);
 
         add(new ChangePasswordPanel("changePassword")
-                .setVisible(false));
+                .setVisible(false));*/
 
         add(new PurchasesListPanel("purchases", address));
     }
