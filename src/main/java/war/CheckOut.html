@@ -10,42 +10,40 @@
     <div class="leftpanel">
         <h3 class="panel">Checkout</h3>
 
-        <div>
-            <table class="dbcontent">
-                <thead>
-                <tr>
-                    <th colspan="2">Your account data</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr class="odd">
-                    <td class="title">Name</td>
-                    <td class="userdata" wicket:id="name"></td>
-                </tr>
-                <tr class="even">
-                    <td class="title">Street</td>
-                    <td class="userdata" wicket:id="street"></td>
-                </tr>
-                <tr class="odd">
-                    <td class="title">Zip code</td>
-                    <td class="userdata" wicket:id="zipCode"></td>
-                </tr>
-                <tr class="even">
-                    <td class="title">City</td>
-                    <td class="userdata" wicket:id="city"></td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="2" class="center">
-                        <a href="#" wicket:id="cancel">Cancel</a>
-                        &nbsp;
-                        <a href="#" wicket:id="order">Order</a>
-                    </td>
-                </tr>
-                </tfoot>
-            </table>
-        </div>
+        <table class="dbcontent">
+            <thead>
+            <tr>
+                <th colspan="2">Your account data</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+                <td class="title">Name</td>
+                <td class="userdata" wicket:id="name"></td>
+            </tr>
+            <tr class="even">
+                <td class="title">Street</td>
+                <td class="userdata" wicket:id="street"></td>
+            </tr>
+            <tr class="odd">
+                <td class="title">Zip code</td>
+                <td class="userdata" wicket:id="zipCode"></td>
+            </tr>
+            <tr class="even">
+                <td class="title">City</td>
+                <td class="userdata" wicket:id="city"></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="2" class="center">
+                    <a href="#" wicket:id="cancel">Cancel</a>
+                    &nbsp;
+                    <a href="#" wicket:id="order">Order</a>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
     </div>
     <div wicket:id="shoppingCart" class="rightpanel"></div>
 </div>

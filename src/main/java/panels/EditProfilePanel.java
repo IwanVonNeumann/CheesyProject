@@ -1,11 +1,13 @@
 package panels;
 
 import domain.Address;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
+import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.SubmitLink;
 import org.apache.wicket.markup.html.form.TextField;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
+import views.ProfileView;
 
 public class EditProfilePanel extends CheesePanel {
 
@@ -20,18 +22,28 @@ public class EditProfilePanel extends CheesePanel {
         form.add(new TextField("zipCode"));
         form.add(new TextField("city"));
 
-        form.add(new Link("cancel") {
+        form.add(new AjaxFallbackLink("cancel") {
             @Override
-            public void onClick() {
-                getParent().getParent().setVisible(false);
-                getParent().getParent().getParent().
-                        get("profile").setVisible(true);
+            public void onClick(AjaxRequestTarget target) {
+                EditProfilePanel editProfilePanel =
+                        getEditProfilePanel();
+                ProfileDataPanel profileDataPanel =
+                        getProfileView().getProfileDataPanel();
+
+                editProfilePanel.setVisible(false);
+                profileDataPanel.setVisible(true);
+
+                if (target != null) {
+                    target.addComponent(editProfilePanel);
+                    target.addComponent(profileDataPanel);
+                }
             }
         });
 
-        form.add(new SubmitLink("save") {
+        // TODO: закончить
+        form.add(new AjaxSubmitLink("save") {
             @Override
-            public void onSubmit() {
+            protected void onSubmit(AjaxRequestTarget target, Form form) {
                 super.onSubmit();
                 // getParent() == form
                 // getParent().getParent() == EditProfilePanel
@@ -40,8 +52,16 @@ public class EditProfilePanel extends CheesePanel {
                 getParent().getParent().getParent().
                         get("profile").setVisible(true);
                 getCheeseSession().getDataCache().updateAddress(
-                        (Address)(getParent().getModelObject()));
+                        (Address) (getParent().getModelObject()));
             }
         });
+    }
+
+    private EditProfilePanel getEditProfilePanel() {
+        return this;
+    }
+
+    private ProfileView getProfileView() {
+        return (ProfileView)getParent();
     }
 }

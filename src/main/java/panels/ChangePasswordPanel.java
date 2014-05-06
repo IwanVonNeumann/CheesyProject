@@ -1,10 +1,11 @@
 package panels;
 
 import domain.Address;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.SubmitLink;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.PropertyModel;
 import views.ProfileView;
 
@@ -33,12 +34,16 @@ public class ChangePasswordPanel extends CheesePanel {
                 new PropertyModel(this, "password2")).
                 setRequired(true));
 
-        form.add(new Link("cancel") {
+        form.add(new AjaxFallbackLink("cancel") {
             @Override
-            public void onClick() {
-                getParent().getParent().setVisible(false);
-                getParent().getParent().getParent().
-                        get("profile").setVisible(true);
+            public void onClick(AjaxRequestTarget target) {
+                ChangePasswordPanel changePasswordPanel =
+                        getChangePasswordPanel();
+                changePasswordPanel.setVisible(false);
+
+                if (target != null) {
+                    target.addComponent(changePasswordPanel);
+                }
             }
         });
 
@@ -61,5 +66,9 @@ public class ChangePasswordPanel extends CheesePanel {
                         */
             }
         });
+    }
+
+    private ChangePasswordPanel getChangePasswordPanel() {
+        return this;
     }
 }

@@ -10,7 +10,6 @@ import org.apache.wicket.markup.html.list.ListView;
 import panels.AuthenticationPanel;
 import views.StoreView;
 
-// TODO: кто обращается к спискам покупок?
 public class LoginPage extends CheesePage {
 
     public LoginPage() {

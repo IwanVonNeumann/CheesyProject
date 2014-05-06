@@ -155,7 +155,7 @@ public class Address {
     public String toString() {
         return "Address [" + id + "]: " + title + " " + name + ", " +
                 street + ", " + city + ", " + zipCode +
-                ", purchases: " + getPurchases().size() +
+                //", purchases: " + getPurchases().size() + // дергает ленивую инициализацию!
                 (deleted ? " [deleted]" : "");
     }
 }

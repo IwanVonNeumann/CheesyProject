@@ -1,10 +1,10 @@
 package panels;
 
-import domain.Address;
-import look.HashLabel;
+import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.IModel;
+import views.ProfileView;
 
 /**
  * Created by IRuskevich on 14.26.2
@@ -20,26 +20,42 @@ public class ProfileDataPanel extends CheesePanel {
         add(new Label("zipCode"));
         add(new Label("city"));
 
-        add(new Link("edit") {
+        add(new AjaxFallbackLink("edit") {
             @Override
-            public void onClick() {
-                // getParent() == ProfileDataPanel
-                // getParent().getParent() == ViewProfile
-                getParent().setVisible(false);
-                getParent().getParent().
-                        get("editProfile").setVisible(true);
+            public void onClick(AjaxRequestTarget target) {
+                ProfileDataPanel profileDataPanel = getProfileDataPanel();
+                profileDataPanel.setVisible(false);
+
+                EditProfilePanel editProfilePanel =
+                        getProfileView().getEditProfilePanel();
+                editProfilePanel.setVisible(true);
+
+                if (target != null) {
+                    target.addComponent(profileDataPanel);
+                    target.addComponent(editProfilePanel);
+                }
             }
         });
 
-        add(new Link("changePassword") {
+        add(new AjaxFallbackLink("changePassword") {
             @Override
-            public void onClick() {
-                getParent().setVisible(false);
-                getParent().getParent().
-                        get("changePassword").setVisible(true);
+            public void onClick(AjaxRequestTarget target) {
+                ChangePasswordPanel changePasswordPanel =
+                        getProfileView().getChangePasswordPanel();
+                changePasswordPanel.setVisible(true);
+
+                if (target != null) {
+                    target.addComponent(changePasswordPanel);
+                }
             }
         });
+    }
 
-        add(new HashLabel("hash", 4));
+    private ProfileDataPanel getProfileDataPanel() {
+        return this;
+    }
+
+    private ProfileView getProfileView() {
+        return (ProfileView) getParent();
     }
 }
