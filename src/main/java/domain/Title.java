@@ -7,6 +7,7 @@ import java.util.List;
  * Created by Iwan on 26.04.2014
  */
 
+// TODO: исправить несоответствие между строкой и константой (DropDown)
 public enum Title {
     MR("Mr."), MS("Ms."), MRS("Mrs."), DR("Dr.");
 

@@ -47,10 +47,6 @@ public class ProfileView extends CheesePage {
         add(new PurchasesListPanel("purchases", address));
     }
 
-    public ProfileView getProfileView() {
-        return this;
-    }
-
     public ProfileDataPanel getProfileDataPanel() {
         return profileDataPanel;
     }

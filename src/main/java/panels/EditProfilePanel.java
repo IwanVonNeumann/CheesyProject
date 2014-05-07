@@ -1,9 +1,11 @@
 package panels;
 
 import domain.Address;
+import domain.Title;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
+import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.IModel;
@@ -17,6 +19,9 @@ public class EditProfilePanel extends CheesePanel {
         Form form = new Form("form", model);
         add(form);
 
+
+        form.add(new DropDownChoice("title",
+                Title.toStringArray()).setRequired(true));
         form.add(new TextField("name"));
         form.add(new TextField("street"));
         form.add(new TextField("zipCode"));
@@ -40,20 +45,26 @@ public class EditProfilePanel extends CheesePanel {
             }
         });
 
-        // TODO: закончить
         form.add(new AjaxSubmitLink("save") {
             @Override
             protected void onSubmit(AjaxRequestTarget target, Form form) {
                 super.onSubmit();
 
-                // getParent() == form
-                // getParent().getParent() == EditProfilePanel
-                // getParent().getParent().getParent() == VieProfile
-                getParent().getParent().setVisible(false);
-                getParent().getParent().getParent().
-                        get("profile").setVisible(true);
-                getCheeseSession().getDataCache().updateAddress(
-                        (Address) (getParent().getModelObject()));
+                Address address = (Address) form.getModelObject();
+                getCheeseSession().getDataCache().updateAddress(address);
+
+                EditProfilePanel editProfilePanel = getEditProfilePanel();
+                editProfilePanel.setVisible(false);
+
+                ProfileDataPanel profileDataPanel =
+                        getProfileView().getProfileDataPanel();
+
+                profileDataPanel.setVisible(true);
+
+                if (target != null) {
+                    target.addComponent(editProfilePanel);
+                    target.addComponent(profileDataPanel);
+                }
             }
         });
     }
