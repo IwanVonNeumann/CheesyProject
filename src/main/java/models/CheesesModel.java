@@ -17,11 +17,11 @@ public class CheesesModel extends LoadableDetachableModel {
 
     @Override
     protected Object load() {
-        System.out.println("[Wicket] CheesesModel.load();");
+        //System.out.println("[Wicket] CheesesModel.load();");
         return getCheeses();
     }
 
-    @Override
+    /*@Override
     protected void onAttach() {
         super.onAttach();
         System.out.println("[Wicket] CheesesModel.onAttach();");
@@ -31,7 +31,7 @@ public class CheesesModel extends LoadableDetachableModel {
     protected void onDetach() {
         super.onDetach();
         System.out.println("[Wicket] CheesesModel.onDetach();");
-    }
+    }*/
 
     protected List<Cheese> getCheeses() {
         return dao.getCheesesList();

@@ -62,4 +62,8 @@ public class ProfileView extends CheesePage {
     public ChangePasswordPanel getChangePasswordPanel() {
         return changePasswordPanel;
     }
+
+    public AdditionalDataPanel getAdditionalDataPanel() {
+        return additionalDataPanel;
+    }
 }

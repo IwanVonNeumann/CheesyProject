@@ -23,6 +23,19 @@ public class PasswordChange {
         return newPassword2;
     }
 
+
+    public void setOldPassword(String oldPassword) {
+        this.oldPassword = oldPassword;
+    }
+
+    public void setNewPassword1(String newPassword1) {
+        this.newPassword1 = newPassword1;
+    }
+
+    public void setNewPassword2(String newPassword2) {
+        this.newPassword2 = newPassword2;
+    }
+
     public boolean passwordsEqual() {
         return newPassword1.equals(newPassword2);
     }

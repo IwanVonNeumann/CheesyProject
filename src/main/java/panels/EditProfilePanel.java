@@ -45,6 +45,7 @@ public class EditProfilePanel extends CheesePanel {
             @Override
             protected void onSubmit(AjaxRequestTarget target, Form form) {
                 super.onSubmit();
+
                 // getParent() == form
                 // getParent().getParent() == EditProfilePanel
                 // getParent().getParent().getParent() == VieProfile
