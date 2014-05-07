@@ -6,7 +6,8 @@ import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.PasswordTextField;
 import org.apache.wicket.markup.html.form.SubmitLink;
-import org.apache.wicket.model.PropertyModel;
+import org.apache.wicket.model.CompoundPropertyModel;
+import security.PasswordChange;
 import views.ProfileView;
 
 /**
@@ -14,24 +15,18 @@ import views.ProfileView;
  */
 public class ChangePasswordPanel extends CheesePanel {
 
-    String oldPassword;
-    String password1;
-    String password2;
-
     public ChangePasswordPanel(String id) {
         super(id);
 
-        Form form = new Form("form");
+        Form form = new Form("form",
+                new CompoundPropertyModel(new PasswordChange()));
         add(form);
 
-        form.add(new PasswordTextField("oldPassword",
-                new PropertyModel(this, "oldPassword")).
+        form.add(new PasswordTextField("oldPassword").
                 setRequired(true));
-        form.add(new PasswordTextField("password1",
-                new PropertyModel(this, "password1")).
+        form.add(new PasswordTextField("newPassword1").
                 setRequired(true));
-        form.add(new PasswordTextField("password2",
-                new PropertyModel(this, "password2")).
+        form.add(new PasswordTextField("newPassword2").
                 setRequired(true));
 
         form.add(new AjaxFallbackLink("cancel") {
@@ -52,11 +47,15 @@ public class ChangePasswordPanel extends CheesePanel {
             public void onSubmit() {
                 super.onSubmit();
                 Address address = getCheeseSession().getAddress();
-                if (address.correctHash(oldPassword)
-                        & (password1.equals(password2))) {
-                    address.setPassword(password1);
+                PasswordChange passwordChange =
+                        (PasswordChange)getModelObject();
+                if ((passwordChange.passwordsEqual()) &&
+                        address.correctHash(
+                                passwordChange.getOldPassword())) {
+                    String newPassword = passwordChange.getNewPassword1();
+                    address.setPassword(newPassword);
                     getCheeseSession().getDataCache().updateAddress(address);
-                    System.out.println("Password set to " + password1);
+                    System.out.println("Password set to " + newPassword);
                 }
                 setResponsePage(ProfileView.class);
                 /*
