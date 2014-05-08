@@ -19,7 +19,7 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
     public JDBCCartEntryDAO(Connection connection) {
         super(connection);
         System.out.println("[JDBC] Creating Purchase DAO...");
-        cheeseDAO = new JDBCCheeseDAO(connection); // нужен ли этот объект?
+        cheeseDAO = new JDBCCheeseDAO(connection); // TODO: нужен ли этот объект?
     }
 
     /*@Override

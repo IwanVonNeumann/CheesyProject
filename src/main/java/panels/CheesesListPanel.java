@@ -50,6 +50,8 @@ public class CheesesListPanel extends CheesePanel {
                                 }
                             }
                         });
+
+                        listItem.add(new CommentsPanel("comments", listItem.getModel()));
                     }
                 };
         add(cheeses);

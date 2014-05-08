@@ -36,3 +36,14 @@ CREATE TABLE CartEntries
 	FOREIGN KEY (CartID) REFERENCES Carts(CartID),
 	FOREIGN KEY (CheeseID) REFERENCES Cheeses(CheeseID)
 );
+
+CREATE TABLE Comments
+(
+    CommentID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CheeseID int NOT NULL,
+    CustomerID int NOT NULL,
+    Text varchar(255),
+    Clock DATETIME,
+    FOREIGN KEY (CheeseID) REFERENCES Cheeses(CheeseID),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);

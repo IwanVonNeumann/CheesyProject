@@ -1,6 +1,7 @@
 package dao.jdbc.dao;
 
 import dao.iface.CheeseDAO;
+import dao.jdbc.proxy.JDBCCheeseProxy;
 import domain.Cheese;
 
 import java.sql.*;
@@ -242,11 +243,12 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
     }
 
     private Cheese buildCheese(ResultSet result) throws SQLException {
-        return new Cheese(result.getInt("CheeseID"),
+        return new JDBCCheeseProxy(result.getInt("CheeseID"),
                 result.getString("CheeseName"),
                 result.getString("Description"),
                 result.getDouble("Price"),
-                result.getBoolean("Deleted"));
+                result.getBoolean("Deleted"),
+                connection);
     }
 
     /*

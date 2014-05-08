@@ -1,0 +1,13 @@
+/* Comments */
+div.commentspanel {
+    margin-left: 170px;
+}
+
+div.comment {
+    background-color: #F5D0A9;
+}
+
+span.author {
+    font-weight: bold;
+    color: maroon;
+}

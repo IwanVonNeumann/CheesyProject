@@ -1,11 +1,15 @@
 package domain;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Cheese {
 
     private int id;
     private String name;
     private String description;
     private Double price;
+    private List<Comment> comments; // Lazy :)
     private boolean deleted;
 
     public Cheese() {
@@ -41,6 +45,10 @@ public class Cheese {
         return price;
     }
 
+    public List<Comment> getComments() {
+        return comments;
+    }
+
     public boolean isDeleted() {
         return deleted;
     }
@@ -62,6 +70,10 @@ public class Cheese {
         this.price = price;
     }
 
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
     public void setDeleted(boolean deleted) {
         this.deleted = deleted;
     }
@@ -70,6 +82,13 @@ public class Cheese {
 
     public void delete() {
         setDeleted(true);
+    }
+
+    public void comment(Comment comment) {
+        if (comments == null) {
+            comments = new LinkedList<>();
+        }
+        comments.add(comment);
     }
 
     @Override
