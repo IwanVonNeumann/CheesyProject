@@ -5,7 +5,7 @@ import domain.Cheese;
 import look.CurrencyLabel;
 import look.RowModifier;
 
-import models.CheesesModel;
+import models.CheesesLDModel;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
@@ -22,7 +22,7 @@ public class AdminCheesesListPanel extends CheesePanel {
     public AdminCheesesListPanel(String id) {
         super(id);
 
-        final CheesesModel cheesesModel = new CheesesModel(
+        final CheesesLDModel cheesesModel = new CheesesLDModel(
                 getCheeseSession().getDataCache());
 
         final PageableListView cheeses =
@@ -63,14 +63,14 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 // не работает
                                 // вероятно, из-за модели:
                                 // Deleting Cheese clicked...
-                                // [Wicket] CheesesModel.load();
+                                // [Wicket] CheesesLDModel.load();
                                 // [JDBC] SELECT * FROM Cheeses
                                 // WHERE Deleted <> true;
-                                // [Wicket] CheesesModel.onAttach();
+                                // [Wicket] CheesesLDModel.onAttach();
                                 // [JDBC] UPDATE Cheeses
                                 // SET Deleted = true
                                 // WHERE CheeseID = 19
-                                //         [Wicket] CheesesModel.onDetach();
+                                //         [Wicket] CheesesLDModel.onDetach();
 
                                 if (target != null) {
                                     AdminCheesesListPanel adminCheesesListPanel =

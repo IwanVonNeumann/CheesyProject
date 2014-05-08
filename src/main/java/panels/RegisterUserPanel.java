@@ -2,8 +2,10 @@ package panels;
 
 import domain.Address;
 import domain.Title;
+import look.proxy.AddressViewProxy;
 import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
 import views.StoreView;
@@ -20,14 +22,15 @@ public class RegisterUserPanel extends CheesePanel {
     public RegisterUserPanel(String id, IModel model) {
         super(id);
 
-        Form form = new Form("form", model);
+        Address address = (Address)model.getObject();
+        AddressViewProxy addressViewProxy = new AddressViewProxy(address);
+
+        Form form = new Form("form",
+                new CompoundPropertyModel(addressViewProxy));
         add(form);
 
-        form.add(new DropDownChoice("title", Title.toStringArray()).setRequired(true));
-        //TODO: сделать MR по умолчанию
-        Address address = (Address) form.getModelObject();
         address.setTitle(Title.MR);
-
+        form.add(new DropDownChoice("title", Title.toStringArray()).setRequired(true));
         form.add(new TextField("name").setRequired(true));
         form.add(new TextField("street").setRequired(true));
         form.add(new TextField("zipCode").setRequired(true));
@@ -47,6 +50,7 @@ public class RegisterUserPanel extends CheesePanel {
             }
         });
 
+        // TODO: цивилизованно сделать регистрацию
         form.add(new SubmitLink("register") {
             @Override
             public void onSubmit() {

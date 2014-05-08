@@ -6,10 +6,10 @@ import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
-public class CustomersModel extends LoadableDetachableModel{
+public class AddressesLDModel extends LoadableDetachableModel{
     private AddressDAO dao;
 
-    public CustomersModel(AddressDAO dao) {
+    public AddressesLDModel(AddressDAO dao) {
         super();
         this.dao = dao;
     }

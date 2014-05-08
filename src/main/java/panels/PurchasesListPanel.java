@@ -2,9 +2,10 @@ package panels;
 
 import domain.Address;
 import domain.Cart;
+import look.proxy.CartViewProxy;
 import look.CurrencyLabel;
 import look.RowModifier;
-import models.CartsModel;
+import models.CartsLDModel;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
@@ -15,8 +16,6 @@ import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
 
 import java.io.Serializable;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 
 /**
  * Created by IRuskevich on 14.25.2
@@ -33,7 +32,7 @@ public class PurchasesListPanel extends CheesePanel {
         // передан ли конкретный покупатель в качестве параметра?
         IModel cartsModel = address == null ?
                 // полный список из базы
-                new CartsModel(getCheeseSession().getDataCache()) :
+                new CartsLDModel(getCheeseSession().getDataCache()) :
                 // список покупок текущего пользователя
                 new Model((Serializable) address.getPurchases());
 
@@ -43,9 +42,11 @@ public class PurchasesListPanel extends CheesePanel {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         Cart cart = (Cart) listItem.getModelObject();
-                        Address customer = cart.getAddress();
+                        listItem.setModel(
+                                new CompoundPropertyModel(
+                                        new CartViewProxy(cart)));
 
-                        Label customerName = new Label("customer", customer.getName());
+                        Label customerName = new Label("customer");
 
                         if (address != null) {
                             customerName.setVisible(false);
@@ -53,16 +54,13 @@ public class PurchasesListPanel extends CheesePanel {
                         listItem.add(customerName);
 
                         Label deleted = new Label("deleted", "profile deleted");
-                        if (!customer.isDeleted()) deleted.setVisible(false);
+                        if (!cart.getAddress().isDeleted()) deleted.setVisible(false);
                         listItem.add(deleted);
 
-                        DateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
-                        DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
-                        listItem.add(new Label("date",
-                                dateFormat.format(cart.getTime())));
-                        listItem.add(new Label("time",
-                                timeFormat.format(cart.getTime())));
+                        listItem.add(new Label("date"));
+                        listItem.add(new Label("time"));
 
+                        // TODO: возможно, не используется свойство LoadableDetachable
                         listItem.add(new ListView("entries", cart.getEntries()) {
                             @Override
                             protected void populateItem(ListItem listItem) {
@@ -86,6 +84,5 @@ public class PurchasesListPanel extends CheesePanel {
         add(customers);
 
         add(new PagingNavigator("navigator", customers));
-
     }
 }

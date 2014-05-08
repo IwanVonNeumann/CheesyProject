@@ -2,7 +2,7 @@ package war;
 
 import domain.Address;
 import look.RowModifier;
-import models.CustomersModel;
+import models.AddressesLDModel;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -23,11 +23,11 @@ public class LoginPage extends CheesePage {
             }
         });
 
-        CustomersModel customersModel = new CustomersModel(
+        AddressesLDModel addressLoadableDetachableModel = new AddressesLDModel(
                 getCheeseSession().getDataCache());
 
         ListView customers =
-                new ListView("customers", customersModel) {
+                new ListView("customers", addressLoadableDetachableModel) {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         int i = listItem.getIndex() + 1;

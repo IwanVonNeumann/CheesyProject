@@ -2,7 +2,7 @@ package views;
 
 import domain.Address;
 import look.RowModifier;
-import models.CustomersModel;
+import models.AddressesLDModel;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -18,11 +18,11 @@ public class CustomersView extends CheesePage {
 
         add(new PageHeadPanel("head"));
 
-        CustomersModel customersModel = new CustomersModel(
+        AddressesLDModel addressesModel = new AddressesLDModel(
                 getCheeseSession().getDataCache());
 
         PageableListView customers =
-                new PageableListView("customers", customersModel, 10) {
+                new PageableListView("customers", addressesModel, 10) {
                     @Override
                     protected void populateItem(ListItem listItem) {
                         final Address address = (Address) listItem.getModelObject();

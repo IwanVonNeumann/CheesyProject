@@ -2,12 +2,14 @@ package panels;
 
 import domain.Address;
 import domain.Title;
+import look.proxy.AddressViewProxy;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.form.DropDownChoice;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import views.ProfileView;
 
@@ -16,16 +18,19 @@ public class EditProfilePanel extends CheesePanel {
     public EditProfilePanel(String id, IModel model) {
         super(id);
 
-        Form form = new Form("form", model);
-        add(form);
+        Address address = (Address)model.getObject();
+        AddressViewProxy addressViewProxy = new AddressViewProxy(address);
 
+        Form form = new Form("form",
+                new CompoundPropertyModel(addressViewProxy));
+        add(form);
 
         form.add(new DropDownChoice("title",
                 Title.toStringArray()).setRequired(true));
-        form.add(new TextField("name"));
-        form.add(new TextField("street"));
-        form.add(new TextField("zipCode"));
-        form.add(new TextField("city"));
+        form.add(new TextField("name").setRequired(true));
+        form.add(new TextField("street").setRequired(true));
+        form.add(new TextField("zipCode").setRequired(true));
+        form.add(new TextField("city").setRequired(true));
 
         form.add(new AjaxFallbackLink("cancel") {
             @Override
@@ -50,7 +55,7 @@ public class EditProfilePanel extends CheesePanel {
             protected void onSubmit(AjaxRequestTarget target, Form form) {
                 super.onSubmit();
 
-                Address address = (Address) form.getModelObject();
+                Address address = ((AddressViewProxy) form.getModelObject()).getAddress();
                 getCheeseSession().getDataCache().updateAddress(address);
 
                 EditProfilePanel editProfilePanel = getEditProfilePanel();

@@ -3,7 +3,7 @@ package panels;
 import domain.Cart;
 import domain.Cheese;
 import look.CurrencyLabel;
-import models.CheesesModel;
+import models.CheesesLDModel;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
@@ -19,7 +19,7 @@ public class CheesesListPanel extends CheesePanel {
     public CheesesListPanel(String id) {
         super(id);
 
-        CheesesModel cheesesModel = new CheesesModel(
+        CheesesLDModel cheesesModel = new CheesesLDModel(
                 getCheeseSession().getDataCache());
 
         PageableListView cheeses =

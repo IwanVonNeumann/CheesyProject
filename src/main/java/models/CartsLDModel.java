@@ -7,21 +7,21 @@ import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
-public class CartsModel extends LoadableDetachableModel {
+public class CartsLDModel extends LoadableDetachableModel {
 
     private CartDAO dao;
     private Address address;
 
-    public CartsModel(CartDAO dao) {
+    public CartsLDModel(CartDAO dao) {
         super();
         this.dao = dao;
         address = null;
     }
 
-    public CartsModel(CartDAO dao, Address address) {
+/*    public CartsLDModel(CartDAO dao, Address address) {
         this(dao);
         this.address = address;
-    }
+    }*/
 
     @Override
     protected Object load() {

@@ -3,13 +3,13 @@ package models;
 import org.apache.wicket.model.LoadableDetachableModel;
 
 // TODO: пересмотреть: возможно, класс не нужен
-public class CartEntriesModel extends LoadableDetachableModel {
+public class CartEntriesLDModel extends LoadableDetachableModel {
 
 
     /*private CartEntryDAO dao;
     private Cart cart;
 
-    public CartEntriesModel(CartEntryDAO dao, Cart cart) {
+    public CartEntriesLDModel(CartEntryDAO dao, Cart cart) {
         this.dao = dao;
         this.cart = cart;
     }*/
