@@ -1,13 +1,29 @@
 /* Comments */
 div.commentspanel {
-    margin-left: 170px;
+    font-size: 13px;
+    margin-left: 25px;
 }
 
 div.comment {
     background-color: #F5D0A9;
+    /*border: 1px solid white;*/
+    width: 250px;
+    padding: 5px;
+}
+
+div.timestamp {
+    margin-left: 10px;
 }
 
 span.author {
     font-weight: bold;
     color: maroon;
+}
+
+div.leave {
+    font-weight: bold;
+}
+
+input.comment {
+    width: 200px;
 }

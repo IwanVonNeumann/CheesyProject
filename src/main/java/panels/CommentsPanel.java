@@ -14,6 +14,7 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.PropertyModel;
 
 import java.sql.Timestamp;
 
@@ -71,6 +72,8 @@ public class CommentsPanel extends CheesePanel {
         showLink.setOutputMarkupId(true);
         showLink.setOutputMarkupPlaceholderTag(true);
         add(showLink);
+
+        showLink.add(new Label("count", new PropertyModel(cheese, "comments.size")));
 
         hideLink = new AjaxFallbackLink("hide") {
             @Override

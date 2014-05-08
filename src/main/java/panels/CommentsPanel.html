@@ -8,24 +8,27 @@
 <body>
 <wicket:panel>
     <div>
-        <a href="#" wicket:id="show">Show comments</a>
+        <a href="#" wicket:id="show">Show comments (<span wicket:id="count"></span>)</a>
         <a href="#" wicket:id="hide">Hide comments</a>
     </div>
     <div wicket:id="container" class="commentspanel">
         <div wicket:id="comments" class="comment">
             <div>
                 <span wicket:id="author" class="author"></span>
-                <span wicket:id="text" class="comment"></span>
+                <span wicket:id="text"></span>
             </div>
-            <div>
+            <div class="timestamp">
                 <span wicket:id="date"></span>
                 <span wicket:id="time"></span>
             </div>
         </div>
-        <div>
+        <div class="comment">
             <form wicket:id="form">
-                <input type="text" wicket:id="text"/>
-                <a href="#" wicket:id="send">Send</a>
+                <div class="leave">Leave a comment:</div>
+                <div>
+                    <input type="text" wicket:id="text" class="comment"/>
+                    <a href="#" wicket:id="send">Send</a>
+                </div>
             </form>
         </div>
     </div>
