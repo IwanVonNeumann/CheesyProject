@@ -2,10 +2,8 @@ package war;
 
 import domain.Address;
 import domain.Cart;
-
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-
 import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
 import views.StoreView;
@@ -38,6 +36,7 @@ public class CheckOut extends CheesePage {
             public void onClick() {
                 Cart cart = getCart();
                 cart.order(); // обслуживание
+                // TODO: проверить, работает ли на хайбернейте
                 getCheeseSession().getDataCache().insertCart(cart); // сохранение в базе
                 cart.reset(); // сброс корзины
                 setResponsePage(StoreView.class);
@@ -51,33 +50,5 @@ public class CheckOut extends CheesePage {
         shoppingCart.setOutputMarkupId(true);
         shoppingCart.setOutputMarkupPlaceholderTag(true);
         add(shoppingCart);
-
-         /*
-        add(new FeedbackPanel("feedback"));
-
-        Form form = new Form("form");
-        add(form);
-
-        address = getCart().getAddress();
-
-        form.add(new TextField("name",
-                new PropertyModel(address, "name")).setRequired(true));
-
-        form.add(new TextField("street",
-                new PropertyModel(address, "street")).setRequired(true));
-
-        form.add(new TextField("zipCode",
-                new PropertyModel(address, "zipCode")).setRequired(true));
-
-        form.add(new TextField("city",
-                new PropertyModel(address, "city")).setRequired(true));
-
-        form.add(new Link("cancel") {
-            @Override
-            public void onClick() {
-                setResponsePage(Index.class);
-            }
-        });
-        */
     }
 }

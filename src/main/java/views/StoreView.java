@@ -7,17 +7,23 @@ import war.CheesePage;
 
 public class StoreView extends CheesePage {
 
+    private ShoppingCartPanel shoppingCartPanel;
+
     public StoreView() {
 
         add(new PageHeadPanel("head"));
 
         add(new CheesesListPanel("cheesesListPanel"));
 
-        ShoppingCartPanel shoppingCart =
-                new ShoppingCartPanel("shoppingCart", getCart());
+        shoppingCartPanel = new ShoppingCartPanel("shoppingCart", getCart());
 
-        shoppingCart.setOutputMarkupId(true);
-        shoppingCart.setOutputMarkupPlaceholderTag(true);
-        add(shoppingCart);
+        shoppingCartPanel.setOutputMarkupId(true);
+        shoppingCartPanel.setOutputMarkupPlaceholderTag(true);
+        add(shoppingCartPanel);
     }
+
+    public ShoppingCartPanel getShoppingCartPanel() {
+        return shoppingCartPanel;
+    }
+
 }

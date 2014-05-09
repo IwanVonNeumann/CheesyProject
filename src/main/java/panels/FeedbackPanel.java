@@ -1,5 +1,6 @@
 package panels;
 
+import domain.Address;
 import domain.Cheese;
 import domain.Comment;
 import look.proxy.CommentViewProxy;
@@ -14,41 +15,37 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
-import org.apache.wicket.model.PropertyModel;
 
 import java.sql.Timestamp;
 
 /**
  * Created by IRuskevich on 08.05.2014
  */
-public class CommentsPanel extends CheesePanel {
+public class FeedbackPanel extends CheesePanel {
 
     private Cheese cheese;
 
     private WebMarkupContainer container;
-    private ListView commentsList;
-
-    private AjaxFallbackLink showLink;
-    private AjaxFallbackLink hideLink;
 
     private Form commentForm;
 
-    public CommentsPanel(String id, IModel model) {
+    public FeedbackPanel(String id, IModel model) {
         super(id, model);
 
         cheese = (Cheese)getModelObject();
 
         container = new WebMarkupContainer("container");
 
-        commentsList = new ListView("comments", cheese.getComments()) {
+        ListView commentsList = new ListView("comments", cheese.getComments()) {
             @Override
             protected void populateItem(ListItem listItem) {
-                Comment comment = (Comment)listItem.getModelObject();
+                Comment comment = (Comment) listItem.getModelObject();
                 CommentViewProxy commentViewProxy =
                         new CommentViewProxy(comment);
                 listItem.setModel(
                         new CompoundPropertyModel(
-                                commentViewProxy));
+                                commentViewProxy)
+                );
 
                 listItem.add(new Label("author"));
                 listItem.add(new Label("text"));
@@ -58,34 +55,24 @@ public class CommentsPanel extends CheesePanel {
         };
 
         container.add(commentsList);
-        container.setVisible(false);
         container.setOutputMarkupId(true);
         container.setOutputMarkupPlaceholderTag(true);
 
-        showLink = new AjaxFallbackLink("show") {
+        AjaxFallbackLink hideLink = new AjaxFallbackLink("hide") {
             @Override
             public void onClick(AjaxRequestTarget target) {
-                toggleVisibility(target);
+                FeedbackPanel feedbackPanel = getFeedbackPanel();
+                feedbackPanel.setVisible(false);
+
+                if (target != null) {
+                    target.addComponent(feedbackPanel);
+                }
             }
         };
 
-        showLink.setOutputMarkupId(true);
-        showLink.setOutputMarkupPlaceholderTag(true);
-        add(showLink);
-
-        showLink.add(new Label("count", new PropertyModel(cheese, "comments.size")));
-
-        hideLink = new AjaxFallbackLink("hide") {
-            @Override
-            public void onClick(AjaxRequestTarget target) {
-                toggleVisibility(target);
-            }
-        };
-
-        hideLink.setVisible(false);
         hideLink.setOutputMarkupId(true);
         hideLink.setOutputMarkupPlaceholderTag(true);
-        add(hideLink);
+        container.add(hideLink);
 
         commentForm = new Form("form",
                 new CompoundPropertyModel(new Comment()));
@@ -99,9 +86,15 @@ public class CommentsPanel extends CheesePanel {
                 newComment.setTime(new Timestamp(System.currentTimeMillis()));
                 cheese.comment(newComment);
 
+                Address address = getCheeseSession().getAddress();
+                getCheeseSession().getDataCache().insertComment(newComment, cheese, address);
+
                 form.setModel(new CompoundPropertyModel(new Comment()));
 
-                target.addComponent(container);
+                if (target != null) {
+                    target.addComponent(container);
+                    target.addComponent(getCommentsCountLabel());
+                }
             }
         });
 
@@ -110,15 +103,15 @@ public class CommentsPanel extends CheesePanel {
         add(container);
     }
 
-    private void toggleVisibility(AjaxRequestTarget target) {
-        showLink.setVisible(!showLink.isVisible());
-        hideLink.setVisible(!hideLink.isVisible());
-        container.setVisible(!container.isVisible());
+    private FeedbackPanel getFeedbackPanel() {
+        return this;
+    }
 
-        if (target != null) {
-            target.addComponent(showLink);
-            target.addComponent(hideLink);
-            target.addComponent(container);
-        }
+    private CheeseArticlePanel getCheeseArticlePanel() {
+        return (CheeseArticlePanel)getParent();
+    }
+
+    private Label getCommentsCountLabel() {
+        return getCheeseArticlePanel().getCommentsCountLabel();
     }
 }

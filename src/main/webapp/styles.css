@@ -2,6 +2,7 @@ body {
 	margin: 0; padding: 0;
 	font-family: georgia, times, serif;
 	font-size: 15px;
+    /*background-color: #FFE0C0;*/
 }
 
 div {
@@ -9,10 +10,14 @@ div {
 }
 
 div.userid, .header, .menu, .content {
-	margin-left:auto;
-	margin-right:auto;
-	width:920px;
+    margin-left:auto;
+    margin-right:auto;
+    width:920px;
 }
+
+/*div.userid, .header, .content {
+    background-color: white;
+}*/
 
 div.userid {
 	text-align: right;
@@ -111,6 +116,8 @@ td.center {
 td.right {
 	text-align: right;
 }
+
+
 
 
 /* Login / Signup */

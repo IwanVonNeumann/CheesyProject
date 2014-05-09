@@ -12,4 +12,6 @@ public interface DBConnection {
     CartEntryDAO getCartEntryDAO();
 
     CheeseDAO getCheeseDAO();
+
+    CommentDAO getCommentDAO();
 }

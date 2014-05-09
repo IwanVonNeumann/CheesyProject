@@ -1,15 +1,12 @@
 package dao.jdbc;
 
 import dao.iface.*;
-import dao.jdbc.dao.JDBCAddressDAO;
-import dao.jdbc.dao.JDBCCartDAO;
-import dao.jdbc.dao.JDBCCartEntryDAO;
-import dao.jdbc.dao.JDBCCheeseDAO;
+import dao.jdbc.dao.*;
 
 import java.sql.Connection;
 
 /**
- * Created by IRuskevich on 14.14.3.
+ * Created by IRuskevich on 14.14.3
  */
 public class JDBCConnection implements DBConnection {
 
@@ -17,12 +14,14 @@ public class JDBCConnection implements DBConnection {
     private AddressDAO addressDAO;
     private CartEntryDAO cartEntryDAO;
     private CartDAO cartDAO;
+    private CommentDAO commentDAO;
 
     public JDBCConnection(Connection connection) {
         cheeseDAO = new JDBCCheeseDAO(connection);
         addressDAO = new JDBCAddressDAO(connection);
         cartEntryDAO = new JDBCCartEntryDAO(connection);
         cartDAO = new JDBCCartDAO(connection);
+        commentDAO = new JDBCCommentDAO(connection);
     }
 
     @Override
@@ -43,5 +42,10 @@ public class JDBCConnection implements DBConnection {
     @Override
     public CheeseDAO getCheeseDAO() {
         return cheeseDAO;
+    }
+
+    @Override
+    public CommentDAO getCommentDAO() {
+        return commentDAO;
     }
 }

@@ -33,4 +33,9 @@ public class HiberConnection implements DBConnection {
     public CheeseDAO getCheeseDAO() {
         return new HiberCheeseDAO(sessionFactory);
     }
+
+    @Override
+    public CommentDAO getCommentDAO() {
+        return null; // TODO
+    }
 }

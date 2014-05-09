@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="css/article.css" rel="stylesheet"/>
+</head>
+<body>
+<wicket:panel>
+    <p>
+        <span wicket:id="name" class="h3cheese">Gouda</span>
+        <span class="icon">
+            <img src="like.png"/>
+        </span>
+        <a href="#" wicket:id="comments" class="comment">
+            <span class="icon">
+                <img src="comment.png"/>
+            </span>
+            <span wicket:id="commentsCount"></span>
+        </a>
+
+    </p>
+
+    <p wicket:id="description">Gouda is a Dutch...</p>
+
+    <p>
+        <span wicket:id="price">$1.99</span>
+        <a wicket:id="add" href="#">add to cart</a>
+    </p>
+
+    <div wicket:id="feedback"></div>
+</wicket:panel>
+</body>
+</html>

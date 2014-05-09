@@ -1,0 +1,15 @@
+/* CheeseArticlePanel */
+
+span.h3cheese {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span.icon {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+a.comment {
+    text-decoration: none;
+}

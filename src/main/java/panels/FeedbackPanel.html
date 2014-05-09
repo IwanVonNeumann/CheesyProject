@@ -3,15 +3,14 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link href="styles.css" rel="stylesheet"/>
-    <link href="css/comments.css" rel="stylesheet"/>
+    <link href="css/feedback.css" rel="stylesheet"/>
 </head>
 <body>
 <wicket:panel>
-    <div>
-        <a href="#" wicket:id="show">Show comments (<span wicket:id="count"></span>)</a>
-        <a href="#" wicket:id="hide">Hide comments</a>
-    </div>
     <div wicket:id="container" class="commentspanel">
+        <div class="comment">
+            <a href="#" wicket:id="hide">Hide comments</a>
+        </div>
         <div wicket:id="comments" class="comment">
             <div>
                 <span wicket:id="author" class="author"></span>

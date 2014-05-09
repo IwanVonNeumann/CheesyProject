@@ -4,10 +4,7 @@ import cache.iface.IDataCache;
 
 import dao.iface.*;
 
-import domain.Address;
-import domain.Cart;
-import domain.CartEntry;
-import domain.Cheese;
+import domain.*;
 
 import java.util.List;
 
@@ -20,12 +17,14 @@ public class DataCacheMock implements IDataCache {
     private CartDAO cartDAO;
     private CartEntryDAO cartEntryDAO;
     private CheeseDAO cheeseDAO;
+    private CommentDAO commentDAO;
 
     public DataCacheMock(DBConnection dbConnection) {
         addressDAO = dbConnection.getAddressDAO();
         cartDAO = dbConnection.getCartDAO();
         cartEntryDAO = dbConnection.getCartEntryDAO();
         cheeseDAO = dbConnection.getCheeseDAO();
+        commentDAO = dbConnection.getCommentDAO();
         System.out.println("Data Cache mock created...");
     }
 
@@ -144,5 +143,18 @@ public class DataCacheMock implements IDataCache {
     @Override
     public List<Cheese> searchCheeseByDescription(String key) {
         return cheeseDAO.searchCheeseByDescription(key);
+    }
+
+
+    // CommentDAO
+
+    @Override
+    public List<Comment> getCommentsList(Cheese cheese) {
+        return commentDAO.getCommentsList(cheese);
+    }
+
+    @Override
+    public void insertComment(Comment comment, Cheese cheese, Address address) {
+        commentDAO.insertComment(comment, cheese, address);
     }
 }

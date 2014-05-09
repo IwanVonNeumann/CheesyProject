@@ -2,11 +2,9 @@ package cache;
 
 import cache.iface.IDataCache;
 
+import dao.iface.CommentDAO;
 import dao.iface.DBConnection;
-import domain.Address;
-import domain.Cart;
-import domain.Cheese;
-import domain.CartEntry;
+import domain.*;
 
 import java.util.List;
 
@@ -19,6 +17,7 @@ public class DataCache implements IDataCache {
     private CartCache cartCache;
     private CartEntryCache cartEntryCache;
     private CheeseCache cheeseCache;
+    private CommentDAO commentCache;
 
     public DataCache(DBConnection dbConnection) {
         // step 1
@@ -28,6 +27,9 @@ public class DataCache implements IDataCache {
         cartEntryCache = new CartEntryCache(dbConnection.getCartEntryDAO(), cheeseCache);
         // step 3
         cartCache = new CartCache(dbConnection.getCartDAO(), cartEntryCache, addressCache);
+
+        // no step :) // TODO :)
+        commentCache = new CommentCache(dbConnection.getCommentDAO());
     }
 
     // AddressDAO
@@ -145,5 +147,18 @@ public class DataCache implements IDataCache {
     @Override
     public List<Cheese> searchCheeseByDescription(String key) {
         return cheeseCache.searchCheeseByDescription(key);
+    }
+
+
+    // CommentDAO
+
+    @Override
+    public List<Comment> getCommentsList(Cheese cheese) {
+        return commentCache.getCommentsList(cheese);
+    }
+
+    @Override
+    public void insertComment(Comment comment, Cheese cheese, Address address) {
+        commentCache.insertComment(comment, cheese, address);
     }
 }
