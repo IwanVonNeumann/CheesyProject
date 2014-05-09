@@ -36,7 +36,6 @@ public class CheckOut extends CheesePage {
             public void onClick() {
                 Cart cart = getCart();
                 cart.order(); // обслуживание
-                // TODO: проверить, работает ли на хайбернейте
                 getCheeseSession().getDataCache().insertCart(cart); // сохранение в базе
                 cart.reset(); // сброс корзины
                 setResponsePage(StoreView.class);

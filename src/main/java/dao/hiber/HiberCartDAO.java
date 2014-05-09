@@ -40,6 +40,7 @@ public class HiberCartDAO extends HiberDAO implements CartDAO {
         return result;
     }
 
+    // TODO: исправить!
     @Override
     public void insertCart(Cart cart) {
         Session session = sessionFactory.openSession();
