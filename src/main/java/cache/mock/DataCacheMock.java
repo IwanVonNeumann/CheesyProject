@@ -1,12 +1,11 @@
 package cache.mock;
 
 import cache.iface.IDataCache;
-
 import dao.iface.*;
-
 import domain.*;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IRuskevich on 20.03.2014
@@ -18,6 +17,7 @@ public class DataCacheMock implements IDataCache {
     private CartEntryDAO cartEntryDAO;
     private CheeseDAO cheeseDAO;
     private CommentDAO commentDAO;
+    private LikeDAO likeDAO;
 
     public DataCacheMock(DBConnection dbConnection) {
         addressDAO = dbConnection.getAddressDAO();
@@ -25,6 +25,7 @@ public class DataCacheMock implements IDataCache {
         cartEntryDAO = dbConnection.getCartEntryDAO();
         cheeseDAO = dbConnection.getCheeseDAO();
         commentDAO = dbConnection.getCommentDAO();
+        likeDAO = dbConnection.getLikeDAO();
         System.out.println("Data Cache mock created...");
     }
 
@@ -156,5 +157,15 @@ public class DataCacheMock implements IDataCache {
     @Override
     public void insertComment(Comment comment, Cheese cheese, Address address) {
         commentDAO.insertComment(comment, cheese, address);
+    }
+
+    @Override
+    public Set<Address> getLikesList(Cheese cheese) {
+        return likeDAO.getLikesList(cheese);
+    }
+
+    @Override
+    public void insertLike(Cheese cheese, Address address) {
+        likeDAO.insertLike(cheese, address);
     }
 }

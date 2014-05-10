@@ -1,12 +1,12 @@
 package cache;
 
 import cache.iface.IDataCache;
-
 import dao.iface.CommentDAO;
 import dao.iface.DBConnection;
 import domain.*;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Iwan on 14.20.3
@@ -160,5 +160,18 @@ public class DataCache implements IDataCache {
     @Override
     public void insertComment(Comment comment, Cheese cheese, Address address) {
         commentCache.insertComment(comment, cheese, address);
+    }
+
+
+    // LikeDAO
+
+    @Override
+    public Set<Address> getLikesList(Cheese cheese) {
+        return null;
+    }
+
+    @Override
+    public void insertLike(Cheese cheese, Address address) {
+
     }
 }

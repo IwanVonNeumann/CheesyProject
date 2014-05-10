@@ -38,4 +38,9 @@ public class HiberConnection implements DBConnection {
     public CommentDAO getCommentDAO() {
         return null; // TODO
     }
+
+    @Override
+    public LikeDAO getLikeDAO() {
+        return null; // TODO
+    }
 }

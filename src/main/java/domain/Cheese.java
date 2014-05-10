@@ -1,7 +1,9 @@
 package domain;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class Cheese {
 
@@ -9,6 +11,7 @@ public class Cheese {
     private String name;
     private String description;
     private Double price;
+    private Set<Address> likes;     // Lazy :)
     private List<Comment> comments; // Lazy :)
     private boolean deleted;
 
@@ -45,6 +48,10 @@ public class Cheese {
         return price;
     }
 
+    public Set<Address> getLikes() {
+        return likes;
+    }
+
     public List<Comment> getComments() {
         return comments;
     }
@@ -70,6 +77,10 @@ public class Cheese {
         this.price = price;
     }
 
+    public void setLikes(Set<Address> likes) {
+        this.likes = likes;
+    }
+
     public void setComments(List<Comment> comments) {
         this.comments = comments;
     }
@@ -84,8 +95,18 @@ public class Cheese {
         setDeleted(true);
     }
 
+    public boolean like(Address address) {
+        if (likes == null) { // TODO: призадуматься
+            likes = new HashSet<>();
+        }
+        if (!alreadyLiked(address)) {
+            return likes.add(address);
+        }
+        return false;
+    }
+
     public void comment(Comment comment) {
-        if (comments == null) {
+        if (comments == null) { // TODO: призадуматься
             comments = new LinkedList<>();
         }
         comments.add(comment);
@@ -104,5 +125,12 @@ public class Cheese {
     @Override
     public String toString() {
         return "Cheese{" + name + '\t' + description + '\t' + price + '}';
+    }
+
+    private boolean alreadyLiked(Address address) {
+        for (Address current : likes) {
+            if (current.equals(address)) return true;
+        }
+        return false;
     }
 }

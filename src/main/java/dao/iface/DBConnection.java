@@ -14,4 +14,6 @@ public interface DBConnection {
     CheeseDAO getCheeseDAO();
 
     CommentDAO getCommentDAO();
+
+    LikeDAO getLikeDAO();
 }

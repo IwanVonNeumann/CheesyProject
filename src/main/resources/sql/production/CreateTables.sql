@@ -37,6 +37,15 @@ CREATE TABLE CartEntries
 	FOREIGN KEY (CheeseID) REFERENCES Cheeses(CheeseID)
 );
 
+CREATE TABLE Likes
+(
+    LikeID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    CheeseID int NOT NULL,
+    CustomerID int NOT NULL,
+    FOREIGN KEY (CheeseID) REFERENCES Cheeses(CheeseID),
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
 CREATE TABLE Comments
 (
     CommentID int NOT NULL AUTO_INCREMENT PRIMARY KEY,

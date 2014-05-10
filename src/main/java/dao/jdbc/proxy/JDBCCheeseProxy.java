@@ -1,11 +1,14 @@
 package dao.jdbc.proxy;
 
 import dao.jdbc.dao.JDBCCommentDAO;
+import dao.jdbc.dao.JDBCLikeDAO;
+import domain.Address;
 import domain.Cheese;
 import domain.Comment;
 
 import java.sql.Connection;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by IRuskevich on 08.05.2014
@@ -18,6 +21,20 @@ public class JDBCCheeseProxy extends Cheese {
                            Connection connection) {
         super(id, name, description, price, deleted);
         this.connection = connection;
+    }
+
+    @Override
+    public Set<Address> getLikes() {
+        System.out.println("[JDBC] Cheese proxy call for " +
+                getName() + "...");
+        if (super.getLikes() == null) {
+            System.out.println("[JDBC] Running lazy init for likes list...");
+            super.setLikes(
+                    new JDBCLikeDAO(connection).getLikesList(this));
+        } else {
+            System.out.println("[JDBC] Likes list already in memory...");
+        }
+        return super.getLikes();
     }
 
     @Override

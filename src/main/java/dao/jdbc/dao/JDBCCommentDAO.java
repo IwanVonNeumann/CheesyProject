@@ -67,7 +67,7 @@ public class JDBCCommentDAO extends JDBCDAO implements CommentDAO{
                     "INSERT INTO Comments " +
                             "(CommentID, CheeseID, CustomerID, Text, Clock) " +
                             "VALUES (?, ?, ?, ?, ?);");
-            statement.setInt(1, comment.getId());
+            statement.setInt(1, comment.getId()); // TODO: пересмотреть необходимость
             statement.setInt(2, cheese.getId());
             statement.setInt(3, address.getId());
             statement.setString(4, comment.getText());

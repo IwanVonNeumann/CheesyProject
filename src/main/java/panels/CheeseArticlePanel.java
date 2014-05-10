@@ -1,5 +1,6 @@
 package panels;
 
+import domain.Address;
 import domain.Cart;
 import domain.Cheese;
 import look.CurrencyLabel;
@@ -15,11 +16,16 @@ import views.StoreView;
  */
 public class CheeseArticlePanel extends CheesePanel {
 
+    private Cheese cheese;
+
     private FeedbackPanel feedbackPanel;
+    private Label likesCount;
     private Label commentsCount;
 
     public CheeseArticlePanel(String id, final IModel model) {
         super(id, model);
+
+        cheese = (Cheese)getModelObject();
 
         add(new Label("name"));
         add(new Label("description"));
@@ -57,13 +63,36 @@ public class CheeseArticlePanel extends CheesePanel {
 
         add(commentsLink);
 
-        Cheese cheese = (Cheese)getModelObject();
         commentsCount = new Label("commentsCount",
                 new PropertyModel(cheese, "comments.size"));
         commentsCount.setOutputMarkupId(true);
-        commentsCount.setOutputMarkupPlaceholderTag(true);
 
         commentsLink.add(commentsCount);
+
+        AjaxFallbackLink likeLink = new AjaxFallbackLink("like") {
+            @Override
+            public void onClick(AjaxRequestTarget target) {
+                Address address = getCheeseSession().getAddress();
+                if (cheese.like(address)) {
+                    getCheeseSession().getDataCache().insertLike(cheese, address);
+                    System.out.println("Like successful for " + address.getName());
+                } else {
+                    System.out.println("Cannot like twice for " + address.getName());
+                }
+
+                if (target != null) {
+                    target.addComponent(likesCount);
+                }
+            }
+        };
+
+        add(likeLink);
+
+        likesCount= new Label("likesCount",
+                new PropertyModel(cheese, "likes.size"));
+        likesCount.setOutputMarkupId(true);
+
+        likeLink.add(likesCount);
     }
 
 

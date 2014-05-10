@@ -15,6 +15,7 @@ public class JDBCConnection implements DBConnection {
     private CartEntryDAO cartEntryDAO;
     private CartDAO cartDAO;
     private CommentDAO commentDAO;
+    private LikeDAO likeDAO;
 
     public JDBCConnection(Connection connection) {
         cheeseDAO = new JDBCCheeseDAO(connection);
@@ -22,6 +23,7 @@ public class JDBCConnection implements DBConnection {
         cartEntryDAO = new JDBCCartEntryDAO(connection);
         cartDAO = new JDBCCartDAO(connection);
         commentDAO = new JDBCCommentDAO(connection);
+        likeDAO = new JDBCLikeDAO(connection);
     }
 
     @Override
@@ -47,5 +49,10 @@ public class JDBCConnection implements DBConnection {
     @Override
     public CommentDAO getCommentDAO() {
         return commentDAO;
+    }
+
+    @Override
+    public LikeDAO getLikeDAO() {
+        return likeDAO;
     }
 }
