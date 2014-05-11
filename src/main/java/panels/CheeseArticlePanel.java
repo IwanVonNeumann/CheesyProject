@@ -7,6 +7,7 @@ import look.CurrencyLabel;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
 import views.StoreView;
@@ -57,6 +58,8 @@ public class CheeseArticlePanel extends CheesePanel {
                         !feedbackPanel.isVisible());
                 if (target != null) {
                     target.addComponent(feedbackPanel);
+                    TextField commentField = feedbackPanel.getCommentField();
+                    target.focusComponent(commentField);
                 }
             }
         };
@@ -75,13 +78,10 @@ public class CheeseArticlePanel extends CheesePanel {
                 Address address = getCheeseSession().getAddress();
                 if (cheese.like(address)) {
                     getCheeseSession().getDataCache().insertLike(cheese, address);
-                    System.out.println("Like successful for " + address.getName());
-                } else {
-                    System.out.println("Cannot like twice for " + address.getName());
-                }
 
-                if (target != null) {
-                    target.addComponent(likesCount);
+                    if (target != null) {
+                        target.addComponent(likesCount);
+                    }
                 }
             }
         };

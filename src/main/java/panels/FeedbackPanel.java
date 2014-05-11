@@ -28,11 +28,12 @@ public class FeedbackPanel extends CheesePanel {
     private WebMarkupContainer container;
 
     private Form commentForm;
+    private TextField commentField;
 
     public FeedbackPanel(String id, IModel model) {
         super(id, model);
 
-        cheese = (Cheese)getModelObject();
+        cheese = (Cheese) getModelObject();
 
         container = new WebMarkupContainer("container");
 
@@ -55,8 +56,9 @@ public class FeedbackPanel extends CheesePanel {
         };
 
         container.add(commentsList);
-        container.setOutputMarkupId(true);
-        container.setOutputMarkupPlaceholderTag(true);
+
+        container.setOutputMarkupId(true)
+                .setOutputMarkupPlaceholderTag(true);
 
         AjaxFallbackLink hideLink = new AjaxFallbackLink("hide") {
             @Override
@@ -70,18 +72,22 @@ public class FeedbackPanel extends CheesePanel {
             }
         };
 
-        hideLink.setOutputMarkupId(true);
-        hideLink.setOutputMarkupPlaceholderTag(true);
+        hideLink.setOutputMarkupId(true)
+                .setOutputMarkupPlaceholderTag(true);
         container.add(hideLink);
 
         commentForm = new Form("form",
                 new CompoundPropertyModel(new Comment()));
-        commentForm.add(new TextField("text").setRequired(true));
+
+        commentField = new TextField("text");
+        commentField.setRequired(true)
+                .setOutputMarkupId(true);
+        commentForm.add(commentField);
 
         commentForm.add(new AjaxSubmitLink("send") {
             @Override
             protected void onSubmit(AjaxRequestTarget target, Form form) {
-                Comment newComment = (Comment)commentForm.getModelObject();
+                Comment newComment = (Comment) commentForm.getModelObject();
                 newComment.setAddress(getCheeseSession().getAddress());
                 newComment.setTime(new Timestamp(System.currentTimeMillis()));
                 cheese.comment(newComment);
@@ -94,6 +100,7 @@ public class FeedbackPanel extends CheesePanel {
                 if (target != null) {
                     target.addComponent(container);
                     target.addComponent(getCommentsCountLabel());
+                    target.focusComponent(commentField);
                 }
             }
         });
@@ -103,12 +110,16 @@ public class FeedbackPanel extends CheesePanel {
         add(container);
     }
 
+    public TextField getCommentField() {
+        return (TextField) commentForm.get("text");
+    }
+
     private FeedbackPanel getFeedbackPanel() {
         return this;
     }
 
     private CheeseArticlePanel getCheeseArticlePanel() {
-        return (CheeseArticlePanel)getParent();
+        return (CheeseArticlePanel) getParent();
     }
 
     private Label getCommentsCountLabel() {

@@ -36,6 +36,14 @@ public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
 
         try {
             //System.out.println("Accessing data...");
+
+            // Consider
+            // SELECT LikeID, CheeseName, CustomerName
+            // FROM Cheeses INNER JOIN Likes
+            // ON Cheeses.CheeseID = Likes.CheeseID
+            // INNER JOIN Customers
+            // ON Likes.CustomerID = Customers.CustomerID;
+
             statement = connection.prepareStatement(
                     "SELECT * FROM Likes WHERE CheeseID = ?;");
             statement.setInt(1, cheese.getId());
@@ -53,7 +61,6 @@ public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
             return list;
         } catch (SQLException e) {
             System.out.println("Exception while accessing data...");
-            System.out.println(e);
             return null;
         } finally {
             closeResultSet(result);
