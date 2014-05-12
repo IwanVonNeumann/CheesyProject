@@ -3,10 +3,13 @@ package panels;
 import domain.Address;
 import domain.Title;
 import look.proxy.AddressViewProxy;
+import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.*;
 import org.apache.wicket.markup.html.link.Link;
+import org.apache.wicket.markup.html.panel.FeedbackPanel;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
+import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
 import views.StoreView;
 import war.LoginPage;
@@ -22,26 +25,50 @@ public class RegisterUserPanel extends CheesePanel {
     public RegisterUserPanel(String id, IModel model) {
         super(id);
 
-        Address address = (Address)model.getObject();
+        Address address = (Address) model.getObject();
         AddressViewProxy addressViewProxy = new AddressViewProxy(address);
 
         Form form = new Form("form",
                 new CompoundPropertyModel(addressViewProxy));
         add(form);
 
+        Model titleModel = new Model("Title");
+        Model nameModel = new Model("Name");
+        Model streetModel = new Model("Street");
+        Model zipCodeModel = new Model("Zip code");
+        Model cityModel = new Model("City");
+        Model passwordModel = new Model("Password");
+        Model confirmPasswordModel = new Model("Confirm password");
+
+        form.add(new Label("titleL", titleModel));
+        form.add(new Label("nameL", nameModel));
+
+
         address.setTitle(Title.MR);
-        form.add(new DropDownChoice("title", Title.toStringArray()).setRequired(true));
-        form.add(new TextField("name").setRequired(true));
-        form.add(new TextField("street").setRequired(true));
-        form.add(new TextField("zipCode").setRequired(true));
-        form.add(new TextField("city").setRequired(true));
+        form.add(new DropDownChoice("title", Title.toStringArray())
+                .setRequired(true)
+                .setLabel(titleModel));
+        form.add(new TextField("name")
+                .setRequired(true)
+                .setLabel(nameModel));
+        form.add(new TextField("street")
+                .setRequired(true)
+                .setLabel(streetModel));
+        form.add(new TextField("zipCode")
+                .setRequired(true)
+                .setLabel(zipCodeModel));
+        form.add(new TextField("city")
+                .setRequired(true)
+                .setLabel(cityModel));
 
         form.add(new PasswordTextField("password1",
-                new PropertyModel(this, "password1")).
-                setRequired(true));
+                new PropertyModel(this, "password1"))
+                .setRequired(true)
+                .setLabel(passwordModel));
         form.add(new PasswordTextField("password2",
-                new PropertyModel(this, "password2")).
-                setRequired(true));
+                new PropertyModel(this, "password2"))
+                .setRequired(true)
+                .setLabel(confirmPasswordModel));
 
         form.add(new Link("back") {
             @Override
@@ -62,6 +89,8 @@ public class RegisterUserPanel extends CheesePanel {
                 setResponsePage(StoreView.class);
             }
         });
+
+        add(new FeedbackPanel("feedback"));
 
     }
 }
