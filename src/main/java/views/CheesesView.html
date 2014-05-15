@@ -1,19 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
-<head>
-    <title>Cheesr - Making cheese taste beta</title>
-    <link href="styles.css" rel="stylesheet"/>
-</head>
 <body>
-<div wicket:id="head"></div>
-<div class="content">
+<wicket:extend>
     <h3 class="section">Cheeses View</h3>
     <div wicket:id="cheesesListPanel" class="leftpanel"></div>
     <div wicket:id="cheeseDataPanel" class="rightpanel"></div>
-
-    <!--<div wicket:id="addCheesePanel" class="rightpanel"></div>
-    <div class="rightpanel">&nbsp;</div>
-    <div wicket:id="editCheesePanel" class="rightpanel"></div>-->
-</div>
+</wicket:extend>
 </body>
 </html>

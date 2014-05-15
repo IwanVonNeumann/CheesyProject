@@ -1,17 +1,13 @@
 package views;
 
 import panels.CheesesListPanel;
-import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
-import war.CheesePage;
 
-public class StoreView extends CheesePage {
+public class StoreView extends BasicView {
 
     private ShoppingCartPanel shoppingCartPanel;
 
     public StoreView() {
-
-        add(new PageHeadPanel("head"));
 
         add(new CheesesListPanel("cheesesListPanel"));
 

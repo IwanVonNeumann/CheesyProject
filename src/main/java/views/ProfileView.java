@@ -3,9 +3,8 @@ package views;
 import domain.Address;
 import org.apache.wicket.model.CompoundPropertyModel;
 import panels.*;
-import war.CheesePage;
 
-public class ProfileView extends CheesePage {
+public class ProfileView extends BasicView {
 
     private ProfileDataPanel profileDataPanel;
     private EditProfilePanel editProfilePanel;
@@ -13,7 +12,6 @@ public class ProfileView extends CheesePage {
     private AdditionalDataPanel additionalDataPanel;
 
     public ProfileView() {
-        add(new PageHeadPanel("head"));
 
         Address address = getCheeseSession().getAddress();
 

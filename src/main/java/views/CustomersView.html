@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
-<head>
-    <title>Cheesr - Making cheese taste beta</title>
-    <link href="styles.css" rel="stylesheet"/>
-</head>
 <body>
-<div wicket:id="head"></div>
-<div class="content">
+<wicket:extend>
     <h3 class="section">Customers View</h3>
     <table class="dbcontent center">
         <thead>
-        <th class="number"></th>
-        <th class="customers">Name</th>
-        <th class="street">Street</th>
-        <th class="zipcode">Zip code</th>
-        <th class="city">City</th>
-        <th class="action"></th>
+        <tr>
+            <th class="number"></th>
+            <th class="customers">Name</th>
+            <th class="street">Street</th>
+            <th class="zipcode">Zip code</th>
+            <th class="city">City</th>
+            <th class="action"></th>
+        </tr>
         </thead>
         <tr wicket:id="customers">
             <td wicket:id="num" class="number">1</td>
@@ -27,6 +24,6 @@
         </tr>
     </table>
     <div wicket:id="navigator" class="navigator"></div>
-</div>
+</wicket:extend>
 </body>
 </html>

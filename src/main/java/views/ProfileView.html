@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
-<head>
-    <title>Cheesr - Making cheese taste beta</title>
-    <link href="styles.css" rel="stylesheet"/>
-</head>
 <body>
-<div wicket:id="head"></div>
-<div class="content">
+<wicket:extend>
     <div class="leftpanel">
         <h3 class="panel">Profile Data</h3>
 
@@ -20,6 +15,6 @@
 
         <div wicket:id="purchases"></div>
     </div>
-</div>
+</wicket:extend>
 </body>
 </html>

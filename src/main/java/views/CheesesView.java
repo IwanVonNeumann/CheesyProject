@@ -2,16 +2,13 @@ package views;
 
 import panels.AdminCheesesListPanel;
 import panels.CheeseDataPanel;
-import panels.PageHeadPanel;
-import war.CheesePage;
 
-public class CheesesView extends CheesePage {
+public class CheesesView extends BasicView {
 
     private AdminCheesesListPanel adminCheesesListPanel;
     private CheeseDataPanel cheeseDataPanel;
 
     public CheesesView() {
-        add(new PageHeadPanel("head"));
 
         adminCheesesListPanel = new AdminCheesesListPanel("cheesesListPanel");
         adminCheesesListPanel.setOutputMarkupId(true);
