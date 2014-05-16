@@ -17,8 +17,6 @@ import views.ProfileView;
  */
 public class ChangePasswordPanel extends CheesePanel {
 
-    private FeedbackPanel feedbackPanel; // TODO: починить
-
     public ChangePasswordPanel(String id) {
         super(id);
 
@@ -42,7 +40,7 @@ public class ChangePasswordPanel extends CheesePanel {
 
         form.add(new EqualPasswordInputValidator(passwordField1, passwordField2));
 
-        feedbackPanel = new FeedbackPanel("feedback");
+        FeedbackPanel feedbackPanel = new FeedbackPanel("feedback"); // TODO: починить
         feedbackPanel.setOutputMarkupId(true);
         form.add(feedbackPanel);
 

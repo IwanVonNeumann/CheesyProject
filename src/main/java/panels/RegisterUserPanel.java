@@ -40,9 +40,13 @@ public class RegisterUserPanel extends CheesePanel {
         Model passwordModel = new Model("Password");
         Model confirmPasswordModel = new Model("Confirm password");
 
-        form.add(new Label("titleL", titleModel));
-        form.add(new Label("nameL", nameModel));
-
+        form.add(new Label("titleLabel", titleModel));
+        form.add(new Label("nameLabel", nameModel));
+        form.add(new Label("streetLabel", streetModel));
+        form.add(new Label("zipCodeLabel", zipCodeModel));
+        form.add(new Label("cityLabel", cityModel));
+        form.add(new Label("passwordLabel", passwordModel));
+        form.add(new Label("confirmPasswordLabel", confirmPasswordModel));
 
         address.setTitle(Title.MR);
         form.add(new DropDownChoice("title", Title.toStringArray())

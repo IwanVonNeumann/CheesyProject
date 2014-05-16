@@ -12,7 +12,7 @@ import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
-import war.CheckOut;
+import views.CheckOutView;
 
 public class ShoppingCartPanel extends CheesePanel {
 
@@ -71,7 +71,7 @@ public class ShoppingCartPanel extends CheesePanel {
         add(new Link("checkout") {
             @Override
             public void onClick() {
-                setResponsePage(new CheckOut());
+                setResponsePage(new CheckOutView());
             }
         });
     }

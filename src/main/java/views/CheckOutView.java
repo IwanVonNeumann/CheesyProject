@@ -1,18 +1,14 @@
-package war;
+package views;
 
 import domain.Address;
 import domain.Cart;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import panels.PageHeadPanel;
 import panels.ShoppingCartPanel;
-import views.StoreView;
 
-public class CheckOut extends CheesePage {
+public class CheckOutView extends BasicView {
 
-    public CheckOut() {
-
-        add(new PageHeadPanel("head"));
+    public CheckOutView() {
 
         Address address = getCheeseSession().getAddress();
 
@@ -28,11 +24,8 @@ public class CheckOut extends CheesePage {
             }
         });
 
-        //form.add(new Button("order") {
-        //add(new Button("order") {
         add(new Link("order") {
             @Override
-            //public void onSubmit() {
             public void onClick() {
                 Cart cart = getCart();
                 cart.order(); // обслуживание

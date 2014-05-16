@@ -1,7 +1,6 @@
 package war;
 
 import domain.Address;
-import domain.Title;
 import org.apache.wicket.model.CompoundPropertyModel;
 import panels.RegisterUserPanel;
 

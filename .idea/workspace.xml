@@ -8,22 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/views/BasicView.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/views/BasicView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CustomersView.html" afterPath="$PROJECT_DIR$/src/main/java/views/CustomersView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/ProfileView.html" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/PurchasesView.html" afterPath="$PROJECT_DIR$/src/main/java/views/PurchasesView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/SearchView.html" afterPath="$PROJECT_DIR$/src/main/java/views/SearchView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/SearchView.java" afterPath="$PROJECT_DIR$/src/main/java/views/SearchView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/StoreView.html" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/StoreView.java" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/views/CheckOutView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ShoppingCartPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/SignupPage.java" afterPath="$PROJECT_DIR$/src/main/java/war/SignupPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\war\CheckOut.html" afterPath="$PROJECT_DIR$/target/classes/war/CheckOut.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\war\CheckOut.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheckOutView.java" />
     </list>
     <ignored path="MavenProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -82,8 +75,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -94,8 +87,8 @@
       <file leaf-file-name="ChangePasswordPanel.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07338552" vertical-offset="44" max-vertical-offset="1581">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.085127205" vertical-offset="525" max-vertical-offset="1547">
+              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -123,9 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/TestTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/look/proxy/CommentProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Comment.java" />
         <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.html" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CommentsPanel.java" />
@@ -156,8 +146,6 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCLikeDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/domain/Cheese.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.html" />
         <option value="$PROJECT_DIR$/src/main/java/panels/FeedbackPanel.html" />
         <option value="$PROJECT_DIR$/src/main/java/views/BasicView.java" />
@@ -174,6 +162,11 @@
         <option value="$PROJECT_DIR$/src/main/java/views/SearchView.html" />
         <option value="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
         <option value="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/CheckOutView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/CheckOutView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" />
       </list>
     </option>
   </component>
@@ -277,6 +270,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -428,41 +422,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheesyProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheeseStore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CheesyProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -502,19 +463,19 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="war" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\views" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\pic" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
+      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="cache" />
       <recent name="look" />
       <recent name="dao.base" />
       <recent name="sql.test" />
       <recent name="dao" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\pic" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
-      <recent name="D:\Users\User\IdeaProjects\MavenProject\src\main" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.Jetty">
@@ -804,7 +765,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28721374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28625953" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18636848" sideWeight="0.41787124" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -836,11 +797,11 @@
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29007635" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29007635" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35246995" sideWeight="0.22" order="8" side_tool="true" content_ui="tabs" />
@@ -862,8 +823,8 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323667" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16894531" sideWeight="0.6983333" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -882,7 +843,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Registration" />
     <MESSAGE value="DAO interfaces" />
     <MESSAGE value="JDBC ifaces&#10;" />
     <MESSAGE value="DAO ifaces refactoring" />
@@ -907,7 +867,8 @@
     <MESSAGE value="Done with Likes inserting/reading mechanism" />
     <MESSAGE value="Working on Feedback" />
     <MESSAGE value="Wicket:links introduction to some panels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wicket:links introduction to some panels" />
+    <MESSAGE value="Markup inheritance introduced in Views package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Markup inheritance introduced in Views package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -922,27 +883,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/article.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheckOut.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0872093" vertical-offset="60" max-vertical-offset="952">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="2091">
-          <caret line="94" column="25" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cache/AddressCache.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="1292">
@@ -1118,13 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheckOut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5988258" vertical-offset="0" max-vertical-offset="1022">
-          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/FeedbackPanel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14345992" vertical-offset="0" max-vertical-offset="748">
@@ -1143,7 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0665362" vertical-offset="0" max-vertical-offset="1022">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1151,7 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25373134" vertical-offset="0" max-vertical-offset="737">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1159,7 +1090,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22173913" vertical-offset="0" max-vertical-offset="690">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1167,7 +1097,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62165964" vertical-offset="0" max-vertical-offset="711">
           <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1183,7 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3347398" vertical-offset="0" max-vertical-offset="711">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1191,7 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07172996" vertical-offset="0" max-vertical-offset="711">
           <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1199,7 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09226594" vertical-offset="0" max-vertical-offset="737">
           <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,7 +1133,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27679783" vertical-offset="0" max-vertical-offset="986">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1215,7 +1140,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23909986" vertical-offset="0" max-vertical-offset="711">
           <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1223,9 +1147,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23066486" vertical-offset="0" max-vertical-offset="737">
           <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1233,7 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1614654" vertical-offset="0" max-vertical-offset="737">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,7 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14345992" vertical-offset="0" max-vertical-offset="711">
           <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,7 +1168,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.095639944" vertical-offset="0" max-vertical-offset="711">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,7 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09226594" vertical-offset="0" max-vertical-offset="737">
           <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.815534" vertical-offset="0" max-vertical-offset="1751">
           <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1273,30 +1189,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1853">
           <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/CheckOutView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8607595" vertical-offset="0" max-vertical-offset="867">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/CheckOutView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1190">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19833565" vertical-offset="554" max-vertical-offset="1479">
-          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.2994129" vertical-offset="51" max-vertical-offset="1547">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93875504" vertical-offset="0" max-vertical-offset="1445">
+          <caret line="55" column="57" selection-start-line="55" selection-start-column="57" selection-end-line="55" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/SignupPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.049902152" vertical-offset="0" max-vertical-offset="1022">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44911936" vertical-offset="0" max-vertical-offset="1022">
+          <caret line="37" column="22" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07338552" vertical-offset="44" max-vertical-offset="1581">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.085127205" vertical-offset="525" max-vertical-offset="1547">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding />
         </state>
       </provider>
