@@ -1,0 +1,7 @@
+/* Menu Panel */
+
+td.item {
+    color: white;
+    /* не работает :( */
+    /*font-style: normal;*/
+}
