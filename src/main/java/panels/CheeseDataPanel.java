@@ -1,12 +1,12 @@
 package panels;
 
 import domain.Cheese;
+import look.RequiredTextField;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
-import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import views.CheesesView;
@@ -60,9 +60,9 @@ public class CheeseDataPanel extends CheesePanel {
         cheeseForm.setOutputMarkupPlaceholderTag(true);
         add(cheeseForm);
 
-        cheeseForm.add(new TextField("name").setRequired(true));
-        cheeseForm.add(new TextField("description").setRequired(true));
-        cheeseForm.add(new TextField("price").setRequired(true));
+        cheeseForm.add(new RequiredTextField("name"));
+        cheeseForm.add(new RequiredTextField("description"));
+        cheeseForm.add(new RequiredTextField("price"));
 
         final AjaxFallbackLink cancelLink = new AjaxFallbackLink("cancel") {
             @Override
