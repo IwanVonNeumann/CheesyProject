@@ -14,7 +14,7 @@ public class LoginPage extends CheesePage {
 
     public LoginPage() {
 
-        add(new AuthenticationPanel("authentication"));
+        //add(new AuthenticationPanel("authentication"));
 
         add(new Link("signup") {
             @Override
