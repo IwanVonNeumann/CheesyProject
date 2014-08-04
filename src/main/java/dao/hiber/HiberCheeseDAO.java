@@ -65,6 +65,7 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
         updateCheese(cheese);
     }
 
+    // TODO: refactor: не нужно доставать список!
     @Override
     public boolean exists(Cheese cheese) {
         Session session = sessionFactory.openSession();
