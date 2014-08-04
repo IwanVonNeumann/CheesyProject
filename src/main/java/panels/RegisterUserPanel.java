@@ -2,6 +2,7 @@ package panels;
 
 import domain.Address;
 import domain.Title;
+import look.RequiredTextField;
 import look.proxy.AddressViewProxy;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.*;
@@ -52,17 +53,13 @@ public class RegisterUserPanel extends CheesePanel {
         form.add(new DropDownChoice("title", Title.toStringArray())
                 .setRequired(true)
                 .setLabel(titleModel));
-        form.add(new TextField("name")
-                .setRequired(true)
+        form.add(new RequiredTextField("name")
                 .setLabel(nameModel));
-        form.add(new TextField("street")
-                .setRequired(true)
+        form.add(new RequiredTextField("street")
                 .setLabel(streetModel));
-        form.add(new TextField("zipCode")
-                .setRequired(true)
+        form.add(new RequiredTextField("zipCode")
                 .setLabel(zipCodeModel));
-        form.add(new TextField("city")
-                .setRequired(true)
+        form.add(new RequiredTextField("city")
                 .setLabel(cityModel));
 
         form.add(new PasswordTextField("password1",

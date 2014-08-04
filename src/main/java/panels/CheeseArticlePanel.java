@@ -4,10 +4,13 @@ import domain.Address;
 import domain.Cart;
 import domain.Cheese;
 import look.CurrencyLabel;
+import org.apache.wicket.ResourceReference;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.TextField;
+import org.apache.wicket.markup.html.image.Image;
+import org.apache.wicket.markup.html.link.ResourceLink;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
 import views.StoreView;
@@ -71,6 +74,8 @@ public class CheeseArticlePanel extends CheesePanel {
         commentsCount.setOutputMarkupId(true);
 
         commentsLink.add(commentsCount);
+        commentsLink.add(new Image("commentImg",
+                new ResourceReference(CheeseArticlePanel.class, "resources/comment.png")));
 
         AjaxFallbackLink likeLink = new AjaxFallbackLink("like") {
             @Override
@@ -93,6 +98,8 @@ public class CheeseArticlePanel extends CheesePanel {
         likesCount.setOutputMarkupId(true);
 
         likeLink.add(likesCount);
+        likeLink.add(new Image("likeImg",
+                new ResourceReference(CheeseArticlePanel.class, "resources/like.png")));
     }
 
 
