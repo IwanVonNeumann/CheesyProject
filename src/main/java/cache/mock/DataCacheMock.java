@@ -19,7 +19,7 @@ public class DataCacheMock implements IDataCache {
     private CommentDAO commentDAO;
     private LikeDAO likeDAO;
 
-    public DataCacheMock(DBConnection dbConnection) {
+    /*public DataCacheMock(DBConnection dbConnection) {
         addressDAO = dbConnection.getAddressDAO();
         cartDAO = dbConnection.getCartDAO();
         cartEntryDAO = dbConnection.getCartEntryDAO();
@@ -27,8 +27,34 @@ public class DataCacheMock implements IDataCache {
         commentDAO = dbConnection.getCommentDAO();
         likeDAO = dbConnection.getLikeDAO();
         System.out.println("Data Cache mock created...");
+    }*/
+
+    public DataCacheMock() {
     }
 
+    public void setAddressDAO(AddressDAO addressDAO) {
+        this.addressDAO = addressDAO;
+    }
+
+    public void setCartDAO(CartDAO cartDAO) {
+        this.cartDAO = cartDAO;
+    }
+
+    public void setCartEntryDAO(CartEntryDAO cartEntryDAO) {
+        this.cartEntryDAO = cartEntryDAO;
+    }
+
+    public void setCheeseDAO(CheeseDAO cheeseDAO) {
+        this.cheeseDAO = cheeseDAO;
+    }
+
+    public void setCommentDAO(CommentDAO commentDAO) {
+        this.commentDAO = commentDAO;
+    }
+
+    public void setLikeDAO(LikeDAO likeDAO) {
+        this.likeDAO = likeDAO;
+    }
 
     // AddressDAO
 

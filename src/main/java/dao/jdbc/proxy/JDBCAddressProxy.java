@@ -1,26 +1,26 @@
 package dao.jdbc.proxy;
 
-import dao.jdbc.dao.JDBCCartDAO;
+import dao.iface.CartDAO;
 import domain.Address;
 import domain.Cart;
 import domain.Title;
 
-import java.sql.Connection;
 import java.util.List;
 
 /**
  * Created by IRuskevich on 14.18.3
  */
+
 public class JDBCAddressProxy extends Address {
 
-    private Connection connection;
+    private CartDAO cartDAO;
 
     // считывание из базы, запись создана программно
     public JDBCAddressProxy(Title title, String name, String street, String city,
                             Integer zipCode, int id, byte[] hash, boolean deleted,
-                            Connection connection) {
+                            CartDAO cartDAO) {
         super(title, name, street, city, zipCode, id, hash, deleted);
-        this.connection = connection;
+        this.cartDAO = cartDAO;
     }
 
     @Override
@@ -29,8 +29,7 @@ public class JDBCAddressProxy extends Address {
                 getName() + "...");
         if (super.getPurchases() == null) {
             System.out.println("[JDBC] Running lazy init for purchases list...");
-            super.setPurchases(
-                    new JDBCCartDAO(connection).getCartsList(this));
+            super.setPurchases(cartDAO.getCartsList(this));
         } else {
             System.out.println("[JDBC] Purchases list already in memory...");
         }

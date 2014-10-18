@@ -1,11 +1,10 @@
 package dao.jdbc.dao;
 
 import dao.iface.AddressDAO;
-import dao.jdbc.proxy.JDBCAddressProxy;
+import dao.iface.ProxyFactory;
 import domain.Address;
 import domain.Title;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,12 +13,15 @@ import java.util.List;
 
 public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
-    Connection connection;
+    private ProxyFactory proxyFactory;
 
-    public JDBCAddressDAO(Connection connection) {
-        super(connection);
-        this.connection = connection;
+    public JDBCAddressDAO() {
+        super();
         System.out.println("[JDBC] Creating Address DAO...");
+    }
+
+    public void setProxyFactory(ProxyFactory proxyFactory) {
+        this.proxyFactory = proxyFactory;
     }
 
     @Override
@@ -207,7 +209,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
             System.out.println("[JDBC] SELECT 1 FROM Customers\n" +
                     "\tWHERE CustomerName = " + address.getName() +
                     " AND Deleted <> true");
-            result =  statement.executeQuery();
+            result = statement.executeQuery();
             return result.next();
         } catch (SQLException e) {
             System.out.println("Exception while searching for data...");
@@ -219,7 +221,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
     }
 
     private Address buildAddress(ResultSet result) throws SQLException {
-        return new JDBCAddressProxy(
+        return proxyFactory.getAddressProxy(
                 Title.valueOf(result.getString("Title")),
                 result.getString("CustomerName"),
                 result.getString("Street"),
@@ -227,8 +229,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
                 result.getInt("ZipCode"),
                 result.getInt("CustomerID"),
                 result.getBytes("PasswordHash"),
-                result.getBoolean("deleted"),
-                connection);
+                result.getBoolean("deleted"));
     }
 
 

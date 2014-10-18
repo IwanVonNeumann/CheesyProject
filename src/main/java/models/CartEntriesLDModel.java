@@ -1,10 +1,13 @@
 package models;
 
-import org.apache.wicket.model.LoadableDetachableModel;
+import cache.iface.IDataCache;
 
 // TODO: пересмотреть: возможно, класс не нужен
-public class CartEntriesLDModel extends LoadableDetachableModel {
+public class CartEntriesLDModel extends AbstractLDModel {
 
+    public CartEntriesLDModel(IDataCache dataCache) {
+        super(dataCache);
+    }
 
     /*private CartEntryDAO dao;
     private Cart cart;

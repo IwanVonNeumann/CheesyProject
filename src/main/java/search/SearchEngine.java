@@ -14,16 +14,23 @@ import java.util.Map;
 /**
  * Created by Iwan on 28.04.2014
  */
+
 public class SearchEngine {
 
-    private static Map<String, ISearchProcedure> procedures = new HashMap<>();
+    private Map<String, ISearchProcedure> procedures = new HashMap<>();
 
-    static {
+    private IDataCache dataCache;
+
+    public SearchEngine() {
         procedures.put("name", new NameSearchProcedure());
         procedures.put("description", new DescriptionSearchProcedure());
     }
 
-    public static SearchResultsSet search(IDataCache dataCache, ValueMap pars) {
+    public void setDataCache(IDataCache dataCache) {
+        this.dataCache = dataCache;
+    }
+
+    public SearchResultsSet search(ValueMap pars) {
         System.out.println("Running Search Engine...");
         String key = (String)pars.get("query");
 

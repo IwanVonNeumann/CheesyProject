@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Created by Iwan on 30.04.2014
  */
+
 public class StringUtils {
 
     public static int countSubstrings(String string, String substring) {

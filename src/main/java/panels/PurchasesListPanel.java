@@ -2,10 +2,9 @@ package panels;
 
 import domain.Address;
 import domain.Cart;
-import look.proxy.CartViewProxy;
 import look.CurrencyLabel;
 import look.RowModifier;
-import models.CartsLDModel;
+import look.proxy.CartViewProxy;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
@@ -14,12 +13,14 @@ import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.Model;
+import war.CheeseApplication;
 
 import java.io.Serializable;
 
 /**
  * Created by IRuskevich on 14.25.2
  */
+
 public class PurchasesListPanel extends CheesePanel {
 
     public PurchasesListPanel(String id) {
@@ -32,7 +33,7 @@ public class PurchasesListPanel extends CheesePanel {
         // передан ли конкретный покупатель в качестве параметра?
         IModel cartsModel = address == null ?
                 // полный список из базы
-                new CartsLDModel(getCheeseSession().getDataCache()) :
+                CheeseApplication.get().getModelLoader().getCartsModel() :
                 // список покупок текущего пользователя
                 new Model((Serializable) address.getPurchases());
 

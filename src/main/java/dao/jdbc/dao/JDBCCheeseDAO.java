@@ -1,18 +1,26 @@
 package dao.jdbc.dao;
 
 import dao.iface.CheeseDAO;
-import dao.jdbc.proxy.JDBCCheeseProxy;
+import dao.iface.ProxyFactory;
 import domain.Cheese;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
-    public JDBCCheeseDAO(Connection connection) {
-        super(connection);
+    private ProxyFactory proxyFactory;
+
+    public JDBCCheeseDAO() {
+        super();
         System.out.println("[JDBC] Creating Cheese DAO...");
+    }
+
+    public void setProxyFactory(ProxyFactory proxyFactory) {
+        this.proxyFactory = proxyFactory;
     }
 
     @Override
@@ -167,7 +175,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
             System.out.println("[JDBC] SELECT 1 FROM Cheeses\n" +
                     "\tWHERE CheeseName = " + cheese.getName() +
                     " AND Deleted <> true");
-            result =  statement.executeQuery();
+            result = statement.executeQuery();
             return result.next();
         } catch (SQLException e) {
             System.out.println("Exception while searching for data...");
@@ -243,12 +251,12 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
     }
 
     private Cheese buildCheese(ResultSet result) throws SQLException {
-        return new JDBCCheeseProxy(result.getInt("CheeseID"),
+        return proxyFactory.getCheeseProxy(
+                result.getInt("CheeseID"),
                 result.getString("CheeseName"),
                 result.getString("Description"),
                 result.getDouble("Price"),
-                result.getBoolean("Deleted"),
-                connection);
+                result.getBoolean("Deleted"));
     }
 
     /*

@@ -8,6 +8,7 @@ import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import org.apache.wicket.model.CompoundPropertyModel;
 import views.StoreView;
+import war.CheeseApplication;
 
 import java.util.List;
 
@@ -16,8 +17,8 @@ public class CheesesListPanel extends CheesePanel {
     public CheesesListPanel(String id) {
         super(id);
 
-        CheesesLDModel cheesesModel = new CheesesLDModel(
-                getCheeseSession().getDataCache());
+        CheesesLDModel cheesesModel =
+                (CheesesLDModel) CheeseApplication.get().getModelLoader().getCheesesModel();
 
         PageableListView cheeses =
                 new PageableListView("cheeses", cheesesModel, 3) {

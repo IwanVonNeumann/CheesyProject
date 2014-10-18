@@ -1,17 +1,14 @@
 package models;
 
-import dao.iface.AddressDAO;
+import cache.iface.IDataCache;
 import domain.Address;
-import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
-public class AddressesLDModel extends LoadableDetachableModel{
-    private AddressDAO dao;
+public class AddressesLDModel extends AbstractLDModel{
 
-    public AddressesLDModel(AddressDAO dao) {
-        super();
-        this.dao = dao;
+    public AddressesLDModel(IDataCache dataCache) {
+        super(dataCache);
     }
 
     @Override
@@ -20,6 +17,6 @@ public class AddressesLDModel extends LoadableDetachableModel{
     }
 
     protected List<Address> getAddresses() {
-        return dao.getAddressesList();
+        return dataCache.getAddressesList();
     }
 }

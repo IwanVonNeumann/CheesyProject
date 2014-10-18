@@ -14,7 +14,7 @@ public class LoginPage extends CheesePage {
 
     public LoginPage() {
 
-        //add(new AuthenticationPanel("authentication"));
+        add(new AuthenticationPanel("authentication"));
 
         add(new Link("signup") {
             @Override
@@ -23,8 +23,8 @@ public class LoginPage extends CheesePage {
             }
         });
 
-        AddressesLDModel addressLoadableDetachableModel = new AddressesLDModel(
-                getCheeseSession().getDataCache());
+        AddressesLDModel addressLoadableDetachableModel =
+                (AddressesLDModel) CheeseApplication.get().getModelLoader().getAddressModel();
 
         ListView customers =
                 new ListView("customers", addressLoadableDetachableModel) {

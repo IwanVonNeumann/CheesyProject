@@ -13,6 +13,6 @@ public class JDBCCheeseDAOTest extends CheeseDAOTest {
     public void initDAO() {
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        dao = new JDBCCheeseDAO(connection);
+        dao = new JDBCCheeseDAO();
     }
 }

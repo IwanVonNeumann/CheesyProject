@@ -1,21 +1,22 @@
 package models;
 
-import dao.iface.CartDAO;
+import cache.iface.IDataCache;
 import domain.Address;
 import domain.Cart;
-import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
-public class CartsLDModel extends LoadableDetachableModel {
+public class CartsLDModel extends AbstractLDModel {
 
-    private CartDAO dao;
     private Address address;
 
-    public CartsLDModel(CartDAO dao) {
-        super();
-        this.dao = dao;
-        address = null;
+    public CartsLDModel(IDataCache dataCache, Address address) {
+        super(dataCache);
+        this.address = address;
+    }
+
+    public CartsLDModel(IDataCache dataCache) {
+        this(dataCache, null);
     }
 
 /*    public CartsLDModel(CartDAO dao, Address address) {
@@ -31,9 +32,9 @@ public class CartsLDModel extends LoadableDetachableModel {
     protected List<Cart> getCarts() {
         List<Cart> cartsList;
         if (address == null) {
-            cartsList = dao.getCartsList();
+            cartsList = dataCache.getCartsList();
         } else {
-            cartsList = dao.getCartsList(address);
+            cartsList = dataCache.getCartsList(address);
         }
         return cartsList;
     }

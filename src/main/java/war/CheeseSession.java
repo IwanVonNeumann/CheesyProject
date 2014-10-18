@@ -24,9 +24,12 @@ public class CheeseSession extends WebSession {
 
     private IDataCache dataCache;
 
-    protected CheeseSession(Request request, IDataCache dataCache) {
+    protected CheeseSession(Request request) {
         super(request);
         cart = new Cart();
+    }
+
+    public void setDataCache(IDataCache dataCache) {
         this.dataCache = dataCache;
     }
 

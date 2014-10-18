@@ -1,30 +1,30 @@
 package war;
 
-import cache.iface.IDataCache;
-import cache.mock.DataCacheMock;
-import dao.iface.ConnectionManager;
-import dao.jdbc.JDBCConnectionManager;
+import models.loaders.ModelLoader;
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import search.SearchEngine;
 
 public class CheeseApplication extends WebApplication {
 
-    private IDataCache dataCache;
+    private ModelLoader modelLoader;
+
+    private SearchEngine searchEngine;
 
     public CheeseApplication() {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.cfg.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        ConnectionManager connectionManager = (ConnectionManager)context.getBean("connectionManager");
+        modelLoader = (ModelLoader)context.getBean("modelLoader");
 
-        dataCache = new DataCacheMock(connectionManager.getConnection());
+        searchEngine = (SearchEngine)context.getBean("searchEngine");
     }
 
     @Override
-    protected void init() {}
+    protected void init() {
+    }
 
     public static CheeseApplication get() {
         return (CheeseApplication) Application.get();
@@ -37,7 +37,15 @@ public class CheeseApplication extends WebApplication {
 
     @Override
     public Session newSession(Request request, Response response) {
-        return new CheeseSession(request, dataCache);
+        return new CheeseSession(request);
+    }
+
+    public ModelLoader getModelLoader() {
+        return modelLoader;
+    }
+
+    public SearchEngine getSearchEngine() {
+        return searchEngine;
     }
 
     /*

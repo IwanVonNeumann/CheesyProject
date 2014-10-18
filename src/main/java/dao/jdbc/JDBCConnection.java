@@ -17,13 +17,21 @@ public class JDBCConnection implements DBConnection {
     private CommentDAO commentDAO;
     private LikeDAO likeDAO;
 
-    public JDBCConnection(Connection connection) {
-        cheeseDAO = new JDBCCheeseDAO(connection);
+        public JDBCConnection(Connection connection) {
+//    public JDBCConnection() {
+        /*cheeseDAO = new JDBCCheeseDAO(connection);
         addressDAO = new JDBCAddressDAO(connection);
         cartEntryDAO = new JDBCCartEntryDAO(connection);
         cartDAO = new JDBCCartDAO(connection);
         commentDAO = new JDBCCommentDAO(connection);
-        likeDAO = new JDBCLikeDAO(connection);
+        likeDAO = new JDBCLikeDAO(connection);*/
+
+        cheeseDAO = new JDBCCheeseDAO();
+        addressDAO = new JDBCAddressDAO();
+        cartEntryDAO = new JDBCCartEntryDAO();
+        cartDAO = new JDBCCartDAO();
+        commentDAO = new JDBCCommentDAO();
+        likeDAO = new JDBCLikeDAO();
     }
 
     @Override

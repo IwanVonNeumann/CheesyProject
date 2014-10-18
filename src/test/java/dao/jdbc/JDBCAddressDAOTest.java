@@ -13,6 +13,6 @@ public class JDBCAddressDAOTest extends AddressDAOTest {
     public void initDAO() {
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        dao = new JDBCAddressDAO(connection);
+        dao = new JDBCAddressDAO();
     }
 }

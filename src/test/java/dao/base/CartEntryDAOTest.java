@@ -31,9 +31,9 @@ public class CartEntryDAOTest extends DAOTest {
         entity = "cartentry";
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
-        cartDAO = new JDBCCartDAO(connection);
-        cheeseDAO = new JDBCCheeseDAO(connection);
-        cartEntryDAO = new JDBCCartEntryDAO(connection);
+        cartDAO = new JDBCCartDAO();
+        cheeseDAO = new JDBCCheeseDAO();
+        cartEntryDAO = new JDBCCartEntryDAO();
     }
 
     @After

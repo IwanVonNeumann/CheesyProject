@@ -1,18 +1,14 @@
 package models;
 
-import dao.iface.CheeseDAO;
+import cache.iface.IDataCache;
 import domain.Cheese;
-import org.apache.wicket.model.LoadableDetachableModel;
 
 import java.util.List;
 
-public class CheesesLDModel extends LoadableDetachableModel {
+public class CheesesLDModel extends AbstractLDModel {
 
-    private CheeseDAO dao;
-
-    public CheesesLDModel(CheeseDAO dao) {
-        super();
-        this.dao = dao;
+    public CheesesLDModel(IDataCache dataCache) {
+        super(dataCache);
     }
 
     @Override
@@ -34,6 +30,6 @@ public class CheesesLDModel extends LoadableDetachableModel {
     }*/
 
     protected List<Cheese> getCheeses() {
-        return dao.getCheesesList();
+        return dataCache.getCheesesList();
     }
 }

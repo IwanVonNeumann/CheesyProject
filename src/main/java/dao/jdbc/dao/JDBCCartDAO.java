@@ -3,12 +3,14 @@ package dao.jdbc.dao;
 import dao.iface.AddressDAO;
 import dao.iface.CartDAO;
 import dao.iface.CartEntryDAO;
-
 import domain.Address;
 import domain.Cart;
 import domain.CartEntry;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +19,25 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
     private AddressDAO addressDAO;
     private CartEntryDAO cartEntryDAO;
 
-    public JDBCCartDAO(Connection connection) {
+    public JDBCCartDAO() {
+        super();
+        System.out.println("[JDBC] Creating Cart DAO...");
+    }
+
+    public void setAddressDAO(AddressDAO addressDAO) {
+        this.addressDAO = addressDAO;
+    }
+
+    public void setCartEntryDAO(CartEntryDAO cartEntryDAO) {
+        this.cartEntryDAO = cartEntryDAO;
+    }
+
+    /*public JDBCCartDAO(Connection connection) {
         super(connection);
         addressDAO = new JDBCAddressDAO(connection);
         cartEntryDAO = new JDBCCartEntryDAO(connection);
         System.out.println("[JDBC] Creating Cart DAO...");
-    }
+    }*/
 
     @Override
     public List<Cart> getCartsList() {

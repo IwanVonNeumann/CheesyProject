@@ -1,26 +1,28 @@
 package dao.jdbc.proxy;
 
-import dao.jdbc.dao.JDBCCommentDAO;
-import dao.jdbc.dao.JDBCLikeDAO;
+import dao.iface.CommentDAO;
+import dao.iface.LikeDAO;
 import domain.Address;
 import domain.Cheese;
 import domain.Comment;
 
-import java.sql.Connection;
 import java.util.List;
 import java.util.Set;
 
 /**
  * Created by IRuskevich on 08.05.2014
  */
+
 public class JDBCCheeseProxy extends Cheese {
 
-    private Connection connection;
+    private CommentDAO commentDAO;
+    private LikeDAO likeDAO;
 
     public JDBCCheeseProxy(int id, String name, String description, Double price, boolean deleted,
-                           Connection connection) {
+                           CommentDAO commentDAO, LikeDAO likeDAO) {
         super(id, name, description, price, deleted);
-        this.connection = connection;
+        this.commentDAO = commentDAO;
+        this.likeDAO = likeDAO;
     }
 
     @Override
@@ -30,7 +32,7 @@ public class JDBCCheeseProxy extends Cheese {
         if (super.getLikes() == null) {
             System.out.println("[JDBC] Running lazy init for likes list...");
             super.setLikes(
-                    new JDBCLikeDAO(connection).getLikesList(this));
+                    likeDAO.getLikesList(this));
         } else {
             System.out.println("[JDBC] Likes list already in memory...");
         }
@@ -44,7 +46,7 @@ public class JDBCCheeseProxy extends Cheese {
         if (super.getComments() == null) {
             System.out.println("[JDBC] Running lazy init for comments list...");
             super.setComments(
-                    new JDBCCommentDAO(connection).getCommentsList(this));
+                    commentDAO.getCommentsList(this));
         } else {
             System.out.println("[JDBC] Comments list already in memory...");
         }

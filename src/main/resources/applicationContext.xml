@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Switch data access layer to Hibernate: -->
+    <!--<bean id="connectionManager" class="dao.hiber.HiberConnectionManager"/>-->
+
+    <!-- Switch data access layer to JDBC: -->
+    <!--<bean id="connectionManager" class="dao.jdbc.JDBCConnectionManager"/>-->
+
+    <context:component-scan base-package="cache"/>
+    <context:component-scan base-package="dao.jdbc.dao"/>
+    <context:component-scan base-package="models"/>
+    <context:component-scan base-package="war"/>
+
+    <import resource="jdbc-context.xml"/>
+
+    <bean id="dataCache" class="cache.mock.DataCacheMock">
+        <property name="addressDAO" ref="addressDAO"/>
+        <property name="cartDAO" ref="cartDAO"/>
+        <property name="cartEntryDAO" ref="cartEntryDAO"/>
+        <property name="cheeseDAO" ref="cheeseDAO"/>
+        <property name="commentDAO" ref="commentDAO"/>
+        <property name="likeDAO" ref="likeDAO"/>
+    </bean>
+
+    <bean id="modelLoader" class="models.loaders.LDModelLoader">
+        <property name="dataCache" ref="dataCache"/>
+    </bean>
+
+    <bean id="searchEngine" class="search.SearchEngine">
+        <property name="dataCache" ref="dataCache"/>
+    </bean>
+
+</beans>

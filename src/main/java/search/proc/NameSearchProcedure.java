@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * Created by Iwan on 28.04.2014
  */
+
 public class NameSearchProcedure implements ISearchProcedure {
 
     @Override

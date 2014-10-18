@@ -16,14 +16,15 @@ import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import org.apache.wicket.model.CompoundPropertyModel;
 
 import views.CheesesView;
+import war.CheeseApplication;
 
 public class AdminCheesesListPanel extends CheesePanel {
 
     public AdminCheesesListPanel(String id) {
         super(id);
 
-        final CheesesLDModel cheesesModel = new CheesesLDModel(
-                getCheeseSession().getDataCache());
+        final CheesesLDModel cheesesModel =
+                (CheesesLDModel) CheeseApplication.get().getModelLoader().getCheesesModel();
 
         final PageableListView cheeses =
                 new PageableListView("cheeses", cheesesModel, 10) {

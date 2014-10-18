@@ -8,12 +8,16 @@ import static search.StringUtils.highlightAllKeys;
 /**
  * Created by Iwan on 28.04.2014
  */
+
 public class SearchResult implements Comparable<SearchResult> {
 
     private Cheese cheese;
     private String key;
 
-    private int rank;
+    private final int rank;
+
+    private final static int NAME_WEIGHT = 10;
+    private final static int DESC_WEIGHT = 1;
 
     public SearchResult(Cheese cheese, String key) {
         this.cheese = cheese;
@@ -55,8 +59,7 @@ public class SearchResult implements Comparable<SearchResult> {
     }
 
     private int calculateRank() {
-        final int NAME_WEIGHT = 10;
-        final int DESC_WEIGHT = 1;
+
         return countSubstrings(cheese.getName(), key) * NAME_WEIGHT +
                 countSubstrings(cheese.getDescription(), key) * DESC_WEIGHT;
     }

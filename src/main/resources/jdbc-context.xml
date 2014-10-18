@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/cheesydb"/>
+        <property name="username" value="user"/>
+        <property name="password" value="userpwd"/>
+    </bean>
+
+    <!-- no proxy -->
+
+    <bean id="cartDAO" class="dao.jdbc.dao.JDBCCartDAO" init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="addressDAO" ref="addressDAO"/>
+        <property name="cartEntryDAO" ref="cartEntryDAO"/>
+    </bean>
+
+    <bean id="cartEntryDAO" class="dao.jdbc.dao.JDBCCartEntryDAO" init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="cheeseDAO" ref="cheeseDAO"/>
+    </bean>
+
+    <!-- dependent -->
+
+    <bean id="commentDAO" class="dao.jdbc.dao.JDBCCommentDAO" init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="addressDAO" ref="addressDAO"/>
+    </bean>
+
+    <bean id="likeDAO" class="dao.jdbc.dao.JDBCLikeDAO" init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="addressDAO" ref="addressDAO"/>
+    </bean>
+
+    <!-- proxy factory -->
+
+    <bean id="proxyFactory" class="dao.jdbc.proxy.JDBCProxyFactory">
+        <property name="cartDAO" ref="cartDAO"/>
+        <property name="commentDAO" ref="commentDAO"/>
+        <property name="likeDAO" ref="likeDAO"/>
+    </bean>
+
+    <!-- proxy -->
+
+    <bean id="addressDAO" class="dao.jdbc.dao.JDBCAddressDAO" init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="proxyFactory" ref="proxyFactory"/>
+    </bean>
+
+    <bean id="cheeseDAO" class="dao.jdbc.dao.JDBCCheeseDAO" init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="proxyFactory" ref="proxyFactory"/>
+    </bean>
+
+</beans>

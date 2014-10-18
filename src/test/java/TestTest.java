@@ -15,11 +15,11 @@ public class TestTest {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.cfg.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("WEB-INF/applicationContext.xml");
 
         ConnectionManager connectionManager = (ConnectionManager)context.getBean("connectionManager");
 
-        IDataCache dataCache = new DataCacheMock(connectionManager.getConnection());
+        IDataCache dataCache = new DataCacheMock();
 
         List<Cheese> cheeses = dataCache.getCheesesList();
 

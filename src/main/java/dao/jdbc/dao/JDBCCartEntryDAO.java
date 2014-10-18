@@ -5,7 +5,6 @@ import domain.Cart;
 import domain.CartEntry;
 import domain.Cheese;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,11 +15,20 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
 
     private JDBCCheeseDAO cheeseDAO;
 
-    public JDBCCartEntryDAO(Connection connection) {
+    public JDBCCartEntryDAO() {
+        super();
+        System.out.println("[JDBC] Creating Purchase DAO...");
+    }
+
+    public void setCheeseDAO(JDBCCheeseDAO cheeseDAO) {
+        this.cheeseDAO = cheeseDAO;
+    }
+
+    /*public JDBCCartEntryDAO(Connection connection) {
         super(connection);
         System.out.println("[JDBC] Creating Purchase DAO...");
         cheeseDAO = new JDBCCheeseDAO(connection); // TODO: нужен ли этот объект?
-    }
+    }*/
 
     /*@Override
     public List<CartEntry> getCartEntries(Cart cart) {

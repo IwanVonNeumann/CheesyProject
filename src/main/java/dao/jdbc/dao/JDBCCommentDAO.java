@@ -6,21 +6,27 @@ import domain.Address;
 import domain.Cheese;
 import domain.Comment;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * Created by IRuskevich on 08.05.2014
  */
+
 public class JDBCCommentDAO extends JDBCDAO implements CommentDAO{
 
     private AddressDAO addressDAO;
 
-    public JDBCCommentDAO(final Connection connection) {
-        super(connection);
-        addressDAO = new JDBCAddressDAO(connection);
+    public JDBCCommentDAO() {
+        super();
         System.out.println("[JDBC] Creating Comment DAO...");
+    }
+
+    public void setAddressDAO(AddressDAO addressDAO) {
+        this.addressDAO = addressDAO;
     }
 
     @Override

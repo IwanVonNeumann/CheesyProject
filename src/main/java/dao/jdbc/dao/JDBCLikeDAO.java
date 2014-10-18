@@ -5,7 +5,6 @@ import dao.iface.LikeDAO;
 import domain.Address;
 import domain.Cheese;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,10 +20,13 @@ public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
 
     private AddressDAO addressDAO;
 
-    public JDBCLikeDAO(Connection connection) {
-        super(connection);
-        addressDAO = new JDBCAddressDAO(connection);
+    public JDBCLikeDAO() {
+        super();
         System.out.println("[JDBC] Creating Like DAO...");
+    }
+
+    public void setAddressDAO(AddressDAO addressDAO) {
+        this.addressDAO = addressDAO;
     }
 
     @Override
