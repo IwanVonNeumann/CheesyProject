@@ -18,9 +18,14 @@ public class JDBCCheeseProxy extends Cheese {
     private CommentDAO commentDAO;
     private LikeDAO likeDAO;
 
-    public JDBCCheeseProxy(int id, String name, String description, Double price, boolean deleted,
-                           CommentDAO commentDAO, LikeDAO likeDAO) {
-        super(id, name, description, price, deleted);
+
+    public JDBCCheeseProxy(Cheese cheese, CommentDAO commentDAO, LikeDAO likeDAO) {
+        super(
+                cheese.getId(),
+                cheese.getName(),
+                cheese.getDescription(),
+                cheese.getPrice(),
+                cheese.isDeleted());
         this.commentDAO = commentDAO;
         this.likeDAO = likeDAO;
     }

@@ -3,37 +3,54 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <property name="url" value="jdbc:mysql://localhost/cheesydb"/>
         <property name="username" value="user"/>
         <property name="password" value="userpwd"/>
     </bean>
 
+    <bean id="connectionWrapper" class="dao.jdbc.ConnectionWrapper"
+          init-method="init">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--<bean id="connectionManager" class="dao.jdbc.JDBCConnectionManager" init-method="init">-->
+    <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+
     <!-- no proxy -->
 
     <bean id="cartDAO" class="dao.jdbc.dao.JDBCCartDAO" init-method="init">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="connectionWrapper" ref="connectionWrapper"/>
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
         <property name="addressDAO" ref="addressDAO"/>
         <property name="cartEntryDAO" ref="cartEntryDAO"/>
     </bean>
 
     <bean id="cartEntryDAO" class="dao.jdbc.dao.JDBCCartEntryDAO" init-method="init">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="connectionWrapper" ref="connectionWrapper"/>
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
         <property name="cheeseDAO" ref="cheeseDAO"/>
     </bean>
 
     <!-- dependent -->
 
     <bean id="commentDAO" class="dao.jdbc.dao.JDBCCommentDAO" init-method="init">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="connectionWrapper" ref="connectionWrapper"/>
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
         <property name="addressDAO" ref="addressDAO"/>
     </bean>
 
     <bean id="likeDAO" class="dao.jdbc.dao.JDBCLikeDAO" init-method="init">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="connectionWrapper" ref="connectionWrapper"/>
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
         <property name="addressDAO" ref="addressDAO"/>
     </bean>
 
@@ -48,12 +65,14 @@
     <!-- proxy -->
 
     <bean id="addressDAO" class="dao.jdbc.dao.JDBCAddressDAO" init-method="init">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="connectionWrapper" ref="connectionWrapper"/>
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
         <property name="proxyFactory" ref="proxyFactory"/>
     </bean>
 
     <bean id="cheeseDAO" class="dao.jdbc.dao.JDBCCheeseDAO" init-method="init">
-        <property name="dataSource" ref="dataSource"/>
+        <property name="connectionWrapper" ref="connectionWrapper"/>
+        <property name="jdbcTemplate" ref="jdbcTemplate"/>
         <property name="proxyFactory" ref="proxyFactory"/>
     </bean>
 

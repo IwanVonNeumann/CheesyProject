@@ -1,5 +1,6 @@
 package war;
 
+import cache.iface.IDataCache;
 import models.loaders.ModelLoader;
 import org.apache.wicket.*;
 import org.apache.wicket.protocol.http.WebApplication;
@@ -9,6 +10,8 @@ import search.SearchEngine;
 
 public class CheeseApplication extends WebApplication {
 
+    private IDataCache dataCache;
+
     private ModelLoader modelLoader;
 
     private SearchEngine searchEngine;
@@ -16,6 +19,8 @@ public class CheeseApplication extends WebApplication {
     public CheeseApplication() {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        dataCache = (IDataCache)context.getBean("dataCache");
 
         modelLoader = (ModelLoader)context.getBean("modelLoader");
 
@@ -37,7 +42,7 @@ public class CheeseApplication extends WebApplication {
 
     @Override
     public Session newSession(Request request, Response response) {
-        return new CheeseSession(request);
+        return new CheeseSession(request, dataCache);
     }
 
     public ModelLoader getModelLoader() {

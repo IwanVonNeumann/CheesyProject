@@ -2,7 +2,8 @@ package dao.iface;
 
 import domain.Address;
 import domain.Cheese;
-import domain.Title;
+
+import java.util.List;
 
 /**
  * Created by Iwan on 12.10.2014
@@ -10,9 +11,11 @@ import domain.Title;
 
 public interface ProxyFactory {
 
-    Address getAddressProxy(Title title, String name, String street, String city,
-                            Integer zipCode, int id, byte[] hash, boolean deleted);
+    Address getAddressProxy(Address address);
 
-    Cheese getCheeseProxy(int id, String name, String description, Double price,
-                          boolean deleted);
+    List<Address> getAddressProxyList(List<Address> addressList);
+
+    Cheese getCheeseProxy(Cheese cheese);
+
+    List<Cheese> getCheeseProxyList(List<Cheese> cheesesList);
 }

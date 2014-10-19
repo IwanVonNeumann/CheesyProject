@@ -1,16 +1,5 @@
 package war;
 
-/*
-// компилится :)
-import dao.iface.DBConnection;
-import dao.iface.AddressDAO;
-import dao.iface.CartDAO;
-import dao.iface.CartEntryDAO;
-import dao.iface.CheeseDAO;
-// не компилится :(
-import dao.iface.*;
-*/
-
 import cache.iface.IDataCache;
 import domain.Address;
 import domain.Cart;
@@ -24,8 +13,9 @@ public class CheeseSession extends WebSession {
 
     private IDataCache dataCache;
 
-    protected CheeseSession(Request request) {
+    protected CheeseSession(Request request, IDataCache dataCache) {
         super(request);
+        this.dataCache = dataCache;
         cart = new Cart();
     }
 

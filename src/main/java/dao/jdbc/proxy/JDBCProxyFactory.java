@@ -6,7 +6,9 @@ import dao.iface.LikeDAO;
 import dao.iface.ProxyFactory;
 import domain.Address;
 import domain.Cheese;
-import domain.Title;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Iwan on 12.10.2014
@@ -33,14 +35,38 @@ public class JDBCProxyFactory implements ProxyFactory {
         this.likeDAO = likeDAO;
     }
 
+
     @Override
-    public Address getAddressProxy(Title title, String name, String street, String city,
-                                   Integer zipCode, int id, byte[] hash, boolean deleted) {
-        return new JDBCAddressProxy(title, name, street, city, zipCode, id, hash, deleted, cartDAO);
+    public Address getAddressProxy(Address address) {
+        return new JDBCAddressProxy(address, cartDAO);
     }
 
     @Override
-    public Cheese getCheeseProxy(int id, String name, String description, Double price, boolean deleted) {
-        return new JDBCCheeseProxy(id, name, description, price, deleted, commentDAO, likeDAO);
+    public List<Address> getAddressProxyList(List<Address> addressList) {
+
+        List<Address> proxiesList = new ArrayList<>(addressList.size());
+
+        for (Address address : addressList) {
+            proxiesList.add(getAddressProxy(address));
+        }
+
+        return proxiesList;
+    }
+
+    @Override
+    public Cheese getCheeseProxy(Cheese cheese) {
+        return new JDBCCheeseProxy(cheese, commentDAO, likeDAO);
+    }
+
+    @Override
+    public List<Cheese> getCheeseProxyList(List<Cheese> cheesesList) {
+
+        List<Cheese> proxiesList = new ArrayList<>(cheesesList.size());
+
+        for (Cheese cheese : cheesesList) {
+            proxiesList.add(getCheeseProxy(cheese));
+        }
+
+        return proxiesList;
     }
 }

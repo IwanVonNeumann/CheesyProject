@@ -60,6 +60,8 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 getCheeseSession().getDataCache().
                                         safeDeleteCheese(selected);
 
+                                // TODO: все еще не работает
+
                                 // TODO:
                                 // не работает
                                 // вероятно, из-за модели:
@@ -76,6 +78,7 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 if (target != null) {
                                     AdminCheesesListPanel adminCheesesListPanel =
                                             getCheesesView().getAdminCheesesListPanel();
+                                    System.out.println("AdminCheesesListPanel: " + adminCheesesListPanel.getClass());
                                     target.addComponent(adminCheesesListPanel);
                                 }
                             }

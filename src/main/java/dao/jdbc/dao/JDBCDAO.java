@@ -1,33 +1,36 @@
 package dao.jdbc.dao;
 
-import javax.sql.DataSource;
+import dao.jdbc.ConnectionWrapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 public abstract class JDBCDAO {
 
+    private ConnectionWrapper connectionWrapper;
+
     protected Connection connection;
 
-    private DataSource dataSource;
+    protected JdbcTemplate jdbcTemplate;
 
     protected JDBCDAO() {
     }
 
     public void init() {
-        try {
-            connection = dataSource.getConnection();
-        } catch (SQLException e) {
-            System.out.println("Exceptions while getting connection...");
-        }
+        connection = connectionWrapper.getConnection();
     }
 
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
+    public void setConnectionWrapper(ConnectionWrapper connectionWrapper) {
+        this.connectionWrapper = connectionWrapper;
     }
 
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
+    // TODO прочитать о необходимости в JDBCTemplate
     protected void closeResultSet(ResultSet resultSet) {
         try {
             if (resultSet != null) {

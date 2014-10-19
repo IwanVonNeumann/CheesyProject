@@ -2,13 +2,12 @@ package dao.jdbc.dao;
 
 import dao.iface.AddressDAO;
 import dao.iface.ProxyFactory;
+import dao.jdbc.mappers.AddressRowMapper;
 import domain.Address;
-import domain.Title;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
@@ -26,80 +25,45 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
     @Override
     public List<Address> getAddressesList() {
-        List<Address> list;
-        PreparedStatement statement = null;
-        ResultSet result = null;
 
-        try {
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Customers WHERE Deleted <> ?;");
-            statement.setBoolean(1, true);
-            result = statement.executeQuery();
+        System.out.println("[JDBC] SELECT * FROM Customers\n" +
+                "\tWHERE Deleted <> true;");
 
-            System.out.println("[JDBC] SELECT * FROM Customers\n" +
-                    "\tWHERE Deleted <> true;");
-            list = new ArrayList<Address>();
-            while (result.next()) {
-                Address address = buildAddress(result);
-                list.add(address);
-            }
-            return list;
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-            System.out.println(e);
-            return null;
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-        }
+        String query = "SELECT * FROM Customers WHERE Deleted <> ?";
+
+        List<Address> addressList = jdbcTemplate.query(query, new Object[]{true}, new AddressRowMapper());
+
+        return proxyFactory.getAddressProxyList(addressList);
     }
 
+    //TODO search for usages
     @Override
     public Address getAddress(int id) {
-        PreparedStatement statement = null;
-        ResultSet result = null;
 
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Customers " +
-                            "WHERE CustomerID = ?;");
-            statement.setInt(1, id);
-            result = statement.executeQuery();
-            result.next();
-            return buildAddress(result);
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-            return null;
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-        }
+        System.out.println("[JDBC] SELECT * FROM Customers " +
+                "WHERE CustomerID = " + id + ";");
+
+        String query = "SELECT * FROM Customers WHERE CustomerID = ?";
+
+        Address address = jdbcTemplate.queryForObject(query, new Object[]{id}, new AddressRowMapper());
+
+        return proxyFactory.getAddressProxy(address);
     }
 
     @Override
     public Address getAddress(String name) {
-        PreparedStatement statement = null;
-        ResultSet result = null;
 
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Customers " +
-                            "WHERE CustomerName = ?;");
-            statement.setString(1, name);
-            result = statement.executeQuery();
-            result.next();
-            return buildAddress(result);
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-            return null;
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-        }
+        System.out.println("[JDBC] SELECT * FROM Customers " +
+                "WHERE CustomerName = " + name + ";");
+
+        String query = "SELECT * FROM Customers WHERE CustomerName = ?";
+
+        Address address = jdbcTemplate.queryForObject(query, new Object[]{name}, new AddressRowMapper());
+
+        return proxyFactory.getAddressProxy(address);
     }
 
+    //TODO -> jdbcTemplate
     @Override
     public void insertAddress(Address address) {
         if (exists(address)) return; // уже в базе
@@ -140,163 +104,48 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
     @Override
     public void updateAddress(Address address) {
-        PreparedStatement statement = null;
 
-        try {
-            //System.out.println("Updating Address with ID " + address.getId() + "...");
-            statement = connection.prepareStatement(
-                    "UPDATE Customers " +
-                            "SET CustomerName = ?, " +
-                            "Street = ?, " +
-                            "ZipCode = ?, " +
-                            "City = ?, " +
-                            "PasswordHash = ? " +
-                            "WHERE CustomerID = ?;");
-            statement.setString(1, address.getName());
-            statement.setString(2, address.getStreet());
-            statement.setInt(3, address.getZipCode());
-            statement.setString(4, address.getCity());
-            statement.setBytes(5, address.getHash());
-            statement.setInt(6, address.getId());
-            statement.executeUpdate();
-            System.out.println("[JDBC] UPDATE Customers \n" +
-                    "\tSET CustomerName = " + address.getName() + ", " +
-                    "Street = " + address.getStreet() + ", " +
-                    "ZipCode = " + address.getZipCode() + ", " +
-                    "City = " + address.getCity() + "\n" +
-                    "PasswordHash = hash\n" +
-                    "\tWHERE CustomerID = " + address.getId());
-        } catch (SQLException e) {
-            System.out.println("Exception while updating data...");
-        } finally {
-            closeStatement(statement);
-        }
+        System.out.println("[JDBC] UPDATE Customers \n" +
+                "\tSET CustomerName = " + address.getName() + ", " +
+                "Street = " + address.getStreet() + ", " +
+                "ZipCode = " + address.getZipCode() + ", " +
+                "City = " + address.getCity() + "\n" +
+                "PasswordHash = hash\n" +
+                "\tWHERE CustomerID = " + address.getId());
+
+        String query = "UPDATE Customers " +
+                "SET CustomerName = ?, Street = ?, ZipCode = ?, City = ?, PasswordHash = ? " +
+                "WHERE CustomerID = ?";
+
+        jdbcTemplate.update(query,
+                address.getName(), address.getStreet(), address.getZipCode(),
+                address.getCity(), address.getHash(), address.getId());
     }
 
     @Override
     public void safeDeleteAddress(Address address) {
-        PreparedStatement statement = null;
 
-        try {
-            //System.out.println("Safely Deleting Address with ID " + address.getId() + "...");
-            statement = connection.prepareStatement(
-                    "UPDATE Customers " +
-                            "SET Deleted = ? " +
-                            "WHERE CustomerID = ?;");
-            statement.setBoolean(1, true);
-            statement.setInt(2, address.getId());
-            statement.executeUpdate();
-            System.out.println("[JDBC] UPDATE Customers \n" +
-                    "\tSET Deleted = true \n" +
-                    "\tWHERE CustomerID = " + address.getId() + ";");
-        } catch (SQLException e) {
-            System.out.println("Exception while updating data...");
-        } finally {
-            closeStatement(statement);
-        }
+        System.out.println("[JDBC] UPDATE Customers \n" +
+                "\tSET Deleted = true \n" +
+                "\tWHERE CustomerID = " + address.getId() + ";");
+
+        String query = "UPDATE Customers SET Deleted = true WHERE CustomerID = ?";
+
+        jdbcTemplate.update(query, address.getId());
     }
 
     @Override
     public boolean exists(Address address) {
-        PreparedStatement statement = null;
-        ResultSet result = null;
 
-        try {
-            //System.out.println("Searching for Address with ID " + address.getId() + "...");
-            statement = connection.prepareStatement(
-                    "SELECT 1 FROM Customers WHERE CustomerName = ? AND Deleted <> true;");
-            statement.setString(1, address.getName());
-            System.out.println("[JDBC] SELECT 1 FROM Customers\n" +
-                    "\tWHERE CustomerName = " + address.getName() +
-                    " AND Deleted <> true");
-            result = statement.executeQuery();
-            return result.next();
-        } catch (SQLException e) {
-            System.out.println("Exception while searching for data...");
-            return false;
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-        }
+        System.out.println("[JDBC] SELECT 1 FROM Customers\n" +
+                "\tWHERE CustomerName = " + address.getName() +
+                " AND Deleted <> true");
+
+        String query = "SELECT 1 FROM Customers WHERE CustomerName = ? AND Deleted <> true";
+
+        List<Address> addressList = jdbcTemplate.query(query,
+                new Object[]{address.getName()}, new AddressRowMapper());
+
+        return addressList.size() > 0;
     }
-
-    private Address buildAddress(ResultSet result) throws SQLException {
-        return proxyFactory.getAddressProxy(
-                Title.valueOf(result.getString("Title")),
-                result.getString("CustomerName"),
-                result.getString("Street"),
-                result.getString("City"),
-                result.getInt("ZipCode"),
-                result.getInt("CustomerID"),
-                result.getBytes("PasswordHash"),
-                result.getBoolean("deleted"));
-    }
-
-
-    // включая безопасно удаленные
-    /*
-    public List<Address> getFullAddressList() {
-        //System.out.println("Accessing data...");
-            *//*statement = connection.createStatement();
-            result = statement.executeQuery(
-                    "SELECT * FROM Customers;");*//*
-        return null; //все адреса, включая удаленные
-    }*/
-
-
-    /*
-    // работает только если нет покупок
-    public void deleteAddress(Address address) {
-        PreparedStatement statement = null;
-
-        try {
-            //System.out.println("Deleting address " + address.getName() + "...");
-            statement = connection.prepareStatement(
-                    "DELETE FROM Customers WHERE CustomerID = ?;");
-            statement.setInt(1, address.getId());
-            statement.executeUpdate();
-            System.out.println("[JDBC] DELETE FROM Customers WHERE CustomerID = \"" +
-                    address.getId() + "\";");
-        } catch (SQLException e) {
-            System.out.println("Exception while deleting data...");
-        } finally {
-            closeStatement(statement);
-        }
-    }
-    */
-
-
-    // заменено
-    /*
-    private int getAddressId(Address address) {
-        PreparedStatement statement = null;
-        ResultSet result = null;
-
-        int id = 0;
-
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.prepareStatement(
-                    "SELECT CustomerID FROM Customers " +
-                            "WHERE CustomerName = ? AND Street = ? AND " +
-                            "ZipCode = ? AND City = ?;");
-            statement.setString(1, address.getName());
-            statement.setString(2, address.getStreet());
-            statement.setInt(3, address.getZipCode());
-            statement.setString(4, address.getCity());
-            result = statement.executeQuery();
-            result.next();
-            id = result.getInt("CustomerID");
-            //return id;
-
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-            return id;
-        }
-    }
-    */
-
 }

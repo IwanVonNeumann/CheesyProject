@@ -19,15 +19,6 @@ public class DataCacheMock implements IDataCache {
     private CommentDAO commentDAO;
     private LikeDAO likeDAO;
 
-    /*public DataCacheMock(DBConnection dbConnection) {
-        addressDAO = dbConnection.getAddressDAO();
-        cartDAO = dbConnection.getCartDAO();
-        cartEntryDAO = dbConnection.getCartEntryDAO();
-        cheeseDAO = dbConnection.getCheeseDAO();
-        commentDAO = dbConnection.getCommentDAO();
-        likeDAO = dbConnection.getLikeDAO();
-        System.out.println("Data Cache mock created...");
-    }*/
 
     public DataCacheMock() {
     }

@@ -8,15 +8,15 @@
     <!-- Switch data access layer to Hibernate: -->
     <!--<bean id="connectionManager" class="dao.hiber.HiberConnectionManager"/>-->
 
-    <!-- Switch data access layer to JDBC: -->
-    <!--<bean id="connectionManager" class="dao.jdbc.JDBCConnectionManager"/>-->
 
     <context:component-scan base-package="cache"/>
     <context:component-scan base-package="dao.jdbc.dao"/>
     <context:component-scan base-package="models"/>
     <context:component-scan base-package="war"/>
 
+    <!-- Switch data access layer to JDBC: -->
     <import resource="jdbc-context.xml"/>
+
 
     <bean id="dataCache" class="cache.mock.DataCacheMock">
         <property name="addressDAO" ref="addressDAO"/>

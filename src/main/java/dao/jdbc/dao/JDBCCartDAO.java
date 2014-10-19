@@ -32,12 +32,6 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
         this.cartEntryDAO = cartEntryDAO;
     }
 
-    /*public JDBCCartDAO(Connection connection) {
-        super(connection);
-        addressDAO = new JDBCAddressDAO(connection);
-        cartEntryDAO = new JDBCCartEntryDAO(connection);
-        System.out.println("[JDBC] Creating Cart DAO...");
-    }*/
 
     @Override
     public List<Cart> getCartsList() {
