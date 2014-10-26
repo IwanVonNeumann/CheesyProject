@@ -4,10 +4,14 @@ import dao.iface.AddressDAO;
 import dao.iface.ProxyFactory;
 import dao.jdbc.mappers.AddressRowMapper;
 import domain.Address;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
@@ -36,7 +40,6 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         return proxyFactory.getAddressProxyList(addressList);
     }
 
-    //TODO search for usages
     @Override
     public Address getAddress(long id) {
 
@@ -63,43 +66,38 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
         return proxyFactory.getAddressProxy(address);
     }
 
-    //TODO -> jdbcTemplate
     @Override
-    public void insertAddress(Address address) {
+    public void insertAddress(final Address address) {
         if (exists(address)) return; // уже в базе
 
-        PreparedStatement statement = null;
-        ResultSet generatedKeys = null;
+        System.out.println("[JDBC] INSERT INTO Customers (CustomerName, Street, ZipCode, City)\n" +
+                "\t\tVALUES (\"" + address.getName() + "\", \"" +
+                address.getStreet() + "\", " + address.getZipCode() + ", " +
+                address.getCity() + ", hash);");
 
-        try {
-            //System.out.println("Adding cheese " + cheese.getName() + "...");
-            statement = connection.prepareStatement(
-                    "INSERT INTO Customers (CustomerName, Street, ZipCode, City, PasswordHash, Deleted) " +
-                            "VALUES (?, ?, ?, ?, ?, ?);");
+        final String query = "INSERT INTO Customers " +
+                "(CustomerName, Street, ZipCode, City, PasswordHash, Deleted) " +
+                "VALUES (?, ?, ?, ?, ?, ?)";
 
-            statement.setString(1, address.getName());
-            statement.setString(2, address.getStreet());
-            statement.setInt(3, address.getZipCode());
-            statement.setString(4, address.getCity());
-            statement.setBytes(5, address.getHash());
-            statement.setBoolean(6, false);
-            statement.executeUpdate();
-            System.out.println("[JDBC] INSERT INTO Customers (CustomerName, Street, ZipCode, City)\n" +
-                    "\t\tVALUES (\"" + address.getName() + "\", \"" +
-                    address.getStreet() + "\", " + address.getZipCode() + ", " +
-                    address.getCity() + ", hash);");
+        KeyHolder holder = new GeneratedKeyHolder();
 
-            generatedKeys = statement.getGeneratedKeys();
-            generatedKeys.next();
-            address.setId(generatedKeys.getInt(1));
+        jdbcTemplate.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection)
+                    throws SQLException {
+                PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+                statement.setString(1, address.getName());
+                statement.setString(2, address.getStreet());
+                statement.setInt(3, address.getZipCode());
+                statement.setString(4, address.getCity());
+                statement.setBytes(5, address.getHash());
+                statement.setBoolean(6, false);
+                return statement;
+            }
+        }, holder);
 
-            System.out.println("ID granted: " + address.getId());
-        } catch (SQLException e) {
-            System.out.println("Exception while inserting data...");
-        } finally {
-            closeStatement(statement);
-            closeResultSet(generatedKeys);
-        }
+        address.setId(holder.getKey().longValue());
+        System.out.println("[JDBC] ID granted: " + address.getId());
     }
 
     @Override
@@ -137,15 +135,13 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
     @Override
     public boolean exists(Address address) {
 
-        System.out.println("[JDBC] SELECT 1 FROM Customers\n" +
-                "\tWHERE CustomerName = " + address.getName() +
-                " AND Deleted <> true");
+        System.out.println("[JDBC] SELECT 1 FROM Customers\n\t" +
+                "WHERE CustomerName = " + address.getName() + " AND Deleted <> true");
 
-        String query = "SELECT 1 FROM Customers WHERE CustomerName = ? AND Deleted <> true";
+        String query = "SELECT COUNT(CustomerID) FROM Customers WHERE CustomerName = ? AND Deleted <> true";
 
-        List<Address> addressList = jdbcTemplate.query(query,
-                new Object[]{address.getName()}, new AddressRowMapper());
+        int count = jdbcTemplate.queryForObject(query, new Object[]{address.getId()}, Integer.class);
 
-        return addressList.size() > 0;
+        return count > 0;
     }
 }

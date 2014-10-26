@@ -5,7 +5,6 @@ import dao.iface.*;
 import domain.*;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by IRuskevich on 20.03.2014
@@ -176,13 +175,21 @@ public class DataCacheMock implements IDataCache {
         commentDAO.insertComment(comment, cheese, address);
     }
 
+
+    // LikeDAO
+
     @Override
-    public Set<Address> getLikesList(Cheese cheese) {
+    public List<Address> getLikesList(Cheese cheese) {
         return likeDAO.getLikesList(cheese);
     }
 
     @Override
-    public void insertLike(Cheese cheese, Address address) {
-        likeDAO.insertLike(cheese, address);
+    public boolean exists(Like like) {
+        return false;
+    }
+
+    @Override
+    public void insertLike(Like like) {
+        likeDAO.insertLike(like);
     }
 }

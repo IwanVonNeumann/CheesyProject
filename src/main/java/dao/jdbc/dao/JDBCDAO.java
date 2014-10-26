@@ -4,8 +4,6 @@ import dao.jdbc.ConnectionWrapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 public abstract class JDBCDAO {
 
@@ -28,26 +26,5 @@ public abstract class JDBCDAO {
 
     public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
-    }
-
-    // TODO прочитать о необходимости в JDBCTemplate
-    protected void closeResultSet(ResultSet resultSet) {
-        try {
-            if (resultSet != null) {
-                resultSet.close();
-            }
-        } catch (Exception e) {
-            System.out.println("Exception while closing ResultSet...");
-        }
-    }
-
-    protected void closeStatement(Statement statement) {
-        try {
-            if (statement != null) {
-                statement.close();
-            }
-        } catch (Exception e) {
-            System.out.println("Exception while closing Statement...");
-        }
     }
 }

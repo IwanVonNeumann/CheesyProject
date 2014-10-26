@@ -2,15 +2,19 @@ package dao.iface;
 
 import domain.Address;
 import domain.Cheese;
+import domain.Like;
 
-import java.util.Set;
+import java.util.List;
 
 /**
  * Created by IRuskevich on 10.05.2014
  */
+
 public interface LikeDAO {
 
-    Set<Address> getLikesList(Cheese cheese);
+    List<Address> getLikesList(Cheese cheese);
 
-    void insertLike(Cheese cheese, Address address);
+    boolean exists(Like like);
+
+    void insertLike(Like like);
 }

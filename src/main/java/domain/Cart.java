@@ -17,13 +17,6 @@ public class Cart implements Serializable {
         entries = new LinkedList<>();
     }
 
-    // цивилизованное извлечение из базы
-    public Cart(int id, List<CartEntry> entries, Address address, Timestamp time) {
-        this.id = id;
-        this.entries = entries;
-        this.address = address;
-        this.time = time;
-    }
 
     public long getId() {
         return id;

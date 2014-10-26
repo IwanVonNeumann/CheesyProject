@@ -41,7 +41,6 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 //      return jdbcTemplate.queryForList(query, Cheese.class); //TODO
     }
 
-    //TODO search for usages
     @Override
     public Cheese getCheese(long id) {
 
@@ -118,15 +117,14 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
     @Override
     public boolean exists(Cheese cheese) {
 
-        System.out.println("[JDBC] SELECT 1 FROM Cheeses\n" +
-                "\tWHERE CheeseName = " + cheese.getName() + " AND Deleted <> true");
+        System.out.println("[JDBC] SELECT COUNT(CheeseID) FROM Cheeses\n\t" +
+                "WHERE CheeseName = " + cheese.getName() + " AND Deleted <> true");
 
-        String query = "SELECT 1 FROM Cheeses WHERE CheeseName = ? AND Deleted <> true";
+        String query = "SELECT COUNT(CheeseID) FROM Cheeses WHERE CheeseName = ? AND Deleted <> true";
 
-        List<Cheese> cheesesList = jdbcTemplate.query(query,
-                new Object[]{cheese.getName()}, new CheeseRowMapper());
+        int count = jdbcTemplate.queryForObject(query, new Object[]{cheese.getId()}, Integer.class);
 
-        return cheesesList.size() > 0;
+        return count > 0;
     }
 
     @Override

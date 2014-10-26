@@ -2,21 +2,25 @@ package dao.jdbc.dao;
 
 import dao.iface.AddressDAO;
 import dao.iface.CommentDAO;
+import dao.jdbc.mappers.CommentRowMapper;
 import domain.Address;
 import domain.Cheese;
 import domain.Comment;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.LinkedList;
+import java.sql.Statement;
 import java.util.List;
 
 /**
  * Created by IRuskevich on 08.05.2014
  */
 
-public class JDBCCommentDAO extends JDBCDAO implements CommentDAO{
+public class JDBCCommentDAO extends JDBCDAO implements CommentDAO {
 
     private AddressDAO addressDAO;
 
@@ -31,72 +35,44 @@ public class JDBCCommentDAO extends JDBCDAO implements CommentDAO{
 
     @Override
     public List<Comment> getCommentsList(Cheese cheese) {
-        List<Comment> list;
-        PreparedStatement statement = null;
-        ResultSet result = null;
 
-        try {
-            //System.out.println("Accessing data...");
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Comments WHERE CheeseID = ?;");
-            statement.setLong(1, cheese.getId());
-            result = statement.executeQuery();
-            System.out.println("[JDBC] SELECT * FROM Comments\n\t" +
-                    "WHERE CheeseID = " + cheese.getId() + ";");
-            list = new LinkedList<>();
-            while (result.next()) {
-                list.add(buildComment(result));
-            }
-            return list;
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-            return null;
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-        }
+        System.out.println("[JDBC] SELECT * FROM Comments\n\t" +
+                "WHERE CheeseID = " + cheese.getId() + ";");
+
+        String query = "SELECT * FROM Comments WHERE CheeseID = ?";
+
+        return jdbcTemplate.query(query, new Object[]{cheese.getId()},
+                new CommentRowMapper(addressDAO));
     }
 
     @Override
-    public void insertComment(Comment comment, Cheese cheese, Address address) {
-        PreparedStatement statement = null;
+    public void insertComment(final Comment comment, final Cheese cheese, final Address address) {
 
-        try {
-            System.out.println("Adding Comment for " +
-                    cheese.getName() + "...");
-            System.out.println("Cheese ID: " + cheese.getId());
-            System.out.println("Cheese name: " + cheese.getName());
-            System.out.println("Comment text: " + comment.getText());
-            System.out.println("Author: " + address.getName());
+        System.out.println("[JDBC] INSERT INTO Comments\n" +
+                "\t(CheeseID, CustomerID, Text, Clock)\n" +
+                "\tVALUES (" + cheese.getId() + ", " + address.getId() + ", " +
+                comment.getText() + ", date);");
 
-            statement = connection.prepareStatement(
-                    "INSERT INTO Comments " +
-                            "(CommentID, CheeseID, CustomerID, Text, Clock) " +
-                            "VALUES (?, ?, ?, ?, ?);");
-            statement.setLong(1, comment.getId()); // TODO: пересмотреть необходимость
-            statement.setLong(2, cheese.getId());
-            statement.setLong(3, address.getId());
-            statement.setString(4, comment.getText());
-            statement.setTimestamp(5, comment.getTime()); // База отбрасывает милисекунды
-            statement.executeUpdate();
-            System.out.println("[JDBC] INSERT INTO Comments\n" +
-                    "\t(CommentID, CheeseID, CustomerID, Text, Clock)\n" +
-                    "\tVALUES (" + comment.getId() + ", " +
-                    cheese.getId() + ", " + address.getId() + ", " +
-                    comment.getText() + ", date);");
-        } catch (SQLException e) {
-            System.out.println("Exception while inserting data...");
-        } finally {
-            closeStatement(statement);
-        }
-    }
+        final String query = "INSERT INTO Comments " +
+                "(CheeseID, CustomerID, Text, Clock) " +
+                "VALUES (?, ?, ?, ?)";
 
-    private Comment buildComment(ResultSet result) throws SQLException {
-        int customerId = result.getInt("CustomerID");
-        Address address = addressDAO.getAddress(customerId);
-        return new Comment(result.getInt("CommentID"),
-                result.getString("Text"),
-                result.getTimestamp("Clock"),
-                address);
+        KeyHolder holder = new GeneratedKeyHolder();
+
+        jdbcTemplate.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection)
+                    throws SQLException {
+                PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+                statement.setLong(1, cheese.getId());
+                statement.setLong(2, address.getId());
+                statement.setString(3, comment.getText());
+                statement.setTimestamp(4, comment.getTime()); // База отбрасывает милисекунды
+                return statement;
+            }
+        }, holder);
+
+        comment.setId(holder.getKey().longValue());
+        System.out.println("[JDBC] ID granted: " + comment.getId());
     }
 }

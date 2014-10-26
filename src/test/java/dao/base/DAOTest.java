@@ -1,7 +1,6 @@
 package dao.base;
 
 import dao.iface.ConnectionManager;
-import dao.jdbc.JDBCConnectionManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
@@ -35,7 +34,7 @@ public abstract class DAOTest {
 
         connect();
 
-        connectionManager = new JDBCConnectionManager();
+//        connectionManager = new JDBCConnectionManager();
     }
 
     @AfterClass

@@ -17,7 +17,7 @@ public class CartEntry implements Serializable { // какого?
     }
 
     public CartEntry(Cheese cheese, int quantity) {
-        this(cheese);
+        this.cheese = cheese;
         this.quantity = quantity;
     }
 
@@ -33,6 +33,10 @@ public class CartEntry implements Serializable { // какого?
         return quantity;
     }
 
+    public long getCheeseId() {
+        return cheese.getId();
+    }
+
 
     public void setId(long id) {
         this.id = id;
@@ -46,10 +50,6 @@ public class CartEntry implements Serializable { // какого?
         this.quantity = quantity;
     }
 
-
-    public long getCheeseId() {
-        return cheese.getId();
-    }
 
     public String getName() {
         return cheese.getName();

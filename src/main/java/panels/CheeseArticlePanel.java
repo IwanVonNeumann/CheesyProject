@@ -3,6 +3,7 @@ package panels;
 import domain.Address;
 import domain.Cart;
 import domain.Cheese;
+import domain.Like;
 import look.CurrencyLabel;
 import org.apache.wicket.ResourceReference;
 import org.apache.wicket.ajax.AjaxRequestTarget;
@@ -10,7 +11,6 @@ import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.markup.html.image.Image;
-import org.apache.wicket.markup.html.link.ResourceLink;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
 import views.StoreView;
@@ -18,6 +18,9 @@ import views.StoreView;
 /**
  * Created by IRuskevich on 09.05.2014
  */
+
+// TODO make like inactive if already liked
+// TODO get list of likes
 public class CheeseArticlePanel extends CheesePanel {
 
     private Cheese cheese;
@@ -82,7 +85,7 @@ public class CheeseArticlePanel extends CheesePanel {
             public void onClick(AjaxRequestTarget target) {
                 Address address = getCheeseSession().getAddress();
                 if (cheese.like(address)) {
-                    getCheeseSession().getDataCache().insertLike(cheese, address);
+                    getCheeseSession().getDataCache().insertLike(new Like(cheese, address));
 
                     if (target != null) {
                         target.addComponent(likesCount);

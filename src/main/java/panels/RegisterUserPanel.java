@@ -83,7 +83,7 @@ public class RegisterUserPanel extends CheesePanel {
             @Override
             public void onSubmit() {
                 super.onSubmit();
-                Address address = (Address) getParent().getModelObject();
+                Address address = (Address) getParent().getModelObject(); // TODO fix classCastEx
                 address.setPassword(password1);
                 getCheeseSession().getDataCache().insertAddress(address);
                 getCheeseSession().setAddress(address);

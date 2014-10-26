@@ -7,7 +7,6 @@ import domain.Cheese;
 import domain.Comment;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by IRuskevich on 08.05.2014
@@ -31,7 +30,7 @@ public class JDBCCheeseProxy extends Cheese {
     }
 
     @Override
-    public Set<Address> getLikes() {
+    public List<Address> getLikes() {
         System.out.println("[JDBC] Cheese proxy call for " +
                 getName() + "...");
         if (super.getLikes() == null) {

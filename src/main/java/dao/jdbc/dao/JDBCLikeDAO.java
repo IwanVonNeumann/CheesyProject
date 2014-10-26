@@ -1,101 +1,90 @@
 package dao.jdbc.dao;
 
-import dao.iface.AddressDAO;
 import dao.iface.LikeDAO;
+import dao.jdbc.mappers.AddressRowMapper;
 import domain.Address;
 import domain.Cheese;
+import domain.Like;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.sql.Statement;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by IRuskevich on 10.05.2014
  */
-public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
 
-    private AddressDAO addressDAO;
+public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
 
     public JDBCLikeDAO() {
         super();
         System.out.println("[JDBC] Creating Like DAO...");
     }
 
-    public void setAddressDAO(AddressDAO addressDAO) {
-        this.addressDAO = addressDAO;
+    @Override
+    public List<Address> getLikesList(Cheese cheese) {
+
+        System.out.println("[JDBC] SELECT " +
+                "Customers.CustomerID as CustomerID, CustomerName, " +
+                "Street, ZipCode, City, PasswordHash, Deleted, Title\n\t" +
+                "FROM Likes INNER JOIN Customers on Likes.CustomerID = Customers.CustomerID\n\t" +
+                "WHERE CheeseID = " + cheese.getId() + ";");
+
+        String query = "SELECT " +
+                "Customers.CustomerID as CustomerID, CustomerName, " +
+                "Street, ZipCode, City, PasswordHash, Deleted, Title " +
+                "FROM Likes INNER JOIN Customers on Likes.CustomerID = Customers.CustomerID " +
+                "WHERE CheeseID = ?";
+
+        return jdbcTemplate.query(query, new Object[]{cheese.getId()}, new AddressRowMapper());
     }
 
     @Override
-    public Set<Address> getLikesList(Cheese cheese) {
-        List<Integer> addresses;
-        Set<Address> list;
-        PreparedStatement statement = null;
-        ResultSet result = null;
+    public void insertLike(final Like like) {
+        if (exists(like)) return;
 
-        try {
-            //System.out.println("Accessing data...");
+        System.out.println("[JDBC] INSERT INTO Likes\n" +
+                "\t(CheeseID, CustomerID)\n" +
+                "\tVALUES (" + like.getCheese().getId() + ", " + like.getAddress().getId() + ");");
 
-            // Consider
-            // SELECT LikeID, CheeseName, CustomerName
-            // FROM Cheeses INNER JOIN Likes
-            // ON Cheeses.CheeseID = Likes.CheeseID
-            // INNER JOIN Customers
-            // ON Likes.CustomerID = Customers.CustomerID;
+        final String query = "INSERT INTO Likes " +
+                "(CheeseID, CustomerID) " +
+                "VALUES (?, ?);";
 
-            statement = connection.prepareStatement(
-                    "SELECT * FROM Likes WHERE CheeseID = ?;");
-            statement.setLong(1, cheese.getId());
-            result = statement.executeQuery();
-            System.out.println("[JDBC] SELECT * FROM Likes\n\t" +
-                    "WHERE CheeseID = " + cheese.getId() + ";");
-            addresses = new LinkedList<>();
-            while (result.next()) {
-                addresses.add(result.getInt("CustomerID"));
+        KeyHolder holder = new GeneratedKeyHolder();
+
+        jdbcTemplate.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection)
+                    throws SQLException {
+                PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+                statement.setLong(1, like.getCheese().getId());
+                statement.setLong(2, like.getAddress().getId());
+                return statement;
             }
-            list = new HashSet<>(addresses.size());
-            for (Integer i : addresses) {
-                list.add(addressDAO.getAddress(i));
-            }
-            return list;
-        } catch (SQLException e) {
-            System.out.println("Exception while accessing data...");
-            return null;
-        } finally {
-            closeResultSet(result);
-            closeStatement(statement);
-        }
+        }, holder);
+
+//        like.setId(holder.getKey().longValue());
+//        System.out.println("[JDBC] ID granted: " + like.getId());
     }
 
     @Override
-    public void insertLike(Cheese cheese, Address address) {
-        PreparedStatement statement = null;
+    public boolean exists(Like like) {
 
-        try {
-            System.out.println("Adding Like for " +
-                    cheese.getName() + "...");
-            System.out.println("Cheese ID: " + cheese.getId());
-            System.out.println("Cheese name: " + cheese.getName());
-            System.out.println("Customer: " + address.getName());
+        System.out.println("[JDBC] SELECT COUNT(LikeID) FROM Cheeses\n" +
+                "\tWHERE CheeseID = " + like.getCheese().getId() +
+                " AND CustomerID = " + like.getAddress().getId() + ";");
 
-            statement = connection.prepareStatement(
-                    "INSERT INTO Likes " +
-                            "(CheeseID, CustomerID) " +
-                            "VALUES (?, ?);");
-            statement.setLong(1, cheese.getId());
-            statement.setLong(2, address.getId());
+        String query = "SELECT COUNT(LikeID) FROM Likes WHERE CheeseID = ? AND CustomerID = ?";
 
-            statement.executeUpdate();
-            System.out.println("[JDBC] INSERT INTO Likes\n" +
-                    "\t(CheeseID, CustomerID)\n" +
-                    "\tVALUES (" + cheese.getId() + ", " + address.getId() + ");");
-        } catch (SQLException e) {
-            System.out.println("Exception while inserting data...");
-        } finally {
-            closeStatement(statement);
-        }
+        int count = jdbcTemplate.queryForObject(query,
+                new Object[]{like.getCheese().getId(), like.getAddress().getId()}, Integer.class);
+
+        return count > 0;
     }
 }

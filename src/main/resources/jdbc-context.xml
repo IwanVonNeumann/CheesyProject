@@ -51,7 +51,6 @@
     <bean id="likeDAO" class="dao.jdbc.dao.JDBCLikeDAO" init-method="init">
         <property name="connectionWrapper" ref="connectionWrapper"/>
         <property name="jdbcTemplate" ref="jdbcTemplate"/>
-        <property name="addressDAO" ref="addressDAO"/>
     </bean>
 
     <!-- proxy factory -->
