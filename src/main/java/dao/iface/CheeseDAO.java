@@ -1,7 +1,6 @@
 package dao.iface;
 
 import domain.Cheese;
-import search.SearchEngine;
 
 import java.util.List;
 
@@ -14,7 +13,7 @@ public interface CheeseDAO {
 
     boolean exists(Cheese cheese);
 
-    Cheese getCheese(int id);
+    Cheese getCheese(long id);
 
     void addCheese(Cheese cheese);
 

@@ -7,7 +7,7 @@ import java.sql.Timestamp;
  */
 public class Comment {
 
-    private int id;
+    private long id;
     private String text;
     private Timestamp time;
     private Address address;
@@ -24,7 +24,7 @@ public class Comment {
 
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -42,7 +42,7 @@ public class Comment {
 
 
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

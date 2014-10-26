@@ -36,7 +36,7 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
     }*/
 
     @Override
-    public List<CartEntry> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(long cartId) {
         List<CartEntry> list;
         PreparedStatement statement = null;
         ResultSet result = null;
@@ -46,13 +46,13 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
             statement = connection.prepareStatement(
                     "SELECT * FROM CartEntries " +
                             "WHERE CartID = ?;");
-            statement.setInt(1, cartId);
+            statement.setLong(1, cartId);
             result = statement.executeQuery();
 
             System.out.println("[JDBC] SELECT * FROM CartEntries " +
                     "WHERE CartID = " + cartId + ";");
 
-            list = new ArrayList<CartEntry>();
+            list = new ArrayList<>();
             while (result.next()) {
                 list.add(buildMultiCheese(result));
             }
@@ -82,8 +82,8 @@ public class JDBCCartEntryDAO extends JDBCDAO implements CartEntryDAO {
                     "INSERT INTO CartEntries " +
                             "(CheeseID, CartID, Quantity) " +
                             "VALUES (?, ?, ?);");
-            statement.setInt(1, cheese.getCheeseId());
-            statement.setInt(2, cart.getId());
+            statement.setLong(1, cheese.getCheeseId());
+            statement.setLong(2, cart.getId());
             statement.setInt(3, cheese.getQuantity());
             statement.executeUpdate();
             System.out.println("[JDBC] INSERT INTO CartEntries " +

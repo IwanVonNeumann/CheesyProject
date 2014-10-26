@@ -39,7 +39,7 @@ public class HiberCartEntryDAO extends HiberDAO implements CartEntryDAO {
     // TODO пересмотреть, нужен ли метод:
     // загрузка корзины должна вытащить записи каскадом
     @Override
-    public List<CartEntry> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(long cartId) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Query query = session.createQuery("from CartEntry where CartID = :id");

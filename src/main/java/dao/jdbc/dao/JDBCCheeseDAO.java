@@ -4,10 +4,14 @@ import dao.iface.CheeseDAO;
 import dao.iface.ProxyFactory;
 import dao.jdbc.mappers.CheeseRowMapper;
 import domain.Cheese;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
@@ -39,7 +43,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
 
     //TODO search for usages
     @Override
-    public Cheese getCheese(int id) {
+    public Cheese getCheese(long id) {
 
         System.out.println("[JDBC] SELECT * FROM Cheeses " +
                 "WHERE CheeseID = " + id + ";");
@@ -63,38 +67,34 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
         jdbcTemplate.update(query, cheese.getId());
     }
 
-    //TODO -> jdbcTemplate
     @Override
     public void addCheese(final Cheese cheese) {
         if (exists(cheese)) return; // уже в базе
 
-        PreparedStatement statement = null;
-        ResultSet generatedKeys;
-
-        try {
-            //System.out.println("Adding cheese " + cheese.getName() + "...");
-            statement = connection.prepareStatement(
-                    "INSERT INTO Cheeses (CheeseName, Description, Price, Deleted) " +
-                            "VALUES (?, ?, ?, ?);");
-            statement.setString(1, cheese.getName());
-            statement.setString(2, cheese.getDescription());
-            statement.setDouble(3, cheese.getPrice());
-            statement.setBoolean(4, false);
-            statement.executeUpdate();
-            System.out.println("[JDBC] INSERT INTO Cheeses (CheeseName, Description, Price)\n" +
+        System.out.println("[JDBC] INSERT INTO Cheeses (CheeseName, Description, Price)\n" +
                     "\t\tVALUES (\"" + cheese.getName() + "\", \"" +
-                    cheese.getDescription() + "\", " + cheese.getPrice() + ");");
+                    cheese.getDescription() + "\", " + cheese.getPrice() + ")");
 
-            generatedKeys = statement.getGeneratedKeys();
-            generatedKeys.next();
-            cheese.setId(generatedKeys.getInt(1));
+        final String query = "INSERT INTO Cheeses (CheeseName, Description, Price, Deleted) " +
+                "VALUES (?, ?, ?, ?)";
 
-            System.out.println("ID granted: " + cheese.getId());
-        } catch (SQLException e) {
-            System.out.println("Exception while inserting data...");
-        } finally {
-            closeStatement(statement);
-        }
+        KeyHolder holder = new GeneratedKeyHolder();
+
+        jdbcTemplate.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection connection)
+                    throws SQLException {
+                PreparedStatement statement = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+                statement.setString(1, cheese.getName());
+                statement.setString(2, cheese.getDescription());
+                statement.setDouble(3, cheese.getPrice());
+                statement.setBoolean(4, false);
+                return statement;
+            }
+        }, holder);
+
+        cheese.setId(holder.getKey().longValue());
+        System.out.println("[JDBC] ID granted: " + cheese.getId());
     }
 
     @Override
@@ -114,6 +114,7 @@ public class JDBCCheeseDAO extends JDBCDAO implements CheeseDAO {
                 cheese.getName(), cheese.getDescription(), cheese.getPrice(), cheese.getId());
     }
 
+    // TODO possible query review
     @Override
     public boolean exists(Cheese cheese) {
 

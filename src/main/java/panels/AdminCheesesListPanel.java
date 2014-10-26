@@ -78,7 +78,7 @@ public class AdminCheesesListPanel extends CheesePanel {
                                 if (target != null) {
                                     AdminCheesesListPanel adminCheesesListPanel =
                                             getCheesesView().getAdminCheesesListPanel();
-                                    System.out.println("AdminCheesesListPanel: " + adminCheesesListPanel.getClass());
+//                                    System.out.println("AdminCheesesListPanel: " + adminCheesesListPanel.getClass());
                                     target.addComponent(adminCheesesListPanel);
                                 }
                             }

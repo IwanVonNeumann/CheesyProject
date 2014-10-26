@@ -1,7 +1,6 @@
 package dao.base;
 
 import dao.iface.AddressDAO;
-import dao.jdbc.dao.JDBCAddressDAO;
 
 import domain.Address;
 

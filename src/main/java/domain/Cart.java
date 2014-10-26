@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Cart implements Serializable {
 
-    private int id;
+    private long id;
     private List<CartEntry> entries;
     private Address address;
     private Timestamp time;
@@ -25,7 +25,7 @@ public class Cart implements Serializable {
         this.time = time;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -42,7 +42,7 @@ public class Cart implements Serializable {
     }
 
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

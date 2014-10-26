@@ -8,7 +8,7 @@ import static security.PasswordManager.passwordIsCorrect;
 
 public class Address {
 
-    private int id;
+    private long id;
     private Title title;
     private String name;
     private String street;
@@ -43,13 +43,17 @@ public class Address {
 
     // считывание из базы
     public Address(Title title, String name, String street, String city,
-                   Integer zipCode, int id, byte[] hash, boolean deleted) {
+                   Integer zipCode, long id, byte[] hash, boolean deleted) {
         this(title, name, street, city, zipCode);
         this.id = id;
         this.deleted = deleted;
         setHash(hash);
     }
 
+
+    public long getId() {
+        return id;
+    }
 
     public Title getTitle() {
         return title;
@@ -71,10 +75,6 @@ public class Address {
         return zipCode;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public byte[] getHash() {
         return hash;
     }
@@ -87,6 +87,10 @@ public class Address {
         return purchases;
     }
 
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public void setTitle(Title title) {
         this.title = title;
@@ -108,9 +112,6 @@ public class Address {
         this.zipCode = zipCode;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public void setHash(byte[] hash) {
         if (hash != null) {

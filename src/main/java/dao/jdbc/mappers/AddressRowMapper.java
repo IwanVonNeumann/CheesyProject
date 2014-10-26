@@ -22,7 +22,7 @@ public class AddressRowMapper implements RowMapper<Address> {
                 resultSet.getString("Street"),
                 resultSet.getString("City"),
                 resultSet.getInt("ZipCode"),
-                resultSet.getInt("CustomerID"),
+                resultSet.getLong("CustomerID"),
                 resultSet.getBytes("PasswordHash"),
                 resultSet.getBoolean("deleted"));
         return address;

@@ -13,7 +13,7 @@ public interface AddressDAO {
 
     boolean exists(Address address);
 
-    Address getAddress(int id);
+    Address getAddress(long id);
 
     Address getAddress(String name);
 

@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class Cheese {
 
-    private int id;
+    private long id;
     private String name;
     private String description;
     private Double price;
@@ -18,7 +18,7 @@ public class Cheese {
     public Cheese() {
     }
 
-    public Cheese(int id, String name, String description, Double price) {
+    public Cheese(long id, String name, String description, Double price) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -26,13 +26,13 @@ public class Cheese {
     }
 
     // добавлен для отладки
-    public Cheese(int id, String name, String description, Double price, boolean deleted) {
+    public Cheese(long id, String name, String description, Double price, boolean deleted) {
         this(id, name, description, price);
         this.deleted = deleted;
     }
 
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -61,7 +61,7 @@ public class Cheese {
     }
 
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

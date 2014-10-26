@@ -69,7 +69,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
             //System.out.println("Accessing data...");
             statement = connection.prepareStatement(
                     "SELECT * FROM Carts WHERE CustomerID = ?;");
-            statement.setInt(1, address.getId());
+            statement.setLong(1, address.getId());
             result = statement.executeQuery();
             System.out.println("[JDBC] SELECT * FROM Carts\n\t" +
                     "WHERE CustomerID = " + address.getId() + ";");
@@ -97,7 +97,7 @@ public class JDBCCartDAO extends JDBCDAO implements CartDAO {
                     "INSERT INTO Carts (Clock, CustomerID) " +
                             "VALUES (?, ?);");
             statement.setTimestamp(1, cart.getTime()); // База отбрасывает милисекунды
-            statement.setInt(2, cart.getAddress().getId());
+            statement.setLong(2, cart.getAddress().getId());
             statement.executeUpdate();
 
             generatedKeys = statement.getGeneratedKeys();

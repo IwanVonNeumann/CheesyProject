@@ -45,7 +45,7 @@ public class DataCache implements IDataCache {
     }
 
     @Override
-    public Address getAddress(int id) {
+    public Address getAddress(long id) {
         return addressCache.getAddress(id);
     }
 
@@ -102,7 +102,7 @@ public class DataCache implements IDataCache {
     }*/
 
     @Override
-    public List<CartEntry> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(long cartId) {
         return cartEntryCache.getCartEntries(cartId);
     }
 
@@ -115,7 +115,7 @@ public class DataCache implements IDataCache {
     }
 
     @Override
-    public Cheese getCheese(int id) {
+    public Cheese getCheese(long id) {
         return cheeseCache.getCheese(id);
     }
 

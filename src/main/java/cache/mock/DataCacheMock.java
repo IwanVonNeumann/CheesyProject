@@ -60,7 +60,7 @@ public class DataCacheMock implements IDataCache {
     }
 
     @Override
-    public Address getAddress(int id) {
+    public Address getAddress(long id) {
         return addressDAO.getAddress(id);
     }
 
@@ -111,7 +111,7 @@ public class DataCacheMock implements IDataCache {
     }*/
 
     @Override
-    public List<CartEntry> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(long cartId) {
         return cartEntryDAO.getCartEntries(cartId);
     }
 
@@ -129,7 +129,7 @@ public class DataCacheMock implements IDataCache {
     }
 
     @Override
-    public Cheese getCheese(int id) {
+    public Cheese getCheese(long id) {
         return cheeseDAO.getCheese(id);
     }
 

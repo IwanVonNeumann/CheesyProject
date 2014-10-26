@@ -40,7 +40,7 @@ public class HiberAddressDAO extends HiberDAO implements AddressDAO {
     }
 
     @Override
-    public Address getAddress(int id) {
+    public Address getAddress(long id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Address address = (Address)session.get(Address.class, id);

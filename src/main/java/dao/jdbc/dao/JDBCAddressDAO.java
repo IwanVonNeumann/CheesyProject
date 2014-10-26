@@ -38,7 +38,7 @@ public class JDBCAddressDAO extends JDBCDAO implements AddressDAO {
 
     //TODO search for usages
     @Override
-    public Address getAddress(int id) {
+    public Address getAddress(long id) {
 
         System.out.println("[JDBC] SELECT * FROM Customers " +
                 "WHERE CustomerID = " + id + ";");

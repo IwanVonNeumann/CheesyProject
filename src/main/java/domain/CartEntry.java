@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class CartEntry implements Serializable { // какого?
 
-    private int id;
+    private long id;
     private Cheese cheese;
     private int quantity;
 
@@ -21,7 +21,7 @@ public class CartEntry implements Serializable { // какого?
         this.quantity = quantity;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -34,7 +34,7 @@ public class CartEntry implements Serializable { // какого?
     }
 
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -47,7 +47,7 @@ public class CartEntry implements Serializable { // какого?
     }
 
 
-    public int getCheeseId() {
+    public long getCheeseId() {
         return cheese.getId();
     }
 

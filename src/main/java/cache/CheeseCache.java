@@ -36,7 +36,7 @@ public class CheeseCache implements CheeseDAO {
     }
 
     @Override
-    public Cheese getCheese(int id) {
+    public Cheese getCheese(long id) {
         for (Cheese cheese : cheeses) {
             if (cheese.getId() == id)
                 return cheese;

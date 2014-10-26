@@ -36,7 +36,7 @@ public class AddressCache implements AddressDAO {
     }
 
     @Override
-    public Address getAddress(int id) {
+    public Address getAddress(long id) {
         for (Address address : addresses) {
             if (address.getId() == id) return address;
         }

@@ -15,7 +15,7 @@ public class CheeseRowMapper implements RowMapper<Cheese> {
     @Override
     public Cheese mapRow(ResultSet resultSet, int i) throws SQLException {
         Cheese cheese = new Cheese();
-        cheese.setId(resultSet.getInt("CheeseID"));
+        cheese.setId(resultSet.getLong("CheeseID"));
         cheese.setName(resultSet.getString("CheeseName"));
         cheese.setDescription(resultSet.getString("Description"));
         cheese.setPrice(resultSet.getDouble("Price"));

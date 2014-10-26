@@ -28,7 +28,7 @@ public class HiberCheeseDAO extends HiberDAO implements CheeseDAO {
     }
 
     @Override
-    public Cheese getCheese(int id) {
+    public Cheese getCheese(long id) {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         Cheese cheese = (Cheese) session.get(Cheese.class, id);

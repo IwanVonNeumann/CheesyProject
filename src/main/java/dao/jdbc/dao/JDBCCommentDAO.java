@@ -39,7 +39,7 @@ public class JDBCCommentDAO extends JDBCDAO implements CommentDAO{
             //System.out.println("Accessing data...");
             statement = connection.prepareStatement(
                     "SELECT * FROM Comments WHERE CheeseID = ?;");
-            statement.setInt(1, cheese.getId());
+            statement.setLong(1, cheese.getId());
             result = statement.executeQuery();
             System.out.println("[JDBC] SELECT * FROM Comments\n\t" +
                     "WHERE CheeseID = " + cheese.getId() + ";");
@@ -73,9 +73,9 @@ public class JDBCCommentDAO extends JDBCDAO implements CommentDAO{
                     "INSERT INTO Comments " +
                             "(CommentID, CheeseID, CustomerID, Text, Clock) " +
                             "VALUES (?, ?, ?, ?, ?);");
-            statement.setInt(1, comment.getId()); // TODO: пересмотреть необходимость
-            statement.setInt(2, cheese.getId());
-            statement.setInt(3, address.getId());
+            statement.setLong(1, comment.getId()); // TODO: пересмотреть необходимость
+            statement.setLong(2, cheese.getId());
+            statement.setLong(3, address.getId());
             statement.setString(4, comment.getText());
             statement.setTimestamp(5, comment.getTime()); // База отбрасывает милисекунды
             statement.executeUpdate();

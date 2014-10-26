@@ -26,7 +26,7 @@ public class CartEntryCache implements CartEntryDAO {
     }*/
 
     @Override
-    public List<CartEntry> getCartEntries(int cartId) {
+    public List<CartEntry> getCartEntries(long cartId) {
         return cartEntryDAO.getCartEntries(cartId);
     }
 

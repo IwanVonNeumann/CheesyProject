@@ -48,7 +48,7 @@ public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
 
             statement = connection.prepareStatement(
                     "SELECT * FROM Likes WHERE CheeseID = ?;");
-            statement.setInt(1, cheese.getId());
+            statement.setLong(1, cheese.getId());
             result = statement.executeQuery();
             System.out.println("[JDBC] SELECT * FROM Likes\n\t" +
                     "WHERE CheeseID = " + cheese.getId() + ";");
@@ -85,8 +85,8 @@ public class JDBCLikeDAO extends JDBCDAO implements LikeDAO {
                     "INSERT INTO Likes " +
                             "(CheeseID, CustomerID) " +
                             "VALUES (?, ?);");
-            statement.setInt(1, cheese.getId());
-            statement.setInt(2, address.getId());
+            statement.setLong(1, cheese.getId());
+            statement.setLong(2, address.getId());
 
             statement.executeUpdate();
             System.out.println("[JDBC] INSERT INTO Likes\n" +

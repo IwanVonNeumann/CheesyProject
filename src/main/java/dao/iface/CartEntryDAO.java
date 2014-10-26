@@ -14,7 +14,7 @@ public interface CartEntryDAO {
 
     // какой из двух методов логичнее оставить?
     // или нужны оба?
-    List<CartEntry> getCartEntries(int cartId);
+    List<CartEntry> getCartEntries(long cartId);
 
     // возможно, стоит переделать на
     // void insertCartEntry(int cartId, CartEntry cheese);
