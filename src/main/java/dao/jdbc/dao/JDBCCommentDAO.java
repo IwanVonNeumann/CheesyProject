@@ -45,6 +45,7 @@ public class JDBCCommentDAO extends JDBCDAO implements CommentDAO {
                 new CommentRowMapper(addressDAO));
     }
 
+    // TODO: remove Address from signature
     @Override
     public void insertComment(final Comment comment, final Cheese cheese, final Address address) {
 

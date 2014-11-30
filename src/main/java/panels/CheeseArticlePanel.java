@@ -19,7 +19,6 @@ import views.StoreView;
  * Created by IRuskevich on 09.05.2014
  */
 
-// TODO make like inactive if already liked
 // TODO get list of likes
 public class CheeseArticlePanel extends CheesePanel {
 
@@ -92,6 +91,13 @@ public class CheeseArticlePanel extends CheesePanel {
                     }
                 }
             }
+
+            @Override
+            public boolean isEnabled() {
+                boolean alreadyLiked = getCheeseSession().getDataCache().exists(
+                        new Like(cheese, getAddress()));
+                return !alreadyLiked;
+            }
         };
 
         add(likeLink);
@@ -108,6 +114,10 @@ public class CheeseArticlePanel extends CheesePanel {
 
     public Label getCommentsCountLabel() {
         return commentsCount;
+    }
+
+    private Address getAddress() {
+        return getCheeseSession().getAddress();
     }
 
     private Cart getCart() {

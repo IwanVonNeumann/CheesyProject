@@ -1,12 +1,16 @@
 package dao.base;
 
-import dao.iface.ConnectionManager;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.io.*;
+import javax.sql.DataSource;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.List;
@@ -14,53 +18,30 @@ import java.util.List;
 /**
  * Created by IRuskevich on 20.03.2014
  */
-public abstract class DAOTest {
 
-    private static String url;
-    private static String name;
-    private static String password;
+public abstract class DAOTest {
 
     protected static String entity;
 
     protected static Connection connection;
 
-    protected static ConnectionManager connectionManager;
-
     @BeforeClass
     public static void prepareData() {
-        url = "jdbc:mysql://localhost/cheese_test";
-        name = "user";
-        password = "userpwd";
 
-        connect();
+        ApplicationContext context = new ClassPathXmlApplicationContext("test-context.xml");
 
-//        connectionManager = new JDBCConnectionManager();
-    }
+        DataSource dataSource = (DataSource) context.getBean("dataSource");
 
-    @AfterClass
-    public static void discardData() {
-        disconnect(connection);
-    }
-
-    private static void connect() {
         try {
-            System.out.println("Connecting to the Test DB...\n");
-            Class.forName("com.mysql.jdbc.Driver"); //Загружаем драйвер
-            connection = DriverManager.getConnection(url, name, password);
-        } catch (ClassNotFoundException | SQLException e) {
+            connection = dataSource.getConnection();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    protected static void disconnect(Connection connection) {
-        try {
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (Exception e) {
-            System.out.println("Exception while closing Connection...");
-        }
-        System.out.println("\nSuccessfully disconnected from the DB...");
+    @AfterClass
+    public static void discardData() {
+        // TODO drop
     }
 
     protected static void executeFile(String entity, String fileName) {
@@ -68,7 +49,7 @@ public abstract class DAOTest {
             BufferedReader br =
                     new BufferedReader(
                             new FileReader(
-                                    new File("./src/main/resources/sql/test/" +
+                                    new File("classpath:sql/" +
                                             entity + "/" + fileName)));
 
             StringBuilder stringBuilder = new StringBuilder();

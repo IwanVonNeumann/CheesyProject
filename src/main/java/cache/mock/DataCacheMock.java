@@ -185,7 +185,7 @@ public class DataCacheMock implements IDataCache {
 
     @Override
     public boolean exists(Like like) {
-        return false;
+        return likeDAO.exists(like);
     }
 
     @Override
