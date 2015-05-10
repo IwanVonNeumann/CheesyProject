@@ -7,7 +7,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="Bootstrap framework introduced; Login and Store views updated">
+    <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="">
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\.name" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\copyright\profiles_settings.xml" afterPath="" />
@@ -57,6 +57,17 @@
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\webContexts.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\CheeseStore.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Address.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Cart.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Cheese.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\look\RowModifier.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesePage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseSession.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage.html" afterPath="" />
     </list>
     <ignored path="MavenProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -202,24 +213,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1891892">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArticleCounter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArticleCounter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.075675674">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <element signature="e#1575#1576#0" expanded="false" />
-                <element signature="e#1652#1653#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1284,7 +1284,7 @@
       <workItem from="1420283707879" duration="29000" />
       <workItem from="1420289169392" duration="1176000" />
       <workItem from="1423221172560" duration="1656000" />
-      <workItem from="1431166919842" duration="36909000" />
+      <workItem from="1431166919842" duration="37098000" />
     </task>
     <task id="LOCAL-00001" summary="Bootstrap framework introduced; Login and Store views updated">
       <created>1431272990537</created>
@@ -1292,11 +1292,17 @@
       <option name="project" value="LOCAL" />
       <updated>1431272990537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".idea removed">
+      <created>1431273156321</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1431273156321</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44904000" />
+    <option name="totallyTimeSpent" value="45093000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1401,7 +1407,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JDBC ifaces&#10;" />
     <MESSAGE value="DAO ifaces refactoring" />
     <MESSAGE value="Hibernate integration" />
     <MESSAGE value="Domain objects linking reorganization" />
@@ -1426,7 +1431,8 @@
     <MESSAGE value="JDBC DAOs partially transferred to JdbcTemplate" />
     <MESSAGE value="JDBC Cheese DAO fully transferred to JdbcTemplate" />
     <MESSAGE value="Bootstrap framework introduced; Login and Store views updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap framework introduced; Login and Store views updated" />
+    <MESSAGE value=".idea removed" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1770,17 +1776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#1575#1576#0" expanded="false" />
-            <element signature="e#1652#1653#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1813,14 +1808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.7">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1880,6 +1867,24 @@
         <state vertical-scroll-proportion="0.1891892">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.7">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.075675674">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
