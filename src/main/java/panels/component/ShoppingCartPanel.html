@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<wicket:panel>
+    <header>
+        <h3><span class="glyphicon glyphicon-shopping-cart"></span> Your selection</h3>
+    </header>
+
+    <div>
+        <table class="table table-condensed table-striped cart">
+            <tbody>
+            <tr wicket:id="cart">
+                <td wicket:id="name" class="cheese-name">Gouda</td>
+                <td wicket:id="articleCounter">x1</td>
+                <td wicket:id="price">$2.99</td>
+                <td class="remove">
+                    <a wicket:id="remove" href="#" title="Remove"><i class="fa fa-trash"></i></a>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <th colspan="2">Total:</th>
+                <th colspan="2" wicket:id="total">$1.99</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div class="pull-right">
+        <button type="button" class="btn btn-primary btn-xs" wicket:id="checkout">
+            <i class="fa fa-credit-card"></i> Check out
+        </button>
+    </div>
+</wicket:panel>
+</body>
+</html>

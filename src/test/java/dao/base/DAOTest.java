@@ -28,6 +28,8 @@ public abstract class DAOTest {
     @BeforeClass
     public static void prepareData() {
 
+        System.out.println("DAOTest.prepareData called");
+
         ApplicationContext context = new ClassPathXmlApplicationContext("test-context.xml");
 
         DataSource dataSource = (DataSource) context.getBean("dataSource");

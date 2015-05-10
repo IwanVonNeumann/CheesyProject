@@ -10,6 +10,8 @@ public class CheesesView extends BasicView {
 
     public CheesesView() {
 
+        getPageHeadPanel().setActiveLink("cheeses");
+
         adminCheesesListPanel = new AdminCheesesListPanel("cheesesListPanel");
         adminCheesesListPanel.setOutputMarkupId(true);
         add(adminCheesesListPanel);

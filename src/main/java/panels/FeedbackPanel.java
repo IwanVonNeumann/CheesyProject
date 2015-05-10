@@ -15,6 +15,7 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
+import panels.store.CheeseArticlePanel;
 
 import java.sql.Timestamp;
 

@@ -5,6 +5,7 @@ import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.Model;
+import panels.component.ShoppingCartPanel;
 
 public class ArticleCounter extends CheesePanel {
 
@@ -25,8 +26,7 @@ public class ArticleCounter extends CheesePanel {
             }
         });
 
-        add(new Label("quantity",
-                "x" + cheese.getQuantity()));
+        add(new Label("quantity", new Model(cheese.getQuantity())));
 
         add(new AjaxFallbackLink("incLink", new Model(cheese)) {
             @Override
@@ -40,10 +40,6 @@ public class ArticleCounter extends CheesePanel {
                 }
             }
         });
-    }
-
-    private ArticleCounter getArticleCounter() {
-        return this;
     }
 
     private ShoppingCartPanel getShoppingCartPanel() {

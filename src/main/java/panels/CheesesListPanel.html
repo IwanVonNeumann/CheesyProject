@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html xmlns:wicket="http://wicket.apache.org">
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
 <head>
-    <link href="styles.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
 <wicket:panel>
-    <h3 class="panel">Store view</h3>
+    <header>
+        <h3><i class="fa fa-home"></i> Store</h3>
+    </header>
 
-    <div wicket:id="cheeses" class="cheese">
-        <div wicket:id="cheese"></div>
+    <div wicket:id="cheeses">
+        <div wicket:id="cheese" class="cheese"></div>
     </div>
+
     <div wicket:id="navigator"></div>
 </wicket:panel>
 </body>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/sql/address" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/sql/cart" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/test/resources/sql/cheese/insertData.sql" dialect="MySQL" />
   </component>
 </project>
-

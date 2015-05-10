@@ -4,7 +4,7 @@ import domain.Address;
 import domain.Cart;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
-import panels.ShoppingCartPanel;
+import panels.component.ShoppingCartPanel;
 
 public class CheckOutView extends BasicView {
 

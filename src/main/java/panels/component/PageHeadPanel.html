@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<wicket:panel>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Online Cheese Store</a>
+            </div>
+
+            <div>
+                <ul class="nav navbar-nav">
+                    <li wicket:id="store">
+                        <a href="#" wicket:id="store_link">
+                            <i class="fa fa-home"></i> Store
+                        </a>
+                    </li>
+                    <li wicket:id="search">
+                        <a href="#" wicket:id="search_link">
+                            <span class="glyphicon glyphicon-search"></span> Search
+                        </a>
+                    </li>
+                    <li wicket:id="cheeses">
+                        <a href="#" wicket:id="cheeses_link">
+                            <i class="fa fa-heart"></i> Cheeses
+                        </a>
+                    </li>
+                    <li wicket:id="purchases">
+                        <a href="#" wicket:id="purchases_link">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Purchases
+                        </a>
+                    </li>
+                    <li wicket:id="customers">
+                        <a href="#" wicket:id="customers_link">
+                            <i class="fa fa-users"></i> Customers
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <span wicket:id="userID"></span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li wicket:id="profile">
+                                <a href="#" wicket:id="profile_link">
+                                    <span class="glyphicon glyphicon-file"></span> Profile
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#" wicket:id="logout">
+                                <span class="glyphicon glyphicon-log-out"></span> Log out
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</wicket:panel>
+
+</body>
+</html>

@@ -7,35 +7,393 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CartEntryRowMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CartRowMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CommentRowMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/domain/Like.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/LikeRowMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/domain/Cart.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Cart.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/domain/CartEntry.java" afterPath="$PROJECT_DIR$/src/main/java/domain/CartEntry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/domain/Cheese.java" afterPath="$PROJECT_DIR$/src/main/java/domain/Cheese.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.java" />
+    <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="Bootstrap framework introduced; Login and Store views updated">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/cart-entry.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-2.1.4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/new_styles.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/npm.js" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\copyright\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\dataSources.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\dictionaries\IRuskevich.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\inspectionProfiles\Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\inspectionProfiles\profiles_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__commons_logging_commons_logging_1_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__junit_junit_4_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__log4j_log4j_1_2_14.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__mx4j_mx4j_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__mx4j_mx4j_tools_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__mysql_mysql_connector_java_5_1_6.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_apache_wicket_wicket_1_3_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_hibernate_common_hibernate_commons_annotations_4_0_4_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_hibernate_hibernate_core_4_3_4_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_3_GA.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_mortbay_jetty_jetty_6_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_mortbay_jetty_jetty_management_6_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_mortbay_jetty_jetty_util_6_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_mortbay_jetty_servlet_api_2_5_6_1_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_slf4j_slf4j_api_1_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_slf4j_slf4j_log4j12_1_4_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_aop_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_beans_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_context_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_core_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_expression_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_tx_4_1_1_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_web_3_0_4_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\scopes\scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\sqldialects.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\webContexts.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\CheeseStore.iml" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\AuthenticationPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\CheeseArticlePanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\MenuPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\MenuPanel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\PageHeadPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\PageHeadPanel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\UserStatusPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\UserStatusPanel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\CheeseLogo.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\AddressDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\CartDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\CartEntryDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\CheeseDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\DAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\DBConnection.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\PurchaseDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Address.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Cart.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Cheese.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\MultiCheese.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\look\RowModifier.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CartEntriesModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CartsModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CheesesModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CustomersModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Address.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$6.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminView$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminView.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminView.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\HomePage1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\HomePage2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\HomePage3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\NewPage.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Cart.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CartEntriesList.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Cheese.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseDAO.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseMain.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseMain.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesePage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesePage.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseSession.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesModel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesView$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesView.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesView.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$2$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$3.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$4.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$5.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\NewPage$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\NewPage.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\NewPage.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\PageHeadPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\PageHeadPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Person.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel$2.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\UserIdPanel$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\UserIdPanel.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\UserIdPanel.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCheeses.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCheeses.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCustomers$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCustomers.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCustomers.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases$1$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases$1.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\WicketApplication.class" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\116olopnybkzh7zp40gx6ovfi\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\11beujbye34aj1ockzjpz54th1\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1257c58rc6hdc75u3l57uurlo\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\128g0ptub2wv74lakpn8ry8h7\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\146oks3y6fgq9pt0entyuwuya\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\14grw2sy7dfd110sta7mqgaebh\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\15zjz8fsad0sawleq89u64ijg\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\17g5yjamy7x3g1qxdkf533l4ih\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\18e6utosmtfn27801e8m2qaam\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\18m80aodkuotb3ir9yr4d4h5b\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\18r6sr7o9wiyb15pvgekmogrgl\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1a8wwyo77nxz65fnfq9lhlc9r\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1ak7ovfrnz6l41r45wdo6emkr\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1bzxii9qpdlp61hpstarzox092\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1cdyx4lw25jab1o1k5e95ifawa\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1cramv4q102ze1pfchg5w8x7dx\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1d8o1r4v40nkszcv3pq817pdg\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1dqqa2nxf41t1140ycswfbusf\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1ejjqm2nu8t0u3ol5rch8i3y\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1el2chhk9le901rsh14ldc1a3l\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1eq5bku81zfqqqa5zdg8bo7mo\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1f26hfnjy0h8jqwhmuyxx2oey\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1f7tw4kfvnlk4voieq1rjorxv\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1fe91jjk9eghr1p90nftjm0jrm\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1fjggf2cocmmtggmkkt11cwm6\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1godoaclltxeoifcc6beyad86\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1gw4y2adid8fq8cif6k4y6eb3\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1h2bibsgvveem179rwtons8xlu\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1h8cur4a19x4g1p0hw2j322nof\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1hmn79rwhhr2oh6a7hd5f991k\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1j6su08mw6e63rxtt16lbzn2z\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1j8qr1h0xjn0tmc5s5fa2z08w\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1jlnt8pbrngimyv7zi2djy70c\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1jxnmlawu6ax01kdjknpcr1jy6\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1k2dqvfhwshpd41ht030ocm7k\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1l8mfbhj5m454h0n1f960i2qf\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1ltsy4pv2q6xfoxyapzcq7lum\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1manbw224g29kpj59ud3qoizn\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1nq9nlvt9rmjg9kcv7tx1vqfy\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1o1kltvy2uexb18p1zqkv48tm9\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1qad9zghm1h8h3hamwzu7kq3l\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1qcb91tnbf3691k5pl3q0vehd\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1rguwsihynd4iroas2lv4dhir\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1s3m6a9yh8jpn19l03xz7wby5h\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1skqei1gzg32bz1g08mtr3a32\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1slv2nf0gurcb18cdnht4ytry8\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1te9y6l42bjp3hz71nleqjbuy\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1tjy97q32ib17s6pva47naykr\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1tz8igjxsgnkw1s44ugjafutqm\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1vtn9ie6fvqd5plnnlxl04n0d\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1w3exkzy0in4i15k0p4hkopib\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1wbngvnrc6h68w3sq16thzdcj\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1wffn7xtaniabjurbtcq51tb7\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1wv37t2gzb0971imejpmin6nkh\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1xo7r4lhk9la4817fk28oiyje\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1xvwe4i31ec6v12gcml0e8t88w\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1y0c0id12l3pz677gz02ml0lp\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\2wk5t5eekatld4dhmo3gl442\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\3r8jlcccpgq91tq1wwnvj113x\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\3yz7rmcuncgi1hhliz07kst52\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\3z5ch96dz5x2ad4iks3rru3w\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\51031yogkgrykt712jtcsfws\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\5eitp6tfgsch1x4ws905ch8d0\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\5wnfz0m3mukl1xk8ucfizj6tr\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\6o3irpojaxbm1mrpa55iazkuj\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7282a59rcvv91nv5bkqg5zqrb\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7c1z8d9zm2871wn29zo0us94v\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7stoteu9vzzg1a6763je5g3kq\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7vyj69bs18m112bmzui8e8z98\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\8rg1o7zl818m14aet35jurz6k\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\8vix9mapo2lghilygd6yhylb\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\b3wq12wr0otd1jn6b3p0cfx8u\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\bqx2ha9gjet81cllw67stl9nm\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\bw4xnh31yhp6j8m16ymkq7az\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\e2giv0rlioyc1m8h8a9sx6f1j\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\fm8eg3xtcodixx2xmbfozp41\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\g94agh1slb031kuwxim133oz9\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\gibgynyw62jml9u2cjhv2gj\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\hfw2rn3ls8b21hjobtecz6a9j\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\hwaueop30pa418n3jazteszsg\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\hzyx6g80wn7w1iivmom7qkjxc\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\iglq8db5kg3o69w730dk0ox3\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\io760fu0cqsy5x3j55iy689e\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\io92jes65at12sairtmxlkgs\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\k2hx5qymqveg161prs2oeg2sq\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\km6gw79dltp81mkk4dpuo8uej\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\l5h2h0ia2g47pgylgreafmu8\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\ldbc2rgpp406sn5gb7oixs2c\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\lggj8szwtzet13ax3iz873xuv\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\msbv8tflw09f12hvzzvuj3gx5\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\nkmmm0dpnts91ne3ncf3oxi82\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\nm3gcvjlosyci3u984zemcge\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\pd4c1nn9h5bs1qay57v8kk90d\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\pdisocmlv1lhv7bxnh7k25ya\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\psufnksz3nlg98sgaavugg2r\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\q0hi9vnchcws1cv2wr8mnqruw\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\r9p07t1f1b6z15z2dbrhjnpj4\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\seizncblestrf18m4lodxpp2\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\so97zu3iasl56comj2vzpgzw\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\uve5izhyg33goo8nxx1ltfz7\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\uxq4hnjy1fiu1hm36j2vfrfrr\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\uy0to7pgtloh1c3flvn5xs938\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\vcgwiw16co2g1l88qpdv94pvn\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\vo4ndklnl6w2jus8mm82wh7q\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\vwnkh1ybcytj1fg9ktgj82pjf\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\wei1jiqqld5h1il5c3jxg106d\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\xw1pinf57zzc52otwvdo3769\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\xxjygyji7mt31ud1mhpm6k9s0\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\yf6pkgxp3ezo1vmob4a9aq2sl\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\z9e7m6or451dxco48wux77b\pm-null" afterPath="" />
+      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\zgp5nwr4nwko1mtf49ig8hizi\pm-null" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AdditionalDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/AdditionalDataPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html" afterPath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/BasicView.html" afterPath="$PROJECT_DIR$/src/main/java/views/BasicView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/BasicView.java" afterPath="$PROJECT_DIR$/src/main/java/views/BasicView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/CheckOut.html" afterPath="$PROJECT_DIR$/src/main/java/war/CheckOut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheckOutView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheckOutView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cache/DataCache.java" afterPath="$PROJECT_DIR$/src/main/java/cache/DataCache.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cache/mock/DataCacheMock.java" afterPath="$PROJECT_DIR$/src/main/java/cache/mock/DataCacheMock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCCheeseProxy.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCCheeseProxy.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCommentDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCommentDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCLikeDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCLikeDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/dao/iface/LikeDAO.java" afterPath="$PROJECT_DIR$/src/main/java/dao/iface/LikeDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/FeedbackPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/FeedbackPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/jdbc/JDBCAddressDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/jdbc/JDBCAddressDAOTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/LoginPage.html" afterPath="$PROJECT_DIR$/src/main/java/war/LoginPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/look/RowModifier.java" afterPath="$PROJECT_DIR$/src/main/java/look/RowModifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/SearchView.java" afterPath="$PROJECT_DIR$/src/main/java/views/SearchView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/SignupPage.html" afterPath="$PROJECT_DIR$/src/main/java/war/SignupPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/StoreView.html" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/StoreView.java" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jdbc-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/jdbc-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\AuthenticationPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\CheeseArticlePanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\ShoppingCartPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\ShoppingCartPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.java" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\styles_.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles_.css" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\address\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/address/createTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\address\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/address/dropTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\address\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/address/insertData.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cart\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cart/createTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cart\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cart/dropTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cart\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cart/insertData.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cartentry\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cartentry/createTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cartentry\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cartentry/dropTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cartentry\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cartentry/insertData.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cheese\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cheese/createTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cheese\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cheese/dropTables.sql" />
+      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cheese\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cheese/insertData.sql" />
     </list>
     <ignored path="MavenProject.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,10 +409,44 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="hibernate.cfg.xml" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="hibernate.cfg.xml" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="cheesydb" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="DebuggerManager">
+    <ui_properties converted="true" />
     <breakpoint_any converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -92,7 +484,6 @@
       </breakpoint>
     </breakpoint_any>
     <breakpoint_rules converted="true" />
-    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -100,50 +491,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CheeseArticlePanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.java">
+      <file leaf-file-name="new_styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/new_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2420">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectionWrapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/ConnectionWrapper.java">
+      <file leaf-file-name="ShoppingCartPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="792">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCAddressDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2970">
-              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCDAO.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.120163" vertical-offset="0" max-vertical-offset="682">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
               <folding>
-                <element signature="e#617#618#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2089#2233#0" expanded="false" />
+                <element signature="e#2232#2233#0" expanded="false" />
+                <element signature="e#2529#2530#0" expanded="false" />
+                <element signature="e#2596#2597#0" expanded="false" />
+                <element signature="e#2662#2663#0" expanded="false" />
+                <element signature="e#2718#2719#0" expanded="false" />
+                <element signature="e#2748#2749#0" expanded="false" />
+                <element signature="e#2775#2776#0" expanded="false" />
+                <element signature="e#2831#2832#0" expanded="false" />
+                <element signature="e#2858#2859#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShoppingCartPanel.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-21.7">
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27027026">
+              <caret line="6095" column="25" selection-start-line="6095" selection-start-column="25" selection-end-line="6095" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArticleCounter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="e#1575#1576#0" expanded="false" />
+                <element signature="e#1652#1653#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Html5" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -159,64 +592,78 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="HierarchyBrowserManager">
     <option name="SCOPE" value="All" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/proc/NameSearchProcedure.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/SearchEngine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/search/SearchResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/SearchPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/ConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/ConnectionWrapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/JDBCConnectionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java" />
-        <option value="$PROJECT_DIR$/src/test/test-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/CheeseApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/war/CheeseSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCProxyFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/ProxyFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCAddressProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Address.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CheeseRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/AddressRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/look/proxy/AddressViewProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CartRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Cart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartEntryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CartEntryRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CommentRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCommentDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/iface/LikeDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCCheeseProxy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Cheese.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/Like.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cache/DataCache.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cache/mock/DataCacheMock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/domain/CartEntry.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dao/base/CartEntryDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/base/AddressDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/jdbc/JDBCAddressDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mysql.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/jdbc-context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/LikeRowMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCLikeDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/AuthenticationPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/login/1.html" />
+        <option value="$PROJECT_DIR$/src/main/java/look/RowModifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/look/RowClassModifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/MenuPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/MenuPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/UserStatusPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/UserStatusPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/war/CheeseSession.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/BasicView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/SearchView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/CustomersView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/PageHeadPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.html" />
+        <option value="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/PageHeadPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/com/ShoppingCartPanel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/cart-entry.js" />
+        <option value="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/views/BasicView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/new_styles.css" />
+        <option value="$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java" />
       </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -265,11 +712,14 @@
       </PATH>
     </treeState>
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1608" />
-    <option name="height" value="856" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1384" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -292,6 +742,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -311,7 +763,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,6 +814,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -380,7 +837,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheesyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheesyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="war" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheesyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,11 +959,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jdbc" />
+              <option name="myItemId" value="panels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,15 +985,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="panels" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jdbc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="store" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,13 +1015,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="panels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheesyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panels" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheeseStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CheesyProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="look" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -516,35 +1099,40 @@
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.appearance" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="LayoutCode.rearrangeEntriesPlain text" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\resources" />
-      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\test\resources" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cartentry" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cart" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\address" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="war" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\fonts" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\css" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\js" />
       <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\resources" />
-      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\WEB-INF" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\production" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql\test\cheese" />
-      <recent name="D:\Users\User\My Documents\IdeaProjects\Cheese\src\main\resources\sql" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\test\resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\store\" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\component\" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\com" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\login\" />
+      <recent name="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\css\" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="dao.iface" />
@@ -556,6 +1144,7 @@
   </component>
   <component name="RunManager" selected="Maven.Jetty">
     <configuration default="false" name="TestTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TestTest" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -571,29 +1160,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="HiberAddressDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MavenProject" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao.hiber" />
-      <option name="MAIN_CLASS_NAME" value="dao.hiber.HiberAddressDAOTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="JDBCCheeseDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="CheeseStore" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -615,12 +1183,18 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="HiberCheeseDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MavenProject" />
+    <configuration default="false" name="AddressDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CheeseStore" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao.hiber" />
-      <option name="MAIN_CLASS_NAME" value="dao.hiber.HiberCheeseDAOTest" />
+      <option name="PACKAGE_NAME" value="dao.base" />
+      <option name="MAIN_CLASS_NAME" value="dao.base.AddressDAOTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
@@ -637,14 +1211,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="dao.hiber in MavenProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MavenProject" />
+    <configuration default="false" name="AddressDAOTest.updatingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CheeseStore" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao.hiber" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="dao.base" />
+      <option name="MAIN_CLASS_NAME" value="dao.base.AddressDAOTest" />
+      <option name="METHOD_NAME" value="updatingTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -657,6 +1237,232 @@
       <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JDBCAddressDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="dao.jdbc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CheeseStore" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="dao.jdbc" />
+      <option name="MAIN_CLASS_NAME" value="dao.jdbc.JDBCAddressDAOTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -689,57 +1495,53 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
+        <value defaultName="singleModule" />
       </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
       <envs />
-      <patterns />
+      <properties />
+      <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
     <configuration default="false" name="Jetty" type="MavenRunConfiguration" factoryName="Maven">
@@ -771,18 +1573,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Maven.Jetty" />
       <item index="1" class="java.lang.String" itemvalue="Application.TestTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HiberAddressDAOTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.JDBCCheeseDAOTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HiberCheeseDAOTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.dao.hiber in MavenProject" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.JDBCCheeseDAOTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.AddressDAOTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AddressDAOTest.updatingTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.JDBCAddressDAOTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.JDBCCheeseDAOTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HiberAddressDAOTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HiberCheeseDAOTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.dao.hiber in MavenProject" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AddressDAOTest.updatingTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.JDBCAddressDAOTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AddressDAOTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.JDBCCheeseDAOTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -808,13 +1610,27 @@
     </option>
     <option name="fileTypes" value="class;svn-base;svn-work;Extra;gif;png;jpg;jpeg;bmp;tga;tiff;ear;war;zip;jar;iml;iws;ipr;bz2;gz;" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="" />
       <created>1381080876906</created>
+      <option name="number" value="Default" />
       <updated>1381080876906</updated>
+      <workItem from="1417869695716" duration="2235000" />
+      <workItem from="1417872515947" duration="114000" />
+      <workItem from="1417872655829" duration="2785000" />
+      <workItem from="1420283707879" duration="29000" />
+      <workItem from="1420289169392" duration="1176000" />
+      <workItem from="1423221172560" duration="1656000" />
+      <workItem from="1431166919842" duration="36709000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="44704000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -837,71 +1653,74 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1608" height="856" extended-state="6" />
+    <frame x="-9" y="-9" width="1384" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="36" y="507" width="1558" height="239" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28512397" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18677792" sideWeight="0.41650295" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27335164" sideWeight="0.22015405" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32231405" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16880617" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21758665" sideWeight="0.5815324" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2603306" sideWeight="0.77984595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8214286" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.6976744" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27210885" sideWeight="0.22015405" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.168693" sideWeight="0.6983333" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29421768" sideWeight="0.77984595" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18677792" sideWeight="0.41650295" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23328267" sideWeight="0.5815324" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2840136" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32312927" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32369146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292011" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="36" y="507" width="1558" height="239" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.6976744" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29007635" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35246995" sideWeight="0.22" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22364217" sideWeight="0.6983333" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27385497" sideWeight="0.78" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.6976744" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32633588" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323667" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16894531" sideWeight="0.6983333" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35246995" sideWeight="0.22" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16894531" sideWeight="0.6983333" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29007635" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.6976744" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39938557" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.323667" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32872504" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27385497" sideWeight="0.78" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.6976744" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22364217" sideWeight="0.6983333" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32633588" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -916,10 +1735,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-    <MESSAGE value="DAO interfaces" />
     <MESSAGE value="JDBC ifaces&#10;" />
     <MESSAGE value="DAO ifaces refactoring" />
     <MESSAGE value="Hibernate integration" />
@@ -944,280 +1759,277 @@
     <MESSAGE value="Spring context configured;&#10;JDBC template configured" />
     <MESSAGE value="JDBC DAOs partially transferred to JdbcTemplate" />
     <MESSAGE value="JDBC Cheese DAO fully transferred to JdbcTemplate" />
-    <option name="LAST_COMMIT_MESSAGE" value="JDBC Cheese DAO fully transferred to JdbcTemplate" />
+    <MESSAGE value="Bootstrap framework introduced; Login and Store views updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bootstrap framework introduced; Login and Store views updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
+    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/base/CheeseDAOTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.208696" vertical-offset="0" max-vertical-offset="2244">
-          <caret line="103" column="32" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/test-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="506">
-          <caret line="12" column="66" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery-2.1.4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.753915" vertical-offset="169" max-vertical-offset="1210">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.113513514">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.037837837">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8852459">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/war/CheeseSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09109731" vertical-offset="0" max-vertical-offset="924">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5225225">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.3.2/wicket-1.3.2.jar!/org/apache/wicket/Page.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75055677" vertical-offset="103" max-vertical-offset="946">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.23773585">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.3.2/wicket-1.3.2.jar!/org/apache/wicket/markup/html/WebPage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23773585">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.3.2/wicket-1.3.2.jar!/org/apache/wicket/MarkupContainer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38867924">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.3.2/wicket-1.3.2.jar!/org/apache/wicket/markup/html/WebComponent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23773585">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.3.2/wicket-1.3.2.jar!/org/apache/wicket/markup/html/basic/Label.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23773585">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33150685">
+          <caret line="38" column="41" selection-start-line="38" selection-start-column="41" selection-end-line="38" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/look/RowModifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46027398">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/BasicView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6216216">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#386#387#0" expanded="false" />
+            <element signature="e#422#423#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/CheesesView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41621622">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/SearchView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6594595">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/PurchasesView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3027027">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/views/CustomersView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="1166">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.3027027">
+          <caret line="17" column="51" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/ProxyFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6055046" vertical-offset="0" max-vertical-offset="528">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCProxyFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5579399" vertical-offset="66" max-vertical-offset="1364">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCAddressProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73006135" vertical-offset="215" max-vertical-offset="968">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.04908" vertical-offset="0" max-vertical-offset="3564">
-          <caret line="101" column="38" selection-start-line="101" selection-start-column="38" selection-end-line="101" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5319149" vertical-offset="1180" max-vertical-offset="2046">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8857143" vertical-offset="0" max-vertical-offset="2706">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_55/jre/lib/rt.jar!/java/util/Set.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33285713" vertical-offset="163" max-vertical-offset="902">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Title.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28285715" vertical-offset="0" max-vertical-offset="902">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37714285" vertical-offset="528" max-vertical-offset="1276">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.075675674">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/AddressRowMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.585567" vertical-offset="134" max-vertical-offset="682">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1870">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/look/proxy/AddressViewProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2272727" vertical-offset="0" max-vertical-offset="924">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6818182" vertical-offset="1232" max-vertical-offset="1914">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CheeseRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53305787" vertical-offset="50" max-vertical-offset="594">
-          <caret line="18" column="58" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5995807" vertical-offset="0" max-vertical-offset="2288">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.52">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CartEntryDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/ProfileView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31518623" vertical-offset="0" max-vertical-offset="698">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/hiber/HiberCartEntryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44126076" vertical-offset="462" max-vertical-offset="1232">
-          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CartRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5272206" vertical-offset="226" max-vertical-offset="924">
-          <caret line="27" column="48" selection-start-line="26" selection-start-column="8" selection-end-line="27" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CartEntryRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68481374" vertical-offset="50" max-vertical-offset="748">
-          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartEntryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2145987" vertical-offset="1" max-vertical-offset="1650">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1740#2270#0" expanded="true" />
-            <element signature="e#2259#2260#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cache/CommentCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.712743" vertical-offset="0" max-vertical-offset="616">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/CommentRowMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6857143" vertical-offset="114" max-vertical-offset="814">
-          <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/CheeseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50285715" vertical-offset="0" max-vertical-offset="700">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5297297">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCommentDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/LoginPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="853" max-vertical-offset="1540">
+        <state vertical-scroll-proportion="0.56">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/wicket/wicket/1.3.2/wicket-1.3.2.jar!/org/apache/wicket/Component.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3490566">
+          <caret line="405" column="29" selection-start-line="405" selection-start-column="29" selection-end-line="405" selection-end-column="29" />
           <folding>
-            <element signature="e#832#833#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#1876#2491#0" expanded="true" />
-            <element signature="e#2480#2481#0" expanded="true" />
+            <element signature="e#14995#14996#0" expanded="true" />
+            <element signature="e#15035#15036#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCartDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="462" max-vertical-offset="1584">
-          <caret line="57" column="61" selection-start-line="51" selection-start-column="8" selection-end-line="57" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.7567568">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/war/CheesePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15135135">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Cheese.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="1349" max-vertical-offset="2332">
-          <caret line="99" column="8" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.7567568">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21777777" vertical-offset="645" max-vertical-offset="2464">
-          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.04">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52">
+          <caret line="29" column="17" selection-start-line="27" selection-start-column="8" selection-end-line="29" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7243242">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1226,152 +2038,182 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/domain/CartEntry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7324263" vertical-offset="73" max-vertical-offset="1738">
-          <caret line="18" column="51" selection-start-line="18" selection-start-column="51" selection-end-line="18" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.15135135">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/domain/CartEntryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="139" max-vertical-offset="814">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/base/CartEntryDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51111114" vertical-offset="777" max-vertical-offset="1452">
-          <caret line="68" column="50" selection-start-line="68" selection-start-column="50" selection-end-line="68" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3255814" vertical-offset="1320" max-vertical-offset="1826">
-          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCCheeseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7209302" vertical-offset="2299" max-vertical-offset="3498">
-          <caret line="126" column="25" selection-start-line="124" selection-start-column="8" selection-end-line="126" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.39459458">
+          <caret line="41" column="39" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/mappers/LikeRowMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6581197" vertical-offset="0" max-vertical-offset="902">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+        <state vertical-scroll-proportion="-0.4">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4918919">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/cart-entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/BasicView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/StoreView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04">
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/views/CheesesView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04">
+          <caret line="1" column="50" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#1575#1576#0" expanded="false" />
+            <element signature="e#1652#1653#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2089#2233#0" expanded="false" />
+            <element signature="e#2232#2233#0" expanded="false" />
+            <element signature="e#2529#2530#0" expanded="false" />
+            <element signature="e#2596#2597#0" expanded="false" />
+            <element signature="e#2662#2663#0" expanded="false" />
+            <element signature="e#2718#2719#0" expanded="false" />
+            <element signature="e#2748#2749#0" expanded="false" />
+            <element signature="e#2775#2776#0" expanded="false" />
+            <element signature="e#2831#2832#0" expanded="false" />
+            <element signature="e#2858#2859#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/new_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.7">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44684684">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCLikeDAO.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.1757321" vertical-offset="0" max-vertical-offset="1826">
-          <caret line="82" column="24" selection-start-line="82" selection-start-column="24" selection-end-line="82" selection-end-column="24" />
-          <folding>
-            <element signature="e#2051#2533#0" expanded="true" />
-            <element signature="e#2522#2523#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/iface/LikeDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35845214" vertical-offset="0" max-vertical-offset="491">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cache/iface/IDataCache.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/sql/cart/insertData.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35845214" vertical-offset="0" max-vertical-offset="491">
-          <caret line="8" column="96" selection-start-line="8" selection-start-column="96" selection-end-line="8" selection-end-column="96" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cache/mock/DataCacheMock.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6506276" vertical-offset="2329" max-vertical-offset="3014">
-          <caret line="178" column="14" selection-start-line="178" selection-start-column="14" selection-end-line="178" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6054054">
+          <caret line="86" column="19" selection-start-line="86" selection-start-column="19" selection-end-line="86" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cache/DataCache.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/sql/cheese/insertData.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46443516" vertical-offset="2418" max-vertical-offset="3080">
-          <caret line="167" column="25" selection-start-line="167" selection-start-column="25" selection-end-line="167" selection-end-column="25" />
-          <folding>
-            <element signature="e#3881#3882#0" expanded="true" />
-            <element signature="e#3908#3909#0" expanded="true" />
-            <element signature="e#3962#3963#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/domain/Like.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3910387" vertical-offset="248" max-vertical-offset="946">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/proxy/JDBCCheeseProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/sql/cart/createTables.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35845214" vertical-offset="0" max-vertical-offset="1298">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/panels/CheeseArticlePanel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2420">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.27027026">
+          <caret line="6095" column="25" selection-start-line="6095" selection-start-column="25" selection-end-line="6095" selection-end-column="25" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/ConnectionWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="166" max-vertical-offset="792">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCAddressDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2970">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/jdbc/dao/JDBCDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.120163" vertical-offset="0" max-vertical-offset="682">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1381,10 +2223,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>CheeseStore:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1404,6 +2248,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>html5</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1415,7 +2260,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>JDK v7u55</last-edited>
+          <last-edited>JDK v8u25</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1427,7 +2272,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|CheeseStore</last-edited>
+          <last-edited>Web|CheeseStore</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1439,7 +2284,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>JDK 7.51</last-edited>
+          <last-edited>JDK v8u25</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1464,4 +2309,3 @@
     </states>
   </component>
 </project>
-

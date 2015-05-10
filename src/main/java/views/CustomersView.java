@@ -15,6 +15,8 @@ public class CustomersView extends BasicView {
 
     public CustomersView() {
 
+        getPageHeadPanel().setActiveLink("customers");
+
         AddressesLDModel addressesModel =
                 (AddressesLDModel) CheeseApplication.get().getModelLoader().getAddressModel();
 

@@ -1,7 +1,7 @@
 package views;
 
 import panels.SearchPanel;
-import panels.ShoppingCartPanel;
+import panels.component.ShoppingCartPanel;
 import search.SearchResultsSet;
 
 /**
@@ -10,6 +10,8 @@ import search.SearchResultsSet;
 public class SearchView extends BasicView {
 
     public SearchView(SearchResultsSet searchResults) {
+
+        getPageHeadPanel().setActiveLink("search");
 
         add(new SearchPanel("search", searchResults));
 

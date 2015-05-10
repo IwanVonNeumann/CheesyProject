@@ -11,6 +11,7 @@ public class JDBCAddressDAOTest extends AddressDAOTest {
 
     @Override
     public void initDAO() {
+        System.out.println("JDBCAddressDAOTest.initDAO called");
         executeFile(entity, "createTables.sql");
         executeFile(entity, "insertData.sql");
         dao = new JDBCAddressDAO();

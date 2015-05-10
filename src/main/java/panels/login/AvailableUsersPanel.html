@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<wicket:panel>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <i class="fa fa-users"></i> Our customers
+        </div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item" wicket:id="customers">
+                    <a href="#" wicket:id="link">
+                        <span wicket:id="name">John Wayne</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</wicket:panel>
+
+</body>
+</html>

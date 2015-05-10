@@ -1,41 +1,36 @@
 <!DOCTYPE html>
-<html xmlns:wicket="http://wicket.apache.org">
-<head>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head lang="en">
     <title>Cheesr - Making cheese taste beta</title>
-    <link href="styles.css" rel="stylesheet"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="header"></div>
-<div class="making">Making cheese taste beta...</div>
-<div class="content">
-    <h3 class="section">Login Page</h3>
 
-    <div wicket:id="authentication"></div>
-    <br/>
-    <div class="signup">
-        Don't have an account?
-        <br/>
-        <a href="#" wicket:id="signup">Sign up</a>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Online Cheese Store</a>
+        </div>
     </div>
-    <br/>
-    <div>
-        <table class="dbcontent center">
-            <thead>
-            <tr>
-                <th>List of customers</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr wicket:id="customers">
-                <td class="users center">
-                    <a href="#" wicket:id="link">
-                        <span wicket:id="name">John Wayne</span>
-                    </a>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div wicket:id="authentication"></div>
+        </div>
+
+        <div class="col-md-6">
+            <div wicket:id="available-users"></div>
+        </div>
     </div>
 </div>
+
 </body>
 </html>

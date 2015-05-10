@@ -13,6 +13,8 @@ public class ProfileView extends BasicView {
 
     public ProfileView() {
 
+//        getPageHeadPanel().setActiveLink("profile");
+
         Address address = getCheeseSession().getAddress();
 
         /*add(new AddressDataPanel("profile",
