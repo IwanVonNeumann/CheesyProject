@@ -8,38 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c3c71e7-c5fe-48eb-9786-254c86ea7789" name="Default" comment="Bootstrap framework introduced; Login and Store views updated">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AvailableUsersPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/panels/component/PageHeadPanel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/cart-entry.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-2.1.4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mysql.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/css/new_styles.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/npm.js" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\.name" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\compiler.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\copyright\profiles_settings.xml" afterPath="" />
@@ -80,7 +48,6 @@
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_expression_4_1_1_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_jdbc_4_1_1_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_tx_4_1_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__org_springframework_spring_web_3_0_4_RELEASE.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\libraries\Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\misc.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\modules.xml" afterPath="" />
@@ -90,304 +57,6 @@
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\webContexts.xml" afterPath="" />
       <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\.idea\workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\CheeseStore.iml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\AuthenticationPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\CheeseArticlePanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\MenuPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\MenuPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\PageHeadPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\PageHeadPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\UserStatusPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\UserStatusPanel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\CheeseLogo.png" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\AddressDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\CartDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\CartEntryDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\CheeseDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\DAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\DBConnection.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\dao\PurchaseDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Address.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Cart.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\Cheese.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\domain\MultiCheese.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\look\RowModifier.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CartEntriesModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CartsModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CheesesModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\models\CustomersModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AddCheesePanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Address.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1$6.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminCheesesListPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminView.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\AdminView.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ArticleCounter.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\HomePage1.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\HomePage2.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\HomePage3.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Backup\NewPage.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Cart.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CartEntriesList.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheckOut.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Cheese.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseDAO.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseMain.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseMain.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesePage.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesePage.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheeseSession.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesListPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesModel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesView.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\CheesesView.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\EditCheesePanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage1.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage2.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\HomePage3.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\LoginPage.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$3.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$4.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel$5.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\MenuPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\NewPage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\NewPage.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\NewPage.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\PageHeadPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\PageHeadPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel$2.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ShoppingCartPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\UserIdPanel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\UserIdPanel.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\UserIdPanel.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCheeses.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCheeses.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCustomers$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCustomers.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewCustomers.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases$1.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\ViewPurchases.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\classes\war\WicketApplication.class" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\116olopnybkzh7zp40gx6ovfi\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\11beujbye34aj1ockzjpz54th1\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1257c58rc6hdc75u3l57uurlo\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\128g0ptub2wv74lakpn8ry8h7\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\146oks3y6fgq9pt0entyuwuya\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\14grw2sy7dfd110sta7mqgaebh\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\15zjz8fsad0sawleq89u64ijg\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\17g5yjamy7x3g1qxdkf533l4ih\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\18e6utosmtfn27801e8m2qaam\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\18m80aodkuotb3ir9yr4d4h5b\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\18r6sr7o9wiyb15pvgekmogrgl\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1a8wwyo77nxz65fnfq9lhlc9r\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1ak7ovfrnz6l41r45wdo6emkr\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1bzxii9qpdlp61hpstarzox092\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1cdyx4lw25jab1o1k5e95ifawa\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1cramv4q102ze1pfchg5w8x7dx\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1d8o1r4v40nkszcv3pq817pdg\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1dqqa2nxf41t1140ycswfbusf\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1ejjqm2nu8t0u3ol5rch8i3y\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1el2chhk9le901rsh14ldc1a3l\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1eq5bku81zfqqqa5zdg8bo7mo\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1f26hfnjy0h8jqwhmuyxx2oey\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1f7tw4kfvnlk4voieq1rjorxv\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1fe91jjk9eghr1p90nftjm0jrm\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1fjggf2cocmmtggmkkt11cwm6\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1godoaclltxeoifcc6beyad86\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1gw4y2adid8fq8cif6k4y6eb3\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1h2bibsgvveem179rwtons8xlu\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1h8cur4a19x4g1p0hw2j322nof\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1hmn79rwhhr2oh6a7hd5f991k\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1j6su08mw6e63rxtt16lbzn2z\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1j8qr1h0xjn0tmc5s5fa2z08w\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1jlnt8pbrngimyv7zi2djy70c\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1jxnmlawu6ax01kdjknpcr1jy6\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1k2dqvfhwshpd41ht030ocm7k\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1l8mfbhj5m454h0n1f960i2qf\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1ltsy4pv2q6xfoxyapzcq7lum\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1manbw224g29kpj59ud3qoizn\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1nq9nlvt9rmjg9kcv7tx1vqfy\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1o1kltvy2uexb18p1zqkv48tm9\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1qad9zghm1h8h3hamwzu7kq3l\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1qcb91tnbf3691k5pl3q0vehd\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1rguwsihynd4iroas2lv4dhir\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1s3m6a9yh8jpn19l03xz7wby5h\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1skqei1gzg32bz1g08mtr3a32\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1slv2nf0gurcb18cdnht4ytry8\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1te9y6l42bjp3hz71nleqjbuy\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1tjy97q32ib17s6pva47naykr\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1tz8igjxsgnkw1s44ugjafutqm\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1vtn9ie6fvqd5plnnlxl04n0d\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1w3exkzy0in4i15k0p4hkopib\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1wbngvnrc6h68w3sq16thzdcj\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1wffn7xtaniabjurbtcq51tb7\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1wv37t2gzb0971imejpmin6nkh\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1xo7r4lhk9la4817fk28oiyje\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1xvwe4i31ec6v12gcml0e8t88w\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\1y0c0id12l3pz677gz02ml0lp\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\2wk5t5eekatld4dhmo3gl442\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\3r8jlcccpgq91tq1wwnvj113x\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\3yz7rmcuncgi1hhliz07kst52\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\3z5ch96dz5x2ad4iks3rru3w\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\51031yogkgrykt712jtcsfws\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\5eitp6tfgsch1x4ws905ch8d0\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\5wnfz0m3mukl1xk8ucfizj6tr\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\6o3irpojaxbm1mrpa55iazkuj\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7282a59rcvv91nv5bkqg5zqrb\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7c1z8d9zm2871wn29zo0us94v\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7stoteu9vzzg1a6763je5g3kq\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\7vyj69bs18m112bmzui8e8z98\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\8rg1o7zl818m14aet35jurz6k\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\8vix9mapo2lghilygd6yhylb\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\b3wq12wr0otd1jn6b3p0cfx8u\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\bqx2ha9gjet81cllw67stl9nm\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\bw4xnh31yhp6j8m16ymkq7az\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\e2giv0rlioyc1m8h8a9sx6f1j\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\fm8eg3xtcodixx2xmbfozp41\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\g94agh1slb031kuwxim133oz9\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\gibgynyw62jml9u2cjhv2gj\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\hfw2rn3ls8b21hjobtecz6a9j\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\hwaueop30pa418n3jazteszsg\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\hzyx6g80wn7w1iivmom7qkjxc\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\iglq8db5kg3o69w730dk0ox3\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\io760fu0cqsy5x3j55iy689e\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\io92jes65at12sairtmxlkgs\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\k2hx5qymqveg161prs2oeg2sq\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\km6gw79dltp81mkk4dpuo8uej\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\l5h2h0ia2g47pgylgreafmu8\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\ldbc2rgpp406sn5gb7oixs2c\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\lggj8szwtzet13ax3iz873xuv\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\msbv8tflw09f12hvzzvuj3gx5\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\nkmmm0dpnts91ne3ncf3oxi82\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\nm3gcvjlosyci3u984zemcge\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\pd4c1nn9h5bs1qay57v8kk90d\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\pdisocmlv1lhv7bxnh7k25ya\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\psufnksz3nlg98sgaavugg2r\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\q0hi9vnchcws1cv2wr8mnqruw\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\r9p07t1f1b6z15z2dbrhjnpj4\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\seizncblestrf18m4lodxpp2\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\so97zu3iasl56comj2vzpgzw\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\uve5izhyg33goo8nxx1ltfz7\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\uxq4hnjy1fiu1hm36j2vfrfrr\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\uy0to7pgtloh1c3flvn5xs938\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\vcgwiw16co2g1l88qpdv94pvn\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\vo4ndklnl6w2jus8mm82wh7q\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\vwnkh1ybcytj1fg9ktgj82pjf\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\wei1jiqqld5h1il5c3jxg106d\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\xw1pinf57zzc52otwvdo3769\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\xxjygyji7mt31ud1mhpm6k9s0\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\yf6pkgxp3ezo1vmob4a9aq2sl\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\z9e7m6or451dxco48wux77b\pm-null" afterPath="" />
-      <change type="DELETED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\target\work\MavenProject-filestore\zgp5nwr4nwko1mtf49ig8hizi\pm-null" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AdditionalDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/AdditionalDataPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/AddressDataPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/AdminCheesesListPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html" afterPath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" afterPath="$PROJECT_DIR$/src/main/java/panels/ArticleCounter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/BasicView.html" afterPath="$PROJECT_DIR$/src/main/java/views/BasicView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/BasicView.java" afterPath="$PROJECT_DIR$/src/main/java/views/BasicView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/ChangePasswordPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/CheckOut.html" afterPath="$PROJECT_DIR$/src/main/java/war/CheckOut.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheckOutView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheckOutView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/CheeseDataPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/CheesesListPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CheesesView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" afterPath="$PROJECT_DIR$/src/main/java/views/CustomersView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/base/DAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/EditProfilePanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/FeedbackPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/FeedbackPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/jdbc/JDBCAddressDAOTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/jdbc/JDBCAddressDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/LoginPage.html" afterPath="$PROJECT_DIR$/src/main/java/war/LoginPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/war/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/ProfileDataPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" afterPath="$PROJECT_DIR$/src/main/java/views/ProfileView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/PurchasesListPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" afterPath="$PROJECT_DIR$/src/main/java/views/PurchasesView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/RegisterUserPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/look/RowModifier.java" afterPath="$PROJECT_DIR$/src/main/java/look/RowModifier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/SearchResultsPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/SearchView.java" afterPath="$PROJECT_DIR$/src/main/java/views/SearchView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/war/SignupPage.html" afterPath="$PROJECT_DIR$/src/main/java/war/SignupPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/StoreView.html" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/views/StoreView.java" afterPath="$PROJECT_DIR$/src/main/java/views/StoreView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/jdbc-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/jdbc-context.xml" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\AuthenticationPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/login/AuthenticationPanel.java" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\CheeseArticlePanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/store/CheeseArticlePanel.java" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\ShoppingCartPanel.html" afterPath="$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.html" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\java\panels\ShoppingCartPanel.java" afterPath="$PROJECT_DIR$/src/main/java/panels/component/ShoppingCartPanel.java" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles.css" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\main\webapp\styles_.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles_.css" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\address\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/address/createTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\address\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/address/dropTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\address\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/address/insertData.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cart\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cart/createTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cart\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cart/dropTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cart\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cart/insertData.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cartentry\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cartentry/createTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cartentry\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cartentry/dropTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cartentry\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cartentry/insertData.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cheese\createTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cheese/createTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cheese\dropTables.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cheese/dropTables.sql" />
-      <change type="MOVED" beforePath="D:\Users\User\IdeaProjects\CheesyProject\src\test\java\sql\cheese\insertData.sql" afterPath="$PROJECT_DIR$/src/test/resources/sql/cheese/insertData.sql" />
     </list>
     <ignored path="MavenProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -533,21 +202,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.1891892">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27027026">
-              <caret line="6095" column="25" selection-start-line="6095" selection-start-column="25" selection-end-line="6095" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -1112,7 +771,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -1625,12 +1284,19 @@
       <workItem from="1420283707879" duration="29000" />
       <workItem from="1420289169392" duration="1176000" />
       <workItem from="1423221172560" duration="1656000" />
-      <workItem from="1431166919842" duration="36709000" />
+      <workItem from="1431166919842" duration="36909000" />
     </task>
+    <task id="LOCAL-00001" summary="Bootstrap framework introduced; Login and Store views updated">
+      <created>1431272990537</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1431272990537</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44704000" />
+    <option name="totallyTimeSpent" value="44904000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -2169,14 +1835,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/sql/cart/insertData.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2213,6 +1871,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27027026">
           <caret line="6095" column="25" selection-start-line="6095" selection-start-column="25" selection-end-line="6095" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1891892">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
