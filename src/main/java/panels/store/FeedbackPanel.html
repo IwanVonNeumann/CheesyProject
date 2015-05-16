@@ -11,27 +11,30 @@
 <wicket:panel>
     <div wicket:id="container" class="feedback-panel">
         <div>
-            <a href="#" wicket:id="hide" data-toggle="collapse">
-                Hide comments
-            </a>
+            <button type="button" class="close" data-toggle="collapse"
+                    wicket:id="hide">&times;</button>
         </div>
         <div wicket:id="comments" class="comment">
-            <div class="comment-date">
-                    <span wicket:id="date"></span>
-                    <span wicket:id="time"></span>
-            </div>
-            <div class="clearfix"></div>
             <div>
                 <span wicket:id="author" class="author"></span>
                 <span wicket:id="text"></span>
             </div>
+            <div class="comment-date">
+                <span wicket:id="date"></span>
+                <span wicket:id="time"></span>
+            </div>
         </div>
         <div>
-            <form wicket:id="form">
-                <div>Leave a comment:</div>
-                <div>
-                    <input type="text" wicket:id="text" title="comment"/>
-                    <a href="#" wicket:id="send">Send</a>
+            <form wicket:id="form" role="form">
+                <div class="input-group">
+                    <input type="text" wicket:id="text" title="Comment" class="form-control"
+                           placeholder="Leave a comment">
+                    <span class="input-group-btn">
+                    <button type="button" class="btn btn-primary" title="Send"
+                            wicket:id="send">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                    </span>
                 </div>
             </form>
         </div>

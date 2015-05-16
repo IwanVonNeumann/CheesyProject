@@ -63,7 +63,7 @@ public class CheeseArticlePanel extends CheesePanel {
 
         commentsCount = new Label("commentsCount",
                 new PropertyModel(cheese, "comments.size"));
-
+        commentsCount.setOutputMarkupId(true);
 
         add(commentsLink);
         add(commentsCount);
