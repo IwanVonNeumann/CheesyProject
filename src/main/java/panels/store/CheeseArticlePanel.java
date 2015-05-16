@@ -7,13 +7,11 @@ import domain.Like;
 import look.CurrencyLabel;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
+import org.apache.wicket.behavior.SimpleAttributeModifier;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.PropertyModel;
 import panels.CheesePanel;
-import panels.CheesesListPanel;
-import panels.FeedbackPanel;
 import panels.component.ShoppingCartPanel;
 import views.StoreView;
 
@@ -26,7 +24,6 @@ public class CheeseArticlePanel extends CheesePanel {
 
     private Cheese cheese;
 
-    private FeedbackPanel feedbackPanel;
     private Label likesCount;
     private Label commentsCount;
 
@@ -34,6 +31,7 @@ public class CheeseArticlePanel extends CheesePanel {
         super(id, model);
 
         cheese = (Cheese) getModelObject();
+        String feedbackPanelId = "feedback-" + cheese.getId();
 
         add(new Label("name"));
         add(new Label("description"));
@@ -51,29 +49,21 @@ public class CheeseArticlePanel extends CheesePanel {
             }
         });
 
-        feedbackPanel = new FeedbackPanel("feedback", getModel());
-        feedbackPanel.setOutputMarkupId(true);
-        feedbackPanel.setOutputMarkupPlaceholderTag(true);
-        feedbackPanel.setVisible(false);
-
+        FeedbackPanel feedbackPanel = new FeedbackPanel("feedback", getModel());
+        feedbackPanel.add(new SimpleAttributeModifier("id", feedbackPanelId));
         add(feedbackPanel);
 
         AjaxFallbackLink commentsLink = new AjaxFallbackLink("comments") {
             @Override
             public void onClick(AjaxRequestTarget target) {
-                feedbackPanel.setVisible(
-                        !feedbackPanel.isVisible());
-                if (target != null) {
-                    target.addComponent(feedbackPanel);
-                    TextField commentField = feedbackPanel.getCommentField();
-                    target.focusComponent(commentField);
-                }
             }
         };
+        commentsLink.add(new SimpleAttributeModifier("data-target", "#" + feedbackPanelId));
+
 
         commentsCount = new Label("commentsCount",
                 new PropertyModel(cheese, "comments.size"));
-        commentsCount.setOutputMarkupId(true);
+
 
         add(commentsLink);
         add(commentsCount);

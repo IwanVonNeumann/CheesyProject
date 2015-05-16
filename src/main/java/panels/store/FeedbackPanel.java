@@ -1,4 +1,4 @@
-package panels;
+package panels.store;
 
 import domain.Address;
 import domain.Cheese;
@@ -7,6 +7,7 @@ import look.proxy.CommentViewProxy;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxFallbackLink;
 import org.apache.wicket.ajax.markup.html.form.AjaxSubmitLink;
+import org.apache.wicket.behavior.SimpleAttributeModifier;
 import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
@@ -15,7 +16,7 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.IModel;
-import panels.store.CheeseArticlePanel;
+import panels.CheesePanel;
 
 import java.sql.Timestamp;
 
@@ -36,7 +37,10 @@ public class FeedbackPanel extends CheesePanel {
 
         cheese = (Cheese) getModelObject();
 
+        String feedbackPanelId = "feedback-" + cheese.getId();
+
         container = new WebMarkupContainer("container");
+        container.setOutputMarkupId(true);
 
         ListView commentsList = new ListView("comments", cheese.getComments()) {
             @Override
@@ -58,23 +62,12 @@ public class FeedbackPanel extends CheesePanel {
 
         container.add(commentsList);
 
-        container.setOutputMarkupId(true)
-                .setOutputMarkupPlaceholderTag(true);
-
         AjaxFallbackLink hideLink = new AjaxFallbackLink("hide") {
             @Override
-            public void onClick(AjaxRequestTarget target) {
-                FeedbackPanel feedbackPanel = getFeedbackPanel();
-                feedbackPanel.setVisible(false);
-
-                if (target != null) {
-                    target.addComponent(feedbackPanel);
-                }
+            public void onClick(AjaxRequestTarget ajaxRequestTarget) {
             }
         };
-
-        hideLink.setOutputMarkupId(true)
-                .setOutputMarkupPlaceholderTag(true);
+        hideLink.add(new SimpleAttributeModifier("data-target", "#" + feedbackPanelId));
         container.add(hideLink);
 
         commentForm = new Form("form",
@@ -109,14 +102,6 @@ public class FeedbackPanel extends CheesePanel {
         container.add(commentForm);
 
         add(container);
-    }
-
-    public TextField getCommentField() {
-        return (TextField) commentForm.get("text");
-    }
-
-    private FeedbackPanel getFeedbackPanel() {
-        return this;
     }
 
     private CheeseArticlePanel getCheeseArticlePanel() {

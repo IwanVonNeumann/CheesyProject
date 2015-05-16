@@ -9,28 +9,30 @@
 </head>
 <body>
 <wicket:panel>
-    <div>
+    <div class="cheese-header">
         <span class="h4" wicket:id="name">Gouda</span>
 
-        <a href="#" wicket:id="like" class="comment">
+        <a href="#" wicket:id="like">
             <span class="glyphicon glyphicon-heart"></span></a>
         <span class="badge" wicket:id="likesCount"></span>
 
-        <a href="#" wicket:id="comments" class="comment">
+        <a href="#" wicket:id="comments" data-toggle="collapse">
             <span class="glyphicon glyphicon-comment"></span></a>
         <span class="badge" wicket:id="commentsCount"></span>
     </div>
 
-    <div wicket:id="description">Gouda is a Dutch...</div>
+    <div wicket:id="description" class="cheese-details">
+        Gouda is a Dutch...
+    </div>
 
-    <div>
+    <div class="cheese-details">
         <span wicket:id="price" class="price">$1.99</span>
         <button type="button" class="btn btn-primary btn-xs" wicket:id="add">
             <span class="glyphicon glyphicon-shopping-cart"></span> Add to cart
         </button>
     </div>
 
-    <div wicket:id="feedback"></div>
+    <div wicket:id="feedback" class="collapse"></div>
 </wicket:panel>
 </body>
 </html>

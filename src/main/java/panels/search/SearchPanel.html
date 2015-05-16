@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<wicket:panel>
+    <header>
+        <h3><i class="fa fa-search"></i> Cheeses search</h3>
+    </header>
+
+    <div>
+        <form wicket:id="form">
+            <input type="text" wicket:id="query" title="query"/>
+            <input type="submit" value="Search"/>
+            <br/><br/>
+            <label>
+                <input type="checkbox" wicket:id="advanced"/>Show advanced options
+            </label>
+
+            <div wicket:id="wmc">
+                <div>Search in</div>
+                <div wicket:id="criteria"></div>
+            </div>
+        </form>
+    </div>
+    <div wicket:id="results"></div>
+</wicket:panel>
+</body>
+</html>

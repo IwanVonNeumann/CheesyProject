@@ -15,7 +15,7 @@ div.cheese {
     margin-bottom: 25px;
 }
 
-div.cheese div {
+.cheese-header, .cheese-details {
     margin-bottom: 10px;
 }
 
@@ -46,4 +46,24 @@ td.button {
 
 td.full {
     text-align: center;
+}
+
+.feedback-panel {
+    max-width: 400px;
+    padding: 10px;
+    background-color: #d9edf7;
+}
+
+.comment {
+    margin: 5px 0;
+}
+
+.comment-date {
+    padding-left: 10px;
+    font-size: 90%;
+}
+
+.author {
+    font-weight: 700;
+    color: #286090;
 }

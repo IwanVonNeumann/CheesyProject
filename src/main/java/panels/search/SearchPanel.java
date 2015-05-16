@@ -1,4 +1,4 @@
-package panels;
+package panels.search;
 
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.form.AjaxCheckBox;
@@ -9,6 +9,7 @@ import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.PropertyModel;
 import org.apache.wicket.util.value.ValueMap;
+import panels.CheesePanel;
 import search.SearchEngine;
 import search.SearchResultsSet;
 import views.SearchView;

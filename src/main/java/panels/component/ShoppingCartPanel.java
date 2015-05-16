@@ -12,7 +12,6 @@ import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.Model;
 import org.apache.wicket.model.PropertyModel;
-import panels.ArticleCounter;
 import panels.CheesePanel;
 import views.CheckOutView;
 

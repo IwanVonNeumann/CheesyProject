@@ -1,6 +1,6 @@
 package views;
 
-import panels.SearchPanel;
+import panels.search.SearchPanel;
 import panels.component.ShoppingCartPanel;
 import search.SearchResultsSet;
 

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:wicket="http://wicket.apache.org">
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
 <body>
 <wicket:extend>
-    <div class="leftpanel" wicket:id="search"></div>
-    <div class="rightpanel" wicket:id="shoppingCart"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" wicket:id="search"></div>
+            <div class="col-md-4" wicket:id="shoppingCart"></div>
+        </div>
+    </div>
 </wicket:extend>
 </body>
 </html>

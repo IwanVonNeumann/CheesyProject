@@ -1,4 +1,4 @@
-package panels;
+package panels.store;
 
 import domain.Cart;
 import domain.Cheese;
@@ -7,6 +7,7 @@ import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.PageableListView;
 import org.apache.wicket.markup.html.navigation.paging.PagingNavigator;
 import org.apache.wicket.model.CompoundPropertyModel;
+import panels.CheesePanel;
 import panels.store.CheeseArticlePanel;
 import views.StoreView;
 import war.CheeseApplication;

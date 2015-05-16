@@ -1,6 +1,6 @@
 package views;
 
-import panels.CheesesListPanel;
+import panels.store.CheesesListPanel;
 import panels.component.ShoppingCartPanel;
 
 public class StoreView extends BasicView {

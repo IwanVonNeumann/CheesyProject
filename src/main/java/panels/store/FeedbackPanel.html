@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/new_styles.css"/>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<wicket:panel>
+    <div wicket:id="container" class="feedback-panel">
+        <div>
+            <a href="#" wicket:id="hide" data-toggle="collapse">
+                Hide comments
+            </a>
+        </div>
+        <div wicket:id="comments" class="comment">
+            <div class="comment-date">
+                    <span wicket:id="date"></span>
+                    <span wicket:id="time"></span>
+            </div>
+            <div class="clearfix"></div>
+            <div>
+                <span wicket:id="author" class="author"></span>
+                <span wicket:id="text"></span>
+            </div>
+        </div>
+        <div>
+            <form wicket:id="form">
+                <div>Leave a comment:</div>
+                <div>
+                    <input type="text" wicket:id="text" title="comment"/>
+                    <a href="#" wicket:id="send">Send</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</wicket:panel>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package panels;
+package panels.search;
 
 import domain.Cart;
 import look.CurrencyLabel;
@@ -8,6 +8,7 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.model.Model;
+import panels.CheesePanel;
 import search.SearchResult;
 import search.SearchResultsSet;
 
